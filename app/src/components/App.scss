@@ -57,7 +57,38 @@ body:before {
 	height: 100px;
 }
 
-.box h1 {
+h1 {
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 15rem;
+	padding: 0;
+	perspective: 500px;
+}
+
+
+h1 span:first-child {
+	transform: translateX(-14%);
+}
+
+h1 span {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	transition: all 0.35s;
+}
+
+.portrait {
+	background: url();
+	background-size: auto 450px;
+	background-repeat: no-repeat;
+	background-attachment:
+}
+
+h1 a {
+	color: #000;
+	text-shadow: 1px 1px 0 rgba(219,255,5,0.4);
+	text-decoration: none;
+}
+
+.content {
+	margin-left: 0;
 }

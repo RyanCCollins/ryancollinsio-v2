@@ -18,7 +18,7 @@
     "dev": "`npm bin`/webpack-dev-server",
     "lint": "`npm bin`/eslint . --ext .js --ext .jsx",
     "deploy": "NODE_ENV=production `npm bin`/webpack -p",
-    "start": "npm run dev",
+    "start": "npm run dev && node keysone.js",
     "clean": "rm -rf app/dist app/build"
   },
   "repository": {
@@ -26,8 +26,6 @@
     "url": "git+https://github.com/RyanCCollins/flexbox-layouts.git"
   },
   "keywords": [
-    "boilerplate",
-    "koa",
     "redux",
     "react",
     "webpack",
@@ -52,11 +50,8 @@
     "html-webpack-plugin": "^2.7.1",
     "immutable": "^3.7.5",
     "isomorphic-fetch": "^2.2.0",
+    "keystone": "https://github.com/keystonejs/keystone.git",
     "knex": "^0.9.0",
-    "koa": "^1.1.2",
-    "koa-cors": "0.0.16",
-    "koa-route": "^2.4.2",
-    "mysql": "^2.9.0",
     "node-sass": "^3.4.2",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
