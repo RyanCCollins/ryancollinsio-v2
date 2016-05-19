@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+
+/* 1 - 4, beautiful flex grid 3 x 4 */
+// .container {
+// 	display: flex;
+// 	min-height: 100vh;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// }
+
+.box {
+	color: white;
+	font-size: 100px;
+	text-align: center;
+	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+body {
+	background-image: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%)
+};
+
+body:before {
+	//background-image: url("../../images/tswirls.png"), linear-gradient(20deg, #eafa52 0%, #ff77fd 100%);
+	background-image: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%)
+}
+
+.Aligner {
+	display: flex;
+}
+
+
+
+.left-nav {
+	width: 300px;
+	border-top: 3px solid #ecd018;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: scroll;
+	z-index: 99;
+	background-color: #252527;
+	height: 100vh;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
+	height: 100vh;
+	justify-content: center;
+}
+
+.box {
+	height: 100px;
+}
+
+.box h1 {
+	text-transform: uppercase;
+	font-size: 20px;
+}
