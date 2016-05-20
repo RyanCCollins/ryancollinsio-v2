@@ -1,10 +1,11 @@
 var keystone = require('keystone');
+var secrets = require('./lib/secrets');
 
 keystone.init({
   'name': 'RyanCollins.io',
   'brand': 'RyanCollins.io',
   'static': 'public',
-  
+
   'auto update': true,
   'user model': 'User',
   'session': true,
@@ -21,6 +22,7 @@ keystone.set('locals', {
   editable: keystone.content.editable
 });
 
+keystone.set('cloudinary config', secrets.cloudinary.uri);
 
 keystone.set('routes', require('./routes'));
 
