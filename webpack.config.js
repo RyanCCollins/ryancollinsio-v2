@@ -24,7 +24,16 @@ module.exports = {
     {
       test: /\.scss$/,
       loaders: ['style','css','sass']
-    }]
+    },
+    {
+      test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
+      loader: "url-loader?mimetype=application/font-woff"
+    },
+    {
+      test: /\.(ttf|eot|svg)(\?v=[0-9].[0-9].[0-9])?$/,
+      loader: "file-loader?name=[name].[ext]"
+    }
+  ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -44,7 +53,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
-      title: 'React BoilerPlate'
+      title: 'RyanCollins.io'
     })
   ]
 };

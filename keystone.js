@@ -13,6 +13,8 @@ keystone.init({
   'auth': true
 });
 
+keystone.set('cloudinary config', secrets.cloudinary.uri);
+
 keystone.import('models');
 
 keystone.set('locals', {
@@ -22,13 +24,24 @@ keystone.set('locals', {
   editable: keystone.content.editable
 });
 
-keystone.set('cloudinary config', secrets.cloudinary.uri);
+
 
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
-  'users': 'users'
+  'users': 'users',
+  'projects': 'projects'
 });
 
 
-keystone.start()
+/* Bootstrap the server rendered JSX */
+keystone.start({
+  onMount: function() {
+    var app = keystone.app;
+    var express = require('express');
+
+    app.get('*', function(req, res) {
+      res.sendFile(path.join(__dirname, 'index.html'));
+    });
+  }
+});
