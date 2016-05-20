@@ -1,6 +1,6 @@
 Ryancollins.io
 
-React redo of my blog and portfolio.  Coming soon!
+React rewrite of my blog and portfolio.  Coming soon!
 
 ## Getting Started
 TBD
