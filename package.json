@@ -18,7 +18,7 @@
     "dev": "`npm bin`/webpack-dev-server",
     "lint": "`npm bin`/eslint . --ext .js --ext .jsx",
     "deploy": "NODE_ENV=production `npm bin`/webpack -p",
-    "start": "npm run dev && node keysone.js",
+    "start": "npm run dev && node keystone.js",
     "clean": "rm -rf app/dist app/build"
   },
   "repository": {
@@ -50,6 +50,7 @@
     "html-webpack-plugin": "^2.7.1",
     "immutable": "^3.7.5",
     "isomorphic-fetch": "^2.2.0",
+    "model-transform": "^1.1.0",
     "keystone": "https://github.com/keystonejs/keystone.git",
     "knex": "^0.9.0",
     "node-sass": "^3.4.2",
