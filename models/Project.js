@@ -22,6 +22,11 @@ Project.add({
     unique: true,
     note: 'The name of the project.'
   },
+  categories: {
+    type: Types.Relationship,
+    ref: 'ProjectCategory',
+    many: true
+  },
   description: {
     type: Types.Markdown
   },
@@ -37,7 +42,6 @@ Project.add({
     publicID: 'slug'
   }
 });
-
 
 Project.defaultColumns = 'title, description, url';
 Project.register();

@@ -13,7 +13,7 @@ keystone.init({
   'auth': true
 });
 
-keystone.set('cloudinary config', secrets.cloudinary.uri);
+keystone.set('cloudinary config', 'cloudinary://596455341385367:YHmhydy3idqIicv6uTAmDVlHpvk@dc1qjoyvn');
 
 keystone.import('models');
 
