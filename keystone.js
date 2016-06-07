@@ -6,6 +6,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 8016 : process.env.PORT;
+const compiler = webpack(config);
 
 keystone.init({
   'name': 'RyanCollins.io',
@@ -37,31 +38,20 @@ keystone.set('nav', {
   'projects': 'projects'
 });
 
-/* Bootstrap the server rendered JSX */
-keystone.start({
-  onMount: function() {
-    const app = keystone.app;
-    const express = require('express');
+if (isDeveloping) {
+  keystone.pre('routes', webpackMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }))
 
-    const compiler = webpack(config);
-    const middleware = webpackMiddleware(compiler, {
-      publicPath: config.output.publicPath,
-      contentBase: 'src',
-      stats: {
-        colors: true,
-        hash: false,
-        timings: true,
-        chunks: false,
-        chunkModules: false,
-        modules: false
-      }
-    });
+  keystone.pre('routes', webpackHotMiddleware(compiler))
+}
 
-    app.use(middleware);
-    app.use(webpackHotMiddleware(compiler));
-    app.get('/', function response(req, res) {
-      res.write(middleware.fileSystem.readFileSync(path.join(__dirname, '../dist/index.html')));
-      res.end();
-    });
-  }
+keystone.set('routes', function (app) {
+  app.use(webpackHotMiddleware(compiler, {
+    log: console.log
+  }))
 });
+
+/* Bootstrap the server rendered JSX */
+keystone.start();
