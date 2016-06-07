@@ -7,11 +7,13 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
 const router = (
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={FlexGrid}></IndexRoute>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={FlexGrid}></IndexRoute>
+      </Route>
+    </Router>
+  </Provider>
 );
 
 render(router, document.getElementById('root'));

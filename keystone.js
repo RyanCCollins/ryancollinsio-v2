@@ -1,5 +1,11 @@
-var keystone = require('keystone');
-var secrets = require('./lib/secrets');
+const keystone = require('keystone');
+const secrets = require('./lib/secrets');
+const webpack = require('webpack');
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const config = require('./webpack.config.js');
+const isDeveloping = process.env.NODE_ENV !== 'production';
+const port = isDeveloping ? 8016 : process.env.PORT;
 
 keystone.init({
   'name': 'RyanCollins.io',
@@ -24,8 +30,6 @@ keystone.set('locals', {
   editable: keystone.content.editable
 });
 
-
-
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
@@ -33,15 +37,31 @@ keystone.set('nav', {
   'projects': 'projects'
 });
 
-
 /* Bootstrap the server rendered JSX */
 keystone.start({
   onMount: function() {
-    var app = keystone.app;
-    var express = require('express');
+    const app = keystone.app;
+    const express = require('express');
 
-    app.get('*', function(req, res) {
-      res.sendFile(path.join(__dirname, 'index.html'));
+    const compiler = webpack(config);
+    const middleware = webpackMiddleware(compiler, {
+      publicPath: config.output.publicPath,
+      contentBase: 'src',
+      stats: {
+        colors: true,
+        hash: false,
+        timings: true,
+        chunks: false,
+        chunkModules: false,
+        modules: false
+      }
+    });
+
+    app.use(middleware);
+    app.use(webpackHotMiddleware(compiler));
+    app.get('/', function response(req, res) {
+      res.write(middleware.fileSystem.readFileSync(path.join(__dirname, '../dist/index.html')));
+      res.end();
     });
   }
 });
