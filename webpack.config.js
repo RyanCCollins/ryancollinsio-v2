@@ -53,7 +53,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
-      title: 'RyanCollins.io'
+      title: 'RyanCollins.io',
+      template: 'index.html'
     })
   ]
 };
