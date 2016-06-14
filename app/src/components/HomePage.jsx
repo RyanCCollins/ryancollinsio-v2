@@ -1,8 +1,9 @@
 import React from 'react';
+import PortfolioGrid from './PortfolioGrid';
 
-const HomePage = () => (
+const HomePage = (props) => (
   <div>
-    <h1>Welcome to Ryancollins.io</h1>
+    <PortfolioGrid{...props} />
   </div>
 );
 
