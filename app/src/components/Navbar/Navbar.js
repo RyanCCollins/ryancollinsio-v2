@@ -11,15 +11,15 @@ import {
   MenuItem
 } from 'react-foundation';
 
-const Navbar = ({ isAuthenticated }) => (
+const Navbar = () => (
   <TopBar className="navbar">
     <Row>
       <Column>
-        <TopBarTitle className="navbar__title"><Link to="/">RyanCollis.io</Link></TopBarTitle>
+        <TopBarTitle className="navbar__title"><Link to="/">RYANCOLLINS.IO</Link></TopBarTitle>
         <TopBarRight className="navbar__right">
           <Menu>
             <MenuItem>
-              {!isAuthenticated ? <Link to="/login">Log in</Link> : <Link to="/logout">Log out</Link>}
+              <Link to="/portfolio">Porfolio</Link>
             </MenuItem>
           </Menu>
         </TopBarRight>
@@ -27,9 +27,5 @@ const Navbar = ({ isAuthenticated }) => (
     </Row>
   </TopBar>
 );
-
-Navbar.propTypes = {
-  isAuthenticated: PropTypes.bool
-};
 
 export default Navbar;
