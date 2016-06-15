@@ -7,11 +7,10 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-.portfolio-image-wrapper {
-  @include mui-animation(slide(in, up, 40px));
-}
-
-// Combine multiple effects
-.slideAndSpinAndFade {
-  @include mui-animation(fade, spin, slide($direction: up, $amount: 120%));
+.section-header h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Open Sans';
 }

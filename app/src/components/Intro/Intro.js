@@ -3,6 +3,13 @@ import './Intro.scss'
 import ChevronDown from 'react-icons/lib/fa/chevron-down';
 import IntroImage from './IntroImage';
 
+const DownChevron = () => (
+  <div className="intro-header__chevron">
+    <div href="#sectionTwo">
+      <ChevronDown className="intro-header__chevron-down"></ChevronDown>
+    </div>
+  </div>
+);
 
 const Intro = props => (
   <div className="intro">
@@ -11,7 +18,7 @@ const Intro = props => (
         <IntroImage />
         <h1 className="intro-header__headline">I am Ryan Collins</h1>
         <h4 className="intro-header__subheadline">I make Web and Mobile Apps</h4>
-        <ChevronDown className="intro-header__chevron-down"></ChevronDown>
+        <DownChevron />
       </div>
     </div>
   </div>
