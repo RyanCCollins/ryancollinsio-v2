@@ -1,4 +1,13 @@
 .about-section {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
+}
+
+.about-section__header {
+  margin-top: 60px;
+}
+
+.about-section__paragraph-wrapper {
+  margin-top: 60px;
+  margin-bottom: 60px; 
 }

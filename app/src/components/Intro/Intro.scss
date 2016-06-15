@@ -1,5 +1,5 @@
 .intro {
-  background: linear-gradient(145deg, #0363b3 0, #ce06f7 80%, #fa2562 100%);
+  background: linear-gradient(160deg, #34b6d9, #3464d9);
   height: calc(100vh - 50px);
   transition: background linear .5s;
   width: 100%;
@@ -30,11 +30,9 @@
   color: white;
   font-size: 2rem;
   flex: 1;
-  border: 1px solid goldenrod;
 }
 
 .intro-header__subheadline {
-  border: 1px solid goldenrod;
   font-family: 'Raleway';
   text-transform: uppercase;
   font-weight: 300;
@@ -44,7 +42,6 @@
 
 .intro-header__chevron {
   margin-bottom: 1rem;
-  border: 1px solid goldenrod;
 }
 
 .intro-header__chevron-down {

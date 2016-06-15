@@ -7,10 +7,33 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-.section-header h1 {
+$primary-color: #0cd6b4;
+$off-white: #0D4A80;
+
+.section-header {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: #454545;
   font-family: 'Open Sans';
+}
+
+.dark-grey {
+  color: #454545;
+}
+
+.text-medium {
+  font-size: 1.4rem;
+  line-height: 1.42857143;
+}
+
+span.divider {
+  color: primary-color;
+  width: 150px;
+  display: block;
+  margin: 35px 0;
+}
+
+.section__off-white {
+  background: $off-white;
 }
