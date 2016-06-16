@@ -10,7 +10,7 @@ const PortfolioOverlay = ({
       {project.caption}
     </p>
     <a href={project.repositoryURL} className="button">View on Github</a>
-    <Link to={`/projects/${project.key}`} className="button">
+    <Link to="/projects" className="button">
       View Details
     </Link>
   </div>
