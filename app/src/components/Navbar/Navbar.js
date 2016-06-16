@@ -1,5 +1,5 @@
 
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 import {
   Row,
@@ -11,21 +11,31 @@ import {
   MenuItem
 } from 'react-foundation';
 
-const Navbar = () => (
-  <TopBar className="navbar">
-    <Row>
-      <Column>
-        <TopBarTitle className="navbar__title"><Link to="/">RYANCOLLINS.IO</Link></TopBarTitle>
-        <TopBarRight className="navbar__right">
-          <Menu>
-            <MenuItem>
-              <Link to="/portfolio">Porfolio</Link>
-            </MenuItem>
-          </Menu>
-        </TopBarRight>
-      </Column>
-    </Row>
-  </TopBar>
-);
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isActive: false
+    };
+  }
+  render() {
+    return (
+      <TopBar className={this.state.isActive ? 'navbar inactive fixed' : 'navbar active'}>
+        <Row>
+          <Column>
+            <TopBarTitle className="navbar__title"><Link to="/">RYANCOLLINS.IO</Link></TopBarTitle>
+            <TopBarRight className="navbar__right">
+              <Menu>
+                <MenuItem>
+                  <Link to="/portfolio">Porfolio</Link>
+                </MenuItem>
+              </Menu>
+            </TopBarRight>
+          </Column>
+        </Row>
+      </TopBar>
+    );
+  }
+}
 
 export default Navbar;

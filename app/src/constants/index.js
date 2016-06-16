@@ -1,7 +1,11 @@
 import { AboutSectionParagraphs } from './AboutSection/AboutSectionParagraphs';
-import { Technologies } from './Technologies/Technologies';
+import { Technologies, TechnologySectionHeader } from './Technologies/Technologies';
+import { IntroHeadline, IntroSubHeadline } from './IntroSection/IntroSection';
 
 export {
   AboutSectionParagraphs,
-  Technologies
+  Technologies,
+  TechnologySectionHeader,
+  IntroHeadline,
+  IntroSubHeadline
 };

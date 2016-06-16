@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from '../store';
 import App from '../components/App';
-import * as Containers from '../containers/'
+import * as Containers from '../containers/';
 
 const router = (
   <Provider store={store}>

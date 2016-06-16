@@ -8,14 +8,24 @@
 @include motion-ui-animations;
 
 $primary-color: #0cd6b4;
-$off-white: #0D4A80;
+$off-white: #E9EAEC;
+$light-grey: #a1a1a1;
 
 .section-header {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   color: #454545;
-  font-family: 'Open Sans';
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+  padding: 40px;
+  margin-top: 60px;
+}
+
+.section-sub-title {
+  color: $light-grey;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .dark-grey {
@@ -28,11 +38,15 @@ $off-white: #0D4A80;
 }
 
 span.divider {
-  color: primary-color;
+  background-color: $primary-color;
   width: 150px;
+  height: 3px;
   display: block;
   margin: 35px 0;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 
 .section__off-white {
   background: $off-white;

@@ -1,12 +1,15 @@
 import React from 'react';
-import Technologies from '../../components/Technologies';
+import Technologies from '../../components/Technologies/Technologies';
+import './TechnologySection.scss';
 
 const TechnologySection = ({
-  technologies
+  technologies,
+  technologyHeader
 }) => (
-  <div className="section-technologies">
+  <div className="section__off-white section-technologies">
     <Technologies
       technologies={technologies}
+      technologyHeader={technologyHeader}
     />
   </div>
 );
