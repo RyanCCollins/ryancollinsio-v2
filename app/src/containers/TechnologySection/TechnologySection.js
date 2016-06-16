@@ -1,6 +1,6 @@
 import React from 'react';
-import Technologies from '../../components/Technologies/Technologies';
 import './TechnologySection.scss';
+import { Technologies } from '../../components';
 
 const TechnologySection = ({
   technologies,
