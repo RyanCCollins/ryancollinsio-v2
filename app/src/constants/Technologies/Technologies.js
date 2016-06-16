@@ -32,11 +32,11 @@ const Technologies = [
   {
     id: 5,
     name: 'Swift',
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/120px-Swift_logo.svg.png'
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/120px-Swift_logo.svg.png',
     category: Categories.ios
   }
 ];
 
- export {
-   Technologies
- };
+export {
+  Technologies
+};

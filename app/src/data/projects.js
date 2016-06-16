@@ -1,6 +1,7 @@
 const projects = [
   {
-    key: 1,
+    id: 1,
+    key: 'hacksmiths-app',
     title: 'Hacksmiths App',
     type: "iOS Mobile App",
     description: 'Followed best practices to design and develop the Hacksmiths.io app, ' +
@@ -9,10 +10,11 @@ const projects = [
     'appealing application.',
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-app',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0408%202_iphone6plus_gold_side2.png',
-    caption: "Hello world"
+    caption: "iOS Mobile Application built for the Hacksmiths."
   },
   {
-    key: 2,
+    id: 2,
+    key: 'hacksmiths-website',
     title: 'Hacksmiths Website',
     type: "Web Application",
     description: 'Followed best practices to build a production ready, distributed backend web API containing ' +
@@ -22,7 +24,7 @@ const projects = [
     'utilizing the Foundation web framework.',
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-website',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.48%20PM_imac2013_left.png',
-    caption: "Hello world"
+    caption: "Web API and Front End built for the Hacksmiths project."
   }
 ];
 

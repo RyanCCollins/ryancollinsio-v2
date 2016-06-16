@@ -4,9 +4,10 @@ import './IntroImage.scss';
 
 const IntroImage = () => (
   <img
+    alt="An image of Ryan"
     src={Me}
     className="intro-image"
   />
-)
+);
 
 export default IntroImage;
