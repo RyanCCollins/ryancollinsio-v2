@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router';
+import { Link } from 'react-router';
 
 const PortfolioOverlay = ({
   project
@@ -9,8 +9,15 @@ const PortfolioOverlay = ({
     <p className="project-description">
       {project.caption}
     </p>
-    <a href={project.repositoryURL} className="button">View on Github</a>
-    <Link to="/projects" className="button">
+    <a
+      href={project.repositoryURL}
+      className="button primary small portfolio-item__button"
+    >View on Github
+    </a>
+    <Link
+      to={`/projects/${project.id}`}
+      className="button primary small portfolio-item__button"
+    >
       View Details
     </Link>
   </div>

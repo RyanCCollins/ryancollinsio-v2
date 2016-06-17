@@ -10,32 +10,47 @@ import {
   Menu,
   MenuItem
 } from 'react-foundation';
+import Headroom from 'react-headroom';
+
+const Styles = {
+  hidden: {
+    display: 'none'
+  }
+};
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isActive: false
+      isHiding: props.isHiding
     };
   }
   render() {
     return (
-      <TopBar className={this.state.isActive ? 'navbar inactive fixed' : 'navbar active'}>
-        <Row>
-          <Column>
-            <TopBarTitle className="navbar__title"><Link to="/">RYANCOLLINS.IO</Link></TopBarTitle>
-            <TopBarRight className="navbar__right">
-              <Menu>
-                <MenuItem>
-                  <Link to="/portfolio">Porfolio</Link>
-                </MenuItem>
-              </Menu>
-            </TopBarRight>
-          </Column>
-        </Row>
-      </TopBar>
+      <Headroom style={this.state.isHiding ? Styles.hidden : '' }>
+        <TopBar className={this.state.isActive ? 'navbar inactive fixed' : 'navbar active'}>
+          <Row>
+            <Column>
+              <TopBarTitle className="navbar__title">
+                <Link to="/">RYANCOLLINS.IO</Link>
+              </TopBarTitle>
+              <TopBarRight className="navbar__right">
+                <Menu>
+                  <MenuItem>
+                    <Link to="/portfolio">Porfolio</Link>
+                  </MenuItem>
+                </Menu>
+              </TopBarRight>
+            </Column>
+          </Row>
+        </TopBar>
+      </Headroom>
     );
   }
 }
+
+Navbar.Proptypes = {
+  isHiding: React.PropTypes.bool.isRequired
+};
 
 export default Navbar;

@@ -21,7 +21,7 @@ $light-grey: #a1a1a1;
   font-family: 'Raleway';
   letter-spacing: 1px;
   padding: 40px;
-  margin-top: 60px;
+  padding-top: 100px;
 }
 
 .section-sub-title {
@@ -49,7 +49,14 @@ span.divider {
   margin-left: auto;
 }
 
-
 .section__off-white {
   background: $off-white;
+}
+
+.wobble-button {
+  @include wobble();
+}
+
+.gradient-green {
+  background-image: linear-gradient(45deg, rgba(0, 216, 255, .5), rgba(0, 255, 127,.5));
 }

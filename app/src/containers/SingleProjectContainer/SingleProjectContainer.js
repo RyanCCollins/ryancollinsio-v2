@@ -5,8 +5,9 @@ import './SingleProjectContainer.scss';
 class SingleProjectContainer extends React.Component {
   constructor(props) {
     super(props);
-    const projectKey = this.props.location.query;
-    console.log(projectKey);
+  }
+  componentDidMount() {
+    
   }
   render() {
     return (

@@ -61,6 +61,7 @@
     "react-dom": "^15.0.2",
     "react-engine": "^3.4.1",
     "react-foundation": "^0.6.8",
+    "react-headroom": "^2.1.0",
     "react-icons": "^2.1.0",
     "react-motion": "^0.4.4",
     "react-motion-ui-pack": "^0.7.3",

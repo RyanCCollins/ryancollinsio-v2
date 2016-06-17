@@ -8,7 +8,6 @@ const PortfolioGrid = ({
     {projects.map((project) =>
       <PortfolioItem
         project={project}
-        key={project.key}
       />
     )}
   </div>

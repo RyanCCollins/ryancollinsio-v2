@@ -1,7 +1,6 @@
 const projects = [
   {
     id: 1,
-    key: 'hacksmiths-app',
     title: 'Hacksmiths App',
     type: "iOS Mobile App",
     description: 'Followed best practices to design and develop the Hacksmiths.io app, ' +
@@ -14,7 +13,6 @@ const projects = [
   },
   {
     id: 2,
-    key: 'hacksmiths-website',
     title: 'Hacksmiths Website',
     type: "Web Application",
     description: 'Followed best practices to build a production ready, distributed backend web API containing ' +

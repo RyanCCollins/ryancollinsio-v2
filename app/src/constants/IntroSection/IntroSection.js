@@ -1,5 +1,5 @@
-const IntroHeadline = 'I am Ryan Collins';
-const IntroSubHeadline = 'I am a software engineer';
+const IntroHeadline = 'Ryan Collins';
+const IntroSubHeadline = 'Software Engineer';
 
 export {
   IntroHeadline,

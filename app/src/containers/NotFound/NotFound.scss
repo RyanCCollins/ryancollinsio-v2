@@ -1,0 +1,31 @@
+
+.not-found-section__header {
+  font-size: 5rem !important;
+}
+
+.not-found-section__subheader {
+  font-size: 2.5rem !important;
+}
+
+.not-found-section__paragraph-text {
+  font-size: 1.4rem;
+  max-width: 50%;
+  font-family: 'Open Sans';
+  font-weight: 200;
+  padding: 20px;
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+  }
+  @media screen and (max-width: 800px) {
+    max-width: 80%;
+  }
+}
+
+.not-found-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+}

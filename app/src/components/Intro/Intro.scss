@@ -1,7 +1,7 @@
 @import "../../../../node_modules/animatewithsass/animate.scss";
 
 .logo-wrap {
-  padding: 20px; 
+  padding: 20px;
 }
 
 .logo-text-wrap {
@@ -10,7 +10,7 @@
 
 .logo-text {
   color: #ECD018;
-  font-family: 'Lato';
+  font-family: 'Audiowide';
   -webkit-box-shadow: 0px 3px 36px 10px rgba(181,181,18,1);
   -moz-box-shadow: 0px 3px 36px 10px rgba(181,181,18,1);
   box-shadow: 0px 3px 36px 10px rgba(181,181,18,1);
@@ -49,29 +49,30 @@
 .intro-header__headline {
   font-family: 'Raleway';
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   color: white;
   font-size: 3.5rem;
   flex: 1;
-  @include fadeInUp(
+  @include fadeInUpBig(
     $duration: 0.3s,
     $count: 1,
-    $delay: 0.6s,
+    $delay: 0.2s,
     $function: ease,
     $fill: both
   )
 }
 
 .intro-header__subheadline {
+  margin:20px;
   font-family: 'Raleway';
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.8rem;
   color: white;
-  @include fadeInUp(
+  @include fadeInUpBig(
     $duration: 0.3s,
     $count: 1,
-    $delay: 1.2s,
+    $delay: 1.0s,
     $function: ease,
     $fill: both
   )
