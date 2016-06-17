@@ -15,7 +15,6 @@ const LandingPage = props => (
     <AboutSection {...props}
       paragraphs={Constants.AboutSectionParagraphs}
     />
-    <hr />
     <TechnologySection {...props}
       technologies={Constants.Technologies}
       technologyHeader={Constants.technologyHeader}

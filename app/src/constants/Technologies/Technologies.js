@@ -1,4 +1,4 @@
-const Categories = {
+const TechnologyCategories = {
   backend: 'Back End Web',
   frontend: 'Front End Web',
   ios: 'iOS Mobile'
@@ -10,60 +10,61 @@ const Technologies = [
   {
     id: 1,
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Node.js_logo_2015.svg',
-    name: 'Node JS',
-    category: Categories.backend
+    name: '',
+    category: TechnologyCategories.backend
   },
   {
     id: 2,
-    name: 'Ruby on Rails',
+    name: '',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg',
-    category: Categories.backend
+    category: TechnologyCategories.backend
   },
   {
     id: 3,
-    name: 'React JS',
+    name: '',
     imageUrl: 'http://www.aurorasolutions.io/wp-content/uploads/2016/02/react-logo_fi.png',
-    category: Categories.frontend
+    category: TechnologyCategories.frontend
   },
   {
     id: 4,
-    name: 'Redux',
+    name: '',
     imageUrl: 'https://raw.githubusercontent.com/reactjs/redux/master/logo/logo-title-dark.png',
-    category: Categories.frontend
+    category: TechnologyCategories.frontend
   },
   {
     id: 5,
     name: 'Swift',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/120px-Swift_logo.svg.png',
-    category: Categories.ios
+    category: TechnologyCategories.ios
   },
   {
     id: 6,
-    name: 'MongoDB',
+    name: '',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1280px-MongoDB-Logo.svg.png',
-    category: Categories.backend
+    category: TechnologyCategories.backend
   },
   {
     id: 7,
-    name: 'Docker',
+    name: '',
     imageUrl: 'https://xebia.com/assets/uploads/docker%20logo.png',
-    category: Categories.backend
+    category: TechnologyCategories.backend
   },
   {
     id: 8,
     name: 'Webpack & Phoenix',
     imageUrl: 'http://matthewlehner.net/images/webpack-and-phoenix-on-elixir-104e5ffe.svg',
-    category: Categories.backend
+    category: TechnologyCategories.backend
   },
   {
     id: 9,
     name: 'Foundation',
     imageUrl: 'https://incident57.com/codekit/images/help/logo-zurb@2x.svg',
-    category: Categories.frontend
+    category: TechnologyCategories.frontend
   }
 ];
 
 export {
   Technologies,
-  TechnologySectionHeader
+  TechnologySectionHeader,
+  TechnologyCategories
 };

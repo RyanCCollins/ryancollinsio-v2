@@ -5,16 +5,22 @@
   justify-content: center;
   height: 400px;
   width: 400px;
+  padding: 20px;
 }
 
 .technology-grid-item__caption {
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   line-height: 1.37;
   font-family: 'Raleway';
+  text-align: center;
 }
 
 .technology-grid-item {
+
+}
+
+.technology-grid-item__image {
   min-height: 100px;
   min-width: 100px;
   max-width: 200px;

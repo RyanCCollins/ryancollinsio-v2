@@ -1,5 +1,7 @@
 @import "../../node_modules/foundation-sites/scss/foundation";
 @import "../../node_modules/motion-ui/src/motion-ui";
+@import './animate.scss';
+@import "../../node_modules/animatewithsass/animate.scss";
 
 @include foundation-flex-grid;
 @include foundation-flex-classes;
