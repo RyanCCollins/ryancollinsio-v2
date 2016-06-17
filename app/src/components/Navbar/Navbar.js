@@ -8,7 +8,8 @@ import {
   TopBarTitle,
   TopBarRight,
   Menu,
-  MenuItem
+  MenuItem,
+  Button
 } from 'react-foundation';
 import Headroom from 'react-headroom';
 
@@ -27,7 +28,7 @@ class Navbar extends React.Component {
   }
   render() {
     return (
-      <Headroom style={this.state.isHiding ? Styles.hidden : '' }>
+      <Headroom style={this.state.isHiding ? Styles.hidden : 'sticky' }>
         <TopBar className={this.state.isActive ? 'navbar inactive fixed' : 'navbar active'}>
           <Row>
             <Column>
@@ -38,6 +39,11 @@ class Navbar extends React.Component {
                 <Menu>
                   <MenuItem>
                     <Link to="/portfolio">Porfolio</Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to="/contact">
+                      <Button isHollow>Contact Me</Button>
+                    </Link>
                   </MenuItem>
                 </Menu>
               </TopBarRight>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
-import Navbar from './Navbar/Navbar'
+import Navbar from './Navbar/Navbar';
 
 const Main = (props) => (
   <div>
+    <Navbar />
     {React.cloneElement(props.children, props)}
   </div>
 );

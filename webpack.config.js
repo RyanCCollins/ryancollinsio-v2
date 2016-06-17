@@ -22,6 +22,10 @@ module.exports = {
       loaders: ['react-hot', 'babel']
     },
     {
+      test: /\.svg$/,
+      loader: 'babel!svg-react'
+    },
+    {
       test: /\.scss$/,
       loaders: ['style','css','sass']
     },

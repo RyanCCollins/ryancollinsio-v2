@@ -69,9 +69,11 @@
     "react-router": "^2.4.0",
     "react-router-redux": "^4.0.5",
     "redux": "^3.0.4",
+    "redux-form": "^5.2.5",
     "redux-thunk": "^1.0.0",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
+    "svg-react-loader": "^0.3.5",
     "webpack": "^1.12.9",
     "webpack-hot-middleware": "^2.10.0"
   },

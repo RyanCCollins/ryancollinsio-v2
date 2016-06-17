@@ -11,7 +11,8 @@ const router = (
       <Route path="/" component={App}>
         <IndexRoute component={Containers.LandingPage} />
         <Route path="/portfolio" component={Containers.Portfolio} />
-        <Route path="/projects/:projectId" cpmponet={Containers.SingleProject} />
+        <Route path="/projects/:projectId" componet={Containers.SingleProject} />
+        <Route path="/contact" component={Containers.Contact} />
         <Route path="*" component={Containers.NotFound} />
       </Route>
     </Router>
