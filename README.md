@@ -1,4 +1,4 @@
-Ryancollins.io
+![Ryancollins.io logo](https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-logo.png)
 
 Rewrite of my professional portfolio and blog utilizing React, Redux, Keystone, Node, MongoDb, Foundation, etc.
 
