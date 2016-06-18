@@ -11,6 +11,7 @@ const MeImage = () => (
       alt="Ryan Collins"
       className="me-image"
     />
+  <h4 className="title uppercase text-white">Creative Developer</h4>
   </div>
 );
 
@@ -18,20 +19,20 @@ const AboutMeParagraphs = ({
   paragraphs
 }) => (
   <div className="about-section__paragraph-wrapper dark-grey text-medium">
-    {paragraphs.map((para) => <p>{para}</p>)}
+    {paragraphs.map((para) => <p className="">{para}</p>)}
   </div>
 );
 
 const AboutSection = (props) => (
   <div className="about-section" id="aboutSection">
-    <h1 className="about-section__header section-header">About Me</h1>
+    <h1 className="about-section__header section-header text-grey">About Me</h1>
     <Divider />
-    <Row className="display about-section__paragraph">
+    <Row className="display about-section__wrapper">
       <Column small={4}>
         <MeImage />
       </Column>
       <Column small={8} centerOnSmall>
-        <div className="callout primary">
+        <div className="callout about-section__paragraph">
           <AboutMeParagraphs
             paragraphs={props.paragraphs}
           />
