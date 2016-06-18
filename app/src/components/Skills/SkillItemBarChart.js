@@ -1,20 +1,36 @@
 import React from 'react';
-import { Column, Row } from 'react-foundation';
+import { Column } from 'react-foundation';
+import { Motion, spring } from 'react-motion';
 
 class SkillItemBarChart extends React.Component {
   constructor(props) {
     super(props);
-    const widthStyle = {
-      width: props.skill.percent
-    };
-    const leftStyle = {
-      left: props.skill.percent
-    };
+    this.setWidthStyle = this.setWidthStyle.bind(this);
     this.state = {
-      left: leftStyle,
-      width: widthStyle,
-      isAnimating: true
+      leftStyle: {
+        left: 0
+      },
+      widthStyle: {
+        width: 0
+      }
     };
+  }
+  componentDidMount() {
+    this.setWidthStyle();
+  }
+  setWidthStyle() {
+    // const barRef = this.refs.barDiv.getDOMNode();
+    const barRect = {width: 555};
+    const left = barRect.width * (this.props.skill.percent / 100);
+    const width = left + 40;
+    this.setState({
+      widthStyle: {
+        width: width
+      },
+      leftStyle: {
+        left: left
+      }
+    });
   }
   render() {
     const {
@@ -25,12 +41,17 @@ class SkillItemBarChart extends React.Component {
         <div className="bar-chart">
           <div className="item">
             <h4 className="uppercase">{skill.name}</h4>
-            <div className="bar">
-              <span className="percent" style={this.state.left}>{skill.percent}</span>
+            <div
+              className="bar"
+              ref="barDiv"
+            >
               <span
+                className="percent" style={this.state.leftStyle}>{skill.percent}%</span>
+              <span
+                ref="itemProgress"
                 className="item-progress"
                 data-percent={skill.percent}
-                style={this.state.width}
+                style={this.state.widthStyle}
               ></span>
             </div>
           </div>

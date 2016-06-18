@@ -1,0 +1,81 @@
+@media (max-width: 767px) {
+    .circle-chart {
+        margin-top:-30px
+    }
+}
+
+.circle-chart .item {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    #skills {
+        padding-bottom:60px
+    }
+
+    .circle-chart .item {
+        margin-top: 30px;
+        margin-bottom: 30px
+    }
+}
+
+.circle-chart .item > .circle {
+    position: relative;
+    margin: 0 auto;
+    padding: 6px;
+    width: 120px;
+    height: 120px;
+    background-color: #a1a1a1;
+    border-radius: 50%;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.circle-chart .item>.circle>.item-progress {
+    display: inline-block;
+    position: relative;
+    width: 108px;
+    height: 20px;
+    overflow: hidden
+}
+
+.circle-chart .item>.circle>.item-progress:before {
+    display: block;
+    content: "";
+    width: 108px;
+    height: 108px;
+    background-color: #3b3b3b;
+    border-radius: 106px
+}
+
+.circle-chart .item > .percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: -20px;
+    background-color: #006ca3;
+    border-radius: 4px
+}
+
+.circle-chart .item > h4 {
+    margin-top: 20px;
+    letter-spacing: 1px
+}
+
+.bar-chart>.item>.bar>.percent,.circle-chart .item>.percent {
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 14px;
+    box-shadow: 3px 3px 10px #0d0c0d
+}
+.percent {
+  color: white;
+  font-weight: bold;
+}

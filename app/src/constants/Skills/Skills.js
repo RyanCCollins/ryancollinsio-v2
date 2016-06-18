@@ -12,7 +12,7 @@ const Skills = [
   {
     id: 3,
     name: 'Mobile',
-    percent: 98
+    percent: 95
   },
   {
     id: 4,

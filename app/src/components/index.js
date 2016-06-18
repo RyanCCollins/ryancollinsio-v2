@@ -4,6 +4,8 @@ import Technologies from './Technologies/Technologies';
 import SingleProject from './SingleProject/SingleProject';
 import Divider from './Divider/Divider';
 import ContactForm from './ContactForm/ContactForm';
+import Skills from './Skills/Skills';
+import Languages from './Languages/Languages';
 
 export {
   Intro,
@@ -11,5 +13,7 @@ export {
   Technologies,
   SingleProject,
   Divider,
-  ContactForm
+  ContactForm,
+  Skills,
+  Languages
 };

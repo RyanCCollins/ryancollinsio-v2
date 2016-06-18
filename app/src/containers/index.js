@@ -4,6 +4,7 @@ import NotFound from './NotFound/NotFound';
 import SingleProjectContainer from './SingleProjectContainer/SingleProjectContainer';
 import Contact from './Contact/Contact';
 import SkillSection from './SkillSection/SkillSection';
+import LanguageSection from './LanguageSection/LanguageSection';
 
 export {
   LandingPage,
@@ -11,5 +12,6 @@ export {
   NotFound,
   SingleProjectContainer,
   Contact,
-  SkillSection
+  SkillSection,
+  LanguageSection
 };
