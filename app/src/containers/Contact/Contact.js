@@ -1,6 +1,10 @@
 import React from 'react';
 import './Contact.scss';
 import { ContactForm } from '../../components';
+import {
+  Column,
+  Row
+} from 'react-foundation';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -16,10 +20,14 @@ class Contact extends React.Component {
     } = this.props;
     return (
       <div className="contact-container">
-        <h1 className="section-header">Contact Me</h1>
-        <ContactForm
-          handleSubmit={handleSubmit}
-        />
+        <Row>
+          <Column small={12} medium={8} large={6}>
+            <h1 className="section-header">Contact Me</h1>
+            <ContactForm
+              handleSubmit={handleSubmit}
+            />
+          </Column>
+        </Row>
       </div>
     );
   }
