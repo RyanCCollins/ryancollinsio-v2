@@ -1,6 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router';
+import './Navbar.scss';
+import CrownLogoImage from '../../../images/crown.png';
+
 import {
   Row,
   Column,
@@ -19,6 +21,17 @@ const Styles = {
   }
 };
 
+const CrownLogo = () => (
+  <div className="crown-logo">
+    <img
+      className="crown-logo__image"
+      src={CrownLogoImage}
+      alt="Crown Logo"
+    />
+  <span><h1 className="crown-logo__title">ryancollins.io</h1></span>
+  </div>
+);
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -28,21 +41,23 @@ class Navbar extends React.Component {
   }
   render() {
     return (
-      <Headroom style={this.state.isHiding ? Styles.hidden : 'sticky' }>
+      <Headroom style={this.state.isHiding ? Styles.hidden : 'sticky'}>
         <TopBar className={this.state.isActive ? 'navbar inactive fixed' : 'navbar active'}>
           <Row>
             <Column>
               <TopBarTitle className="navbar__title">
-                <Link to="/">RYANCOLLINS.IO</Link>
+                <Link to="/">
+                  <CrownLogo />
+                </Link>
               </TopBarTitle>
               <TopBarRight className="navbar__right">
                 <Menu>
                   <MenuItem>
-                    <Link to="/portfolio">Porfolio</Link>
+                    <Link to="/portfolio" className="active">Portfolio</Link>
                   </MenuItem>
                   <MenuItem>
                     <Link to="/contact">
-                      <Button isHollow>Contact Me</Button>
+                      <Button isHollow className="button__golden">Contact Me</Button>
                     </Link>
                   </MenuItem>
                 </Menu>

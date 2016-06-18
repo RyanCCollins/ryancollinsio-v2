@@ -1,4 +1,5 @@
 @import "../../node_modules/foundation-sites/scss/foundation";
+@import "./settings.scss";
 @import "../../node_modules/motion-ui/src/motion-ui";
 @import './animate.scss';
 @import "../../node_modules/animatewithsass/animate.scss";
@@ -9,7 +10,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-$primary-color: #0cd6b4;
+$golden: #ECD018;
+$primary-color: rgba(0, 216, 255, .9);
 $off-white: #E9EAEC;
 $light-grey: #a1a1a1;
 
@@ -61,10 +63,34 @@ span.divider {
   background-image: linear-gradient(45deg, rgba(0, 216, 255, .5), rgba(0, 255, 127,.5));
 }
 
+.gradient-purple {
+  background-image: linear-gradient(135deg, #ca2091 0, #a041fa 20%, #3f65fb 50%, #0fcbfa 80%, #0fe6fa 100%);
+}
+
 .uppercase {
   text-transform: uppercase;
 }
 
 .text-white {
   color: white;
+}
+
+.top-bar {
+  border-bottom: 1px solid grey;
+}
+
+.menu a {
+  text-transform: uppercase;
+  font-family: 'Lato';
+  color: $primary-color;
+  .active {
+    border-bottom: 2px solid $golden;
+  }
+}
+
+.button__golden {
+  border: 1px solid $primary-color !important;
+  color: $primary-color !important;
+  text-transform: uppercase;
+  font-family: 'Lato';
 }

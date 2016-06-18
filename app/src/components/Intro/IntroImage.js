@@ -1,11 +1,11 @@
 import React from 'react';
-import Me from '../../../images/crown.png';
+import CrownLogoImage from '../../../images/crown.png';
 
 const IntroImage = () => (
   <div className="logo-wrap">
     <img
       alt="An image of a crown"
-      src={Me}
+      src={CrownLogoImage}
       className="intro-image"
     />
     <div className="logo-text-wrap">
