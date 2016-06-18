@@ -27,3 +27,6 @@ Flex box
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
+
+## Screen Shots
+![RyanCollins.io Mocks](https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-mockup.jpg)
