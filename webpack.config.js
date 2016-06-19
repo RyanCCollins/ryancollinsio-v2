@@ -30,6 +30,10 @@ module.exports = {
       loaders: ['style','css','sass']
     },
     {
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
+    },
+    {
       test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
       loader: "url-loader?mimetype=application/font-woff"
     },

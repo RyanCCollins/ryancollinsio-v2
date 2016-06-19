@@ -59,7 +59,7 @@
     height: 40px;
     margin-top: -40px;
     margin-left: -20px;
-    background-color: #006ca3;
+    background-color: rgba(0, 216, 255, .9);
     border-radius: 4px
 }
 
@@ -73,7 +73,7 @@
     font-weight: 700;
     line-height: 40px;
     font-size: 14px;
-    box-shadow: 3px 3px 10px #0d0c0d
+    box-shadow: 3px 3px 10px #0d0c0d;
 }
 .percent {
   color: white;

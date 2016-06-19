@@ -1,5 +1,6 @@
 import React from 'react';
 import './CircleChart.scss';
+import { Motion, spring } from 'react-motion';
 
 class CircleChart extends React.Component {
   constructor(props) {
@@ -17,9 +18,7 @@ class CircleChart extends React.Component {
   getItemHeight() {
     const height = 108 * (this.props.item.percent / 100);
     this.setState({
-      circleStyle: {
-        height: height
-      }
+      height
     });
   }
   render() {
@@ -29,11 +28,18 @@ class CircleChart extends React.Component {
     return (
       <div className="item last" id={`language-item-${item.id}`}>
         <div className="circle">
-          <span
-            className="item-progress"
-            style={this.state.circleStyle}
-            data-percent={item.percent}
-          ></span>
+          <Motion
+            default={{height: 0}}
+            style={{ height: spring(this.state.height) }}
+          >
+            {interpolatingStyle =>
+              <span
+                className="item-progress"
+                style={interpolatingStyle}
+                data-percent={item.percent}
+              ></span>
+            }
+          </Motion>
         </div>
         <span className="percent">{item.percent}%</span>
         <h4 className="text-center uppercase">{item.name}</h4>

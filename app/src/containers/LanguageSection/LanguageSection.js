@@ -6,13 +6,13 @@ const LanguageSection = ({
   languages,
   languageSectionHeader
 }) => (
-  <div className="languages-section">
+  <section className="languages-section">
     <h1 className="section-header">{ languageSectionHeader }</h1>
     <Divider />
     <Languages
       languages={languages}
     />
-  </div>
+  </section>
 );
 
 export default LanguageSection;

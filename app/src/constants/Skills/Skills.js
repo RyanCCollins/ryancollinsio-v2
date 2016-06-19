@@ -31,9 +31,11 @@ const Skills = [
   }
 ];
 
-const SkillSectionHeader = "Skills";
+const SkillSectionHeader = "Areas of Focus";
+const SkillSectionSubheader = "By Skill Level";
 
 export {
   Skills,
-  SkillSectionHeader
+  SkillSectionHeader,
+  SkillSectionSubheader
 };

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Column } from 'react-foundation';
+import { Column } from 'react-foundation'
 import { Motion, spring } from 'react-motion';
 
 class SkillItemBarChart extends React.Component {
   constructor(props) {
     super(props);
     this.setWidthStyle = this.setWidthStyle.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
       leftStyle: {
         left: 0
@@ -16,20 +17,19 @@ class SkillItemBarChart extends React.Component {
     };
   }
   componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+  handleScroll(event) {
     this.setWidthStyle();
   }
   setWidthStyle() {
     // const barRef = this.refs.barDiv.getDOMNode();
-    const barRect = {width: 555};
+    const barRect = { width: 555 };
     const left = barRect.width * (this.props.skill.percent / 100);
     const width = left + 40;
     this.setState({
-      widthStyle: {
-        width: width
-      },
-      leftStyle: {
-        left: left
-      }
+      width,
+      left
     });
   }
   render() {
@@ -45,14 +45,26 @@ class SkillItemBarChart extends React.Component {
               className="bar"
               ref="barDiv"
             >
-              <span
-                className="percent" style={this.state.leftStyle}>{skill.percent}%</span>
-              <span
-                ref="itemProgress"
-                className="item-progress"
-                data-percent={skill.percent}
-                style={this.state.widthStyle}
-              ></span>
+              <Motion defaultStyle={{ left: 0 }} style={{ left: spring(this.state.left) }}>
+                {interpolatingStyle =>
+                  <span
+                    className="percent"
+                    style={interpolatingStyle}
+                  >
+                    {skill.percent}%
+                  </span>
+                }
+              </Motion>
+              <Motion defaultStyle={{ width: 0 }} style={{ width: spring(this.state.width) }}>
+                {interpolatingStyle =>
+                  <span
+                    ref="itemProgress"
+                    className="item-progress"
+                    data-percent={skill.percent}
+                    style={interpolatingStyle}
+                  ></span>
+                }
+              </Motion>
             </div>
           </div>
         </div>

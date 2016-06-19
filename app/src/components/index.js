@@ -6,6 +6,7 @@ import Divider from './Divider/Divider';
 import ContactForm from './ContactForm/ContactForm';
 import Skills from './Skills/Skills';
 import Languages from './Languages/Languages';
+import LoadingIndicator from './LoadingIndicator/LoadingIndicator';
 
 export {
   Intro,
@@ -15,5 +16,6 @@ export {
   Divider,
   ContactForm,
   Skills,
-  Languages
+  Languages,
+  LoadingIndicator
 };

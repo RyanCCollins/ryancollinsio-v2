@@ -101,3 +101,29 @@ span.divider {
   text-transform: uppercase;
   font-family: 'Lato';
 }
+
+.section .section-wrapper>.section-content {
+  padding: 80px 0
+}
+
+@media (min-width: 768px) {
+  .section .section-wrapper>.section-content {
+    padding:100px 0
+  }
+}
+
+.section .section-title {
+  margin-bottom: 20px;
+  font-size: 35px;
+  letter-spacing: 1px
+}
+
+.section .section-subtitle {
+  color: #a1a1a1;
+  font-size: 18px;
+  font-style: italic
+}
+
+.headroom-wrapper, .top-bar, .top-bar-title {
+  z-index: 1000;
+}

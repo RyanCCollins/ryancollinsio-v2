@@ -1,6 +1,6 @@
 .about-section {
-  min-height: 100vh;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .about-section__header {
@@ -13,7 +13,7 @@
 }
 
 .about-section__paragraph {
-  font-family: 'Lato'; 
+  font-family: 'Lato';
 }
 
 .title {
@@ -27,4 +27,8 @@
   letter-spacing: 2px;
   font-family: 'Raleway';
   font-size: 18px;
+}
+
+.resume-button-row {
+  margin: 50px;
 }
