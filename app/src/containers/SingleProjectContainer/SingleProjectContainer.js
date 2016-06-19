@@ -9,26 +9,25 @@ import './SingleProjectContainer.scss';
 class SingleProjectContainer extends React.Component {
   constructor(props) {
     super(props);
+    const projects = props.projects;
     this.state = {
-      project: null
+      projects,
+      selected: null
     };
   }
   componentDidMount() {
     const projectId = this.props.location.query;
-    const project = this.props.projects.filter((item) => {
+    const project = this.state.projects.filter((item) => {
       return item.id === projectId;
     });
-    this.state.project = project;
+    this.state.selected = project;
   }
   render() {
-    const {
-      projects
-    } = this.props;
     return (
       <div className="single-project-container">
-        <h1 className="section-header">{this.state.project ? this.state.project.title : ''}</h1>
+        <h1 className="section-header">{this.state.selected ? this.state.selected.title : ''}</h1>
         <Divider />
-        {this.state.project === null ?
+        {this.state.selected === null ?
           <LoadingIndicator />
           :
           <SingleProject />
@@ -38,7 +37,7 @@ class SingleProjectContainer extends React.Component {
   }
 }
 
-SingleProjectContainer.PropTypes = {
+SingleProjectContainer.propTypes = {
   router: React.PropTypes.func
 };
 

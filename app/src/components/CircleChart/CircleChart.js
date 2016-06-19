@@ -14,6 +14,9 @@ class CircleChart extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
   setItemHeight() {
     const height = 108 * (this.props.item.percent / 100);
     this.setState({

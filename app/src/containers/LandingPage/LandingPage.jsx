@@ -18,14 +18,16 @@ const LandingPage = props => (
     <AboutSection {...props}
       paragraphs={Constants.AboutSectionParagraphs}
     />
-    <SkillSection {...props}
-      skills={Constants.Skills}
-      skillSectionHeader={Constants.SkillSectionHeader}
-    />
-    <LanguageSection
-      languages={Constants.Languages}
-      languageSectionHeader={Constants.LanguageSectionHeader}
-    />
+    <section className="skills">
+      <SkillSection {...props}
+        skills={Constants.Skills}
+        skillSectionHeader={Constants.SkillSectionHeader}
+      />
+      <LanguageSection
+        languages={Constants.Languages}
+        languageSectionHeader={Constants.LanguageSectionHeader}
+      />
+    </section>
     <TechnologySection {...props}
       technologies={Constants.Technologies}
       technologyHeader={Constants.technologyHeader}

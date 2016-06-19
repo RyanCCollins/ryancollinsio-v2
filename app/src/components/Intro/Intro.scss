@@ -17,7 +17,8 @@
 }
 
 .intro {
-  background: linear-gradient(160deg, #34b6d9, #3464d9);
+  // background: linear-gradient(160deg, #34b6d9, #3464d9);
+  background-image: url("../../../images/tswirls.png"), linear-gradient(160deg, #34b6d9, #3464d9);
   height: 100vh;
   transition: background linear .5s;
   width: 100%;
