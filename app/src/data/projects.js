@@ -2,11 +2,41 @@ const projects = [
   {
     id: 1,
     title: 'Hacksmiths App',
-    type: "iOS Mobile App",
+    type: 'iOS Mobile App',
     description: 'Followed best practices to design and develop the Hacksmiths.io app, ' +
     'a professional iOS mobile app built for the members of the Hacksmiths.  ' +
     'Implemented best practices for design and user experience, creating a functional and aesthetically ' +
-    'appealing application.',
+    'appealing application. \r\n' +
+    'Founded by Ryan Collins and Sean Craig, the Hacksmiths are a group of software professionals working ' +
+    'collaboratively in a virtual environment in an effort to solve real world problems through the ' +
+    'development of software. We build tools designed to help non-profit organizations streamline their ' +
+    'philanthropic efforts, utilizing industry best practices and advanced software development methodologies.',
+    milestones: [
+      "Designed a polished User Interface using Apple's UIKit libraries, Cocoapods and custom views.",
+      "Implemented a scalable Node.js API with a persistent MongoDB store to synch server data in real-time to the app.",
+      "Integrated push notifications both app and server-side",
+      "Implemented a complex Core Data model to persist data on the device, providing a seamless offline experience.",
+      "Utilized Promises via the PromiseKit library to provide an elegant Asynchronous experience.",
+      "Implemented the Model View Presenter and Model View Controller patterns.",
+      "Utilized custom Protocols to create modular components.",
+      "Developed an extremely elegant and complex networking client, creating a fast and reliable service layer for the application."
+    ],
+    technicalReview: {
+      snippet: "This is one of the best apps I've reviewed. Your coding style is amazing and reading the code was a breeze. Also the design was especially professional.",
+      url: 'https://review.udacity.com/#!/reviews/159729',
+      author: 'Spiros Raptis'
+    },
+    technicalInformation: {
+      description: "Built in Swift 2.2 using a multitude of Apple Libraries and Cocoapods.  Utilizes the Model View Presenter and Model View Controller paradigms.  Implements Promises to create a seamless Asynchronous experience.",
+      tags: [
+        'Swift',
+        'CoreData',
+        'Cocoapods',
+        'MVP',
+        'MVC',
+        'PromiseKit'
+      ]
+    },
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-app',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0408%202_iphone6plus_gold_side2.png',
     caption: "iOS Mobile Application built for the Hacksmiths."
@@ -20,6 +50,12 @@ const projects = [
     ' Integrated a responsive and functional admin dashboard built to interface with the sites data and services.  '+
     'Implemented a professionally designed Front End web interface built for the visitors and users of the site, ' +
     'utilizing the Foundation web framework.',
+    technicalInformation: {
+      description: "Built with NodeJS, Express, MongoDB, Foundation and KeystoneJS, utilizing the MVC architecture and the Foundation responsive web framework.  Utilized Jade to render views server side and implemented several React JS components, utilizing ES6 and Webpack.  Utilized the Twitter and Github APIs as OAuth providers for the app.",
+      tags: [
+
+      ]
+    },
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-website',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.48%20PM_imac2013_left.png',
     caption: "Web API and Front End built for the Hacksmiths project."

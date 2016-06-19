@@ -37,6 +37,7 @@ body {
   color: $light-grey;
   font-size: 18px;
   font-style: italic;
+  text-align: center;
 }
 
 .dark-grey {
@@ -126,4 +127,10 @@ span.divider {
 
 .headroom-wrapper, .top-bar, .top-bar-title {
   z-index: 1000;
+}
+
+.paragraph-text {
+  font-family: 'Open Sans';
+  font-size: 1.3rem;
+  padding: 10px;
 }

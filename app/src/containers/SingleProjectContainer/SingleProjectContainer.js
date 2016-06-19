@@ -12,34 +12,32 @@ class SingleProjectContainer extends React.Component {
     const projects = props.projects;
     this.state = {
       projects,
-      selected: null
+      selectedProject: null
     };
   }
   componentDidMount() {
-    const projectId = this.props.location.query;
-    console.log(projectId);
-    const project = this.state.projects.filter((item) => {
-      return item.id === projectId;
+    const projectId = this.props.params.projectId;
+    let filteredProjects = this.state.projects.filter((item) => {
+      return item.id == projectId;
     });
-    this.state.selected = project;
+    this.setState({
+      selectedProject: filteredProjects[0]
+    });
   }
   render() {
     return (
       <div className="single-project-container">
-        <h1 className="section-header">{this.state.selected ? this.state.selected.title : ''}</h1>
-        <Divider />
-        {this.state.selected === null ?
+        {this.state.selectedProject === null ?
           <LoadingIndicator />
           :
-          <SingleProject />
+          <SingleProject
+            {...this.props}
+            project={this.state.selectedProject}
+          />
         }
       </div>
     );
   }
 }
-
-SingleProjectContainer.propTypes = {
-  router: React.PropTypes.func
-};
 
 export default SingleProjectContainer;
