@@ -1,0 +1,29 @@
+.loading-indicator-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#overlay {
+  background:rgba(0,0,0,0.6);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  filter:blur(4px);
+  -o-filter:blur(4px);
+  -ms-filter:blur(4px);
+  -moz-filter:blur(4px);
+  -webkit-filter:blur(4px);
+}
+
+.cube {
+  background: rgba(0, 216, 255, 1.0) !important;
+}

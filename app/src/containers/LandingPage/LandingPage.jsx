@@ -6,29 +6,33 @@ import SkillSection from '../../containers/SkillSection/SkillSection';
 import { LanguageSection } from '../../containers';
 
 import * as Constants from '../../constants';
-
 import './LandingPage.scss';
 
 const LandingPage = props => (
   <div className="landing-page">
-    <Intro {...props}
+    <Intro
+      {...props}
       headline={Constants.IntroHeadline}
       subHeadline={Constants.IntroSubHeadline}
     />
-    <AboutSection {...props}
+    <AboutSection
+      {...props}
       paragraphs={Constants.AboutSectionParagraphs}
     />
     <section className="skills">
-      <SkillSection {...props}
+      <SkillSection
+        {...props}
         skills={Constants.Skills}
         skillSectionHeader={Constants.SkillSectionHeader}
       />
       <LanguageSection
+        {...props}
         languages={Constants.Languages}
         languageSectionHeader={Constants.LanguageSectionHeader}
       />
     </section>
-    <TechnologySection {...props}
+    <TechnologySection
+      {...props}
       technologies={Constants.Technologies}
       technologyHeader={Constants.technologyHeader}
     />

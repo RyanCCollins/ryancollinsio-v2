@@ -17,6 +17,7 @@ class SingleProjectContainer extends React.Component {
   }
   componentDidMount() {
     const projectId = this.props.location.query;
+    console.log(projectId);
     const project = this.state.projects.filter((item) => {
       return item.id === projectId;
     });
