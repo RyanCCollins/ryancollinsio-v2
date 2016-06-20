@@ -1,6 +1,7 @@
 import React from 'react';
-import { Column } from 'react-foundation'
+import { Column } from 'react-foundation';
 import { Motion, spring } from 'react-motion';
+import elementInViewport from '../../../lib/isVisible';
 
 class SkillItemBarChart extends React.Component {
   constructor(props) {
@@ -8,12 +9,9 @@ class SkillItemBarChart extends React.Component {
     this.setWidthStyle = this.setWidthStyle.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.state = {
-      leftStyle: {
-        left: 0
-      },
-      widthStyle: {
-        width: 0
-      }
+      left: 0,
+      width: 0,
+      needsAnimation: true
     };
   }
   componentDidMount() {
@@ -23,7 +21,15 @@ class SkillItemBarChart extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
   handleScroll(event) {
-    this.setWidthStyle();
+    const element = document.getElementById('bar-chart-section');
+    if (elementInViewport(element)) {
+      if (this.state.needsAnimation === true) {
+        this.setWidthStyle();
+        this.setState({
+          needsAnimation: false
+        });
+      }
+    }
   }
   setWidthStyle() {
     // const barRef = this.refs.barDiv.getDOMNode();
@@ -40,7 +46,7 @@ class SkillItemBarChart extends React.Component {
       skill
     } = this.props;
     return (
-      <Column large={6} small={12} isColumn>
+      <Column large={6} small={12} isColumn id="bar-chart-section">
         <div className="bar-chart">
           <div className="item">
             <h4 className="uppercase">{skill.name}</h4>

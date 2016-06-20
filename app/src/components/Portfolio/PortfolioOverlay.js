@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Button } from 'react-foundation';
+import { GoSearch } from 'react-icons/lib/go';
 
 const PortfolioOverlay = ({
   project
@@ -9,16 +11,14 @@ const PortfolioOverlay = ({
     <p className="project-description">
       {project.caption}
     </p>
-    <a
-      href={project.repositoryURL}
-      className="button primary small portfolio-item__button"
-    >View on Github
-    </a>
     <Link
       to={`/projects/${project.id}`}
-      className="button primary small portfolio-item__button"
+      className="portfolio-item__button"
     >
-      View Details
+      <Button size={'large'} color={'secondary'}>
+        <GoSearch className="icon-medium" />
+        {' View Details'}
+      </Button>
     </Link>
   </div>
 );

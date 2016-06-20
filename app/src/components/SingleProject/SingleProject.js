@@ -160,7 +160,7 @@ const SingleProject = ({
     <h4 className="section-sub-title">{project.type}</h4>
     <Divider />
     <Row>
-      <Column small={12} large={8} isColumn centerOnSmall>
+      <Column className="image-wrapper" small={12} large={8} isColumn centerOnSmall>
         <Thumbnail
           src={project.featureImage}
         />

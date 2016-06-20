@@ -1,0 +1,19 @@
+.crown-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.crown-logo__image {
+  max-height: 40px;
+  max-width: 180px;
+}
+
+.crown-logo__title {
+  font-size: 0.9rem;
+  font-family: 'Audiowide';
+  font-weight: 100;
+  text-transform: uppercase;
+}

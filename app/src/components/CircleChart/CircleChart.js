@@ -1,6 +1,7 @@
 import React from 'react';
 import './CircleChart.scss';
 import { StaggeredMotion, spring } from 'react-motion';
+import elementInViewport from '../../../lib/isVisible';
 
 class CircleChart extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class CircleChart extends React.Component {
     this.setItemHeight = this.setItemHeight.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.state = {
-      height: 0
+      height: 0,
+      needsAnimation: true
     };
   }
   componentDidMount() {
@@ -24,14 +26,20 @@ class CircleChart extends React.Component {
     });
   }
   handleScroll(event) {
-    this.setItemHeight();
+    const elem = this.refs.item;
+    if (elementInViewport(elem)) {
+      if (this.state.needsAnimation) {
+        this.setItemHeight();
+        this.setState({ needsAnimation: false });
+      }
+    }
   }
   render() {
     const {
       item
     } = this.props;
     return (
-      <div className="item last" id={`language-item-${item.id}`}>
+      <div className="item last" id={`language-item-${item.id}`} ref="item">
         <StaggeredMotion
           defaultStyles={[{ height: 0 }]}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import './Navbar.scss';
-import CrownLogoImage from '../../../images/crown.png';
-
+import CrownLogo from '../CrownLogo/CrownLogo';
 import {
   Row,
   Column,
@@ -20,17 +19,6 @@ const Styles = {
     display: 'none'
   }
 };
-
-const CrownLogo = () => (
-  <div className="crown-logo">
-    <img
-      className="crown-logo__image"
-      src={CrownLogoImage}
-      alt="Crown Logo"
-    />
-  <span><h1 className="crown-logo__title">ryancollins.io</h1></span>
-  </div>
-);
 
 class Navbar extends React.Component {
   constructor(props) {

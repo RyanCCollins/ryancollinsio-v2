@@ -52,13 +52,13 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Hacksmiths Website',
+    title: 'Hacksmiths Website, API, Admin Dashboard',
     type: "Web Application",
     description: 'Followed best practices to build a production ready, distributed backend web API containing ' +
-    'data-driven micro-services built to drive the Hacksmiths philanthropic open source software projects.' +
-    ' Integrated a responsive and functional admin dashboard built to interface with the sites data and services.  '+
-    'Implemented a professionally designed Front End web interface built for the visitors and users of the site, ' +
-    'utilizing the Foundation web framework.',
+      'data-driven micro-services built to drive the Hacksmiths philanthropic open source software projects.' +
+      ' Integrated a responsive and functional admin dashboard built to interface with the sites data and services.  '+
+      'Implemented a professionally designed Front End web interface built for the visitors and users of the site, ' +
+      'utilizing the Foundation web framework.',
     technicalInformation: {
       description: "Built with NodeJS, Express, MongoDB, Foundation and KeystoneJS, utilizing the MVC architecture and the Foundation responsive web framework.  Utilized Jade to render views server side and implemented several React JS components, utilizing ES6 and Webpack.  Utilized the Twitter and Github APIs as OAuth providers for the app.",
       tags: [
@@ -81,7 +81,6 @@ const projects = [
       'Implemented server-rendered Jade views',
       'Architected a data system utilizing MongoDB, serving data to multiple clients via a REST API'
     ],
-    technicalReview: {},
     designPatterns: {
       description: 'Implements the Model View Controller design pattern, 12 Factor Micro-Services, build automation.',
       tags: [
@@ -94,8 +93,12 @@ const projects = [
     appStoreUrl: '',
     projectUrl: 'http://hacksmiths.io',
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-website',
-    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.48%20PM_imac2013_left.png',
-    caption: "Web API and Front End built for the Hacksmiths members."
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.37%20PM_imac2013_front.png',
+    images: [
+      'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.41.03%20PM_imac2013_right.png',
+      'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.48%20PM_imac2013_left.png'
+    ],
+    caption: 'Web API and Front End built for the Hacksmiths members.'
   },
   {
     id: 3,
@@ -114,7 +117,6 @@ const projects = [
       'Lead a team of 18 developers to build the project from the ground up',
       'Provided support and guidance to the team, coordinating the creation of a multi-client application and API.',
     ],
-    technicalReview: {},
     technicalInformation: {
       description: 'Built in Swift using XCode, the application was built using best practices and design patterns.',
       tags: [
@@ -143,14 +145,13 @@ const projects = [
     type: 'Front End Web',
     description: 'Coordinated collaborative efforts and contributed to the development of a React JS web application for the Food Drivr project.',
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr-frontend',
-    featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/food-drivr-screenshot.png',
+    featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/wastenotmock.jpg',
     caption: 'React JS Application built to streamline food donations via the Food Drivr platform.',
     milestones: [
       'Implemented cutting-edge Javascript, including React, ES6 and Webpack.',
       'Wrote a client-side API layer utilizing a Promise based approach, providing a seamless asynchronous experience.',
       'Implemented Material-UI and custom React components, providing a reactive experience.'
     ],
-    technicalReview: {},
     technicalInformation: {
       description: "Built with React JS the application is a Single Page App that compiles via Webpack Hot Module Reloading.  It is truly as cutting edge as it gets, implementing the best parts of ES6 through the use of Babel.  It utilizes a number of NPM modules, Post CSS and boasts custom design by the Hacksmiths resident designer, Sean Craig.",
       tags: [
@@ -177,8 +178,12 @@ const projects = [
     id: 5,
     title: 'Food Drivr - Rails API',
     type: 'Back End Web',
-    description: '',
+    description: 'Coordinated collaborative efforts and lead the ' +
+      'development team of the Food Drivr food donation web and mobile applications. \r\n' +
+      'The Food Drivr website and mobile app serves to make it dead simple to donate edible ' +
+      'food to the hungry. Open the app, press a button and a driver will come pick it up, bringing it to the less fortunate',
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr',
+    projectUrl: 'https://fooddrivr.com',
     featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/donate.png',
     caption: 'Rails JSON API and Back End built to drive the Food Drivr project.',
     milestones: [
@@ -187,7 +192,6 @@ const projects = [
       'Implemented a PostgreSQL database, providing an API to persist data for the project.',
       'Wrote tests utilizing Rspec to eliminate regressions.'
     ],
-    technicalReview: {},
     technicalInformation: {
       description: "Built with Ruby on Rails, utilizing Docker to automate the build, a PostgreSQL database and RSpec to eliminate regressions.",
       tags: [
@@ -211,7 +215,7 @@ const projects = [
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including CoreData, UIKit, CoreNetworking, the Flickr API, and several Cocoa Pod based libraries.',
     repositoryURL: 'https://github.com/RyanCCollins/Virtual-Tourist',
-    projectUrl: 'https://github.com/RyanCCollins/Virtual-Tourist',
+    projectUrl: '',
     featureImage: 'https://s3.amazonaws.com/accredible_api_evidence_items/previews/91872/large/1457463514150?1457463261',
     caption: 'Udacity iOS Nanodegree Project 4',
     milestones: [
@@ -243,6 +247,89 @@ const projects = [
         'Protocol Oriented',
         'Delegate Pattern',
         'Swift Style Guide'
+      ]
+    }
+  },
+  {
+    id: 7,
+    title: 'On the Map',
+    type: 'iOS Mobile',
+    description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including UIKit, CoreNetworking, the Parse API, and several Cocoa Pod based libraries.',
+    repositoryURL: 'https://github.com/RyanCCollins/On-the-Map',
+    projectUrl: '',
+    featureImage: 'https://s3.amazonaws.com/accredible_api_evidence_items/previews/83055/large/1458350177272?1458350105',
+    caption: 'Udacity iOS Nanodegree Project 3',
+    milestones: [
+      'Implemented a custom built networking API using the NSURLSession and other Apple classes',
+      'Used Object Oriented Swift and functional programming techniques.',
+      'Utilized the Parse API to download network data from a backend API.',
+      'Built custom map views to show location data on the map.',
+    ],
+    technicalReview: {
+      snippet: 'Great job with your code. It is really clear, logical, and easy to follow. It is a very thoughtful and complete design. The graphics are very attractive.',
+      url: 'https://review.udacity.com/#!/reviews/74894',
+      author: 'Steven OToole'
+    },
+    technicalInformation: {
+      description: "Built with Swift 2.0, the project implements a number of Apple and Open Source modules and libraries.  It implements the Parse API and a custom built API service layer.",
+      tags: [
+        'Swift',
+        'Cocoapods',
+        'UIKit',
+        'CoreNetworking',
+        'Parse API'
+      ]
+    },
+    designPatterns: {
+      description: 'Utilizes the Model View Controller pattern and the Ray Wenderleich Swift Style Guide, along with the Protocol and Delegate Patterns.',
+      tags: [
+        'Model View Controller',
+        'Protocol Oriented',
+        'Delegate Pattern',
+        'Swift Style Guide'
+      ]
+    }
+  },
+  {
+    id: 8,
+    title: 'Tech Rapport',
+    type: 'Front End Web',
+    description: 'Developed a responsive website for the Tech Rapport Consulting Agency using best practices.  ' +
+      'The site is built with Bootstrap, HTML5, CSS3, Javascript, jQuery, the Liquid templating language, Ruby Gems  and more.  ' +
+      'It uses SASS as a preprocessor and features parallax and other animation effects to showcase my design and programming skills.  ' +
+      'The site was designed based on mockups from a designer.  \r\n' +
+      'The site is generated using Jekyll, which converts Markdown files into HTML by passing them through ' +
+      'templates that I created using Liquid, HTML, SASS, etc.   The site is served via GitHub pages using a Grunt build ' +
+      'that minifies and optimizes the website for production.',
+    repositoryURL: 'https://github.com/RyanCCollins/techrapport.github.io',
+    projectUrl: 'http://techrapport.com',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/techrapport.github.io/master/mockups.jpg',
+    caption: 'Front End Website built for the Tech Rapport Consulting Agency',
+    milestones: [
+      'Implemented page speed optimizations utilizing Grunt as a build tool, receiving a Page Rank score of 99.',
+      'Built interactive components utilizing jQuery and vanilla Javascript',
+      'Wrote complex templates, breaking down the CSS and HTML design into reusable components for the site.',
+      'Implemented organization techniques for the sites components and data.'
+    ],
+    technicalInformation: {
+      description: "Built from the ground up using best practices, Grunt Automation, SASS, the Liquid templating language, et. al.  The data for the site is hosted in Markdown on github, which is converted into HTML via Jekyll.  The site is designed using Bootstrap and custom elements.  It showcases interactive components including bar and circle charts, tasteful animations and others.",
+      tags: [
+        'Grunt',
+        'SASS',
+        'Animations',
+        'Jekyll',
+        'Bootstrap',
+        'jQuery',
+        'Ruby Gems'
+      ]
+    },
+    designPatterns: {
+      description: 'Utilizes automation techniques, image optimization and code minification to improve performance, Markdown generated static HTML, and best practices for code reuse with JavaScript / jQuery.',
+      tags: [
+        'Automation',
+        'Image Optimization',
+        'Minification',
+        'Best Practices'
       ]
     }
   }
