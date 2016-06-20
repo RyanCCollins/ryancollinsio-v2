@@ -1,7 +1,7 @@
 {
-  "name": "flexbox-layouts",
+  "name": "ryancollins.io",
   "version": "1.0.0",
-  "description": "Flexbox layouts done right in React, Redux Webpack.",
+  "description": "Professional Portfolio for Ryan Collins.",
   "main": "index.js",
   "babel": {
     "presets": [
