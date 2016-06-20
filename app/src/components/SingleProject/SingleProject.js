@@ -9,7 +9,12 @@ import {
 } from 'react-foundation';
 import AppStoreButton from '../AppStoreButton/AppStoreButton';
 import Divider from '../Divider/Divider';
-import { GoMarkGithub, GoLink } from 'react-icons/lib/go';
+import {
+  GoMarkGithub,
+  GoLink,
+  GoMilestone,
+  GoQuote
+} from 'react-icons/lib/go';
 
 const ProjectLinks = ({
   project
@@ -17,7 +22,7 @@ const ProjectLinks = ({
   <Column isColumn centerOnSmall small={12} large={8} className="links-container">
     <div className="links-button-container">
       <div className="site-links">
-        {project.projectUrl.length ?
+        {project.projectUrl && project.projectUrl.length ?
           <a href={project.projectUrl} className="button__link">
             <Button className="large button__link">
               <GoLink />
@@ -27,7 +32,7 @@ const ProjectLinks = ({
         :
           <div></div>
         }
-        {project.repositoryURL.length ?
+        {project.repositoryURL && project.repositoryURL.length ?
           <a href={project.repositoryURL}>
             <Button className="large button__github">
               <GoMarkGithub />
@@ -38,7 +43,7 @@ const ProjectLinks = ({
           <div></div>
         }
       </div>
-      {project.appStoreUrl.length > 0 ?
+      {project.appStoreUrl && project.appStoreUrl.length > 0 ?
         <AppStoreButton
           url={project.appStoreUrl}
         />
@@ -107,6 +112,11 @@ const ProjectReview = ({
           :
             'Expert Code Reviewer'
           }
+          <span className="quote-mark">
+            <GoQuote
+              className="quotation-icon"
+            />
+          </span>
         </cite>
       </blockquote>
     </div>
@@ -122,7 +132,11 @@ const ProjectMilestones = ({
   milestones
 }) => (
   <Column className="milestones-section" small={12} large={8} isColumn centerOnSmall>
-    <h1 className="section-header">Milestones</h1>
+    <h1 className="section-header">
+      <GoMilestone />
+        {' Milestones '}
+      <GoMilestone />
+    </h1>
     <Divider />
     <div className="project-milestones callout">
       <ul>
