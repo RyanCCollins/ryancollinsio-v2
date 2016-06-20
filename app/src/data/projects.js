@@ -102,6 +102,48 @@ const projects = [
   },
   {
     id: 3,
+    title: 'RyanCollins.io',
+    type: 'Front End Web',
+    description: 'My masterpiece.  A culmination of all of my advanced web knowledge, RyanCollins.io is a professionally designed and developed single page web application.  Built using cutting edge technologies and advanced techniques and design patterns, including React, Redux, ES6, Webpack.  The site communicates with a custom built API built on Node JS.  The sites data is made available through the Node API and is stored in MongoDb.  The backend boasts a ReactJS built admin dashboard, for updating all of the dynamic data on the site.',
+    repositoryURL: 'https://github.com/RyanCCollins/ryancollins.io',
+    projectUrl: 'http://ryancollins.io',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-mockup.jpg',
+    caption: 'Front End single page web application built for Ryan Collins using cutting edge web technologies.',
+    milestones: [
+      'Implemented cutting edge Javascript including Webpack and React',
+      'Utilized Redux to provide predictable state to the application',
+      'Built several dozen custom components, focusing on reusability and best practices',
+      'Implemented the best features of ES6 using Babel to transpile to ES5.',
+      'Created stateless functional components using JSX best practices and style.',
+      'Utilized the AirBnb style guide to improve code readability and eliminate errors.',
+      'Implemented Enzyme testing to test React Components.'
+    ],
+    technicalInformation: {
+      description: "Built from the ground up using best practices with React, Redux, Webpack, etc.  The site bootstraps via ExpressJS to webpack and compiles ES6 and JSX into a single page application.  React router provides all routing except for when the admin dashboard is accessed.  Utilizes Webpack Sass loader to compile into globally usable CSS modules using CSS classname best practices.",
+      tags: [
+        'JSX',
+        'React',
+        'React Router',
+        'SASS / CSS Modules',
+        'Animations',
+        'Foundation',
+        'Keystone',
+        'Webpack'
+      ]
+    },
+    designPatterns: {
+      description: 'Utilizes the Flux architecture and Redux to provide unidirectional data flow and predictable and immutable application state.  Implements the JSX and ES6 AirBnb style guides.',
+      tags: [
+        'Redux',
+        'Flux',
+        'Immutable',
+        'Best Practices',
+        'AirBnb Style Guides'
+      ]
+    }
+  },
+  {
+    id: 4,
     title: 'Food Drivr - iOS App',
     type: 'iOS Mobile Application',
     description: 'Coordinated collaborative efforts to create open source software with 18 ' +
@@ -140,7 +182,7 @@ const projects = [
     caption: 'iOS Mobile application, utilizing an Uber model to combat food waste.'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Food Drivr - React Web App',
     type: 'Front End Web',
     description: 'Coordinated collaborative efforts and contributed to the development of a React JS web application for the Food Drivr project.',
@@ -175,7 +217,7 @@ const projects = [
     }
   },
   {
-    id: 5,
+    id: 6,
     title: 'Food Drivr - Rails API',
     type: 'Back End Web',
     description: 'Coordinated collaborative efforts and lead the ' +
@@ -210,7 +252,7 @@ const projects = [
     }
   },
   {
-    id: 6,
+    id: 7,
     title: 'Digital Tourist',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including CoreData, UIKit, CoreNetworking, the Flickr API, and several Cocoa Pod based libraries.',
@@ -251,7 +293,7 @@ const projects = [
     }
   },
   {
-    id: 7,
+    id: 8,
     title: 'On the Map',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including UIKit, CoreNetworking, the Parse API, and several Cocoa Pod based libraries.',
@@ -291,7 +333,7 @@ const projects = [
     }
   },
   {
-    id: 8,
+    id: 9,
     title: 'Tech Rapport',
     type: 'Front End Web',
     description: 'Developed a responsive website for the Tech Rapport Consulting Agency using best practices.  ' +
