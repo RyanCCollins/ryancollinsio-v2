@@ -82,6 +82,7 @@
     "style-loader": "^0.13.0",
     "svg-react-loader": "^0.3.5",
     "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
