@@ -32,29 +32,13 @@ slideDown
 }
 
 @keyframes fadeSlideInUp {
-	0% {
-		transform: translateY(100%);
+	from {
 		opacity: 0.0;
+		transform: translateY(20%);
 	}
-	20% {
-		transform: translateY(-8%);
-		opacity: 0.2;
-	}
-	40% {
-		transform: translateY(-6%);
-		opacity: 0.4;
-	}
-	60% {
-		transform: translateY(-4%);
-		opacity: 0.6
-	}
-	80% {
-		transform: translateY(-2%);
-		opacity: 0.8
-	}
-	100% {
+	to {
+		opacity: 1.0;
 		transform: translateY(0%);
-		opacity: 1;
 	}
 }
 

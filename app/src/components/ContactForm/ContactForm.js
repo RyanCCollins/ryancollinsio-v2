@@ -1,26 +1,14 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import { Column, Row, Button } from 'react-foundation';
-import { FaCog, FaPaperPlane } from 'react-icons/lib/fa';
+import {
+  FaCog,
+  FaPaperPlane,
+  FaExclamationTriangle
+} from 'react-icons/lib/fa';
 import './ContactForm.scss';
-
-const validateForm = values => {
-  const errors = {};
-  const emailRe = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  if (!values.fullName) {
-    errors.firstName = "Please enter your first name."
-  }
-  if (!values.text) {
-    errors.text = "Please fill out the text field"
-  }
-  if (!values.email) {
-    errors.email = "Please enter an email address"
-  }
-  if (!emailRe.text(values.email)) {
-    errors.email = "Please enter a valid email address"
-  }
-};
+import contactValidation from './contactValidation';
+import { toastr } from 'react-redux-toastr';
 
 export const fields = [
   'fullName',
@@ -30,6 +18,13 @@ export const fields = [
 ];
 
 class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit() {
+    toastr.success('Success', 'Thanks for sending me a message!  I will get back to you as soon as possible.');
+  }
   render() {
     const {
       handleSubmit,
@@ -45,7 +40,13 @@ class ContactForm extends React.Component {
     return (
       <Row>
         <Column small={12} large={8} isColumn centerOnSmall>
-          <form onSubmit={handleSubmit(this.handleSubmit)} className="form-groups">
+          <form onSubmit={handleSubmit(this.handleSubmit)} className="form-groups" data-abide>
+            <div data-abide-error className="alert callout" style={{ display: 'none' }}>
+              <p>
+                <FaExclamationTriangle className="icon-medium" />
+                {' Please correct the form errors and try again.'}
+              </p>
+            </div>
             <div className="small-12 columns form-group">
               <label htmlFor="first-name">First Name</label>
               <input
@@ -55,7 +56,7 @@ class ContactForm extends React.Component {
                 className={fullName.error ? 'form-control error' : 'form-control'}
                 {...fullName}
               />
-              {fullName.touched && fullName.error && <small class="error">{fullName.error} </small>}
+              {fullName.touched && fullName.error && <small className="error">{fullName.error} </small>}
             </div>
             <div className="small-12 columns form-group">
               <label htmlFor="email">Email</label>
@@ -64,7 +65,7 @@ class ContactForm extends React.Component {
                 type="email"
                 placeholder="Email"
               />
-              {email.touched && email.error && <small class="error">{email.error} </small>}
+            {email.touched && email.error && <small className="error">{email.error} </small>}
             </div>
             <div className="small-12 columns form-group">
               <label htmlFor="category">
@@ -94,10 +95,10 @@ class ContactForm extends React.Component {
                     rows={5}
                   />
                 </div>
-                {text.touched && text.error && <small class="error">{text.error}</small>}
+                {text.touched && text.error && <small className="error">{text.error}</small>}
             </div>
             <div className="button-group">
-              <Button isExpanded size={'large'} className="block" disabled={submitting}>
+              <Button isExpanded size={'large'} disabled={submitting}>
                 {submitting ?
                   <FaCog className="fa-spin" />
                 :
@@ -125,5 +126,5 @@ ContactForm.propTypes = {
 export default reduxForm({
   form: 'contact',
   fields,
-  validateForm
+  validate: contactValidation
 })(ContactForm);

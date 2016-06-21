@@ -24,7 +24,6 @@ class Contact extends React.Component {
           <Column small={12} medium={8} isColumn centerOnSmall>
             <h1 className="section-header">Contact Me</h1>
             <ContactForm
-              handleSubmit={handleSubmit}
               onSubmit={handleSubmit}
             />
           </Column>

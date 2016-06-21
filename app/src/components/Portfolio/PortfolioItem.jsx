@@ -6,8 +6,8 @@ import elementInViewport from '../../../lib/isVisible';
 
 const alternatingAnimation = (id) => {
   let animationName = 'fadeSlideInUp';
-  if (id % 2 == 0) {
-    animationName = 'fadeSlideInUp';
+  if (id == 1) {
+    animationName = 'fadeIn';
   }
   return animationName;
 };
@@ -23,15 +23,19 @@ class PortfolioItem extends React.Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    /* Call the handle scroll right away if it's the first project*/
+    if (this.props.project.id == 1) {
+      this.handleScroll();
+    }
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
-  handleScroll(event) {
+  handleScroll() {
     const selector = `portfolio-item-${this.props.project.id}`;
     const element = document.getElementById(selector);
     if (elementInViewport(element)) {
-      if (this.state.needsAnimation === true && this.props.project.id > 1) {
+      if (this.state.needsAnimation === true) {
         this.setState({
           needsAnimation: false,
           isAnimating: true,
@@ -51,7 +55,7 @@ class PortfolioItem extends React.Component {
             className={this.state.isAnimating ?
               `image-wrapper overlay-fade-in ${this.state.animationName}`
             :
-              'image-wrapper overlay-fade-in fadeIn'
+              'image-wrapper overlay-fade-in'
             }>
             <Thumbnail
               src={project.featureImage}

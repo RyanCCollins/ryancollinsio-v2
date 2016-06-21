@@ -35,11 +35,11 @@ select[multiple],select[size] {
 }
 
 output {
-    display: block;
-    padding-top: 2rem;
-    font-size: 1.8rem;
-    line-height: 1.42857143;
-    color: #454545
+  display: block;
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.42857143;
+  color: #454545
 }
 
 .form-control {
@@ -53,14 +53,14 @@ output {
 }
 
 .form-groups {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden
 }
 
 .form-group {
-    margin: 0;
-    position: relative
+  margin: 0;
+  position: relative
 }
 
 .form-group+.form-group {
@@ -72,7 +72,7 @@ output {
 }
 
 .form-group.text {
-    padding: 2rem 2rem 1rem 2rem
+  padding: 2rem 2rem 1rem 2rem
 }
 
 .form-control {
@@ -151,4 +151,16 @@ button,input,optgroup,select,textarea {
   color: inherit;
   font: inherit;
   margin: 0
+}
+
+.error small.error {
+  display: block;
+  font-size: 0.66667rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 0.88889rem;
+  margin-top: -1px;
+  padding: 0.33333rem 0.5rem 0.5rem;
+  background: #f04124;
+  color: #FFFFFF;
 }
