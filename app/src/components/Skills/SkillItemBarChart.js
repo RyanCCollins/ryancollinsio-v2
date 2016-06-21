@@ -21,7 +21,7 @@ class SkillItemBarChart extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
   handleScroll(event) {
-    const element = document.getElementById('bar-chart-section');
+    const element = document.getElementById('item');
     if (elementInViewport(element)) {
       if (this.state.needsAnimation === true) {
         this.setWidthStyle();
@@ -46,9 +46,9 @@ class SkillItemBarChart extends React.Component {
       skill
     } = this.props;
     return (
-      <Column large={6} small={12} isColumn id="bar-chart-section">
+      <Column large={6} small={12} isColumn>
         <div className="bar-chart">
-          <div className="item">
+          <div className="item" id="item">
             <h4 className="uppercase">{skill.name}</h4>
             <div
               className="bar"

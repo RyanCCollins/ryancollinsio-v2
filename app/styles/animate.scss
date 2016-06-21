@@ -18,6 +18,79 @@ slideDown
 ==============================================
 */
 
+.fadeSlideInUp {
+	animation-name: fadeSlideInUp;
+	-webkit-animation-name: fadeSlideInUp;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;
+}
+
+@keyframes fadeSlideInUp {
+	0% {
+		transform: translateY(100%);
+		opacity: 0.0;
+	}
+	20% {
+		transform: translateY(-8%);
+		opacity: 0.2;
+	}
+	40% {
+		transform: translateY(-6%);
+		opacity: 0.4;
+	}
+	60% {
+		transform: translateY(-4%);
+		opacity: 0.6
+	}
+	80% {
+		transform: translateY(-2%);
+		opacity: 0.8
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+.slideUp{
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
 
 .slideDown{
 	animation-name: slideDown;

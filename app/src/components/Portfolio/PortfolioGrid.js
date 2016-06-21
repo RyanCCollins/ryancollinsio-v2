@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioItem from './PortfolioItem';
-import { Column, Row } from 'react-foundation';
+import { Column } from 'react-foundation';
 
 const PortfolioGrid = ({
   projects
@@ -10,6 +10,7 @@ const PortfolioGrid = ({
       {projects.map((project) =>
         <PortfolioItem
           project={project}
+          key={project.id}
         />
       )}
     </Column>

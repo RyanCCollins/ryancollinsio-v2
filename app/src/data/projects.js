@@ -226,7 +226,7 @@ const projects = [
       'food to the hungry. Open the app, press a button and a driver will come pick it up, bringing it to the less fortunate',
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr',
     projectUrl: 'https://fooddrivr.com',
-    featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/donate.png',
+    featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/food-drivr-donate-mock.jpg',
     caption: 'Rails JSON API and Back End built to drive the Food Drivr project.',
     milestones: [
       'Lead the development of a scalable REST API utilizing the Ruby on Rails web framework.',

@@ -1,0 +1,32 @@
+@import "../../../../node_modules/animatewithsass/animate.scss";
+
+.technology-grid-item__caption {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  line-height: 1.37;
+  font-family: 'Raleway';
+  text-align: center;
+}
+
+.technology-grid-item {
+
+}
+
+.isFading {
+  @include fadeInUp(
+    $duration: 2s
+  );
+}
+
+.technology-grid-item__image {
+  min-height: 100px;
+  min-width: 100px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+@for $i from 1 through 9 {
+  .technology-grid-item:nth-child($i) {
+    -webkit-animation-delay: #{$i}s;
+  }
+}
