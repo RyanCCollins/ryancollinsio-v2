@@ -16,50 +16,40 @@ import Headroom from 'react-headroom';
 
 const Styles = {
   hidden: {
+    zIndex: 20,
     display: 'none'
+  },
+  zIndex: {
+    zIndex: 20
   }
 };
 
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHiding: props.isHiding
-    };
-  }
-  render() {
-    return (
-      <Headroom style={this.state.isHiding ? Styles.hidden : 'sticky'}>
-        <TopBar className={this.state.isActive ? 'navbar inactive fixed' : 'navbar active'}>
-          <Row>
-            <Column>
-              <TopBarTitle className="navbar__title">
-                <Link to="/">
-                  <CrownLogo />
+const Navbar = () => (
+  <Headroom style={Styles.zIndex}>
+    <TopBar className={'navbar active'}>
+      <Row>
+        <Column>
+          <TopBarTitle className="navbar__title">
+            <Link to="/">
+              <CrownLogo />
+            </Link>
+          </TopBarTitle>
+          <TopBarRight className="navbar__right">
+            <Menu>
+              <MenuItem>
+                <Link to="/portfolio" className="active">Portfolio</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/contact">
+                  <Button isHollow className="button__golden">Contact Me</Button>
                 </Link>
-              </TopBarTitle>
-              <TopBarRight className="navbar__right">
-                <Menu>
-                  <MenuItem>
-                    <Link to="/portfolio" className="active">Portfolio</Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link to="/contact">
-                      <Button isHollow className="button__golden">Contact Me</Button>
-                    </Link>
-                  </MenuItem>
-                </Menu>
-              </TopBarRight>
-            </Column>
-          </Row>
-        </TopBar>
-      </Headroom>
-    );
-  }
-}
-
-Navbar.Proptypes = {
-  isHiding: React.PropTypes.bool.isRequired
-};
+              </MenuItem>
+            </Menu>
+          </TopBarRight>
+        </Column>
+      </Row>
+    </TopBar>
+  </Headroom>
+);
 
 export default Navbar;

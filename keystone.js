@@ -53,5 +53,5 @@ keystone.set('routes', function (app) {
   }))
 });
 
-/* Bootstrap the server rendered JSX */
+/* Bootstrap the server */
 keystone.start();

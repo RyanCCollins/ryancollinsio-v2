@@ -5,26 +5,26 @@ import {
   Column,
   Row
 } from 'react-foundation';
+import { toastr, actions as toastrActions } from 'react-redux-toastr';
+import { bindActionCreators } from 'redux';
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
-  handleSubmit(params) {
-    console.log("Clicked Handle Submit");
+  submitForm(params) {
+    // toastr.success('Success', 'Thanks for sending me a message!  I will get back to you as soon as possible.');
   }
   render() {
-    const {
-      handleSubmit
-    } = this.props;
     return (
       <div className="contact-container">
         <Row>
           <Column small={12} medium={8} isColumn centerOnSmall>
             <h1 className="section-header">Contact Me</h1>
             <ContactForm
-              onSubmit={handleSubmit}
+              {...this.props}
+              onSubmit={this.submitForm}
             />
           </Column>
         </Row>

@@ -8,22 +8,17 @@ import {
 } from 'react-icons/lib/fa';
 import './ContactForm.scss';
 import contactValidation from './contactValidation';
-import { toastr } from 'react-redux-toastr';
 
 export const fields = [
   'fullName',
   'email',
   'category',
-  'text'
+  'message'
 ];
 
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleSubmit() {
-    toastr.success('Success', 'Thanks for sending me a message!  I will get back to you as soon as possible.');
   }
   render() {
     const {
@@ -34,13 +29,13 @@ class ContactForm extends React.Component {
         fullName,
         email,
         category,
-        text
+        message
       }
     } = this.props;
     return (
       <Row>
         <Column small={12} large={8} isColumn centerOnSmall>
-          <form onSubmit={handleSubmit(this.handleSubmit)} className="form-groups" data-abide>
+          <form onSubmit={handleSubmit(this.props.onSubmit)} className="form-groups" data-abide>
             <div data-abide-error className="alert callout" style={{ display: 'none' }}>
               <p>
                 <FaExclamationTriangle className="icon-medium" />
@@ -72,7 +67,8 @@ class ContactForm extends React.Component {
                 What are you contacting me about?
               </label>
               <div>
-                <select {...category}
+                <select
+                  {...category}
                   id="category"
                   value={category.value || ''}
                   className={category.error ? 'error' : ''}
@@ -81,21 +77,22 @@ class ContactForm extends React.Component {
                   <option value="help">I need your help on a project.</option>
                   <option value="jobWellDone">I'd like to commend you on a job well done.</option>
                   <option value="hire">I'd like to hire you.</option>
-                  <option value="hire">Something else.</option>
+                  <option value="else">Something else.</option>
                 </select>
               </div>
             </div>
             <div className="small-12 columns form-group">
-              <label htmlFor="text">Text</label>
-                <div>
-                  <textarea {...text}
-                    id="text"
-                    value={text.value || ''}
-                    className={text.error ? 'error' : ''}
-                    rows={5}
-                  />
-                </div>
-                {text.touched && text.error && <small className="error">{text.error}</small>}
+              <label htmlFor="message">Message</label>
+              <div>
+                <textarea
+                  {...message}
+                  id="message"
+                  value={message.value || ''}
+                  className={message.error ? 'error' : ''}
+                  rows={5}
+                />
+              </div>
+              {message.touched && message.error && <small className="error">{message.error}</small>}
             </div>
             <div className="button-group">
               <Button isExpanded size={'large'} disabled={submitting}>
