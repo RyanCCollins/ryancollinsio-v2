@@ -5,6 +5,8 @@ import SingleProjectContainer from './SingleProjectContainer/SingleProjectContai
 import Contact from './Contact/Contact';
 import SkillSection from './SkillSection/SkillSection';
 import LanguageSection from './LanguageSection/LanguageSection';
+import PostListView from './Blog/PostListView/PostListView';
+import SinglePostView from './Blog/SinglePostView/SinglePostView';
 
 export {
   LandingPage,
@@ -13,5 +15,7 @@ export {
   SingleProjectContainer,
   Contact,
   SkillSection,
-  LanguageSection
+  LanguageSection,
+  PostListView,
+  SinglePostView
 };

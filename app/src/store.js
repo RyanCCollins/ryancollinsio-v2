@@ -5,7 +5,8 @@ import projects from './data/projects';
 import rootReducer from './reducers/index';
 
 const defaultState = {
-  projects
+  projects,
+  posts: {}
 };
 
 const enhancers = compose(

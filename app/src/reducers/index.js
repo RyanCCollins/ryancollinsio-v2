@@ -4,8 +4,10 @@ import { reducer as formReducer } from 'redux-form';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 
 import projects from './projects';
+import posts from './posts';
 
 const rootReducer = combineReducers({
+  posts,
   projects,
   routing: routerReducer,
   form: formReducer,

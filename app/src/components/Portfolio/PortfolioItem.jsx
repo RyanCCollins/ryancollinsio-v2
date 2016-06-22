@@ -56,7 +56,7 @@ class PortfolioItem extends React.Component {
               `image-wrapper overlay-fade-in ${this.state.animationName}`
             :
               'image-wrapper overlay-fade-in'
-            }>
+          }>
             <Thumbnail
               src={project.featureImage}
               className="portfolio-image"

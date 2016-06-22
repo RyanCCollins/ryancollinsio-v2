@@ -57,6 +57,7 @@
     "keystone": "https://github.com/keystonejs/keystone.git",
     "knex": "^0.9.0",
     "lru-memoize": "^1.0.1",
+    "marked": "^0.3.5",
     "model-transform": "^1.1.0",
     "moment": "^2.13.0",
     "motion-ui": "^1.2.2",

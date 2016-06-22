@@ -7,6 +7,8 @@ import ContactForm from './ContactForm/ContactForm';
 import Skills from './Skills/Skills';
 import Languages from './Languages/Languages';
 import LoadingIndicator from './LoadingIndicator/LoadingIndicator';
+import SinglePost from './Blog/SinglePost/SinglePost';
+import PostList from './Blog/PostList/PostList';
 
 export {
   Intro,
@@ -17,5 +19,7 @@ export {
   ContactForm,
   Skills,
   Languages,
-  LoadingIndicator
+  LoadingIndicator,
+  SinglePost,
+  PostList
 };

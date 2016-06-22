@@ -1,14 +1,14 @@
 var keystone = require('keystone');
-var Types = keystone.Field.types;
+var Types = keystone.Field.Types;
 
-var Inquiry = new keystone.List('Inquiry', {
+const Inquiry = new keystone.List('Inquiry', {
   nocreate: true,
   noedit: true
 });
 
 Inquiry.add({
   fullName: {
-    type: Types.name,
+    type: Types.Name,
     required: true
   },
   email: {

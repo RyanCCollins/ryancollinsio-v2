@@ -1,12 +1,6 @@
 const keystone = require('keystone');
 const secrets = require('./lib/secrets');
-const webpack = require('webpack');
-const webpackMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const config = require('./webpack.config.js');
-const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 8016 : process.env.PORT;
-const compiler = webpack(config);
+
 
 keystone.init({
   'name': 'RyanCollins.io',
@@ -31,27 +25,19 @@ keystone.set('locals', {
   editable: keystone.content.editable
 });
 
-keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
   'users': 'users',
-  'projects': 'projects'
+  'inquiries': 'inquiries',
+  'projects': [
+    'projects',
+    'project-categories'
+  ],
+  'blog': 'posts'
 });
 
-if (isDeveloping) {
-  keystone.pre('routes', webpackMiddleware(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-  }))
 
-  keystone.pre('routes', webpackHotMiddleware(compiler))
-}
-
-keystone.set('routes', function (app) {
-  app.use(webpackHotMiddleware(compiler, {
-    log: console.log
-  }))
-});
+keystone.set('routes', require('./routes'));
 
 /* Bootstrap the server */
 keystone.start();
