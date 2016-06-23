@@ -8,7 +8,7 @@ class PostList extends React.Component {
     } = this.props;
     return (
       <div className="post-list">
-
+        <h1 className="section-title">Blog</h1>
       </div>
     );
   }

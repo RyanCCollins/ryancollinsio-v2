@@ -1,4 +1,5 @@
 import axios from 'axios';
+import fetch from 'isomorphic-fetch';
 /* Request / receive posts from API*/
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
@@ -8,6 +9,7 @@ export const DELETE_POST = 'DELETE_POST';
 export const ADD_POST = 'ADD_POST';
 export const DISPLAY_ERROR = 'DISPLAY_ERROR';
 export const DISPLAY_MESSAGE = 'DISPLAY_MESSAGE';
+export const DISMISS_MESSAGE = 'DISMISS_MESSAGE';
 
 const host = 'http://localhost:3000/';
 const apiUrl = `${host}api/`;
@@ -30,7 +32,9 @@ export function addPost(post) {
 function receivePosts(json) {
   return {
     type: RECEIVE_POSTS,
-    posts: json.posts
+    posts: {
+      items: json.posts
+    }
   };
 }
 
@@ -44,42 +48,26 @@ function encodePost(post) {
   };
 }
 
-function addPostToApi(post) {
+function addPostToApi (post) {
   const newPost = encodePost(post);
   return dispatch => {
     dispatch(addPost(newPost));
     return axios.post(postUrl, newPost).then((results) => {
       dispatch({ type: 'DISPLAY_MESSAGE', message: 'Successfully added post to API.' });
     }).catch((error) => {
-      dispatch({ type: 'DISPLAY_ERROR', error })
+      dispatch({ type: 'DISPLAY_ERROR', error });
     });
-  }
-}
-
-function fetchPosts() {
-  return dispatch => {
-    dispatch(requestAllPosts());
-    return axios.get(listUrl)
-      .then(response => response.json())
-      .then(json => dispatch(receivePosts(json)));
   };
 }
 
-function shouldFetchPosts(state) {
-  const posts = state.posts;
-  if (!posts) {
-    return true
-  } else if (posts.isFetching) {
-    return false
-  } else {
-    return posts.didInvalidate
-  }
-}
+export function fetchPosts() {
+  return function (dispatch) {
+    dispatch(requestAllPosts());
 
-export function fetchPostsIfNeeded() {
-  return (dispatch, getState) => {
-    if (shouldFetchPosts(getState())) {
-      return dispatch(fetchPosts());
-    }
+    return fetch(listUrl)
+      .then(response => response.json())
+      .then(json =>
+        dispatch(receivePosts(json))
+      );
   };
 }

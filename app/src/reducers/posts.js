@@ -6,13 +6,13 @@ import {
 } from '../actions/actionCreators';
 
 function posts(state = {
-  isFetching: false,
-  didInvalidate: false,
-  items: []
+  items: [],
+  isFetching: false
 }, action) {
   switch (action.type) {
     case ADD_POST:
-      const newItems = [
+      console.log("Action:"+action);
+      const newState = [
         ...state.items,
         {
           title: action.title,
@@ -21,24 +21,25 @@ function posts(state = {
         }
       ];
       return Object.assign({}, state, {
-        items: newItems
+        items: newState
       });
     case REQUEST_POSTS:
+      console.log("Action:"+action);
       return Object.assign({}, state, {
-        isFetching: true,
-        didInvalidate: false
+        isFetching: true
       });
     case RECEIVE_POSTS:
+      console.log("Action:"+action);
       return Object.assign({}, state, {
         isFetching: false,
-        didInvalidate: false,
-        items: action.posts
+        items: action.posts.items
       });
     case DELETE_POST:
+      console.log("Action:"+action);
       return Object.assign({}, state, {
-        posts: [
-          ...state.posts.slice(0, action.index),
-          ...state.posts.slice(action.index + 1)
+        items: [
+          ...state.items.slice(0, action.index),
+          ...state.items.slice(action.index + 1)
         ]
       });
     default:

@@ -40,6 +40,9 @@ const Navbar = () => (
                 <Link to="/portfolio" className="active">Portfolio</Link>
               </MenuItem>
               <MenuItem>
+                <Link to="/blog" className="active">Blog</Link>
+              </MenuItem>
+              <MenuItem>
                 <Link to="/contact">
                   <Button isHollow className="button__golden">Contact Me</Button>
                 </Link>
