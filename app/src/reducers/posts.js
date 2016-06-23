@@ -11,7 +11,6 @@ function posts(state = {
 }, action) {
   switch (action.type) {
     case ADD_POST:
-      console.log("Action:"+action);
       const newState = [
         ...state.items,
         {
@@ -24,18 +23,15 @@ function posts(state = {
         items: newState
       });
     case REQUEST_POSTS:
-      console.log("Action:"+action);
       return Object.assign({}, state, {
         isFetching: true
       });
     case RECEIVE_POSTS:
-      console.log("Action:"+action);
       return Object.assign({}, state, {
         isFetching: false,
         items: action.posts.items
       });
     case DELETE_POST:
-      console.log("Action:"+action);
       return Object.assign({}, state, {
         items: [
           ...state.items.slice(0, action.index),

@@ -5,7 +5,9 @@ const apiUrl = `${host}api/`;
 const listUrl = `${apiUrl}list`;
 const postUrl = `${apiUrl}create`;
 
-export const apiPosts = () => {
-  return fetch(postUrl)
-    .then(posts => posts.toJson());
+export const api = {
+  fetchAllPosts() {
+    return fetch(postUrl)
+      .then(posts => posts.toJson());
+  }
 };

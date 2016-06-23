@@ -33,17 +33,20 @@ class PostListView extends React.Component {
     } = this.props;
     return (
       <div className="post-list-view__wrapper">
-        {isFetching && posts.length == 0 &&
+        {isFetching && posts.items.length == 0 &&
           <LoadingIndicator />
         }
-        {!isFetching && posts.length == 0 &&
+        {!isFetching && posts.items.length == 0 &&
           noPosts
         }
-        {posts.length > 0 &&
+        {posts.items.length > 0 &&
           <PostList
             { ...this.props }
-            posts={posts}
+            posts={posts.items}
           />
+        }
+        {messages.length &&
+          <div className="messages">{messages}</div>
         }
       </div>
     );
@@ -60,7 +63,7 @@ PostListView.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    posts: state.posts.items,
+    posts: state.posts,
     messages: state.messages,
     isFetching: state.posts.isFetching
   };

@@ -1,6 +1,11 @@
 import axios from 'axios';
 import fetch from 'isomorphic-fetch';
-import apiPosts from './api';
+
+const host = 'http://localhost:3000/';
+const apiUrl = `${host}api/posts/`;
+const listUrl = `${apiUrl}list`;
+const postUrl = `${apiUrl}create`;
+
 /* Request / receive posts from API*/
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 
@@ -60,7 +65,7 @@ const addPostToApi = (post) => {
 export const fetchPostsFromApi = () => {
   return (dispatch) => {
     dispatch(requestAllPosts());
-    return apiPosts()
+    return fetch(listUrl)
       .then(response => response.json())
       .then(data => dispatch(didReceivePosts(data)))
       .catch(error => dispatch({ type: DISPLAY_ERROR, error }));
