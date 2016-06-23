@@ -9,8 +9,13 @@ import {
 
 class PostListView extends React.Component {
   componentDidMount() {
-    const { fetchPosts, dispatch } = this.props;
-    dispatch(fetchPosts());
+    const {
+      dispatch,
+      fetchPostsFromApi
+    } = this.props;
+    dispatch(
+      fetchPostsFromApi()
+    );
   }
   showMessage(message) {
     toastr.info(message);
@@ -36,6 +41,7 @@ class PostListView extends React.Component {
         }
         {posts.length > 0 &&
           <PostList
+            { ...this.props }
             posts={posts}
           />
         }
@@ -49,7 +55,7 @@ PostListView.propTypes = {
   posts: PropTypes.array.isRequired,
   isFetching: PropTypes.bool.isRequired,
   lastUpdated: PropTypes.number,
-  fetchPosts: PropTypes.func.isRequired
+  fetchPostsFromApi: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {

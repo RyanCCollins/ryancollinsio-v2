@@ -18,13 +18,12 @@
     "lint": "`npm bin`/eslint . --ext .js --ext .jsx",
     "backend": "node keystone.js",
     "deploy": "NODE_ENV=production `npm bin`/webpack -p",
-    "postinstall": "webpack --config ./webpack-prod.config.js --progress --colors",
     "start": "npm run dev && npm run backend",
     "clean": "rm -rf app/dist app/build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RyanCCollins/flexbox-layouts.git"
+    "url": "git+https://github.com/RyanCCollins/ryancollins.io.git"
   },
   "keywords": [
     "redux",
@@ -36,9 +35,9 @@
   "author": "Ryan Collins",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RyanCCollins/flexbox-layouts/issues"
+    "url": "https://github.com/RyanCCollins/ryancollins.io/issues"
   },
-  "homepage": "https://github.com/RyanCCollins/flexbox-layouts#readme",
+  "homepage": "https://github.com/RyanCCollins/ryancollins.io#readme",
   "dependencies": {
     "animatewithsass": "^3.2.1",
     "axios": "^0.12.0",
@@ -81,7 +80,7 @@
     "react-spinkit": "^1.1.7",
     "react-timeout": "^1.0.0",
     "react-waypoint": "^2.0.3",
-    "redux": "^3.0.4",
+    "redux": ">=3.1.0",
     "redux-form": "^5.2.5",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^1.0.3",

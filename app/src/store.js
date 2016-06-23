@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
-import thunkMiddleware from 'redux-thunk';
+import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import projects from './data/projects';
 import createLogger from 'redux-logger';
@@ -10,8 +10,7 @@ const defaultState = {
   projects,
   posts: {
     items: [],
-    isFetching: false,
-    didInvalidate: false
+    isFetching: false
   },
   messages: {
     alertVisible: false,
@@ -24,13 +23,12 @@ const defaultState = {
 const loggerMiddleware = createLogger();
 
 const enhancers = compose(
-  window.devToolsExtension && window.devToolsExtension(),
   applyMiddleware(
-    thunkMiddleware,
+    thunk,
     loggerMiddleware
-  )
+  ),
+  window.devToolsExtension && window.devToolsExtension()
 );
-
 
 const store = createStore(
   rootReducer,
