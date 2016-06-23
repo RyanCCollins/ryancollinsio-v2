@@ -6,6 +6,7 @@ import {
   Row,
   Thumbnail
 } from 'react-foundation';
+import PostImage from '../Shared/PostImage';
 
 class PostSnippet extends React.Component {
   constructor(props) {
@@ -32,7 +33,9 @@ const PostListItem = ({
 }) => (
   <div className="post-list-item">
     <div className="card post-item-card">
-      <img src={post.featureImage.url} />
+      <PostImage
+        image={post.featureImage ? post.featureImage.url : ""}
+      />
       <div className="card-divider post-item-card__divider">
         {post.title}
       </div>

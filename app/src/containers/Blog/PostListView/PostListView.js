@@ -17,6 +17,9 @@ class PostListView extends React.Component {
       fetchPostsFromApi()
     );
   }
+  componentWillReceiveProps(nextProps) {
+
+  }
   showMessage(message) {
     toastr.info(message);
   }
@@ -28,21 +31,23 @@ class PostListView extends React.Component {
     );
     const {
       posts,
+      items,
       isFetching,
+      errors,
       messages
     } = this.props;
     return (
       <div className="post-list-view__wrapper">
-        {isFetching && posts.items.length == 0 &&
+        {isFetching  &&
           <LoadingIndicator />
         }
-        {!isFetching && posts.items.length == 0 &&
+        {!isFetching && items.length == 0 &&
           noPosts
         }
-        {posts.items.length > 0 &&
+        {items.length > 0 &&
           <PostList
             { ...this.props }
-            posts={posts.items}
+            posts={items}
           />
         }
         {messages.length &&
@@ -55,7 +60,8 @@ class PostListView extends React.Component {
 
 PostListView.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  posts: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired,
+  posts: PropTypes.object.isRequired,
   isFetching: PropTypes.bool.isRequired,
   lastUpdated: PropTypes.number,
   fetchPostsFromApi: PropTypes.func.isRequired
@@ -64,7 +70,9 @@ PostListView.propTypes = {
 function mapStateToProps(state) {
   return {
     posts: state.posts,
-    messages: state.messages,
+    items: state.posts.items,
+    messages: state.messages.posts,
+    errors: state.errors.posts,
     isFetching: state.posts.isFetching
   };
 }

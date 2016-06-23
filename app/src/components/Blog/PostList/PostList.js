@@ -6,6 +6,7 @@ import {
   Pagination
 } from 'react-foundation';
 import './PostList.scss';
+import PostListItem from '../PostListItem/PostListItem';
 
 class PostList extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class PostList extends React.Component {
       <div className="post-list">
         <h1 className="section-header">Blog</h1>
         <h4 className="section-sub-title">Recent Posts</h4>
-        {posts.map((post) => <div>{post}</div>)}
+        {posts.map((post) => <PostListItem post={post} />)}
       </div>
     );
   }
