@@ -16,14 +16,14 @@ const PostListItem = ({
     <div className="card post-item-card">
       <PostImage
         className="card-image"
-        image={post.featureImage ? post.featureImage.url : undefined}
+        image={post.featureImage.exists ? post.featureImage.url : undefined}
       />
       <div className="card-divider post-item-card__divider">
-        {post.title}
+        {post.author === "576aad1d0dccb66b575cc73e" ? 'By Ryan Collins' : 'By Unknown Author'}
       </div>
       <div className="card-section post-item-card__section">
         <h4 className="post-item-card__header">{post.title}</h4>
-        <PostSnippet post={post.content.md.toString()} />
+        <PostSnippet content={post.content.md} />
       </div>
     </div>
   </div>

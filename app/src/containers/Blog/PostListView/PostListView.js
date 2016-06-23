@@ -13,9 +13,9 @@ class PostListView extends React.Component {
     const {
       dispatch,
       fetchPostsFromApi,
-      items
+      posts
     } = this.props;
-    if (items.length === 0) {
+    if (posts.items.length === 0) {
       dispatch(
         fetchPostsFromApi()
       );
@@ -35,11 +35,11 @@ class PostListView extends React.Component {
     );
     const {
       posts,
-      items,
       isFetching,
       errors,
       messages
     } = this.props;
+    const items = posts.items;
     return (
       <div className="post-list-view__wrapper">
         <h1 className="section-header">Blog</h1>
@@ -47,9 +47,6 @@ class PostListView extends React.Component {
         <Divider />
         {isFetching &&
           <LoadingIndicator />
-        }
-        {!isFetching && items.length == 0 &&
-          noPosts
         }
         {items.length > 0 &&
           <PostList
@@ -67,22 +64,19 @@ class PostListView extends React.Component {
 
 PostListView.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  items: PropTypes.array.isRequired,
+  errors: PropTypes.array.isRequired,
+  messages: PropTypes.array.isRequired,
   posts: PropTypes.object.isRequired,
   isFetching: PropTypes.bool.isRequired,
-  lastUpdated: PropTypes.number,
   fetchPostsFromApi: PropTypes.func.isRequired
 };
 
-function mapStateToProps(state) {
-  console.log("state: ", state)
-  return {
-    posts: state.posts,
-    items: state.posts.items,
-    messages: state.messages.posts,
-    errors: state.errors.posts,
-    isFetching: state.posts.isFetching
-  };
-}
+const mapStateToProps = (state) => ({
+  posts: state.posts,
+  messages: state.messages.posts,
+  errors: state.errors.posts,
+  isFetching: state.posts.isFetching
+});
+
 
 export default connect(mapStateToProps)(PostListView);

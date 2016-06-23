@@ -31,7 +31,7 @@ export const addPost = (post) => ({
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 const didReceivePosts = (data) => ({
   type: RECEIVE_POSTS,
-  posts: data.posts
+  items: data.posts
 });
 
 function encodePost(post) {
@@ -62,12 +62,32 @@ const addPostToApi = (post) => {
   };
 };
 
-export const fetchPostsFromApi = () => {
-  return (dispatch) => {
+const fetchPostsAsync = () => {
+  return dispatch => {
     dispatch(requestAllPosts());
     return fetch(listUrl)
       .then(response => response.json())
       .then(data => dispatch(didReceivePosts(data)))
       .catch(error => dispatch({ type: DISPLAY_ERROR, error }));
+  };
+};
+
+const shouldFetchPosts = (state) => {
+  const posts = state.posts;
+  if (!posts.items) {
+    return true
+  } else if (posts.isFetching) {
+    return false
+  }
+  return true
+};
+
+export const fetchPostsFromApi = () => {
+  return (dispatch, getState) => {
+    if (shouldFetchPosts(getState())) {
+      return dispatch(fetchPostsAsync());
+    } else {
+      return Promise.resolve()
+    }
   };
 };

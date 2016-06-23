@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import marked from 'marked';
+import ReactMarkdown from 'react-markdown';
 
 class PostSnippet extends React.Component {
   constructor(props) {
@@ -7,19 +7,9 @@ class PostSnippet extends React.Component {
     const {
       content
     } = this.props;
-    marked.setOptions({
-      gfm: true,
-      tables: false,
-      breaks: false,
-      pedantic: false,
-      sanitize: true,
-      smartLists: true,
-      smartyPants: false
-    });
     const newContent = this.stripper(content);
-    const markdown = marked.parse(newContent);
     this.state = {
-      content: markdown
+      content: newContent
     };
   }
   stripper(content) {
@@ -30,7 +20,7 @@ class PostSnippet extends React.Component {
   }
   render() {
     return (
-      <div dangerouslySetInnerHTML={ this.state.content } />
+      <ReactMarkdown source={this.state.content} />
     );
   }
 }
