@@ -4,21 +4,25 @@ import './PostListView.scss';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
 import {
   PostList,
-  LoadingIndicator
+  LoadingIndicator,
+  Divider
 } from '../../../components';
 
 class PostListView extends React.Component {
   componentDidMount() {
     const {
       dispatch,
-      fetchPostsFromApi
+      fetchPostsFromApi,
+      items
     } = this.props;
-    dispatch(
-      fetchPostsFromApi()
-    );
+    if (items.length === 0) {
+      dispatch(
+        fetchPostsFromApi()
+      );
+    }
   }
   componentWillReceiveProps(nextProps) {
-
+    console.log("Called component will receive props", nextProps);
   }
   showMessage(message) {
     toastr.info(message);
@@ -38,7 +42,10 @@ class PostListView extends React.Component {
     } = this.props;
     return (
       <div className="post-list-view__wrapper">
-        {isFetching  &&
+        <h1 className="section-header">Blog</h1>
+        <h4 className="section-sub-title">Recent Posts</h4>
+        <Divider />
+        {isFetching &&
           <LoadingIndicator />
         }
         {!isFetching && items.length == 0 &&
@@ -68,6 +75,7 @@ PostListView.propTypes = {
 };
 
 function mapStateToProps(state) {
+  console.log("state: ", state)
   return {
     posts: state.posts,
     items: state.posts.items,

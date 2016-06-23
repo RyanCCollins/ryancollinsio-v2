@@ -1,11 +1,13 @@
 import React from 'react';
 import placeholder from './placeholder.png';
 
-export const PostImage = ({
+const PostImage = ({
   url
 }) => (
   <img
-    src={url.length > 0 && url !== undefined ? url : placeholder}
+    src={url !== undefined && url.length > 0 ? url : placeholder}
     alt={`A dynamically loaded image for the blog`}
   />
 );
+
+export default PostImage;

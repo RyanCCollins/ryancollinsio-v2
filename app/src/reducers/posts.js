@@ -29,7 +29,7 @@ function posts(state = {
     case RECEIVE_POSTS:
       return Object.assign({}, state, {
         isFetching: false,
-        items: action.posts.items
+        posts: action.posts
       });
     case DELETE_POST:
       return Object.assign({}, state, {

@@ -31,7 +31,7 @@ export const addPost = (post) => ({
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 const didReceivePosts = (data) => ({
   type: RECEIVE_POSTS,
-  posts: { items: data.posts }
+  posts: data.posts
 });
 
 function encodePost(post) {
