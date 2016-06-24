@@ -13,6 +13,7 @@ class SinglePostView extends React.Component {
     this.state = {
       post: null
     };
+    this.setPost = this.setPost.bind(this);
   }
   componentDidMount() {
     const {
@@ -22,9 +23,10 @@ class SinglePostView extends React.Component {
     const postId = params.postId;
     const postItems = posts.items;
     const selectedPost = postItems.filter((post) => post._id == postId);
-    this.setState({
-      post: selectedPost
-    });
+    this.setPost(selectedPost);
+  }
+  setPost(post) {
+    this.setState({ post });
   }
   render() {
     const {

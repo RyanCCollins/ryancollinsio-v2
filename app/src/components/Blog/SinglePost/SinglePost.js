@@ -9,7 +9,7 @@ const SinglePost = ({
   post
 }) => (
   <div className="single-post">
-    <ReactMarkdown content={post.content.md} />
+    <ReactMarkdown source={post.content} />
   </div>
 );
 
