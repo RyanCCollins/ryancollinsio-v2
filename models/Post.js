@@ -34,8 +34,22 @@ Post.add({
     type: Types.Markdown,
     wysiwyg: true,
     height: 400
+  },
+  categories: {
+    type: Types.Relationship,
+    ref: 'PostCategory',
+    many: true
   }
 });
+
+Post.schema.virtual('snippet').get(() => {
+  const content = this.content.md;
+  if (content.length >= 200) {
+    return content.substr(0, 200);
+  }
+  return content;
+});
+
 
 Post.defaultSort = '-publishedDate';
 Post.defaultColumns = 'title, author|20%, publishedDate|20%';

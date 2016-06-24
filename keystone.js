@@ -33,7 +33,10 @@ keystone.set('nav', {
     'projects',
     'project-categories'
   ],
-  'blog': 'posts'
+  'blog': [
+    'posts',
+    'post-categories'
+  ]
 });
 
 
