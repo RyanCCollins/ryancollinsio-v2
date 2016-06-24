@@ -27,6 +27,9 @@ class CategoryList extends React.Component {
     return (
       <div className="category-list menu-vertical">
         <Callout>
+          <span className="filter-label">
+            <p>Filter Posts by Category: </p>
+          </span>
           <Menu>
             <CategoryLink
               category={{ name: 'All' }}

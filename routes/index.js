@@ -28,9 +28,6 @@ exports = module.exports = function (app) {
     log: console.log
   }));
 
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(path.resolve('./'), 'index.html'));
-  });
 
   if (isDeveloping) {
     app.all('*', (req, res, next) => {
@@ -47,4 +44,9 @@ exports = module.exports = function (app) {
   app.get('/api/posts/:id', routes.api.posts.getOne);
   app.all('/api/posts/:id/update', routes.api.posts.update);
   app.get('/api/posts/:id/remove', routes.api.posts.remove);
+
+  /* Unless the route happens before this, then send the index.html file */
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(path.resolve('./'), 'index.html'));
+  });
 };

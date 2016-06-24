@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import './PostListView.scss';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
 import {
-  Row
+  Row,
+  Column
 } from 'react-foundation';
 import {
   PostList,
@@ -56,6 +57,10 @@ class PostListView extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelectCategory = this.handleSelectCategory.bind(this);
+    this.finishLoading = this.finishLoading.bind(this);
+    this.state = {
+      isLoading: props.isFetching
+    };
   }
   componentDidMount() {
     const {
@@ -65,12 +70,15 @@ class PostListView extends React.Component {
     } = this.props;
     if (!posts.items || posts.items.length === 0) {
       dispatch(
-        fetchPostsFromApi()
+        fetchPostsFromApi().then(() => {
+          console.log("called then in fetch apps")
+          this.finishLoading();
+        })
       );
     }
   }
-  componentWillReceiveProps(nextProps) {
-    console.log("Called component will receive props", nextProps);
+  finishLoading() {
+    this.setState({ isLoading: false });
   }
   handleSelectCategory(categoryName) {
     const {
@@ -101,10 +109,8 @@ class PostListView extends React.Component {
     const {
       posts,
       isFetching,
-      errors,
       postCategories,
-      selectedCategory,
-      messages
+      selectedCategory
     } = this.props;
     const items = posts.items;
     const visiblePosts = getFilteredPosts(selectedCategory, items);
@@ -116,15 +122,17 @@ class PostListView extends React.Component {
         />
         <Divider />
         <MessagesSection {...this.props} />
-        {isFetching &&
+        {this.state.isLoading &&
           <LoadingIndicator />
         }
         <Row className="category-links">
-          <CategoryList
-            categories={postCategories}
-            onSelectCategory={this.handleSelectCategory}
-            selectedCategory={selectedCategory}
-          />
+          <Column large={6} small={12} isColumn centerOnSmall>
+            <CategoryList
+              categories={postCategories}
+              onSelectCategory={this.handleSelectCategory}
+              selectedCategory={selectedCategory}
+            />
+          </Column>
         </Row>
         {visiblePosts !== undefined && visiblePosts.length > 0 &&
           <PostList
