@@ -11,6 +11,6 @@ export default function posts(state = {
         posts: [...action.error]
       });
     default:
-      return state;
+      return state || initial;
   }
 }
