@@ -11,6 +11,7 @@ import SinglePost from './Blog/SinglePost/SinglePost';
 import PostList from './Blog/PostList/PostList';
 import MessagePanel from './Shared/MessagePanel/MessagePanel';
 import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
+import CategoryList from './Blog/CategoryList/CategoryList';
 
 export {
   Intro,
@@ -25,5 +26,6 @@ export {
   SinglePost,
   PostList,
   MessagePanel,
-  ErrorPanel
+  ErrorPanel,
+  CategoryList
 };

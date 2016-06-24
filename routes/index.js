@@ -6,6 +6,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../webpack.config.js');
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 8016 : process.env.PORT;
+const path = require('path');
 const compiler = webpack(config);
 
 const routes = {
@@ -26,6 +27,10 @@ exports = module.exports = function (app) {
   app.use(webpackHotMiddleware(compiler, {
     log: console.log
   }));
+
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(path.resolve('./'), 'index.html'));
+  });
 
   if (isDeveloping) {
     app.all('*', (req, res, next) => {

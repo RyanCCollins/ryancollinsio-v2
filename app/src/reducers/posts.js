@@ -2,14 +2,36 @@ import {
   REQUEST_POSTS,
   RECEIVE_POSTS,
   ADD_POST,
-  DELETE_POST
+  DELETE_POST,
+  SELECT_POST_CATEGORY,
+  DESELECT_POST_CATEGORY
 } from '../actions/actionCreators';
 
 function posts(state = {
   items: [],
+  categories: [],
+  selectedCategory: null,
   isFetching: false
 }, action) {
   switch (action.type) {
+    case SELECT_POST_CATEGORY:
+      return Object.assign({}, state, {
+        selectedCategory: action.category
+      });
+    case DESELECT_POST_CATEGORY:
+      return Object.assign({}, state, {
+        selectedCategory: null
+      });
+    case REQUEST_POSTS:
+      return Object.assign({}, state, {
+        isFetching: true
+      });
+    case RECEIVE_POSTS:
+      return Object.assign({}, state, {
+        isFetching: false,
+        items: action.items,
+        categories: action.postCategories
+      });
     case ADD_POST:
       const newState = [
         ...state.items,
@@ -21,15 +43,6 @@ function posts(state = {
       ];
       return Object.assign({}, state, {
         items: newState
-      });
-    case REQUEST_POSTS:
-      return Object.assign({}, state, {
-        isFetching: true
-      });
-    case RECEIVE_POSTS:
-      return Object.assign({}, state, {
-        isFetching: false,
-        items: action.items
       });
     case DELETE_POST:
       return Object.assign({}, state, {

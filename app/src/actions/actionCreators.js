@@ -21,17 +21,51 @@ const requestAllPosts = () => ({
   type: REQUEST_POSTS
 });
 
+export const RECEIVE_POSTS = 'RECEIVE_POSTS';
+const didReceivePosts = (data) => ({
+  type: RECEIVE_POSTS,
+  items: data.posts,
+  postCategories: data.categories
+});
+
+/* Returns dispatch of promise for fetching posts from the API. */
+const fetchPostsAsync = () => {
+  return dispatch => {
+    dispatch(requestAllPosts());
+    return fetch(listUrl)
+      .then(response => response.json())
+      .then(data => dispatch(didReceivePosts(data)))
+      .catch(error => dispatch({ type: DISPLAY_ERROR, error }));
+  };
+};
+
+/* Returns whether the posts should be fetched or not. */
+const shouldFetchPosts = (state) => {
+  const posts = state.posts;
+  if (!posts.items) {
+    return true;
+  } else if (posts.isFetching) {
+    return false;
+  }
+  return true
+};
+
+/* Fetch the posts asynchronously through the api. */
+export const fetchPostsFromApi = () => {
+  return (dispatch, getState) => {
+    if (shouldFetchPosts(getState())) {
+      return dispatch(fetchPostsAsync());
+    } else {
+      return Promise.resolve()
+    }
+  };
+};
+
 /* Add a post to the state */
 export const ADD_POST = 'ADD_POST';
 export const addPost = (post) => ({
   type: ADD_POST,
   post
-});
-
-export const RECEIVE_POSTS = 'RECEIVE_POSTS';
-const didReceivePosts = (data) => ({
-  type: RECEIVE_POSTS,
-  items: data.posts
 });
 
 function encodePost(post) {
@@ -62,32 +96,14 @@ const addPostToApi = (post) => {
   };
 };
 
-const fetchPostsAsync = () => {
-  return dispatch => {
-    dispatch(requestAllPosts());
-    return fetch(listUrl)
-      .then(response => response.json())
-      .then(data => dispatch(didReceivePosts(data)))
-      .catch(error => dispatch({ type: DISPLAY_ERROR, error }));
-  };
-};
+/* Post categories */
+export const SELECT_POST_CATEGORY = "SELECT_POST_CATEGORY";
+export const selectPostCategory = (category) => ({
+  type: SELECT_POST_CATEGORY,
+  category
+});
 
-const shouldFetchPosts = (state) => {
-  const posts = state.posts;
-  if (!posts.items) {
-    return true
-  } else if (posts.isFetching) {
-    return false
-  }
-  return true
-};
-
-export const fetchPostsFromApi = () => {
-  return (dispatch, getState) => {
-    if (shouldFetchPosts(getState())) {
-      return dispatch(fetchPostsAsync());
-    } else {
-      return Promise.resolve()
-    }
-  };
-};
+export const DESELECT_POST_CATEGORY = "DESELECT_POST_CATEGORY";
+export const deselectPostCategory = () => ({
+  type: DESELECT_POST_CATEGORY
+});

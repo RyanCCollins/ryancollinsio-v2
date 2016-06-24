@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
-import store, { history } from '../store';
+import store, { history } from '../store/store';
 import App from '../components/App';
 import * as Containers from '../containers/';
 import ReduxToastr from 'react-redux-toastr';

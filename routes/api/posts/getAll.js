@@ -22,7 +22,7 @@ exports = module.exports = function (req, res) {
   };
 
   const loadData = () => {
-    let loadedPosts = [];
+    var loadedPosts = [];
     loadPosts().then((posts) => {
       loadedPosts = posts;
       return loadCategories()
