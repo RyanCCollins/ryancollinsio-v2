@@ -71,6 +71,7 @@
     "react-icons": "^2.1.0",
     "react-markdown": "^2.3.0",
     "react-masonry-component": "^4.0.4",
+    "react-masonry-layout": "^0.2.2",
     "react-motion": "^0.4.4",
     "react-motion-ui-pack": "^0.7.3",
     "react-owl-carousel": "^0.14.0",

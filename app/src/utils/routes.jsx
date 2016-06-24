@@ -21,7 +21,7 @@ const router = (
           <Route path="/projects/:projectId" component={Containers.SingleProjectContainer} />
           <Route path="/contact" component={Containers.Contact} />
           <Route path="/blog" name="PostListView" component={Containers.PostListView} />
-          <Route path="/post/:id/:slug" name="SinglePostView" component={Containers.SinglePostView} />
+          <Route path="/blog/posts/:postId" name="SinglePostView" component={Containers.SinglePostView} />
           <Route path="*" component={Containers.NotFound} />
         </Route>
       </Router>

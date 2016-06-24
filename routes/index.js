@@ -14,7 +14,7 @@ const routes = {
 
 if (isDeveloping) {
   keystone.pre('routes', webpackMiddleware(compiler, {
-    noInfo: false,
+    noInfo: true,
     publicPath: config.output.publicPath
   }));
 
