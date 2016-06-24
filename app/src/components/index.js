@@ -9,6 +9,8 @@ import Languages from './Languages/Languages';
 import LoadingIndicator from './LoadingIndicator/LoadingIndicator';
 import SinglePost from './Blog/SinglePost/SinglePost';
 import PostList from './Blog/PostList/PostList';
+import MessagePanel from './Shared/MessagePanel/MessagePanel';
+import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
 
 export {
   Intro,
@@ -21,5 +23,7 @@ export {
   Languages,
   LoadingIndicator,
   SinglePost,
-  PostList
+  PostList,
+  MessagePanel,
+  ErrorPanel
 };

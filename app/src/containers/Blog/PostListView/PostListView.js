@@ -2,11 +2,15 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import './PostListView.scss';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
+import { Callout, Row } from 'react-foundation';
 import {
   PostList,
   LoadingIndicator,
-  Divider
+  Divider,
+  MessagePanel,
+  ErrorPanel
 } from '../../../components';
+
 
 class PostListView extends React.Component {
   componentDidMount() {
@@ -15,7 +19,7 @@ class PostListView extends React.Component {
       fetchPostsFromApi,
       posts
     } = this.props;
-    if (posts.items.length === 0) {
+    if (!posts.items || posts.items.length === 0) {
       dispatch(
         fetchPostsFromApi()
       );
@@ -42,20 +46,26 @@ class PostListView extends React.Component {
     const items = posts.items;
     return (
       <div className="post-list-view__wrapper">
-        <h1 className="section-header">Blog</h1>
-        <h4 className="section-sub-title">Recent Posts</h4>
+        <h1 className="section-header">From the Blog</h1>
         <Divider />
+        {!isFetching && errors.length &&
+          <Row>
+            <ErrorPanel errors={errors} />
+          </Row>
+        }
+        {!isFetching && messages.length && !errors.length &&
+          <Row>
+            <MessagePanel messages={messages} />
+          </Row>
+        }
         {isFetching &&
           <LoadingIndicator />
         }
-        {items.length > 0 &&
+        {items !== undefined && items.length > 0 &&
           <PostList
             { ...this.props }
             posts={items}
           />
-        }
-        {messages.length &&
-          <div className="messages">{messages}</div>
         }
       </div>
     );
