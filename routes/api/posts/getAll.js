@@ -11,12 +11,6 @@ exports = module.exports = function (req, res) {
     return Post.model.find().exec();
   };
 
-  const returnObject = {
-    posts: [],
-    categories: [],
-    success: false
-  };
-
   const parseCategory = (category) => ({
     key: category.key,
     name: category.name,
@@ -28,20 +22,18 @@ exports = module.exports = function (req, res) {
   };
 
   const loadData = () => {
-    const returnData = {
-      posts: [],
-      categories: [],
-      error: null
-    };
+    let loadedPosts = [];
     loadPosts().then((posts) => {
-      console.log("Calling load posts with: ", posts)
       loadedPosts = posts;
       return loadCategories()
     }).then((categories) => {
-      console.log("Calling load categories with: ", categories)
-      return res.apiResponse({ success: true, posts: loadedPosts, categories: parseCategories(categories) })
+      return res.apiResponse({
+        success: true,
+        posts: loadedPosts,
+        categories: parseCategories(categories)
+      });
     }).catch((error) => {
-      console.log("Calling error with: ", error)
+      console.log("Calling error with: ", error);
       return res.state(500).send({ error: `An error occured: ${error.message}` });
     });
   }
