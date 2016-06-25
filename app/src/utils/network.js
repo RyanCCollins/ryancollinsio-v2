@@ -49,7 +49,7 @@ import request from './request';
      },
 
      /**
-      * @function post
+      * @function get
       * @description Make a GET request.
       * @param {string} path
       * @param {object} options
