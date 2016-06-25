@@ -1,5 +1,5 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
@@ -9,19 +9,23 @@ import initialState from './initialState';
 
 const loggerMiddleware = createLogger();
 
-const enhancers = compose(
-  applyMiddleware(
-    thunk,
-    promiseMiddleware(),
-    loggerMiddleware
-  ),
-  window.devToolsExtension && window.devToolsExtension()
+const middlewares = [thunk, promiseMiddleware(), loggerMiddleware];
+
+const enhancers = [];
+const devToolsExtension = window.devToolsExtension
+if (typeof devToolsExtension === 'function') {
+  enhancers.push(devToolsExtension())
+}
+
+const composedEnhancers = compose(
+  applyMiddleware(...middlewares),
+  ...enhancers
 );
 
 const store = createStore(
   rootReducer,
   initialState,
-  enhancers,
+  composedEnhancers,
 );
 
 export const history = syncHistoryWithStore(browserHistory, store);

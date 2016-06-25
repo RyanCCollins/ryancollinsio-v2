@@ -1,6 +1,9 @@
 .filter-label {
-  float: left;
-  clear: none;
-  display: block;
-  padding: 2px 1em 0;
+  text-align: center;
+}
+
+.filter-label__text {
+  font-weight: 100;
+  font-family: 'Open Sans';
+  text-decoration: underline;
 }

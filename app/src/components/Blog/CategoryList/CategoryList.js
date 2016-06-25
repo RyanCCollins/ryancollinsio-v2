@@ -33,7 +33,7 @@ class CategoryList extends React.Component {
       <div className="category-list menu-vertical">
         <Callout>
           <span className="filter-label">
-            <p>Filter Posts by Category: </p>
+            <p className="filter-label__text">Filter Posts by Category</p>
           </span>
           <Menu>
             <CategoryLink
