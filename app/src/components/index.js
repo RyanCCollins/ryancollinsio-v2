@@ -12,6 +12,7 @@ import PostList from './Blog/PostList/PostList';
 import MessagePanel from './Shared/MessagePanel/MessagePanel';
 import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
 import CategoryList from './Blog/CategoryList/CategoryList';
+import Author from './Blog/Author/Author';
 
 export {
   Intro,
@@ -27,5 +28,6 @@ export {
   PostList,
   MessagePanel,
   ErrorPanel,
-  CategoryList
+  CategoryList,
+  Author
 };

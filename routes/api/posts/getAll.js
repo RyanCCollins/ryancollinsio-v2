@@ -15,7 +15,7 @@ exports = module.exports = function (req, res) {
   };
 
   const loadPosts = () => {
-    return Post.model.find().exec();
+    return Post.model.find().populate('tags categories author').exec();
   };
 
   const parseItem = (item) => ({

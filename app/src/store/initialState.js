@@ -1,4 +1,5 @@
 import projects from '../data/projects';
+import author from '../data/defaultAuthor';
 
 const initialState = {
   projects,
@@ -15,7 +16,8 @@ const initialState = {
   },
   errors: {
     posts: []
-  }
+  },
+  author
 };
 
 export default initialState;

@@ -2,6 +2,7 @@ import React from 'react';
 import './PostListItem.scss';
 import PostSnippet from '../Shared/PostSnippet';
 import { Link } from 'react-router';
+import TagList from '../Tags/TagList';
 
 import {
   Button
@@ -27,9 +28,18 @@ const PostListItem = ({
         <PostSnippet content={post.content.md} />
         <div className="read-more-button">
           <Link to={`/blog/posts/${post["_id"]}`}>
-            <Button size={'small'}>Read More</Button>
+            <Button color={'success'}>Read More</Button>
           </Link>
         </div>
+        {post.tags.length ?
+          <div className="tag-list-wrapper">
+            <TagList
+              tags={post.tags}
+            />
+          </div>
+        :
+          <div></div>
+        }
       </div>
     </div>
   </div>

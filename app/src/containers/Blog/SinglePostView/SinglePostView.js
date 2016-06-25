@@ -4,7 +4,8 @@ import './SinglePostView.scss';
 import {
   SinglePost,
   Divider,
-  LoadingIndicator
+  LoadingIndicator,
+  Author
 } from '../../../components';
 
 class SinglePostView extends React.Component {
@@ -23,7 +24,7 @@ class SinglePostView extends React.Component {
     const postId = params.postId;
     const postItems = posts.items;
     const selectedPost = postItems.filter((post) => post._id == postId);
-    this.setPost(selectedPost);
+    this.setPost(selectedPost[0]);
   }
   setPost(post) {
     this.setState({ post });
@@ -43,6 +44,11 @@ class SinglePostView extends React.Component {
             <SinglePost
               post={post}
             />
+            <div className="author-wrapper">
+              <Author
+                author={post.author}
+              />
+            </div>
           </div>
         }
       </div>

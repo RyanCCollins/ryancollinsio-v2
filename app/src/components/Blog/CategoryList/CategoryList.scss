@@ -7,3 +7,10 @@
   font-family: 'Open Sans';
   text-decoration: underline;
 }
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

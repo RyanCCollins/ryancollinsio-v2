@@ -35,7 +35,8 @@ keystone.set('nav', {
   ],
   'blog': [
     'posts',
-    'post-categories'
+    'post-categories',
+    'post-tags'
   ]
 });
 

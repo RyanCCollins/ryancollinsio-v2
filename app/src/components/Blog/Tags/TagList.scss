@@ -1,0 +1,28 @@
+.tags-list {
+  display: flex;
+}
+
+.tag-list {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.tags-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag-item {
+  margin-left: 5px;
+}
+
+.m-r__5 {
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.tag-list__text {
+  margin: 0;
+}

@@ -7,6 +7,12 @@ import {
 import { Link } from 'react-router';
 import './CategoryList.scss';
 
+const Styles = {
+  hidden: {
+    display: 'none'
+  }
+};
+
 const CategoryLink = ({
   category,
   isActive,
@@ -30,7 +36,7 @@ class CategoryList extends React.Component {
       selectedCategory
     } = this.props;
     return (
-      <div className="category-list menu-vertical">
+      <div className="category-list" style={categories.length ? {} : Styles.hidden}>
         <Callout>
           <span className="filter-label">
             <p className="filter-label__text">Filter Posts by Category</p>
