@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
   Row,
   Column
@@ -11,8 +11,7 @@ class PostList extends React.Component {
   render() {
     const {
       posts,
-      onChangePage,
-      selectedPage
+      onChangePage
     } = this.props;
     const postItems = posts.map((post) =>
       <Column large={4} medium={6} small={12} isColumn>
@@ -36,5 +35,10 @@ class PostList extends React.Component {
     );
   }
 }
+
+PostList.propTypes = {
+  onChangePage: PropTypes.func.isRequired,
+  posts: PropTypes.array.isRequired
+};
 
 export default PostList;

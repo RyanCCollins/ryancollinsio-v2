@@ -39,6 +39,11 @@ Post.add({
     type: Types.Relationship,
     ref: 'PostCategory',
     many: true
+  },
+  tags: {
+    type: Types.Relationship,
+    ref: 'PostTag',
+    many: true
   }
 });
 

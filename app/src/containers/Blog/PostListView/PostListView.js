@@ -83,6 +83,7 @@ class PostListView extends React.Component {
     super(props);
     this.handleSelectCategory = this.handleSelectCategory.bind(this);
     this.finishLoading = this.finishLoading.bind(this);
+    this.handleChangePage = this.handleChangePage.bind(this);
     this.state = {
       isLoading: props.isFetching
     };
@@ -104,6 +105,9 @@ class PostListView extends React.Component {
   }
   finishLoading() {
     this.setState({ isLoading: false });
+  }
+  handleChangePage() {
+
   }
   handleSelectCategory(category) {
     const {
@@ -130,7 +134,7 @@ class PostListView extends React.Component {
       <div className="post-list-view__wrapper">
         <h1 className="section-header">From the Blog</h1>
         <SectionSubTitle
-          title={selectedCategory === null ? 'All Posts' : `Selected Category: ${selectedCategory}`}
+          title={selectedCategory === null ? 'All Posts' : `Selected Category: ${selectedCategory.name}`}
         />
         <Divider />
         <MessagesSection {...this.props} />
@@ -148,8 +152,8 @@ class PostListView extends React.Component {
         </Row>
         {visiblePosts !== undefined && visiblePosts.length > 0 ?
           <PostList
-            { ...this.props }
             posts={visiblePosts}
+            onChangePage={this.handleChangePage}
           />
         :
           <NoPostsFound category={selectedCategory} />

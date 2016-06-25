@@ -10,17 +10,14 @@ import {
 function posts(state = {
   items: [],
   categories: [],
-  selectedCategory: { name: 'All' },
+  tags: [],
+  selectedCategory: { name: 'All', key: 'all' },
   isFetching: false
 }, action) {
   switch (action.type) {
     case SELECT_POST_CATEGORY:
       return Object.assign({}, state, {
         selectedCategory: action.category
-      });
-    case DESELECT_POST_CATEGORY:
-      return Object.assign({}, state, {
-        selectedCategory: 'All'
       });
     case REQUEST_POSTS:
       return Object.assign({}, state, {

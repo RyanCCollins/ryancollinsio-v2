@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import './SinglePostView.scss';
-import { LoadingIndicator } from '../../../components';
 import {
   SinglePost,
-  Divider
+  Divider,
+  LoadingIndicator
 } from '../../../components';
 
 class SinglePostView extends React.Component {

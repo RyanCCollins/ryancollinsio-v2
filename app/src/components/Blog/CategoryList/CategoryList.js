@@ -39,7 +39,7 @@ class CategoryList extends React.Component {
             <CategoryLink
               category={{ name: 'All' }}
               onClick={this.handleOnSelectCategory.bind(this, { name: 'All' })}
-              isActive={selectedCategory === null || selectedCategory == { name: 'All'}}
+              isActive={selectedCategory.name == 'All'}
             >
               All
             </CategoryLink>

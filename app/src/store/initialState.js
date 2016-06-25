@@ -6,7 +6,8 @@ const initialState = {
     items: [],
     isFetching: false,
     categories: [],
-    selectedCategory: null
+    tags: [],
+    selectedCategory: { name: 'All', key: 'all' }
   },
   messages: {
     alertVisible: false,

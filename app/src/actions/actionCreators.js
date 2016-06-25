@@ -102,8 +102,3 @@ export const selectPostCategory = (category) => ({
   type: SELECT_POST_CATEGORY,
   category
 });
-
-export const DESELECT_POST_CATEGORY = "DESELECT_POST_CATEGORY";
-export const deselectPostCategory = () => ({
-  type: DESELECT_POST_CATEGORY
-});
