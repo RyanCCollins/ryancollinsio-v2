@@ -13,15 +13,20 @@ const CategoryLink = ({
   onClick
 }) => (
   <MenuItem isActive={isActive} onClick={onClick}>
-      <a>{category.name}</a>
+    <a>{category.name}</a>
   </MenuItem>
 );
 
 class CategoryList extends React.Component {
+  handleOnSelectCategory(category) {
+    const {
+      onSelectCategory
+    } = this.props;
+    onSelectCategory(category);
+  }
   render() {
     const {
       categories,
-      onSelectCategory,
       selectedCategory
     } = this.props;
     return (
@@ -33,16 +38,16 @@ class CategoryList extends React.Component {
           <Menu>
             <CategoryLink
               category={{ name: 'All' }}
-              onClick={onSelectCategory}
-              isActive={selectedCategory === null}
+              onClick={this.handleOnSelectCategory.bind(this, { name: 'All' })}
+              isActive={selectedCategory === null || selectedCategory == { name: 'All'}}
             >
               All
             </CategoryLink>
             {categories !== undefined && categories.length && categories.map((cat) =>
               <CategoryLink
                 category={cat}
-                onClick={onSelectCategory}
-                isActive={selectedCategory !== null && selectedCategory === cat.name}
+                onClick={this.handleOnSelectCategory.bind(this, cat)}
+                isActive={selectedCategory !== null && selectedCategory === cat}
               />
             )}
           </Menu>
@@ -55,7 +60,7 @@ class CategoryList extends React.Component {
 CategoryList.propTypes = {
   categories: PropTypes.array,
   onSelectCategory: PropTypes.func.isRequired,
-  selectedCategory: PropTypes.string
+  selectedCategory: PropTypes.object.isRequired
 };
 
 export default CategoryList;

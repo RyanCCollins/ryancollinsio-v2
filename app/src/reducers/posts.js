@@ -10,7 +10,7 @@ import {
 function posts(state = {
   items: [],
   categories: [],
-  selectedCategory: null,
+  selectedCategory: { name: 'All' },
   isFetching: false
 }, action) {
   switch (action.type) {
@@ -20,7 +20,7 @@ function posts(state = {
       });
     case DESELECT_POST_CATEGORY:
       return Object.assign({}, state, {
-        selectedCategory: null
+        selectedCategory: 'All'
       });
     case REQUEST_POSTS:
       return Object.assign({}, state, {

@@ -25,7 +25,7 @@ class PostList extends React.Component {
           {postItems}
         </Row>
         <Row>
-          <Pagination
+          <Paginator
             items={posts}
             perPage={10}
             onChange={onChangePage}

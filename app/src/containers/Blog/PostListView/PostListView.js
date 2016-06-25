@@ -15,14 +15,25 @@ import {
   CategoryList
 } from '../../../components';
 
+const containsCategory = (post, category) => {
+  const categories = post.categories.filter((cat) => cat == category.id)
+  console.log("Post: ", post, "Categories ", categories);
+  return categories.length > 0;
+};
+
 const getFilteredPosts = (
   category,
   posts
 ) => {
-  if (category === null) {
+  if (category === null || category.name == 'All') {
     return posts;
   } else {
-    return posts.filter((post) => post.category.name === category);
+    return posts.filter((post) => {
+      if (containsCategory(post, category)) {
+        return post;
+      }
+      return undefined;
+    });
   }
 };
 
@@ -53,6 +64,20 @@ const MessagesSection = ({
   </div>
 );
 
+const NoPostsFound = ({
+  category
+}) => (
+  <Row>
+    <Column isColumn small={12} large={6} centerOnSmall>
+      <div className="no-posts">
+        <h4 className="no-posts-text">
+          No posts found {category !== null ? `under the ${category.name} category.` : ''}
+        </h4>
+      </div>
+    </Column>
+  </Row>
+);
+
 class PostListView extends React.Component {
   constructor(props) {
     super(props);
@@ -80,32 +105,19 @@ class PostListView extends React.Component {
   finishLoading() {
     this.setState({ isLoading: false });
   }
-  handleSelectCategory(categoryName) {
+  handleSelectCategory(category) {
     const {
       dispatch,
-      selectedCategory,
-      selectPostCategory,
-      deselectPostCategory
+      selectPostCategory
     } = this.props;
-    if (selectedCategory !== null) {
-      dispatch(
-        selectPostCategory(categoryName)
-      );
-    } else {
-      dispatch(
-        deselectPostCategory()
-      );
-    }
+    dispatch(
+      selectPostCategory(category)
+    );
   }
   showMessage(message) {
     toastr.info(message);
   }
   render() {
-    const noPosts = (
-      <div className="no-posts">
-        <h4 className="no-posts-text">No posts found</h4>
-      </div>
-    );
     const {
       posts,
       isFetching,
@@ -134,11 +146,13 @@ class PostListView extends React.Component {
             />
           </Column>
         </Row>
-        {visiblePosts !== undefined && visiblePosts.length > 0 &&
+        {visiblePosts !== undefined && visiblePosts.length > 0 ?
           <PostList
             { ...this.props }
             posts={visiblePosts}
           />
+        :
+          <NoPostsFound category={selectedCategory} />
         }
       </div>
     );
@@ -153,9 +167,8 @@ PostListView.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   fetchPostsFromApi: PropTypes.func.isRequired,
   selectPostCategory: PropTypes.func.isRequired,
-  deselectPostCategory: PropTypes.func.isRequired,
   postCategories: PropTypes.array.isRequired,
-  selectedCategory: PropTypes.string
+  selectedCategory: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
