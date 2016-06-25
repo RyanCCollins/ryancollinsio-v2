@@ -41,6 +41,7 @@ class CategoryList extends React.Component {
             {categories !== undefined && categories.length && categories.map((cat) =>
               <CategoryLink
                 category={cat}
+                onClick={onSelectCategory}
                 isActive={selectedCategory !== null && selectedCategory === cat.name}
               />
             )}
