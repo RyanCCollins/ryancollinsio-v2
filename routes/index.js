@@ -19,13 +19,21 @@ if (isDeveloping) {
     publicPath: config.output.publicPath
   }));
 
-  keystone.pre('routes', webpackHotMiddleware(compiler));
+  keystone.pre('routes', webpackHotMiddleware(compiler, {
+    log: console.log
+  }));
 }
 
 exports = module.exports = function (app) {
+  app.use(webpackMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }));
 
   app.use(webpackHotMiddleware(compiler, {
-    log: console.log
+    log: console.log,
+    path: '/__webpack_hmr',
+    heartbeat: 10 * 1000
   }));
 
 
