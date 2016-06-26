@@ -7,6 +7,7 @@ import {
   Column,
   Row
 } from 'react-foundation';
+import TagList from '../Tags/TagList';
 
 const SinglePost = ({
   post
@@ -17,6 +18,10 @@ const SinglePost = ({
         <article className="paper post-wrapper">
           <ReactMarkdown source={post.content.md} />
         </article>
+        <section className="post__tag-section paper__fit">
+          <h4 className="text-medium centered">Tags</h4>
+          <TagList tags={post.tags} />
+        </section>
       </Column>
     </Row>
   </div>

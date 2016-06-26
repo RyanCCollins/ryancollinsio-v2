@@ -5,7 +5,8 @@ import {
   SinglePost,
   Divider,
   LoadingIndicator,
-  Author
+  Author,
+  CommentThread
 } from '../../../components';
 
 class SinglePostView extends React.Component {
@@ -31,6 +32,9 @@ class SinglePostView extends React.Component {
   }
   render() {
     const {
+      location
+    } = this.props;
+    const {
       post
     } = this.state;
     return (
@@ -42,6 +46,7 @@ class SinglePostView extends React.Component {
             <h1 className="section-header">{post.title}</h1>
             <Divider />
             <SinglePost
+              {...this.props}
               post={post}
             />
             <div className="author-wrapper">
@@ -49,6 +54,12 @@ class SinglePostView extends React.Component {
                 author={post.author}
               />
             </div>
+            <section className="comments">
+              <CommentThread
+                location={location}
+                post={post}
+              />
+            </section>
           </div>
         }
       </div>

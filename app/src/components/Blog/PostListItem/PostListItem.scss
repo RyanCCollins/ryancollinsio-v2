@@ -9,7 +9,7 @@
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic;
   display: inline-block;
@@ -35,4 +35,12 @@
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 0;
+}
+
+.date-posted {
+  letter-spacing: 0;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(0,0,0,.44);
 }

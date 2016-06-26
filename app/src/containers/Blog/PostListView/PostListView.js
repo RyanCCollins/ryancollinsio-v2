@@ -133,7 +133,7 @@ class PostListView extends React.Component {
       <div className="post-list-view__wrapper">
         <h1 className="section-header">From the Blog</h1>
         <SectionSubTitle
-          title={selectedCategory === null ? 'All Posts' : `Selected Category: ${selectedCategory.name}`}
+          title={selectedCategory === 'All' ? 'All Posts' : `Selected Category: ${selectedCategory.name}`}
         />
         <Divider />
         <MessagesSection {...this.props} />

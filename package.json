@@ -65,6 +65,7 @@
     "paginator": "^1.0.0",
     "react": "^15.0.2",
     "react-addons-css-transition-group": "^15.0.2",
+    "react-disqus-thread": "^0.4.0",
     "react-dom": "^15.0.2",
     "react-engine": "^3.4.1",
     "react-foundation": "^0.6.8",

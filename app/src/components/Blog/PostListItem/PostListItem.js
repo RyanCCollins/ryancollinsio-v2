@@ -3,11 +3,16 @@ import './PostListItem.scss';
 import PostSnippet from '../Shared/PostSnippet';
 import { Link } from 'react-router';
 import TagList from '../Tags/TagList';
+import moment from 'moment';
 
 import {
   Button
 } from 'react-foundation';
 import PostImage from '../Shared/PostImage';
+
+const formattedDate = (dateString) => {
+  return moment(dateString).format('MMM Do YY');
+};
 
 const PostListItem = ({
   post
@@ -21,14 +26,21 @@ const PostListItem = ({
         />
       </Link>
       <div className="card-divider post-item-card__divider">
-        {post.author == "573e60a2dece8bd1b59d57c3" ? 'By Ryan Collins' : 'By Unknown Author'}
+        {post.author.name.first ?
+          `${post.author.name.first} ${post.author.name.last}`
+        :
+          'By Unknown Author'
+        }
+        <span className="date-posted">
+          {` — ${formattedDate(post.createdAt)}`}
+        </span>
       </div>
       <div className="card-section post-item-card__section">
         <h4 className="post-item-card__header">{post.title}</h4>
         <PostSnippet content={post.content.md} />
         <div className="read-more-button">
           <Link to={`/blog/posts/${post["_id"]}`}>
-            <Button color={'success'}>Read More</Button>
+            <Button className="button__primary">Read More</Button>
           </Link>
         </div>
         {post.tags.length ?

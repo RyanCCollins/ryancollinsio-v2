@@ -14,7 +14,7 @@ class PostList extends React.Component {
       onChangePage
     } = this.props;
     const postItems = posts.map((post) =>
-      <Column large={4} medium={6} small={12} isColumn>
+      <Column xlarge={4} large={6} medium={6} small={12} isColumn>
         <PostListItem post={post} />
       </Column>
     );

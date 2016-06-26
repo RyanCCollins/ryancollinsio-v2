@@ -17,10 +17,14 @@ $light-grey: #a1a1a1;
 $global-radius: 4px;
 
 body {
-    font-family: Lato,sans-serif;
-    font-size: 16px;
-    line-height: 25px;
-    overflow-x: hidden;
+  font-family: Lato,sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  overflow-x: hidden;
+}
+
+.centered {
+  text-align: center;
 }
 
 .section-header {
@@ -97,9 +101,16 @@ span.divider {
   }
 }
 
+/* Backwards compatible */
 .button__golden {
   border: 1px solid $primary-color !important;
   color: $primary-color !important;
+  text-transform: uppercase;
+  font-family: 'Lato';
+}
+
+.button__primary {
+  background-color: $primary-color !important;
   text-transform: uppercase;
   font-family: 'Lato';
 }
@@ -144,7 +155,6 @@ span.divider {
   font-size: 1.5rem;
 }
 
-
 .image-wrapper {
   width: 100%;
   height: 100%;
@@ -165,5 +175,4 @@ span.divider {
   padding: 60px;
   width: 100%;
   min-height: 200px;
-  margin-bottom: 100px;
 }

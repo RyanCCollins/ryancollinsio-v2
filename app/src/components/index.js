@@ -13,6 +13,7 @@ import MessagePanel from './Shared/MessagePanel/MessagePanel';
 import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
 import CategoryList from './Blog/CategoryList/CategoryList';
 import Author from './Blog/Author/Author';
+import CommentThread from './Blog/CommentThread/CommentThread';
 
 export {
   Intro,
@@ -29,5 +30,6 @@ export {
   MessagePanel,
   ErrorPanel,
   CategoryList,
-  Author
+  Author,
+  CommentThread
 };
