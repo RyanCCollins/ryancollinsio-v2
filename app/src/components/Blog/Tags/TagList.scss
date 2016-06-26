@@ -5,6 +5,8 @@
 .tag-list {
   flex-grow: 1;
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .tags-centered {
@@ -14,7 +16,7 @@
 }
 
 .tag-item {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .m-r__5 {

@@ -19,7 +19,7 @@ const SinglePost = ({
           <ReactMarkdown source={post.content.md} />
         </article>
         <section className="post__tag-section paper__fit">
-          <h4 className="text-medium centered">Tags</h4>
+          <h4 className="text-medium centered section-header__no-padding">Tags</h4>
           <TagList tags={post.tags} />
         </section>
       </Column>

@@ -14,6 +14,7 @@ import {
   ErrorPanel,
   CategoryList
 } from '../../../components';
+import NoPostsFound from '../Misc/NoPostsFound';
 
 const containsCategory = (post, category) => {
   const categories = post.categories.filter((cat) => cat._id == category.id);
@@ -61,20 +62,6 @@ const MessagesSection = ({
       </Row>
     }
   </div>
-);
-
-const NoPostsFound = ({
-  category
-}) => (
-  <Row>
-    <Column isColumn small={12} large={6} centerOnSmall>
-      <div className="no-posts">
-        <h4 className="no-posts-text">
-          No posts found {category !== null ? `under the ${category.name} category.` : ''}
-        </h4>
-      </div>
-    </Column>
-  </Row>
 );
 
 class PostListView extends React.Component {
@@ -133,7 +120,7 @@ class PostListView extends React.Component {
       <div className="post-list-view__wrapper">
         <h1 className="section-header">From the Blog</h1>
         <SectionSubTitle
-          title={selectedCategory === 'All' ? 'All Posts' : `Selected Category: ${selectedCategory.name}`}
+          title={selectedCategory.name == 'All' ? 'All Posts' : `Selected Category: ${selectedCategory.name}`}
         />
         <Divider />
         <MessagesSection {...this.props} />
@@ -155,7 +142,9 @@ class PostListView extends React.Component {
             onChangePage={this.handleChangePage}
           />
         :
-          <NoPostsFound category={selectedCategory} />
+          <NoPostsFound
+            selectedCategory={selectedCategory}
+          />
         }
       </div>
     );

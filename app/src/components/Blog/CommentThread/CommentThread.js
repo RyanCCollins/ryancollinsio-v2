@@ -11,7 +11,7 @@ const CommentThread = ({
   location
 }) => (
   <Row className="comment-thread-container">
-    <Column isColumn small={12} large={8}>
+    <Column isColumn small={12} large={8} centerOnSmall>
       <ReactDisqusThread
         shortname="ryancollinsio"
         identifier={`ryancollinsio-${post._id}`}

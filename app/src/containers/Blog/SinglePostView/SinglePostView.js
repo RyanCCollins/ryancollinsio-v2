@@ -62,6 +62,7 @@ class SinglePostView extends React.Component {
             </section>
           </div>
         }
+        <div className="huge-space"></div>
       </div>
     );
   }

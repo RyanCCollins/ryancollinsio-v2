@@ -27,6 +27,15 @@ body {
   text-align: center;
 }
 
+.section-header__no-padding {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #454545;
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+}
+
 .section-header {
   font-size: 2rem;
   text-align: center;
@@ -175,4 +184,8 @@ span.divider {
   padding: 60px;
   width: 100%;
   min-height: 200px;
+}
+
+.huge-space {
+  margin-bottom: 200px;
 }
