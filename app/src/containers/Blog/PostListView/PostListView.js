@@ -16,8 +16,7 @@ import {
 } from '../../../components';
 
 const containsCategory = (post, category) => {
-  const categories = post.categories.filter((cat) => cat == category.id)
-  console.log("Post: ", post, "Categories ", categories);
+  const categories = post.categories.filter((cat) => cat._id == category.id);
   return categories.length > 0;
 };
 
@@ -51,12 +50,12 @@ const MessagesSection = ({
   errors
 }) => (
   <div className="messages-section">
-    {!isFetching && errors.length &&
+    {(!isFetching && errors.length) &&
       <Row>
         <ErrorPanel errors={errors} />
       </Row>
     }
-    {!isFetching && messages.length && !errors.length &&
+    {(!isFetching && messages.length && !errors.length) &&
       <Row>
         <MessagePanel messages={messages} />
       </Row>

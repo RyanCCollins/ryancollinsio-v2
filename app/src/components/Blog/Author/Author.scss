@@ -2,6 +2,10 @@
   display: inline-block;
   vertical-align: middle;
   border-radius: 100%;
+  @media screen and (max-width: 39.9375em) {
+    width: 25%;
+    height: 100%;
+  }
 }
 
 .avatar-image__small {
@@ -15,4 +19,39 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: normal;
+}
+
+.center-on-small {
+  @media screen and (max-width: 39.9375em) {
+    text-align: center;
+  }
+}
+
+.author-bio-text p {
+  color: rgba(0,0,0,.6);
+  padding: 18px 0;
+  text-align: left;
+  font-family: 'Open Sans';
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.author-social-links {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.muted-link {
+  color: rgba(0,0,0,.8);
+  text-decoration: none;
+}
+
+.author-social-link {
+  padding: 10px 0;
+  font-size: 2rem;
+}
+
+.author-social-link:hover {
+  color: rgb(13, 95, 154);
 }
