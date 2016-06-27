@@ -57,9 +57,9 @@ const AboutSection = (props) => (
       </Row>
       <Row className="resume-button-row">
         <Column small={4} centerOnSmall>
-          <Link to="/contact">
+          <Link to="/resume/view">
             <Button isHollow className="large button__golden">
-              Download Resume
+              View Resume
             </Button>
           </Link>
         </Column>
@@ -68,7 +68,5 @@ const AboutSection = (props) => (
   </section>
 );
 
-<iframe src="http://docs.google.com/gview?url=https://s3.amazonaws.com/accredible-profile-uploads/udacity/resumes/1460771026963&embedded=true" 
-style="width:600px; height:500px;" frameborder="0"></iframe>
 
 export default AboutSection;

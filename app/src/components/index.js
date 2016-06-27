@@ -14,6 +14,7 @@ import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
 import CategoryList from './Blog/CategoryList/CategoryList';
 import Author from './Blog/Author/Author';
 import CommentThread from './Blog/CommentThread/CommentThread';
+import ResumePDF from './ResumePDF/ResumePDF';
 
 export {
   Intro,
@@ -31,5 +32,6 @@ export {
   ErrorPanel,
   CategoryList,
   Author,
-  CommentThread
+  CommentThread,
+  ResumePDF
 };

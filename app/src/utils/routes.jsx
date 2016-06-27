@@ -22,6 +22,7 @@ const router = (
           <Route path="/contact" component={Containers.Contact} />
           <Route path="/blog" name="PostListView" component={Containers.PostListView} />
           <Route path="/blog/posts/:postId" name="SinglePostView" component={Containers.SinglePostView} />
+          <Route path="/resume/view" name="ResumeViewer" component={Containers.PDFViewer} />
           <Route path="*" component={Containers.NotFound} />
         </Route>
       </Router>

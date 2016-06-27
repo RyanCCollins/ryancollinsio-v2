@@ -7,6 +7,7 @@ import SkillSection from './SkillSection/SkillSection';
 import LanguageSection from './LanguageSection/LanguageSection';
 import PostListView from './Blog/PostListView/PostListView';
 import SinglePostView from './Blog/SinglePostView/SinglePostView';
+import PDFViewer from './PDFViewer/PDFViewer';
 
 export {
   LandingPage,
@@ -17,5 +18,6 @@ export {
   SkillSection,
   LanguageSection,
   PostListView,
-  SinglePostView
+  SinglePostView,
+  PDFViewer
 };
