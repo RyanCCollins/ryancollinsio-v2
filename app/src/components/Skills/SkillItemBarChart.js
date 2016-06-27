@@ -49,7 +49,7 @@ class SkillItemBarChart extends React.Component {
       <Column large={6} small={12} isColumn>
         <div className="bar-chart">
           <div className="item" id="item">
-            <h4 className="uppercase">{skill.name}</h4>
+            <h4 className="uppercase  text-white">{skill.name}</h4>
             <div
               className="bar"
               ref="barDiv"

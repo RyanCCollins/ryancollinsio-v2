@@ -7,7 +7,7 @@ const LanguageSection = ({
   languageSectionHeader
 }) => (
   <section className="languages-section">
-    <h1 className="section-header">{ languageSectionHeader }</h1>
+    <h1 className="section-header text-white">{ languageSectionHeader }</h1>
     <Divider />
     <Languages
       languages={languages}

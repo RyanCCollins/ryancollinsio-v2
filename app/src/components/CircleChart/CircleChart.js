@@ -62,7 +62,7 @@ class CircleChart extends React.Component {
           }
         </StaggeredMotion>
         <span className="percent">{item.percent}%</span>
-        <h4 className="text-center uppercase">{item.name}</h4>
+        <h4 className="text-center uppercase text-white">{item.name}</h4>
       </div>
     );
   }

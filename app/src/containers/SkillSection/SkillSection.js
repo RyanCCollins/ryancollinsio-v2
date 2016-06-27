@@ -7,7 +7,7 @@ const SkillSection = ({
   skillSectionHeader
 }) => (
   <div className="skill-section-container">
-    <h1 className="section-header text-grey">{skillSectionHeader}</h1>
+    <h1 className="section-header text-white">{skillSectionHeader}</h1>
     <Divider />
     <Skills
       skills={skills}

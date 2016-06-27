@@ -8,6 +8,7 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 8016 : process.env.PORT;
 const path = require('path');
 const compiler = webpack(config);
+const express = require('express');
 
 const routes = {
   api: importRoutes('./api')
@@ -57,4 +58,6 @@ exports = module.exports = function (app) {
   app.get('/*', (req, res) => {
     res.sendFile(path.join(path.resolve('./'), 'index.html'));
   });
+  // var publicPath = path.resolve(__dirname, 'public');
+  // app.use(express.static(publicPath));
 };
