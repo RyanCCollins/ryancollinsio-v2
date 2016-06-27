@@ -33,7 +33,7 @@ const AboutSection = (props) => (
     <Divider />
     <div className="container">
       <Row className="display about-section__wrapper">
-        <Column small={12} medium={12} large={8} centerOnSmall>
+        <Column small={12} medium={12} large={7}>
           <div className="about-section__paragraph">
             <div className="description-text">
               <AboutP1 />
@@ -41,6 +41,7 @@ const AboutSection = (props) => (
             </div>
           </div>
         </Column>
+        <Column className="show-for-large-up" medium={0} small={0} large={1}></Column>
         <Column small={6} medium={6} large={4} centerOnSmall className="hide-for-xs-only">
           <MeImage />
         </Column>

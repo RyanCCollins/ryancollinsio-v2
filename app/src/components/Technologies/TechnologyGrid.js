@@ -8,12 +8,12 @@ const TechnologyGrid = ({
 }) => (
   <div className="technology-grid" data-equalizer-watch data-equalize-by-row="true">
     <Row upOnSmall={1} upOnMedium={2} upOnLarge={4}>
-        {technologies.map((tech) => (
-          <TechnologGridItem
-            key={tech.id}
-            technology={tech}
-          />
-        ))}
+      {technologies.map((tech) => (
+        <TechnologGridItem
+          key={tech.id}
+          technology={tech}
+        />
+      ))}
     </Row>
   </div>
 );

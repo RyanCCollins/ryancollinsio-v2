@@ -12,6 +12,10 @@
   margin-bottom: 60px;
 }
 
+.about-section__wrapper {
+  margin-top: 50px;
+}
+
 .about-section__paragraph {
   font-family: 'Lato';
 }
@@ -39,4 +43,10 @@
 
 .me-image-wrapper {
   margin-top: 34px;
+}
+
+.show-for-large-up {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }

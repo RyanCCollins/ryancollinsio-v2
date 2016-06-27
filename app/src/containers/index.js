@@ -7,7 +7,8 @@ import SkillSection from './SkillSection/SkillSection';
 import LanguageSection from './LanguageSection/LanguageSection';
 import PostListView from './Blog/PostListView/PostListView';
 import SinglePostView from './Blog/SinglePostView/SinglePostView';
-import PDFViewer from './PDFViewer/PDFViewer';
+import ResumePDF from './ResumePDF/ResumePDF';
+import ResumeSection from './ResumeSection/ResumeSection';
 
 export {
   LandingPage,
@@ -19,5 +20,6 @@ export {
   LanguageSection,
   PostListView,
   SinglePostView,
-  PDFViewer
+  ResumePDF,
+  ResumeSection
 };

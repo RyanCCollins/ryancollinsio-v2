@@ -1,7 +1,9 @@
 import projects from '../data/projects';
+import resumeData from '../data/resumeData';
 
 const initialState = {
   projects,
+  resumeData,
   posts: {
     items: [],
     isFetching: false,
