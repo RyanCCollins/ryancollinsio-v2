@@ -41,7 +41,7 @@ class ResumeItem extends Component {
             className={isCollapsed ? 'collapsed' : 'expanded'}
           />
         </div>
-        <div className="panel">
+        <div className="panel description-text">
           <div className="panel-heading">
             <div className="panel-title">
               <h4 className="resume-title">{title(degree)}</h4>
