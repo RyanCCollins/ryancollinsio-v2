@@ -2,6 +2,9 @@ const keystone = require('keystone');
 const Types = keystone.Field.Types;
 
 const Degree = new keystone.List('Degree', {
+  map: {
+    name: 'title'
+  },
   track: true,
   autokey: {
     path: 'slug',
@@ -11,41 +14,39 @@ const Degree = new keystone.List('Degree', {
 });
 
 Degree.add({
-  name: {
+  title: {
     type: String,
+    initial: true,
     required: true
   },
-  author: {
-    type: Types.Relationship,
-    ref: 'User',
-    index: true
+  school: {
+    type: String,
+    initial: true,
+    required: true
   },
-  publishedDate: {
-    type: Types.Date,
-    index: true
+  dates: {
+    from: {
+      type: String
+    },
+    to: {
+      type: String
+    }
   },
-  featureImage: {
-    type: Types.CloudinaryImage
+  certificate: {
+    url: {
+      type: Types.Url,
+      note: 'The full url including http://'
+    },
+    image: {
+      type: Types.CloudinaryImage
+    }
   },
-  content: {
+  description: {
     type: Types.Markdown,
-    wysiwyg: true,
-    height: 400
-  },
-  categories: {
-    type: Types.Relationship,
-    ref: 'PostCategory',
-    many: true
-  },
-  tags: {
-    type: Types.Relationship,
-    ref: 'PostTag',
-    many: true
+    height: 200
   }
 });
 
-
-
-Degree.defaultSort = '-publishedDate';
-Degree.defaultColumns = 'title, author|20%, publishedDate|20%';
+Degree.defaultSort = '-dates.to';
+Degree.defaultColumns = 'name, school|20%, description|20%';
 Degree.register();

@@ -15,6 +15,7 @@ import CategoryList from './Blog/CategoryList/CategoryList';
 import Author from './Blog/Author/Author';
 import CommentThread from './Blog/CommentThread/CommentThread';
 import PDFViewer from './PDFViewer/PDFViewer';
+import ResumeItem from './ResumeItem/ResumeItem';
 
 export {
   Intro,
@@ -33,5 +34,6 @@ export {
   CategoryList,
   Author,
   CommentThread,
-  PDFViewer
+  PDFViewer,
+  ResumeItem
 };

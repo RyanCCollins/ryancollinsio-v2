@@ -7,10 +7,12 @@ import projects from './projects';
 import posts from './posts';
 import messages from './messages';
 import errors from './errors';
+import resumeData from './resumeData';
 
 const rootReducer = combineReducers({
   posts,
   projects,
+  resumeData,
   messages,
   errors,
   routing: routerReducer,

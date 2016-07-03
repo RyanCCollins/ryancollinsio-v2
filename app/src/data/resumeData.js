@@ -3,7 +3,7 @@ const resumeData = {
     degrees: [
       {
         id: 1,
-        name: 'Senior Web Developer Nanodegree',
+        title: 'Senior Web Developer Nanodegree',
         school: 'Udacity',
         dates: {
           from: 'Mar 2016',
@@ -23,7 +23,7 @@ const resumeData = {
       },
       {
         id: 2,
-        name: 'Ruby Developer Nanodegree',
+        title: 'Ruby Developer Nanodegree',
         school: 'Udacity',
         dates: {
           from: 'Jan 2016',
@@ -43,7 +43,7 @@ const resumeData = {
       },
       {
         id: 3,
-        name: 'iOS Developer Nanodegree',
+        title: 'iOS Developer Nanodegree',
         school: 'Udacity',
         dates: {
           from: 'Jun 2015',
@@ -60,7 +60,7 @@ const resumeData = {
       },
       {
         id: 4,
-        name: 'Bachelors of Science',
+        title: 'Bachelors of Science',
         school: 'New England Institute of Art',
         dates: {
           from: '2007',
@@ -71,9 +71,6 @@ const resumeData = {
           Technologies.  I studied web development, audio and video engineering.`
       }
     ]
-  },
-  work: {
-
   }
 };
 

@@ -5,6 +5,7 @@ import Main from './Main';
 
 const mapStateToProps = (state) => ({
   projects: state.projects,
+  resumeData: state.resumeData,
   messages: state.messages,
   errors: state.errors,
   posts: state.posts

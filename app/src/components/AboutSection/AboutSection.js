@@ -23,7 +23,11 @@ const MeImage = () => (
       alt="Ryan Collins"
       className="me-image"
     />
-    <h4 className="title uppercase text-white">Creative Developer</h4>
+    <h4
+      className="title uppercase text-white text__fit-width"
+    >
+      Creative Developer
+    </h4>
   </div>
 );
 
