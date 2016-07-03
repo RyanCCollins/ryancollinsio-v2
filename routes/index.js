@@ -55,6 +55,7 @@ exports = module.exports = function (app) {
   app.get('/api/posts/:id/remove', routes.api.posts.remove);
 
   /* Unless the route happens before this, then send the index.html file */
+  app.use(express.static('./public'));
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
   });
