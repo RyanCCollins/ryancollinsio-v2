@@ -18,6 +18,7 @@ class Contact extends React.Component {
     this.toastr = bindActionCreators(toastrActions, this.props.dispatch);
   }
   handleSubmit(params) {
+    console.log(`Clicked submit with params: ${submit}`)
     const {
       onSubmitContact
     } = this.props;

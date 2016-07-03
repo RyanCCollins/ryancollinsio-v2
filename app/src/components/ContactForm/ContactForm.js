@@ -20,6 +20,7 @@ class ContactForm extends React.Component {
   render() {
     const {
       handleSubmit,
+      onSubmit,
       submitting,
       resetForm,
       fields: {
@@ -32,7 +33,7 @@ class ContactForm extends React.Component {
     return (
       <Row>
         <Column small={12} large={8} isColumn centerOnSmall>
-          <form onSubmit={handleSubmit} className="form-groups" data-abide>
+          <form onSubmit={handleSubmit(onSubmit)} className="form-groups" data-abide>
             <div data-abide-error className="alert callout" style={{ display: 'none' }}>
               <p>
                 <FaExclamationTriangle className="icon-medium" />
@@ -126,7 +127,8 @@ ContactForm.propTypes = {
   fields: React.PropTypes.object.isRequired,
   handleSubmit: React.PropTypes.func.isRequired,
   resetForm: React.PropTypes.func.isRequired,
-  submitting: React.PropTypes.bool.isRequired
+  submitting: React.PropTypes.bool.isRequired,
+  onSubmit: React.PropTypes.func.isRequired
 };
 
 export default reduxForm({

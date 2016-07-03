@@ -26,12 +26,11 @@ const MessagePanel = ({
         color={'warning'}
         size={'large'}
         className="message-panel-callout"
-        style={isVisible ? Styles.hidden : Styles.notHidden}
+        style={isVisible ? Styles.notHidden : Styles.hidden}
       >
         <MdMessage className="icon-medium" />
-        <h4 className="message-header">
-          The following messages were returned from the server
-        </h4>
+        <h4 className="message-header">Messages</h4>
+        <p className="message-sub-header">The following messages were returned from the server</p>
         <ul className="no-bullet message-list">
           {messages.map((msg) =>
             <li className="message-list-item">

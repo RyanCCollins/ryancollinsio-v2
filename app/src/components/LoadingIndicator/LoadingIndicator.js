@@ -14,22 +14,29 @@ const LoadingIndicator = ({
   isLoading,
   children
 }) => (
-  <div
-    className="loading-indicator-container"
-    style={isLoading ? isNotHidingStyle : isHidingStyle}
-  >
-    <div id="overlay"></div>
-    <div className="loading-indicator">
-      <Spinner
-        spinnerName="cube-grid"
-      />
-    </div>
-    {!isLoading && children}
+  <div>
+    {isLoading ?
+      <div
+        className="loading-indicator-container"
+        style={isLoading ? isNotHidingStyle : isHidingStyle}
+      >
+        <div id="overlay"></div>
+        <div className="loading-indicator">
+          <Spinner
+            spinnerName="cube-grid"
+          />
+        </div>
+      </div>
+    :
+      <div>
+        {children}
+      </div>
+    }
   </div>
 );
 
 LoadingIndicator.propTypes = {
-  children: React.Children,
+  children: PropTypes.Children,
   isLoading: PropTypes.bool.isRequired
 };
 

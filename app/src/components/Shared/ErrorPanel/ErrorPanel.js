@@ -14,7 +14,8 @@ const Styles = {
 
 const ErrorPanel = ({
   errors,
-  isVisible
+  isVisible,
+  onClose
 }) => (
   <Row className="error-panel">
     <Column small={12} large={8} isColumn centerOnSmall>
@@ -22,10 +23,15 @@ const ErrorPanel = ({
         color={'alert'}
         size={'large'}
         className="error-panel-callout"
-        style={isVisible ? Styles.hidden : Styles.notHidden}
+        style={isVisible ? Styles.notHidden : Styles.hidden}
       >
-        <MdWarning />
+        <button
+          className="btn btn-close"
+          onClick={onClose}
+        >✕</button>
+        <MdWarning className="icon-medium" />
         <h4 className="error-header">Errors</h4>
+        <p className="error-sub-header">The following errors were returned from the server</p>
         <ul className="no-bullet error-list">
           {errors.map((error) =>
             <li className="error-list-item">
