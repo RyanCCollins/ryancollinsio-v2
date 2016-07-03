@@ -18,7 +18,7 @@ class Contact extends React.Component {
     this.toastr = bindActionCreators(toastrActions, this.props.dispatch);
   }
   handleSubmit(params) {
-    console.log(`Clicked submit with params: ${submit}`)
+    console.log(`Clicked submit with params: ${params}`)
     const {
       onSubmitContact
     } = this.props;
@@ -58,8 +58,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
-    onSubmitContact: (params) => dispatch(contact(params))
-  });
+    onSubmitContact: (params) => contact(params)
+  }, dispatch);
 
 Contact.propTypes = {
   onSubmitContact: PropTypes.func.isRequired,
