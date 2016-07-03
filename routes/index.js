@@ -56,7 +56,7 @@ exports = module.exports = function (app) {
 
   /* Unless the route happens before this, then send the index.html file */
   app.get('/*', (req, res) => {
-    res.sendFile(path.join(path.resolve('./'), 'index.html'));
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
   });
   // var publicPath = path.resolve(__dirname, 'public');
   // app.use(express.static(publicPath));
