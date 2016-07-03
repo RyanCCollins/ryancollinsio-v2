@@ -129,7 +129,7 @@ const contactFailure = (error) => ({
 
 const createInquiry = (params) => {
   return (dispatch) => {
-    dispatch()
+    dispatch(submitContact(params));
     return fetch(createInquiryUrl, {
       method: 'post',
       headers: postHeaders,
@@ -153,7 +153,10 @@ const createInquiry = (params) => {
 };
 
 export const contact = (params) =>
-  (dispatch) => {
-    dispatch(submitContact(params));
-    return createInquiry(params);
+  (_) => {
+    return createInquiry(params).then((result) =>
+      console.log(`Result received ${result}`)
+    ).catch((err) =>
+      `error received ${err}`
+    )
   };
