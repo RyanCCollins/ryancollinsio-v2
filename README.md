@@ -5,7 +5,7 @@ Rewrite of my professional portfolio and blog utilizing React, Redux, Keystone, 
 Running a Node API with a Mongo DB backed database.  I couldn't find blogging software suitable to my needs, so I wrote my own.  Blog posts are loaded through the admin dashboard and served through the API to redux.  On the front end, the posts are loaded by React dynamically using Redux's connect and the content is parsed as Markdown.  Neat :D.
 
 ## Getting Started
-The application utilizes Webpack and Webpack dev server.  The package.json is setup with all of the install and other scripts to make setup running and building a breeze.
+The application utilizes Webpack and Webpack dev server.  The package.json is setup with all of the install and other scripts to make setup running and building a breeze.  Once running, view the app at: http://localhost:8080/
 
 Run
 ```
@@ -16,6 +16,13 @@ from the root of the project directory, followed by
 ```
 npm run start
 ```
+
+Note that the server / API needs to be run to show blog posts.  You can get the server running with:
+```
+node keystone
+```
+
+To see the admin interface, go to /keystone.
 
 ## Deployment
 Deployed via Docker to AWS EC2.
