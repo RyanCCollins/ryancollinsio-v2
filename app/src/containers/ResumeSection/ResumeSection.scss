@@ -1,3 +1,165 @@
 .resume-section {
   min-height: 100vh;
 }
+
+
+#resume .work-experience {
+  margin-top: 50px
+}
+
+.panel-group.resume {
+  position: relative;
+  margin-top: 30px
+}
+
+.panel-group.resume .resume-item {
+  position: relative;
+  margin-bottom: 40px
+}
+
+@media (min-width: 568px) {
+  .panel-group.resume .resume-item {
+    margin-bottom:20px
+  }
+}
+
+@media (min-width: 768px) {
+    #resume h3 {
+        text-align:left
+    }
+
+    .panel-group.resume .resume-item:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: calc(100% + 20px);
+        top: 0;
+        left: 170px;
+        border-left: 1px dashed #484848
+    }
+}
+
+.panel-group.resume .resume-item:last-child {
+    margin-bottom: 0
+}
+
+.panel-group.resume .resume-item:last-child:before {
+    display: none
+}
+
+.panel-group.resume .resume-item .resume-year {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 40px;
+    margin-bottom: -20px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 40px;
+    background-color: rgba(0, 216, 255, 0.9);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px
+}
+
+@media (min-width: 568px) {
+  .panel-group.resume .resume-item .resume-year {
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin: 0
+  }
+}
+
+.panel-group.resume .resume-item .resume-btn {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 150px;
+  width: 40px;
+  height: 40px;
+  background-color: #2e2e2e;
+  border-radius: 4px
+}
+
+@media (max-width: 767px) {
+  .panel-group.resume .resume-item .resume-btn {
+    display:none
+  }
+}
+
+.panel-group.resume .resume-item .resume-btn>a {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px
+}
+
+.panel-group.resume .resume-item .resume-btn>a:before {
+  display: block;
+  position: absolute;
+  z-index: 15;
+  content: '-';
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center
+}
+
+.panel-group.resume .resume-item .resume-btn>a.collapsed:before {
+  content: '+'
+}
+
+.panel-group.resume .resume-item .panel {
+  padding: 10px;
+  width: 100%;
+  background: 0 0;
+  border: 1px solid #6e6e6e;
+  border-radius: 0
+}
+
+@media (min-width: 568px) {
+  .panel-group.resume .resume-item .panel {
+    width:calc(100% - 140px);
+    margin-left: 140px
+  }
+}
+
+@media (min-width: 768px) {
+  .panel-group.resume .resume-item .panel {
+    width:calc(100% - 210px);
+    margin-left: 210px
+  }
+}
+
+.panel-group.resume .resume-item .panel .panel-heading {
+  position: relative
+}
+
+.panel-group.resume .resume-item .panel .panel-heading .panel-title {
+  text-transform: uppercase
+}
+
+@media (max-width: 567px) {
+  .panel-group.resume .resume-item .panel .panel-heading .panel-title {
+    padding-top:20px
+  }
+}
+
+.panel-group.resume .resume-item .panel .panel-collapse .panel-body {
+  padding-top: 5px;
+  border-top: none
+}
+
+.panel-group.resume .resume-item .panel .panel-collapse .panel-body p {
+  margin-bottom: 0
+}

@@ -26,12 +26,12 @@ class ResumeItem extends Component {
         <div className="resume-year">
           <span className="resume-year">{`${degree.dates.from} - ${degree.dates.to}`}</span>
         </div>
-        <a
-          onClick={this.handleCollapse}
-          className={isCollapsed ? 'collapsed' : 'expanded'}
-        >
-          <div className="resume-button" />
-        </a>
+        <div className="resume-btn">
+          <a
+            onClick={this.handleCollapse}
+            className={isCollapsed ? 'collapsed' : 'expanded'}
+          />
+        </div>
         <div className="panel">
           <div className="panel-heading">
             <div className="panel-title">
@@ -40,7 +40,7 @@ class ResumeItem extends Component {
           </div>
           <div
             id={`degree-${degree.id}`}
-            className={`panel panel-collapse collapse ${isCollapsed ? '' : 'in'}`}
+            className={`panel-collapse collapse ${isCollapsed ? '' : 'in'}`}
           >
             <div className="panel-body">
               <p>{degree.description}</p>
