@@ -1,7 +1,11 @@
 .resume-section {
   min-height: 100vh;
+  padding: 140px;
 }
 
+.resume-section .section-header {
+  padding-top: 0 !important;
+}
 
 #resume .work-experience {
   margin-top: 50px
@@ -50,12 +54,13 @@
 .panel-group.resume .resume-item .resume-year {
     display: block;
     position: relative;
-    width: 160px;
-    height: 40px;
+    width: 130px;
+    min-height: 40px;
+    max-height: 50px;
     margin-bottom: -20px;
     margin-right: auto;
     margin-left: auto;
-    line-height: 40px;
+    line-height: 20px;
     background-color: rgba(0, 216, 255, 0.9);
     text-align: center;
     font-weight: 700;

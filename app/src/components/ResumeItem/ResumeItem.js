@@ -4,18 +4,27 @@ import './ResumeItem.scss';
 const title = (a) =>
   `${a.school} - ${a.title}`;
 
+const Styles = {
+  noHeight: {
+    height: 0
+  },
+  hidden: {
+    display: 'none'
+  }
+};
+
 class ResumeItem extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      isCollapsed: true
+      isCollapsed: this.props.index !== 0
     };
     this.handleCollapse = this.handleCollapse.bind(this);
   }
   handleCollapse() {
     const { isCollapsed } = this.state;
     this.setState({
-      isCollapsed
+      isCollapsed: !isCollapsed
     });
   }
   render() {
@@ -36,14 +45,18 @@ class ResumeItem extends Component {
           <div className="panel-heading">
             <div className="panel-title">
               <h4 className="resume-title">{title(degree)}</h4>
+              <a href={degree.certificateUrl || ''}>
+                {degree.certificateUrl ? 'Download Certificate' : ''}
+              </a>
             </div>
           </div>
           <div
             id={`degree-${degree.id}`}
             className={`panel-collapse collapse ${isCollapsed ? '' : 'in'}`}
+            style={isCollapsed ? Styles.noHeight : {}}
           >
             <div className="panel-body">
-              <p>{degree.description}</p>
+              <p style={isCollapsed ? Styles.hidden : {}}>{degree.description}</p>
             </div>
           </div>
         </div>
@@ -53,6 +66,7 @@ class ResumeItem extends Component {
 }
 
 ResumeItem.propTypes = {
+  index: PropTypes.number,
   degree: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,

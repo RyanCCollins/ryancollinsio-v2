@@ -26,7 +26,7 @@ const resumeData = {
         title: 'Ruby Developer Nanodegree',
         school: 'Udacity',
         dates: {
-          from: 'Jan 2016',
+          from: 'Jan',
           to: 'Mar 2016'
         },
         certificateUrl: 'https://drive.google.com/file/d/0B94Fqd9A5IeockNxUzVYYzVVbm8/view?usp=sharing',
@@ -47,7 +47,7 @@ const resumeData = {
         school: 'Udacity',
         dates: {
           from: 'Jun 2015',
-          to: 'Jan 2016'
+          to: '2016'
         },
         certificateUrl: 'https://drive.google.com/open?id=0B94Fqd9A5Ieod3diWUh1OGtwblk',
         description: `The iOS Developer Nanodegree taught me bleeding edge skills and industry

@@ -26,8 +26,12 @@ const ResumeSection = ({
           centerOnSmall
         >
           <div className="resume-panel-wrapper panel-group resume">
-            {resumeData.education.degrees.map((degree) =>
-              <ResumeItem degree={degree} key={degree.id} />
+            {resumeData.education.degrees.map((degree, i) =>
+              <ResumeItem
+                degree={degree}
+                key={degree.id}
+                index={i}
+              />
             )}
           </div>
         </Column>
