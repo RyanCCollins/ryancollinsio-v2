@@ -50,6 +50,11 @@
   }
 }
 
+.button__flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .text__fit-width {
   max-width: 374px;

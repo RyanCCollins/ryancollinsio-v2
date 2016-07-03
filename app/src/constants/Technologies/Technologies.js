@@ -60,6 +60,24 @@ const Technologies = [
     name: 'Foundation',
     imageUrl: 'https://incident57.com/codekit/images/help/logo-zurb@2x.svg',
     category: TechnologyCategories.frontend
+  },
+  {
+    id: 10,
+    name: 'Elm',
+    imageUrl: 'http://i.imgur.com/1c6FH0f.png',
+    category: TechnologyCategories.frontend
+  },
+  {
+    id: 11,
+    name: 'Ramda',
+    imageUrl: 'http://ramda.jcphillipps.com/logo/ramdaFilled_200x235.png',
+    category: TechnologyCategories.frontend
+  },
+  {
+    id: 12,
+    name: 'Post CSS',
+    imageUrl: 'https://camo.githubusercontent.com/2ec260a9d4d3dcc109be800af0b29a8471ad5967/687474703a2f2f706f73746373732e6769746875622e696f2f706f73746373732f6c6f676f2e737667',
+    category: TechnologyCategories.frontend
   }
 ];
 
