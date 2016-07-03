@@ -7,7 +7,7 @@ const listUrl = `${apiUrl}list`;
 const postUrl = `${apiUrl}create`;
 
 const inquiryUrl = `${host}api/contact/`;
-const createInquiry = `${inquiryUrl}${create}`;
+const createInquiryUrl = `${inquiryUrl}create`;
 
 const postHeaders = {
   'Accept': 'application/json, text/plain, */*',
@@ -130,16 +130,24 @@ const contactFailure = (error) => ({
 const createInquiry = (params) => {
   return (dispatch) => {
     dispatch()
-    return fetch(createInquiry, {
+    return fetch(createInquiryUrl, {
       method: 'post',
       headers: postHeaders,
       body: params
     }).then((response) =>
       response.json()
     ).then((result) =>
-      dispatch(contactSuccess({ message: 'Thanks for contacting me!  I will be in touch soon.' }))
+      dispatch(
+        contactSuccess({
+          message: 'Thanks for contacting me!  I will be in touch soon.'
+        })
+      )
     ).catch((err) =>
-      dispatch(contactFailure({ error: 'An error occured while submitting the request.  Please try again.'}))
+      dispatch(
+        contactFailure({
+          error: 'An error occured while submitting the request.  Please try again.'
+        })
+      )
     );
   };
 };

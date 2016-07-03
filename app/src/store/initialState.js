@@ -18,7 +18,6 @@ const initialState = {
     selectedCategory: { name: 'All', key: 'all' }
   },
   messages: {
-    alertVisible: false,
     posts: [],
     contact: []
   },

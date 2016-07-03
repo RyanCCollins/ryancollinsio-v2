@@ -61,7 +61,6 @@ const mapDispatchToProps = (dispatch) =>
   });
 
 Contact.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   onSubmitContact: PropTypes.func.isRequired,
   errors: PropTypes.array,
   messages: PropTypes.array,
@@ -69,6 +68,6 @@ Contact.propTypes = {
 };
 
 export default connect(
-  mapDispatchToProps,
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Contact);

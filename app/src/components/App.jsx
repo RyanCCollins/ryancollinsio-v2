@@ -8,6 +8,7 @@ const mapStateToProps = (state) => ({
   resumeData: state.resumeData,
   messages: state.messages,
   errors: state.errors,
+  contact: state.contact,
   posts: state.posts
 });
 
