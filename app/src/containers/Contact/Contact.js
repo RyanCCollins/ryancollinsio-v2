@@ -2,12 +2,10 @@ import React, { PropTypes } from 'react';
 import './Contact.scss';
 import { ContactForm,
   LoadingIndicator,
-  ErrorPanel
+  ErrorPanel,
+  MessagePanel
 } from '../../components';
-import {
-  Column,
-  Row
-} from 'react-foundation';
+import { Column, Row } from 'react-foundation';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -17,12 +15,13 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.toastr = bindActionCreators(toastrActions, this.props.dispatch)
+    this.toastr = bindActionCreators(toastrActions, this.props.dispatch);
   }
-  handleSubmit (params) {
+  handleSubmit(params) {
     const {
       onSubmitContact
     } = this.props;
+    onSubmitContact(params);
   }
   render() {
     const {
@@ -33,6 +32,7 @@ class Contact extends React.Component {
     return (
       <LoadingIndicator isLoading={isFetching}>
         <ErrorPanel errors={errors} isVisible={!isFetching && errors.length > 0} />
+        <MessagePanel messages={messages} isVisible={!isFetching && messages.length > 0} />
         <div className="contact-container">
           <Row>
             <Column small={12} medium={8} isColumn centerOnSmall>
@@ -64,7 +64,8 @@ Contact.propTypes = {
   dispatch: PropTypes.func.isRequired,
   onSubmitContact: PropTypes.func.isRequired,
   errors: PropTypes.array,
-  messages: PropTypes.array
+  messages: PropTypes.array,
+  isFetching: PropTypes.bool.isRequired
 };
 
 export default connect(
