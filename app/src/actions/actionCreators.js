@@ -6,9 +6,16 @@ const apiUrl = `${host}api/posts/`;
 const listUrl = `${apiUrl}list`;
 const postUrl = `${apiUrl}create`;
 
+const inquiryUrl = `${host}api/contact/`;
+const createInquiry = `${inquiryUrl}${create}`;
+
+const postHeaders = {
+  'Accept': 'application/json, text/plain, */*',
+  'Content-Type': 'x-www-form-urlencoded'
+};
+
 /* Request / receive posts from API*/
 export const REQUEST_POSTS = 'REQUEST_POSTS';
-
 export const DELETE_POST = 'DELETE_POST';
 
 /* Display messages or errors when adding posts */
@@ -102,3 +109,43 @@ export const selectPostCategory = (category) => ({
   type: SELECT_POST_CATEGORY,
   category
 });
+
+export const SUBMIT_CONTACT = 'SUBMIT_CONTACT';
+
+const submitContact = (params) => ({
+  type: SUBMIT_CONTACT,
+  params
+});
+
+const contactSuccess = (message) => ({
+  type: DISPLAY_MESSAGE,
+  message
+});
+
+const contactFailure = (error) => ({
+  type: DISPLAY_ERROR,
+  error
+});
+
+const createInquiry = (params) => {
+  return (dispatch) => {
+    dispatch()
+    return fetch(createInquiry, {
+      method: 'post',
+      headers: postHeaders,
+      body: params
+    }).then((response) =>
+      response.json()
+    ).then((result) =>
+      dispatch(contactSuccess({ message: 'Thanks for contacting me!  I will be in touch soon.' }))
+    ).catch((err) =>
+      dispatch(contactFailure({ error: 'An error occured while submitting the request.  Please try again.'}))
+    );
+  };
+};
+
+export const contact = (params) =>
+  (dispatch) => {
+    dispatch(submitContact(params));
+    return createInquiry(params);
+  };

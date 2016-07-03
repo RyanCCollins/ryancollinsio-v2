@@ -9,6 +9,7 @@ import PostListView from './Blog/PostListView/PostListView';
 import SinglePostView from './Blog/SinglePostView/SinglePostView';
 import ResumePDF from './ResumePDF/ResumePDF';
 import ResumeSection from './ResumeSection/ResumeSection';
+import ReferenceSection from './ReferenceSection/ReferenceSection';
 
 export {
   LandingPage,
@@ -21,5 +22,6 @@ export {
   PostListView,
   SinglePostView,
   ResumePDF,
-  ResumeSection
+  ResumeSection,
+  ReferenceSection
 };

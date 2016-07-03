@@ -17,9 +17,6 @@ export const fields = [
 ];
 
 class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const {
       handleSubmit,
@@ -35,7 +32,7 @@ class ContactForm extends React.Component {
     return (
       <Row>
         <Column small={12} large={8} isColumn centerOnSmall>
-          <form onSubmit={handleSubmit(this.props.onSubmit)} className="form-groups" data-abide>
+          <form onSubmit={handleSubmit} className="form-groups" data-abide>
             <div data-abide-error className="alert callout" style={{ display: 'none' }}>
               <p>
                 <FaExclamationTriangle className="icon-medium" />
@@ -51,11 +48,17 @@ class ContactForm extends React.Component {
                 className={fullName.error ? 'form-control error' : 'form-control'}
                 {...fullName}
               />
-              {fullName.touched && fullName.error && <small className="error">{fullName.error} </small>}
+              {fullName.touched &&
+                fullName.error &&
+                <small className="error">
+                  {fullName.error}
+                </small>
+              }
             </div>
             <div className="small-12 columns form-group">
               <label htmlFor="email">Email</label>
-              <input {...email}
+              <input
+                {...email}
                 id="email"
                 type="email"
                 placeholder="Email"
@@ -102,7 +105,13 @@ class ContactForm extends React.Component {
                   <FaPaperPlane />
                 }{' Submit'}
               </Button>
-              <Button type="button" isExpanded size={'large'} disabled={submitting} onClick={resetForm}>
+              <Button
+                type="button"
+                isExpanded
+                size={'large'}
+                disabled={submitting}
+                onClick={resetForm}
+              >
                 Clear Form
               </Button>
             </div>

@@ -7,7 +7,9 @@ import projects from './projects';
 import posts from './posts';
 import messages from './messages';
 import errors from './errors';
+import contact from './contact';
 import resumeData from './resumeData';
+import references from './references';
 
 const rootReducer = combineReducers({
   posts,
@@ -15,6 +17,8 @@ const rootReducer = combineReducers({
   resumeData,
   messages,
   errors,
+  references,
+  contact,
   routing: routerReducer,
   form: formReducer,
   toastr: toastrReducer

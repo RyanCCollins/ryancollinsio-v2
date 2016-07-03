@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const Reference = ({
   reference
@@ -6,7 +6,7 @@ const Reference = ({
   <div className="reference-item">
     <div className="profile__image">
       <img
-        alt={`Image of a person named ${reference.person.name}`}
+        alt={`A person named ${reference.person.name}`}
         src={reference.person.image}
         className="img-circle img-thumbnail"
       />
@@ -21,3 +21,10 @@ const Reference = ({
     </div>
   </div>
 );
+
+
+Reference.propTypes = {
+  reference: PropTypes.object.isRequired
+};
+
+export default Reference;

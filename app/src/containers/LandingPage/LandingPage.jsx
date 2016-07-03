@@ -5,7 +5,8 @@ import TechnologySection from '../../containers/TechnologySection/TechnologySect
 import SkillSection from '../../containers/SkillSection/SkillSection';
 import {
   LanguageSection,
-  ResumeSection
+  ResumeSection,
+  ReferenceSection
 } from '../../containers';
 
 import * as Constants from '../../constants';
@@ -35,6 +36,9 @@ const LandingPage = props => (
       />
     </section>
     <ResumeSection
+      {...props}
+    />
+    <ReferenceSection
       {...props}
     />
     <TechnologySection

@@ -2,23 +2,48 @@ import {
   DISPLAY_MESSAGE,
   DISMISS_MESSAGE
 } from '../actions/actionCreators';
+import { combineReducers } from 'redux';
 
-export default function posts(state = {
+const contact = (state = {
   alertVisible: false,
-  posts: []
-}, action) {
+  contact: []
+}, action) => {
   switch (action.type) {
     case DISPLAY_MESSAGE:
       return Object.assign({}, state, {
         alertVisible: true,
-        messages: action.messages
+        contact: [...action.message]
       });
     case DISMISS_MESSAGE:
       return Object.assign({}, state, {
         alertVisible: false,
-        messages: undefined
+        contact: []
       });
     default:
       return state;
   }
-}
+};
+
+const posts = (state = {
+  alertVisible: false,
+  posts: []
+}, action) => {
+  switch (action.type) {
+    case DISPLAY_MESSAGE:
+      return Object.assign({}, state, {
+        alertVisible: true,
+        posts: [...action.message]
+      });
+    case DISMISS_MESSAGE:
+      return Object.assign({}, state, {
+        alertVisible: false,
+        posts: []
+      });
+    default:
+      return state;
+  }
+};
+
+export default combineReducers({
+  posts, contact
+});

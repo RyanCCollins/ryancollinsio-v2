@@ -1,16 +1,37 @@
 import {
-  DISPLAY_ERROR
+  DISPLAY_ERROR,
+  CONTACT_SUCCESS,
+  CONTACT_FAILURE
 } from '../actions/actionCreators';
+import { combineReducers } from 'redux';
 
-export default function posts(state = {
+const contact = (state = {
+  contact: []
+}, action) => {
+  switch (action.type) {
+    case DISPLAY_ERROR:
+      return Object.assign(state, {
+        contact: [...action.error]
+      });
+    default:
+      return state;
+  }
+};
+
+const posts = (state = {
   posts: []
-}, action) {
+}, action) => {
   switch (action.type) {
     case DISPLAY_ERROR:
       return Object.assign(state, {
         posts: [...action.error]
       });
     default:
-      return state || initial;
+      return state;
   }
-}
+};
+
+export default combineReducers({
+  posts,
+  contact
+});

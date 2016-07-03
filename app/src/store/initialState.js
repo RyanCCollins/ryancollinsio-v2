@@ -6,6 +6,10 @@ const initialState = {
   projects,
   resumeData,
   references,
+  contact: {
+    params: {},
+    isFetching: false
+  },
   posts: {
     items: [],
     isFetching: false,
@@ -15,10 +19,12 @@ const initialState = {
   },
   messages: {
     alertVisible: false,
-    posts: []
+    posts: [],
+    contact: []
   },
   errors: {
-    posts: []
+    posts: [],
+    contact: []
   }
 };
 

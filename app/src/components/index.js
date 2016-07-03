@@ -16,6 +16,7 @@ import Author from './Blog/Author/Author';
 import CommentThread from './Blog/CommentThread/CommentThread';
 import PDFViewer from './PDFViewer/PDFViewer';
 import ResumeItem from './ResumeItem/ResumeItem';
+import Reference from './Reference/Reference';
 
 export {
   Intro,
@@ -35,5 +36,6 @@ export {
   Author,
   CommentThread,
   PDFViewer,
-  ResumeItem
+  ResumeItem,
+  Reference
 };

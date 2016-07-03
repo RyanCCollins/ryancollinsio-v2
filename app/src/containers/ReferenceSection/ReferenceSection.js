@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import connect from 'react-redux';
-import Reference from '../../components';
+import { Reference } from 'components';
+import './ReferenceSection.scss';
 
-const ReferenceSection = (props) => (
-  <div className="reference-section">
+const ReferenceSection = ({
+  references
+}) => (
+  <section className="reference-section">
     <h1 className="section-header">References</h1>
-
-  </div>
+    {references.map((ref, i) =>
+      <Reference
+        key={i}
+        reference={ref}
+      />
+    )}
+  </section>
 );
 
-export default ReferenceSection;
+ReferenceSection.propTypes = {
+  references: PropTypes.array.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  references: state.references
+});
+
+export default connect(mapStateToProps)(ReferenceSection);
