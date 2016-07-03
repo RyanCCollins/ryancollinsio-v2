@@ -17,6 +17,7 @@ import CommentThread from './Blog/CommentThread/CommentThread';
 import PDFViewer from './PDFViewer/PDFViewer';
 import ResumeItem from './ResumeItem/ResumeItem';
 import Reference from './Reference/Reference';
+import ErrorPanel from './ErrorPanel/ErrorPanel';
 
 export {
   Intro,
@@ -37,5 +38,6 @@ export {
   CommentThread,
   PDFViewer,
   ResumeItem,
-  Reference
+  Reference,
+  ErrorPanel
 };
