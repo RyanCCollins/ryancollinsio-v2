@@ -11,10 +11,24 @@
   align-items: center;
 }
 
+.reference__source-title {
+
+}
+
+.reference__text {
+  border: 0;
+  padding: 0 0 25px;
+  margin: 0;
+  font-size: 37px;
+  line-height: 1.25;
+  color: #000;
+}
+
 .reference__company {
   text-align: center;
+  font-size: 35px;
   text-transform: uppercase;
-  color: #6b6b6d;
+  color: #958f8f;
   text-decoration: underline;
   font-weight: 400;
   margin-bottom: 30px;
@@ -45,6 +59,17 @@
   display: inline-block;
   max-width: 100%;
   height: auto;
+}
+
+.slick-list:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  width: 88px;
+  height: 75px;
+  background: url(./quote2x.png) 0 0 no-repeat;
+  background-size: 100% 100%;
 }
 
 .owl-carousel {

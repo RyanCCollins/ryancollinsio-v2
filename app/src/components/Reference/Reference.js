@@ -6,7 +6,7 @@ const Reference = ({
   reference
 }) => (
   <Row className="container reference-item__container">
-    <Column isColumn large={8} medium={10} small={12} centerOnSmall>
+    <Column isColumn large={10} medium={12} small={12} centerOnSmall>
       <div className="reference-item">
         <div className="profile__image">
           <img
@@ -17,7 +17,7 @@ const Reference = ({
         </div>
         <div className="reference-item__wrapper">
           <h4 className="reference__company">{reference.person.company}</h4>
-          <div className="reference-text__wrapper description-text">
+          <div className="reference-text__wrapper">
             <p className="reference__text">{reference.text}</p>
           </div>
           <div className="reference-signature">
