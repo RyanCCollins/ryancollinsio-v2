@@ -67,7 +67,7 @@
     font-size: 2.3rem;
   }
   @include fadeInUp(
-    $duration: 0.3s,
+    $duration: 0.5s,
     $count: 1,
     $delay: 0.2s,
     $function: ease,
@@ -89,9 +89,9 @@
     font-size: 1.3rem;
   }
   @include fadeInUp(
-    $duration: 0.3s,
+    $duration: 0.5s,
     $count: 1,
-    $delay: 1.0s,
+    $delay: 0.7s,
     $function: ease,
     $fill: both
   )
@@ -100,9 +100,9 @@
 .intro-header__chevron {
   margin-bottom: 1rem;
   @include fadeInDown(
-    $duration: 0.3s,
+    $duration: 0.5s,
     $count: 1,
-    $delay: 1.8s,
+    $delay: 1.2s,
     $function: ease,
     $fill: both
   )

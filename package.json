@@ -78,6 +78,7 @@
     "react-redux-toastr": "^3.1.4",
     "react-router": "^2.4.0",
     "react-router-redux": "^4.0.5",
+    "react-scroll": "^1.0.17",
     "react-scrollspy": "^2.0.0",
     "react-slick": "^0.12.2",
     "react-spinkit": "^1.1.7",

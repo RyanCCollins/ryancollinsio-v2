@@ -15,6 +15,7 @@ import {
   AboutP4,
   AboutP5
 } from './AboutSectionParagraphs';
+import { Element as ScrollDest } from 'react-scroll';
 
 const MeImage = () => (
   <div className="me-image-wrapper">
@@ -34,6 +35,7 @@ const MeImage = () => (
 const AboutSection = (props) => (
   <section className="about-section" id="aboutSection">
     <h1 className="about-section__header section-header text-grey">About Me</h1>
+    <ScrollDest name="aboutSection" />
     <Divider />
     <div className="container">
       <Row className="display about-section__wrapper">

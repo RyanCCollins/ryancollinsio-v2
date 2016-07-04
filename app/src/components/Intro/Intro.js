@@ -3,12 +3,19 @@ import './Intro.scss';
 import ChevronDown from 'react-icons/lib/fa/chevron-down';
 import IntroImage from './IntroImage';
 import * as Constants from '../../constants';
+import { Link as ScrollTo } from 'react-scroll';
 
 const DownChevron = () => (
   <div className="intro-header__chevron">
-    <div href="#about-section">
+    <ScrollTo
+      to="aboutSection"
+      spy
+      smooth
+      offset={50}
+      duration={800}
+    >
       <ChevronDown className="intro-header__chevron-down" />
-    </div>
+    </ScrollTo>
   </div>
 );
 
