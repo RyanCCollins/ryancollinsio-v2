@@ -18,7 +18,7 @@ const Reference = ({
         <div className="reference-item__wrapper">
           <h4 className="reference__company">{reference.person.company}</h4>
           <div className="reference-text__wrapper">
-            <p className="reference__text">{reference.text}</p>
+            <p className="reference__text">“{reference.text}”</p>
           </div>
           <div className="reference-signature">
             <p className="reference__source-name">
