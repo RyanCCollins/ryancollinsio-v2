@@ -1,8 +1,8 @@
 import axios from 'axios';
 import fetch from 'isomorphic-fetch';
 
-const host = process.env.NODE_ENV === 'production' ?
-  process.env.BASE_URL : 'http://localhost:3000/';
+const host = process.env.NODE_ENV !== 'production' ?
+  'http://localhost:3000/' : process.env.BASE_URL;
 
 const apiUrl = `${host}api/posts/`;
 const listUrl = `${apiUrl}list`;
@@ -71,7 +71,7 @@ const shouldFetchPosts = (state) => {
   } else if (posts.isFetching) {
     return false;
   }
-  return true
+  return true;
 };
 
 /* Fetch the posts asynchronously through the api. */
@@ -80,7 +80,7 @@ export const fetchPostsFromApi = () => {
     if (shouldFetchPosts(getState())) {
       return dispatch(fetchPostsAsync());
     } else {
-      return Promise.resolve()
+      return Promise.resolve();
     }
   };
 };
