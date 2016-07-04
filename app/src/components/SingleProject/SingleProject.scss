@@ -55,14 +55,23 @@
   margin-left: 10px;
 }
 
+.full-width-container {
+  position: relative;
+  min-height: 600px;
+}
+
 .full-width  {
   max-width: 100% !important;
+  margin-top: 50px;
+  margin-bottom: 50px;
   position: absolute;
-  left: 50;
+  left: 0;
   margin: 0 auto;
-  margin-bottom: 20px;
   @media only screen and (min-width: 1024px) {
-    width: 90%;
     margin: 0 auto;
   }
+}
+
+.full-width__margin-bottom {
+  margin: 200px;
 }

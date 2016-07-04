@@ -210,13 +210,15 @@ const SingleProject = ({
         <div></div>
       }
     </Row>
-    <Row className="full-width">
-      <Column small={12} large={8} isColumn centerOnSmall>
-        <h1 className="section-header">Project Gallery</h1>
-        <Divider />
-      </Column>
-      <PortfolioGallery project={project} />
-    </Row>
+    <div className="full-width-container">
+      <Row className="full-width">
+        <Column small={12} large={8} isColumn centerOnSmall>
+          <h1 className="section-header">Project Gallery</h1>
+          <Divider />
+        </Column>
+        <PortfolioGallery project={project} />
+      </Row>
+    </div>
   </div>
 );
 

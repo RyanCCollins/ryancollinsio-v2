@@ -236,7 +236,7 @@ const projects = [
     appStoreUrl: '',
     projectUrl: 'http://hacksmiths.io',
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-website',
-    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.37%20PM_imac2013_front.png',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/main-mockup-web.png',
     caption: 'Web API and Front End built for the Hacksmiths members.',
     images: [
       {
@@ -675,33 +675,17 @@ const projects = [
       },
       {
         id: 5,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/food-drivr-app/pending-donations.PNG',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations.PNG',
         width: 375,
         height: 667,
         aspectRatio: 0.5622,
         lightboxImage: {
           caption: 'Pending Donations',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%403x.PNG',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations.PNG',
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%402x.PNG',
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%403x.PNG'
-          ]
-        }
-      },
-      {
-        id: 6,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
-        width: 375,
-        height: 667,
-        aspectRatio: 0.5622,
-        lightboxImage: {
-          caption: 'Profile Edit Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG',
-          srcSet: [
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG'
           ]
         }
       }
@@ -1090,24 +1074,24 @@ const projects = [
     images: [
       {
         id: 0,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/on-the-map/on-the-map.png',
         width: 280,
         height: 500,
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'On The Map iOS App Image One',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/on-the-map/on-the-map.png'
         }
       },
       {
         id: 1,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map2.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/on-the-map/on-the-map2.png',
         width: 280,
         height: 500,
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'On The Map iOS App Image Two',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map2.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/on-the-map/on-the-map2.png'
         }
       }
     ]
@@ -1157,46 +1141,68 @@ const projects = [
     images: [
       {
         id: 0,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/about-me.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/about-me.png',
         width: 1200,
         height: 768,
         aspectRatio: 1.5625,
         lightboxImage: {
           caption: 'About Me Section',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/about-me.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/about-me.png'
         }
       },
       {
         id: 1,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/milestones.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/milestones.png',
         width: 1200,
         height: 768,
         aspectRatio: 1.5625,
         lightboxImage: {
           caption: 'About Me Section',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/milestones.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/milestones.png'
         }
       },
       {
         id: 2,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/services.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/services.png',
         width: 1200,
         height: 768,
         aspectRatio: 1.5625,
         lightboxImage: {
           caption: 'About Me Section',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/services.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/services.png'
         }
       },
       {
         id: 3,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/work-process.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/work-process.png',
         width: 1200,
         height: 768,
         aspectRatio: 1.5625,
         lightboxImage: {
           caption: 'About Me Section',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/work-process.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/work-process.png'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/skills.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'Strengths Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/skills.png'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/certifications.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'About Me Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/certifications.png'
         }
       }
     ]
