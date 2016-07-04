@@ -1,18 +1,19 @@
 .profile__image img {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .profile__image {
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .reference__source-title {
-
+  
 }
 
 .reference-signature {
@@ -27,6 +28,9 @@
   line-height: 1.25;
   color: #000;
   font-family: 'Open Sans';
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+  }
 }
 
 .reference__company {
