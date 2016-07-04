@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Reference } from 'components';
+import { Reference, Slider, Divider } from 'components';
 import './ReferenceSection.scss';
 
 const ReferenceSection = ({
@@ -8,12 +8,17 @@ const ReferenceSection = ({
 }) => (
   <section className="reference-section">
     <h1 className="section-header">References</h1>
-    {references.map((ref, i) =>
-      <Reference
-        key={i}
-        reference={ref}
-      />
-    )}
+    <Divider />
+    <Slider>
+      {references.map((ref, i) =>
+        <div>
+          <Reference
+            key={i}
+            reference={ref}
+          />
+        </div>
+      )}
+    </Slider>
   </section>
 );
 

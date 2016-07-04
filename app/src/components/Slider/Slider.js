@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Slick from 'react-slick';
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  autoplay: true,
+  autoPlaySpeed: 3000,
+  arrows: true,
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  draggable: true
+};
+
+
 const Slider = ({
-  settings,
   children
 }) => (
-  <Slider {...settings}>
+  <Slick {...settings}>
     {children}
-  </Slider>
+  </Slick>
 );
+
+Slider.propTypes = {
+  children: PropTypes.children
+};
 
 export default Slider;

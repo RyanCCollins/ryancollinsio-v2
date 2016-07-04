@@ -1,13 +1,35 @@
+.profile__image img {
+  width: 160px;
+  height: 160px;
+}
+
 .profile__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reference__company {
+  text-align: center;
+  text-transform: uppercase;
+  color: #6b6b6d;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .img-circle {
-  border-radius: 50%;
+  border-radius: 50% !important;
+}
+
+.reference-signature {
+  font-color: #6b6b6d;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 15px;
 }
 
 .img-thumbnail {

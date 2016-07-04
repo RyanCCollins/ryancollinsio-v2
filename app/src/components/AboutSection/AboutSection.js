@@ -34,8 +34,8 @@ const MeImage = () => (
 
 const AboutSection = (props) => (
   <section className="about-section" id="aboutSection">
-    <h1 className="about-section__header section-header text-grey">About Me</h1>
     <ScrollDest name="aboutSection" />
+    <h1 className="about-section__header section-header text-grey">About Me</h1>
     <Divider />
     <div className="container">
       <Row className="display about-section__wrapper">
@@ -47,7 +47,7 @@ const AboutSection = (props) => (
             </div>
           </div>
         </Column>
-        <Column className="show-for-large-up" medium={0} small={0} large={1}></Column>
+        <Column className="show-for-large-up" medium={0} small={0} large={1} />
         <Column small={6} medium={6} large={4} centerOnSmall className="hide-for-xs-only">
           <MeImage />
         </Column>

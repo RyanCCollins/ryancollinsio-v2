@@ -18,9 +18,11 @@ import PDFViewer from './PDFViewer/PDFViewer';
 import ResumeItem from './ResumeItem/ResumeItem';
 import Reference from './Reference/Reference';
 import MessagesSection from './Shared/MessagesSection/MessagesSection';
+import Slider from './Slider/Slider';
 
 export {
   Intro,
+  Slider,
   Navbar,
   Technologies,
   SingleProject,
