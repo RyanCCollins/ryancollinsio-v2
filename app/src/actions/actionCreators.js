@@ -24,6 +24,21 @@ export const DISPLAY_ERROR = 'DISPLAY_ERROR';
 export const DISPLAY_MESSAGE = 'DISPLAY_MESSAGE';
 export const DISMISS_MESSAGE = 'DISMISS_MESSAGE';
 
+export const displayError = (error) => ({
+  type: DISPLAY_ERROR,
+  error
+});
+
+export const displayMessage = (message) => ({
+  type: DISPLAY_MESSAGE,
+  message
+});
+
+export const dismissMessage = (message) => ({
+  type: DISMISS_MESSAGE,
+  message
+});
+
 const requestAllPosts = () => ({
   type: REQUEST_POSTS
 });
@@ -111,24 +126,36 @@ export const selectPostCategory = (category) => ({
 });
 
 export const SUBMIT_CONTACT = 'SUBMIT_CONTACT';
+export const CONTACT_SUCCESS = 'CONTACT_SUCCESS';
+export const CONTACT_FAILURE = 'CONTACT_FAILURE';
+export const CONTACT_ERRORS = 'CONTACT_ERRORS';
+export const CONTACT_MESSAGES = 'CONTACT_MESSAGES';
 
 const submitContact = (params) => ({
   type: SUBMIT_CONTACT,
   params
 });
 
-const contactSuccess = (message) => ({
-  type: DISPLAY_MESSAGE,
-  message
+const contactSuccess = () => ({
+  type: CONTACT_SUCCESS
 });
 
-const contactFailure = (error) => ({
-  type: DISPLAY_ERROR,
-  error
+const contactFailure = () => ({
+  type: CONTACT_FAILURE
 });
 
-const createInquiry = (params) => {
-  return (dispatch) => {
+const contactErrors = (errors) => ({
+  type: CONTACT_ERRORS,
+  errors
+});
+
+const contactMessages = (messages) => ({
+  type: CONTACT_ERRORS,
+  messages
+});
+
+export const contact = (params) =>
+  (dispatch) => {
     dispatch(submitContact(params));
     return fetch(createInquiryUrl, {
       method: 'post',
@@ -136,27 +163,23 @@ const createInquiry = (params) => {
       body: params
     }).then((response) =>
       response.json()
-    ).then((result) =>
+    ).then((_) => {
+      dispatch(contactSuccess());
       dispatch(
-        contactSuccess({
-          message: 'Thanks for contacting me!  I will be in touch soon.'
+        contactMessages({
+          messages: ['Thanks for contacting me!  I will get back to you as soon as possible.']
         })
       )
-    ).catch((err) =>
-      dispatch(
-        contactFailure({
-          error: 'An error occured while submitting the request.  Please try again.'
-        })
-      )
-    );
-  };
-};
-
-export const contact = (params) =>
-  (_) => {
-    return createInquiry(params).then((result) =>
-      console.log(`Result received ${result}`)
-    ).catch((err) =>
-      `error received ${err}`
-    )
+    })
+    .catch((error) => {
+      dispatch(contactFailure());
+      if (error) {
+        dispatch(
+          contactErrors({
+            errors: [`An error occured: ${JSON.stringify(error)}`]
+          })
+        );
+      }
+    }
+  );
   };

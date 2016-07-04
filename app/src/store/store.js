@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
-import thunk from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
@@ -9,12 +9,12 @@ import initialState from './initialState';
 
 const loggerMiddleware = createLogger();
 
-const middlewares = [thunk, promiseMiddleware(), loggerMiddleware];
+const middlewares = [thunkMiddleware, promiseMiddleware(), loggerMiddleware];
 
 const enhancers = [];
 const devToolsExtension = window.devToolsExtension
 if (typeof devToolsExtension === 'function') {
-  enhancers.push(devToolsExtension())
+  enhancers.push(devToolsExtension());
 }
 
 const composedEnhancers = compose(

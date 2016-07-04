@@ -1,5 +1,7 @@
 import {
-  SUBMIT_CONTACT
+  SUBMIT_CONTACT,
+  CONTACT_SUCCESS,
+  CONTACT_FAILURE
 } from '../actions/actionCreators';
 
 const contact = (state = {
@@ -11,6 +13,16 @@ const contact = (state = {
       return Object.assign({}, state, {
         params: action.params,
         isFetching: true
+      });
+    case CONTACT_SUCCESS:
+      return Object.assign({}, state, {
+        isFetching: false,
+        params: {}
+      });
+    case CONTACT_FAILURE:
+      return Object.assign({}, state, {
+        isFetching: false,
+        params: {}
       });
     default:
       return state;
