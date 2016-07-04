@@ -19,6 +19,7 @@ import ResumeItem from './ResumeItem/ResumeItem';
 import Reference from './Reference/Reference';
 import MessagesSection from './Shared/MessagesSection/MessagesSection';
 import Slider from './Slider/Slider';
+import PortfolioGallery from './SingleProject/PortfolioGallery';
 
 export {
   Intro,
@@ -41,5 +42,6 @@ export {
   PDFViewer,
   ResumeItem,
   Reference,
-  MessagesSection
+  MessagesSection,
+  PortfolioGallery
 };

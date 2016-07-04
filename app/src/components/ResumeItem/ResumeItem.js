@@ -20,12 +20,23 @@ class ResumeItem extends Component {
       isCollapsed: this.props.index !== 0
     };
     this.handleCollapse = this.handleCollapse.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
   }
   handleCollapse() {
     const { isCollapsed } = this.state;
     this.setState({
       isCollapsed: !isCollapsed
     });
+  }
+  handleResize() {
+    if (window.innerWidth < 768) {
+      this.setState({
+        isCollapsed: false
+      });
+    }
   }
   render() {
     const { isCollapsed } = this.state;

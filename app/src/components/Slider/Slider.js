@@ -19,8 +19,6 @@ const LeftArrow = () => (
 
 const settings = {
   dots: true,
-  nextArrow: <RightArrow />,
-  prevArrow: <LeftArrow />,
   infinite: true,
   speed: 500,
   autoplay: true,

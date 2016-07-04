@@ -74,6 +74,7 @@
     "react-markdown": "^2.3.0",
     "react-motion": "^0.4.4",
     "react-motion-ui-pack": "^0.7.3",
+    "react-photo-gallery": "^4.2.8",
     "react-redux": "^4.4.5",
     "react-redux-toastr": "^3.1.4",
     "react-router": "^2.4.0",

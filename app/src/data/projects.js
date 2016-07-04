@@ -48,7 +48,15 @@ const projects = [
     appStoreUrl: 'http://appstore.com/hacksmiths',
     projectUrl: 'http://hacksmiths.io',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0408%202_iphone6plus_gold_side2.png',
-    caption: "iOS Mobile Application built for the Hacksmiths."
+    caption: "iOS Mobile Application built for the Hacksmiths.",
+    images: [
+      {
+        src: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0405_iphone6plus_gold_side2.png',
+      },
+      {
+        src: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0406_iphone6plus_gold_side2.png'
+      }
+    ]
   },
   {
     id: 2,

@@ -7,6 +7,7 @@ import {
   Label,
   Button
 } from 'react-foundation';
+import PortfolioGallery from './PortfolioGallery';
 import AppStoreButton from '../AppStoreButton/AppStoreButton';
 import Divider from '../Divider/Divider';
 import {
@@ -208,6 +209,9 @@ const SingleProject = ({
       :
         <div></div>
       }
+    </Row>
+    <Row>
+      <PortfolioGallery project={project} />
     </Row>
   </div>
 );
