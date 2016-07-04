@@ -11,10 +11,13 @@ const Styles = {
   }
 };
 
+
 class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.handleEndLoad = this.handleEndLoad.bind(this);
+    this.setLoading = this.setLoading.bind(this);
+    this.setNotLoading = this.setNotLoading.bind(this);
     this.state = {
       didLoad: false
     };
@@ -24,13 +27,17 @@ class Portfolio extends Component {
       didLoad
     } = this.state;
     if (!didLoad) {
-      this.state = {
-        isLoading: true
-      };
+      setTimeout(this.setLoading(), 100);
     }
   }
-  handleEndLoad() {
+  setLoading() {
+    this.setState({ isLoading: true });
+  }
+  setNotLoading() {
     this.setState({ isLoading: false, didLoad: true });
+  }
+  handleEndLoad() {
+    setTimeout(this.setNotLoading(), 1000);
   }
   render() {
     const {
