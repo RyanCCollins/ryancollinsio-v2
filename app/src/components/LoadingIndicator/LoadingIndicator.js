@@ -36,7 +36,7 @@ const LoadingIndicator = ({
 );
 
 LoadingIndicator.propTypes = {
-  children: PropTypes.Children,
+  children: React.Children,
   isLoading: PropTypes.bool.isRequired
 };
 

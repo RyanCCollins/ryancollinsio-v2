@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Row, Column, Thumbnail } from 'react-foundation';
 import './Portfolio.scss';
 import PortfolioOverlay from './PortfolioOverlay';
@@ -22,7 +22,7 @@ class PortfolioItem extends React.Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
     /* Call the handle scroll right away if it's the first project*/
     if (this.props.project.id == 1) {
       this.handleScroll();
@@ -46,7 +46,8 @@ class PortfolioItem extends React.Component {
   }
   render() {
     const {
-      project
+      project,
+      onLoad
     } = this.props;
     return (
       <Row className="display portfolio-item">
@@ -56,10 +57,12 @@ class PortfolioItem extends React.Component {
               `image-wrapper overlay-fade-in ${this.state.animationName}`
             :
               'image-wrapper overlay-fade-in'
-          }>
+            }
+          >
             <Thumbnail
               src={project.featureImage}
               className="portfolio-image"
+              onLoad={project.id === 1 ? onLoad : undefined}
             />
             <PortfolioOverlay
               project={project}
@@ -70,5 +73,10 @@ class PortfolioItem extends React.Component {
     );
   }
 }
+
+PortfolioItem.propTypes = {
+  project: PropTypes.object.isRequired,
+  onLoad: PropTypes.func.isRequired
+};
 
 export default PortfolioItem;
