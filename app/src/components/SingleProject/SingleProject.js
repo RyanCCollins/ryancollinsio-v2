@@ -7,7 +7,7 @@ import {
   Label,
   Button
 } from 'react-foundation';
-import PortfolioGallery from './PortfolioGallery';
+import { PortfolioGallery } from 'components';
 import AppStoreButton from '../AppStoreButton/AppStoreButton';
 import Divider from '../Divider/Divider';
 import {
@@ -210,7 +210,7 @@ const SingleProject = ({
         <div></div>
       }
     </Row>
-    <Row>
+    <Row className="full-width">
       <Column small={12} large={8} isColumn centerOnSmall>
         <h1 className="section-header">Project Gallery</h1>
         <Divider />

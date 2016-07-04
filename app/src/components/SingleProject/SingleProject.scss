@@ -54,3 +54,15 @@
   font-size: 3rem;
   margin-left: 10px;
 }
+
+.full-width  {
+  max-width: 100% !important;
+  position: absolute;
+  left: 50;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 1024px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

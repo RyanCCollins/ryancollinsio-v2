@@ -48,14 +48,16 @@ const projects = [
     appStoreUrl: 'http://appstore.com/hacksmiths',
     projectUrl: 'http://hacksmiths.io',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0408%202_iphone6plus_gold_side2.png',
-    caption: "iOS Mobile Application built for the Hacksmiths.",
+    caption: 'iOS Mobile Application built for the Hacksmiths.',
     images: [
       {
         id: 0,
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Community Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community.PNG',
@@ -66,11 +68,12 @@ const projects = [
       },
       {
         id: 1,
-        caption: 'Event Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Event Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event.PNG',
@@ -81,11 +84,12 @@ const projects = [
       },
       {
         id: 2,
-        caption: 'Idea Submission Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Idea Submission Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
@@ -96,11 +100,12 @@ const projects = [
       },
       {
         id: 3,
-        caption: 'Loading Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Loading Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading.PNG',
@@ -111,11 +116,12 @@ const projects = [
       },
       {
         id: 4,
-        caption: 'Participants Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Participants Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants.PNG',
@@ -126,11 +132,12 @@ const projects = [
       },
       {
         id: 5,
-        caption: 'Person Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Person Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person.PNG',
@@ -141,11 +148,12 @@ const projects = [
       },
       {
         id: 6,
-        caption: 'Profile Edit Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Profile Edit Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit.PNG',
@@ -156,11 +164,12 @@ const projects = [
       },
       {
         id: 7,
-        caption: 'Profile Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Profile Page',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile.PNG',
@@ -171,11 +180,12 @@ const projects = [
       },
       {
         id: 8,
-        caption: 'Slideout Nav',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout.PNG',
-        width: 667,
-        height: 375,
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
         lightboxImage: {
+          caption: 'Slideout Nav',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout.PNG',
@@ -188,31 +198,154 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Hacksmiths Website, API, Admin Dashboard',
+    title: 'Hacksmiths Website',
     type: "Web Application",
-    description: 'Followed best practices to build a production ready, distributed backend web API containing ' +
-      'data-driven micro-services built to drive the Hacksmiths philanthropic open source software projects.' +
-      ' Integrated a responsive and functional admin dashboard built to interface with the sites data and services.  '+
-      'Implemented a professionally designed Front End web interface built for the visitors and users of the site, ' +
-      'utilizing the Foundation web framework.',
+    description: `Implemented the Foundation web framework and React JS to
+      design and develop a multi user web application for the members of the Hacksmiths.
+      Built a multi-user blog for members of the site and implemented both server rendered Jade
+      views and dynamic React JS components.`,
     technicalInformation: {
-      description: "Built with NodeJS, Express, MongoDB, Foundation and KeystoneJS, utilizing the MVC architecture and the Foundation responsive web framework.  Utilized Jade to render views server side and implemented several React JS components, utilizing ES6 and Webpack.  Utilized the Twitter and Github APIs as OAuth providers for the app.",
+      description: "Built with server rendered Jade views, utilizing the MVC architecture and the Foundation responsive web framework.  Implemented several React JS components, utilizing ES6 and Webpack.  Utilized Gulp to automate the build process and allow for the usage of preprocessors, including Sass.",
+      tags: [
+        'React JS',
+        'Sass',
+        'Foundation',
+        'KeystoneJS',
+        'ES6',
+        'Webpack',
+        'Gulp'
+      ]
+    },
+    milestones: [
+      'Built an authentication system to allow for multi users on the site',
+      'Built a web API to provide data to multiple clients',
+      'Implemented a custom designed Front End web site',
+      'Utilized the Foundation web framework to build an attractive front end web application',
+      'Automated the build process, using Gulp and Webpack',
+      'Implemented server-rendered Jade views',
+    ],
+    designPatterns: {
+      description: 'Implements the Model View Controller design pattern, 12 Factor Micro-Services, build automation.',
+      tags: [
+        'Model View Controller',
+        'Build Automation',
+        'Micro Services',
+        '12 Factor'
+      ]
+    },
+    appStoreUrl: '',
+    projectUrl: 'http://hacksmiths.io',
+    repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-website',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.37%20PM_imac2013_front.png',
+    caption: 'Web API and Front End built for the Hacksmiths members.',
+    images: [
+      {
+        id: 0,
+        caption: 'Landing Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/landing.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/landing.png',
+          caption: 'Hacksmiths Landing Page'
+        }
+      },
+      {
+        id: 1,
+        caption: 'What We Do',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/what%20we%20do.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'What We Do',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/what%20we%20do.png'
+        }
+      },
+      {
+        id: 2,
+        caption: 'Events Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/events.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Events Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/events.png'
+        }
+      },
+      {
+        id: 3,
+        caption: 'Single Event Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/single%20event.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Single Event Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/single%20event.png'
+        }
+      },
+      {
+        id: 4,
+        caption: 'Members Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/members.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'Members Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/members.png'
+        }
+      },
+      {
+        id: 5,
+        caption: 'Who We Are',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/who%20we%20are.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'Who We Are Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/who%20we%20are.png'
+        }
+      },
+      {
+        id: 6,
+        caption: 'Blog',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/blog.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'Multi User Blog',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/blog.png'
+        }
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: 'Hacksmiths API, Admin Dashboard',
+    type: "Full Stack Web API",
+    description: `Followed best practices to build a Node JS web API containing
+      data driven microservices and React JS / Keystone JS Admin Dashboard.
+      Backed by MongoDB, the API serves multiple clients, including the web app and the iOS app.`,
+    technicalInformation: {
+      description: "Built with NodeJS, Express, MongoDB and KeystoneJS, utilizing the MVC architecture.  Utilized Jade to render views server side and implemented a fast and functional admin dashboard to provide easy access to the site's data.  Utilized the Twitter and Github APIs as OAuth providers for the app and deployed via Docker, automating the process of Continuous Delivery.",
       tags: [
         'React JS',
         'NodeJS',
         'Express',
         'MongoDB',
-        'Foundation',
         'KeystoneJS',
-        'ES6',
-        'Webpack',
         'Docker'
       ]
     },
     milestones: [
       'Built a scalable backend using Node JS, Express JS',
-      'Implemented a custom designed Front End web site',
-      'Designed and implemented an admin dashboard to organize and maintain the sites data',
+      'Implemented a custom admin dashboard using React and KeystoneJS',
       'Automated the build process, following the 12 factor guidelines to build a scalable app',
       'Implemented server-rendered Jade views',
       'Architected a data system utilizing MongoDB, serving data to multiple clients via a REST API'
@@ -229,15 +362,79 @@ const projects = [
     appStoreUrl: '',
     projectUrl: 'http://hacksmiths.io',
     repositoryURL: 'https://github.com/RyanCCollins/hacksmiths-website',
-    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.37%20PM_imac2013_front.png',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-hacksmiths-main.jpg',
+    caption: 'Web API and Front End built for the Hacksmiths members.',
     images: [
-      'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.41.03%20PM_imac2013_right.png',
-      'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-website/master/Screen%20Shot%202016-06-05%20at%204.40.48%20PM_imac2013_left.png'
-    ],
-    caption: 'Web API and Front End built for the Hacksmiths members.'
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-all.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Admin List',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-all.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-events.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Admin Event Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-events.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-login.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Admin Login',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-login.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-meta.png',
+        width: 1200,
+        height: 1080,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Admin Meta',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-meta.png'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-filter.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'Admin Filter Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-filter.png'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-gallery.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'Admin Gallery',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/admin-gallery.png'
+        }
+      }
+    ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'RyanCollins.io',
     type: 'Front End Web',
     description: 'My masterpiece.  A culmination of all of my advanced web knowledge, RyanCollins.io is a professionally designed and developed single page web application.  Built using cutting edge technologies and advanced techniques and design patterns, including React, Redux, ES6, Webpack.  The site communicates with a custom built API built on Node JS.  The sites data is made available through the Node API and is stored in MongoDb.  The backend boasts a ReactJS built admin dashboard, for updating all of the dynamic data on the site.',
@@ -276,10 +473,89 @@ const projects = [
         'Best Practices',
         'AirBnb Style Guides'
       ]
-    }
+    },
+    images: [
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/landing.png',
+        width: 1080,
+        height: 1080,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'Landing Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/landing.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/about.png',
+        width: 1080,
+        height: 1080,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'About Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/about.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/portfolio.png',
+        width: 1080,
+        height: 1080,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'Portfolio Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/portfolio.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/references.png',
+        width: 1080,
+        height: 1080,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'References Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/references.png'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/languages.png',
+        width: 1080,
+        height: 768,
+        aspectRatio: 1.41,
+        lightboxImage: {
+          caption: 'Languages Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/languages.png'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/qualifications.png',
+        width: 1080,
+        height: 768,
+        aspectRatio: 1.41,
+        lightboxImage: {
+          caption: 'Qualifications Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/qualifications.png'
+        }
+      },
+      {
+        id: 6,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/skills.png',
+        width: 1080,
+        height: 768,
+        aspectRatio: 1.41,
+        lightboxImage: {
+          caption: 'Skills Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/ryancollins-io/skills.png'
+        }
+      }
+    ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'Food Drivr - iOS App',
     type: 'iOS Mobile Application',
     description: 'Coordinated collaborative efforts to create open source software with 18 ' +
@@ -315,15 +591,129 @@ const projects = [
     },
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr-ios',
     featureImage: 'https://s3.amazonaws.com/accredible-api-projects/previews/5329/large/1465160757326?1465160244',
-    caption: 'iOS Mobile application, utilizing an Uber model to combat food waste.'
+    caption: 'iOS Mobile application, utilizing an Uber model to combat food waste.',
+    images: [
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/accepting.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Accepting Donation',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/accepting%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/accepting.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/accepting%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/accepting%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Donation Map View',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Idea Submission Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-history.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Donation History',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-history%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-history.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-history.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-history.PNG'
+          ]
+        }
+      },
+      {
+        id: 4,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/mapview.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Donation Map View',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/mapview%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/mapview.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/mapview%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/mapview%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 5,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/food-drivr-app/pending-donations.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Pending Donations',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/pending-donations%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 6,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
+        width: 375,
+        height: 667,
+        aspectRatio: 0.5622,
+        lightboxImage: {
+          caption: 'Profile Edit Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG'
+          ]
+        }
+      }
+    ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Food Drivr - React Web App',
     type: 'Front End Web',
     description: 'Coordinated collaborative efforts and contributed to the development of a React JS web application for the Food Drivr project.',
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr-frontend',
-    featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/wastenotmock.jpg',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/wastenotmock.jpg',
     caption: 'React JS Application built to streamline food donations via the Food Drivr platform.',
     milestones: [
       'Implemented cutting-edge Javascript, including React, ES6 and Webpack.',
@@ -341,6 +731,129 @@ const projects = [
         'Axios'
       ]
     },
+    images: [
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/donate.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Donate Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/donate.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/donate-einstein.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Donate Page With History',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/donate-enstein.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/confirm.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Confirm Donation',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/confirm.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/landing-section-one.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Landing Section One',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/landing-section-one.png'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/landing-section-two.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Landing Section Two',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/landing-section-two.png'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/landing-section-three.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Landing Section Three',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/landing-section-three.png'
+        }
+      },
+      {
+        id: 6,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/profile-one.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Profile One',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/profile-one.png'
+        }
+      },
+      {
+        id: 7,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/profile-two.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Profile Two',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/profile-two.png'
+        }
+      },
+      {
+        id: 8,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/signup.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Main Signup Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/signup.png'
+        }
+      },
+      {
+        id: 9,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/volunteer-signup.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Volunteer Signup Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/volunteer-signup.png'
+        }
+      },
+      {
+        id: 10,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/donor-signup.png',
+        width: 1024,
+        height: 768,
+        aspectRatio: 1.33,
+        lightboxImage: {
+          caption: 'Donor Signup Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/donor-signup.png'
+        }
+      }
+    ],
     designPatterns: {
       description: 'Utilizes the AirBnB JS Style Guide, the Flux and Model View Controller Architectures, HTML 5 and CSS best practices.',
       tags: [
@@ -353,7 +866,7 @@ const projects = [
     }
   },
   {
-    id: 6,
+    id: 7,
     title: 'Food Drivr - Rails API',
     type: 'Back End Web',
     description: 'Coordinated collaborative efforts and lead the ' +
@@ -361,14 +874,15 @@ const projects = [
       'The Food Drivr website and mobile app serves to make it dead simple to donate edible ' +
       'food to the hungry. Open the app, press a button and a driver will come pick it up, bringing it to the less fortunate',
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr',
-    projectUrl: 'https://fooddrivr.com',
+    projectUrl: 'http://teamhacksmiths.github.io/food-drivr-api-documentation',
     featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/food-drivr-donate-mock.jpg',
     caption: 'Rails JSON API and Back End built to drive the Food Drivr project.',
     milestones: [
       'Lead the development of a scalable REST API utilizing the Ruby on Rails web framework.',
       'Utilized Docker to completely automate the deployment and allow for maximum scalability.',
       'Implemented a PostgreSQL database, providing an API to persist data for the project.',
-      'Wrote tests utilizing Rspec to eliminate regressions.'
+      'Wrote tests utilizing Rspec to eliminate regressions.',
+      'Wrote comprehensive documentation to provide sustainability to the project.'
     ],
     technicalInformation: {
       description: "Built with Ruby on Rails, utilizing Docker to automate the build, a PostgreSQL database and RSpec to eliminate regressions.",
@@ -376,19 +890,79 @@ const projects = [
         'Ruby on Rails',
         'Docker',
         'PostgreSQL',
-        'RSpec'
+        'RSpec',
+        'REST',
+        'API'
       ]
     },
     designPatterns: {
-      description: 'Utilizes the Model View Controller pattern and the AirBnb Ruby Style Guide.',
+      description: 'Utilizes the Model View Controller pattern and the AirBnb Ruby Style Guide. Followed the REST architecture, implementing a modern and stable API.',
       tags: [
         'Model View Controller',
-        'AirBnB Ruby Style Guide'
+        'AirBnB Ruby Style Guide',
+        'REST'
       ]
-    }
+    },
+    images: [
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs-errors.png',
+        width: 1500,
+        height: 1200,
+        aspectRatio: 1.25,
+        lightboxImage: {
+          caption: 'API Docs Error Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs-errors.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs-two.png',
+        width: 1500,
+        height: 1200,
+        aspectRatio: 1.25,
+        lightboxImage: {
+          caption: 'API Docs Error Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs-two.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs.png',
+        width: 1500,
+        height: 1200,
+        aspectRatio: 1.25,
+        lightboxImage: {
+          caption: 'API Docs First Section',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-docs.png',
+        width: 1500,
+        height: 1200,
+        aspectRatio: 1.25,
+        lightboxImage: {
+          caption: 'API Entity Relationship Diagram',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-erd.png'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-specs.png',
+        width: 1500,
+        height: 1200,
+        aspectRatio: 1.25,
+        lightboxImage: {
+          caption: 'API Entity Relationship Diagram',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-api/food-drivr-specs.png'
+        }
+      }
+    ]
   },
   {
-    id: 7,
+    id: 8,
     title: 'Digital Tourist',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including CoreData, UIKit, CoreNetworking, the Flickr API, and several Cocoa Pod based libraries.',
@@ -426,10 +1000,56 @@ const projects = [
         'Delegate Pattern',
         'Swift Style Guide'
       ]
-    }
+    },
+    images: [
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one.png',
+        width: 1125,
+        height: 2001,
+        aspectRatio: 0.56,
+        lightboxImage: {
+          caption: 'Virtual Tourist iOS App Image One',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-two.png',
+        width: 1125,
+        height: 2001,
+        aspectRatio: 0.56,
+        lightboxImage: {
+          caption: 'Virtual Tourist iOS App Image Two',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-two.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-three.png',
+        width: 1125,
+        height: 2001,
+        aspectRatio: 0.56,
+        lightboxImage: {
+          caption: 'Virtual Tourist iOS App Image Three',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-three.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-four.png',
+        width: 1125,
+        height: 2001,
+        aspectRatio: 0.56,
+        lightboxImage: {
+          caption: 'Virtual Tourist iOS App Image Four',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one-four.png'
+        }
+      }
+    ]
   },
   {
-    id: 8,
+    id: 9,
     title: 'On the Map',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including UIKit, CoreNetworking, the Parse API, and several Cocoa Pod based libraries.',
@@ -466,10 +1086,34 @@ const projects = [
         'Delegate Pattern',
         'Swift Style Guide'
       ]
-    }
+    },
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map.png',
+        width: 280,
+        height: 500,
+        aspectRatio: 0.56,
+        lightboxImage: {
+          caption: 'On The Map iOS App Image One',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map2.png',
+        width: 280,
+        height: 500,
+        aspectRatio: 0.56,
+        lightboxImage: {
+          caption: 'On The Map iOS App Image Two',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/on-the-map/on-the-map2.png'
+        }
+      }
+    ]
   },
   {
-    id: 9,
+    id: 10,
     title: 'Tech Rapport',
     type: 'Front End Web',
     description: 'Developed a responsive website for the Tech Rapport Consulting Agency using best practices.  ' +
@@ -481,7 +1125,7 @@ const projects = [
       'that minifies and optimizes the website for production.',
     repositoryURL: 'https://github.com/RyanCCollins/techrapport.github.io',
     projectUrl: 'http://techrapport.com',
-    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/techrapport.github.io/master/mockups.jpg',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/techrapport/main.jpg',
     caption: 'Front End Website built for the Tech Rapport Consulting Agency',
     milestones: [
       'Implemented page speed optimizations utilizing Grunt as a build tool, receiving a Page Rank score of 99.',
@@ -509,7 +1153,53 @@ const projects = [
         'Minification',
         'Best Practices'
       ]
-    }
+    },
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/about-me.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'About Me Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/about-me.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/milestones.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'About Me Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/milestones.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/services.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'About Me Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/services.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/work-process.png',
+        width: 1200,
+        height: 768,
+        aspectRatio: 1.5625,
+        lightboxImage: {
+          caption: 'About Me Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techrapport/work-process.png'
+        }
+      }
+    ]
   }
 ];
 
