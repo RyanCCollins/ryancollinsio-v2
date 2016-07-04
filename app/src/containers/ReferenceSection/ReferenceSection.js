@@ -19,6 +19,14 @@ const ReferenceSection = ({
         </div>
       )}
     </Slider>
+    <div className="owl-buttons">
+      <div className="owl-prev">
+        <i className="fa fa-angle-left"></i>
+      </div>
+      <div className="owl-next">
+        <i className="fa fa-angle-right"></i>
+      </div>
+    </div>
   </section>
 );
 
