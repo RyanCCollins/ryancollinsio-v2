@@ -47,7 +47,8 @@ class CircleChart extends React.Component {
               { height: spring(this.state.height) }
             :
               { height: spring(prevInterpolatedStyles[i - 1].height) }
-        })}>
+          })}
+        >
           {interpolatingStyles =>
             <div className="circle">
               {interpolatingStyles.map((style, i) =>
