@@ -19,7 +19,7 @@ class Portfolio extends Component {
     this.setLoading = this.setLoading.bind(this);
     this.setNotLoading = this.setNotLoading.bind(this);
     this.state = {
-      didLoad: false
+      isLoading: false
     };
   }
   componentDidMount() {
