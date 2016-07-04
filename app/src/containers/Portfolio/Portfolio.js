@@ -19,22 +19,22 @@ class Portfolio extends Component {
     this.setLoading = this.setLoading.bind(this);
     this.setNotLoading = this.setNotLoading.bind(this);
     this.state = {
-      didLoad: false
+      isLoading: false
     };
   }
   componentDidMount() {
     const {
-      didLoad
+      isLoading
     } = this.state;
-    if (!didLoad) {
-      setTimeout(this.setLoading(), 100);
+    if (!isLoading) {
+      setTimeout(this.setLoading(), 200);
     }
   }
   setLoading() {
     this.setState({ isLoading: true });
   }
   setNotLoading() {
-    this.setState({ isLoading: false, didLoad: true });
+    this.setState({ isLoading: false });
   }
   handleEndLoad() {
     setTimeout(this.setNotLoading(), 1000);

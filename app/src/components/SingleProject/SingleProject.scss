@@ -7,6 +7,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .review-button-container {
@@ -33,6 +34,9 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .button__github {
@@ -41,6 +45,9 @@
 
 .button__link {
   margin-right: 10px;
+  @media screen and (max-width: 500px) {
+    margin-right: 0px !important;
+  }
 }
 
 .quotation-icon {
