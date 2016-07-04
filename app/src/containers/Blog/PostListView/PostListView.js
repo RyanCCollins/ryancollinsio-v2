@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import './PostListView.scss';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
+import { bindActionCreators } from 'redux';
 import {
   Row,
   Column
@@ -10,14 +11,15 @@ import {
   PostList,
   LoadingIndicator,
   Divider,
-  MessagePanel,
-  ErrorPanel,
+  MessagesSection,
   CategoryList
 } from '../../../components';
 import NoPostsFound from '../Misc/NoPostsFound';
 
 const containsCategory = (post, category) => {
-  const categories = post.categories.filter((cat) => cat._id == category.id);
+  const categories = post.categories.filter(
+    (cat) => cat._id == category.id
+  );
   return categories.length > 0;
 };
 
@@ -45,25 +47,6 @@ const SectionSubTitle = ({
   </h4>
 );
 
-const MessagesSection = ({
-  isFetching,
-  messages,
-  errors
-}) => (
-  <div className="messages-section">
-    {(!isFetching && errors.length) &&
-      <Row>
-        <ErrorPanel errors={errors} />
-      </Row>
-    }
-    {(!isFetching && messages.length && !errors.length) &&
-      <Row>
-        <MessagePanel messages={messages} />
-      </Row>
-    }
-  </div>
-);
-
 class PostListView extends React.Component {
   constructor(props) {
     super(props);
@@ -83,7 +66,6 @@ class PostListView extends React.Component {
     if (!posts.items || posts.items.length === 0) {
       dispatch(
         fetchPostsFromApi().then(() => {
-          console.log("called then in fetch apps")
           this.finishLoading();
         })
       );
@@ -172,4 +154,12 @@ const mapStateToProps = (state) => ({
   isFetching: state.posts.isFetching
 });
 
-export default connect(mapStateToProps)(PostListView);
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators({
+
+  }, dispatch)
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PostListView);

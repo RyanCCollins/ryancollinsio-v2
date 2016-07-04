@@ -1,7 +1,9 @@
 import axios from 'axios';
 import fetch from 'isomorphic-fetch';
 
-const host = 'http://localhost:3000/';
+const host = process.env.NODE_ENV === 'production' ?
+  process.env.BASE_URL : 'http://localhost:3000/';
+
 const apiUrl = `${host}api/posts/`;
 const listUrl = `${apiUrl}list`;
 const postUrl = `${apiUrl}create`;
