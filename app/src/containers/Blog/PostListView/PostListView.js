@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './PostListView.scss';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
+import { fetchPostsFromApi, selectPostCategory } from 'actions/actionCreators';
 import {
   Row,
   Column
@@ -29,16 +30,16 @@ const getFilteredPosts = (
 ) => {
   if (category === null || category.name == 'All') {
     return posts;
-  } else {
-    return posts.filter((post) => {
-      if (containsCategory(post, category)) {
-        return post;
-      }
-      return undefined;
-    });
   }
+  return posts.filter((post) => {
+    if (containsCategory(post, category)) {
+      return post;
+    }
+    return undefined;
+  });
 };
 
+/* Only used internally and it's so small so not worth creating a new component */
 const SectionSubTitle = ({
   title
 }) => (
@@ -46,6 +47,10 @@ const SectionSubTitle = ({
     {title}
   </h4>
 );
+
+SectionSubTitle.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 class PostListView extends React.Component {
   constructor(props) {
@@ -59,16 +64,11 @@ class PostListView extends React.Component {
   }
   componentDidMount() {
     const {
-      dispatch,
-      fetchPostsFromApi,
-      posts
+      posts,
+      fetchPosts
     } = this.props;
     if (!posts.items || posts.items.length === 0) {
-      dispatch(
-        fetchPostsFromApi().then(() => {
-          this.finishLoading();
-        })
-      );
+      fetchPosts();
     }
   }
   finishLoading() {
@@ -79,12 +79,9 @@ class PostListView extends React.Component {
   }
   handleSelectCategory(category) {
     const {
-      dispatch,
-      selectPostCategory
+      selectPostCat
     } = this.props;
-    dispatch(
-      selectPostCategory(category)
-    );
+      selectPostCat(category);
   }
   showMessage(message) {
     toastr.info(message);
@@ -102,7 +99,11 @@ class PostListView extends React.Component {
       <div className="post-list-view__wrapper">
         <h1 className="section-header">From the Blog</h1>
         <SectionSubTitle
-          title={selectedCategory.name == 'All' ? 'All Posts' : `Selected Category: ${selectedCategory.name}`}
+          title={selectedCategory.name == 'All' ?
+            'All Posts'
+          :
+            `Selected Category: ${selectedCategory.name}`
+          }
         />
         <Divider />
         <MessagesSection {...this.props} />
@@ -139,8 +140,8 @@ PostListView.propTypes = {
   messages: PropTypes.array.isRequired,
   posts: PropTypes.object.isRequired,
   isFetching: PropTypes.bool.isRequired,
-  fetchPostsFromApi: PropTypes.func.isRequired,
-  selectPostCategory: PropTypes.func.isRequired,
+  fetchPosts: PropTypes.func.isRequired,
+  selectPostCat: PropTypes.func.isRequired,
   postCategories: PropTypes.array.isRequired,
   selectedCategory: PropTypes.object.isRequired
 };
@@ -156,8 +157,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
-
-  }, dispatch)
+    fetchPosts: () => fetchPostsFromApi(),
+    selectPostCat: (category) => selectPostCategory(category)
+  }, dispatch);
 
 export default connect(
   mapStateToProps,
