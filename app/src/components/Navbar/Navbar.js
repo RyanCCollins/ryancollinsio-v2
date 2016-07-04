@@ -28,14 +28,14 @@ const Navbar = () => (
   <Headroom style={Styles.zIndex}>
     <TopBar className={'navbar active'}>
       <Row>
-        <Column>
+        <Column className="navbar__center-on-small">
           <TopBarTitle className="navbar__title">
             <Link to="/">
               <CrownLogo />
             </Link>
           </TopBarTitle>
           <TopBarRight className="navbar__right">
-            <Menu>
+            <Menu className="menu__centered">
               <MenuItem>
                 <Link to="/portfolio" className="active">Portfolio</Link>
               </MenuItem>
@@ -44,7 +44,7 @@ const Navbar = () => (
               </MenuItem>
               <MenuItem>
                 <Link to="/contact">
-                  <Button isHollow className="button__golden">Contact Me</Button>
+                  <Button isHollow className="button__golden button-contact">Contact Me</Button>
                 </Link>
               </MenuItem>
             </Menu>

@@ -1,84 +1,38 @@
-.fixed {
-  height: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  width: 100%;
-  border-bottom: 1px solid #d9d9d9;
-  z-index: 999;
-  position: fixed;
-  overflow: hidden;
-  background: white;
-  top: 0;
-  left: 0
-}
-
-$menu-icon-size: 4rem;
-$menu-icon-color: #333;
-$menu-link-height: 6.25rem;
-$menu-link-color: #fff;
-$menu-link-border: 1px solid rgba(255,255,255, .5);
-
-.toggle-menu {
-  position:relative;
-  font-size: $menu-icon-size;
-  z-index: 5000;
-  color: $menu-icon-color;
-  top: -0.5rem;
-  left: 1.5rem;
-  transition: all 0.4s ease-in-out;
-
-  &:hover {
-    transition: all 0.4s ease-in-out;
-    color: lighten($menu-icon-color, 30%);
+.navbar__center-on-small {
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.overlay-menu {
-  position: absolute;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  margin:0;
-  padding: 5rem 0 0;
-  opacity: 0;
-  list-style: none;
-  background: url('http://www.nasa.gov/sites/default/files/cygx1_ill.jpg') no-repeat center center;
-  background-size: cover;
-  text-align: center;
-  transform: translateX(-100%) rotateX(40deg);
-  transition: all 400ms cubic-bezier(1.000, -0.400, 0.440, 0.985);
-
-  li {
-    font-size: 1.5rem;
+.menu > li > a {
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
   }
-
-  a {
-    display: block;
-    color: $menu-link-color;
-    font-weight: bold;
-    height: $menu-link-height;
-    line-height: 6.25rem;
-    border-bottom: $menu-link-border;
-    text-decoration: none;
-
-    &:hover {
-      background-color: darken(dodgerblue, 3%);
-    }
+  @media screen and (min-width: 600px) {
+  font-size: 1.0rem;
   }
+  font-size: 1.2rem;
+}
 
-  &.is-open ~ .toggle-menu {
-    display: inline-block;
-    transition: all 0.4s ease-in-out;
-    transform: rotate(135deg);
-    color: lighten($menu-icon-color, 100%);
+.menu__centered {
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.is-open {
-  top: 0;
-  opacity: 1;
-  transform: perspective(200px) translateX(0) rotateX(0);
+.button-contact {
+  @media screen and (max-width: 500px) {
+    font-size: 0.6rem !important;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 0.9rem !important;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 1.0rem !important;
+  }
+  font-size: 1.2rem !important;
 }
