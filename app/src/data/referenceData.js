@@ -30,7 +30,7 @@ const references = [
       image: 'http://techrapport.com/assets/images/references/frank.jpg',
       company: 'Hacksmiths',
       name: 'Frank Robert',
-      title: 'Local SEO Solutions Expert / Front-End Web Developer'
+      title: 'Front-End Web Developer - Hacksmiths'
     }
   },
   {

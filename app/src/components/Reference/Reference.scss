@@ -12,14 +12,6 @@
   align-items: center;
 }
 
-.reference__source-title {
-  
-}
-
-.reference-signature {
-
-}
-
 .reference__text {
   border: 0;
   padding: 0 0 25px;
@@ -28,6 +20,7 @@
   line-height: 1.25;
   color: #000;
   font-family: 'Open Sans';
+  text-align: center;
   @media screen and (max-width: 768px) {
     font-size: 25px;
   }
@@ -48,12 +41,17 @@
 }
 
 .reference-signature {
-  text-align: left;
-  font-color: #6b6b6d;
-  font-style: italic;
-  font-weight: 400;
-  margin-top: 15px;
-  font-size: 25px;
+  display: block;
+  font-size: 29px;
+  text-transform: uppercase;
+  color: #958f8f;
+  text-align: justify;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  margin-top: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .img-thumbnail {
