@@ -8,6 +8,7 @@ class SkillItemBarChart extends React.Component {
     super(props);
     this.setWidthStyle = this.setWidthStyle.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleResize = this.handleResize.bind(this);
     this.state = {
       left: 0,
       width: 0,
@@ -15,31 +16,40 @@ class SkillItemBarChart extends React.Component {
     };
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
   }
-  handleScroll(event) {
-    const element = document.getElementById('item');
-    if (elementInViewport(element)) {
-      if (this.state.needsAnimation === true) {
-        this.setWidthStyle();
-        this.setState({
-          needsAnimation: false
-        });
-      }
-    }
-  }
-  setWidthStyle() {
+  setWidthStyle(w) {
     // const barRef = this.refs.barDiv.getDOMNode();
-    const barRect = { width: 555 };
+    const barRect = { width: w };
     const left = barRect.width * (this.props.skill.percent / 100);
     const width = left + 40;
     this.setState({
       width,
       left
     });
+  }
+  handleScroll() {
+    const element = document.getElementById('item');
+    if (elementInViewport(element)) {
+      if (this.state.needsAnimation === true) {
+        const width = element.offsetWidth;
+        this.setWidthStyle(width || 555);
+        this.setState({
+          needsAnimation: false
+        });
+      }
+    }
+  }
+  handleResize() {
+    const element = document.getElementById('item');
+    const width = element.offsetWidth;
+    console.log(`width: ${width} element: ${element}`)
+    this.setWidthStyle(width);
   }
   render() {
     const {
