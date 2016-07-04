@@ -52,7 +52,13 @@ class PortfolioItem extends React.Component {
     } = this.props;
     return (
       <Row className="display portfolio-item">
-        <Column small={8} centerOnSmall id={`portfolio-item-${project.id}`}>
+        <Column
+          small={12}
+          medium={10}
+          large={8}
+          centerOnSmall
+          id={`portfolio-item-${project.id}`}
+        >
           <div
             className={this.state.isAnimating ?
               `image-wrapper overlay-fade-in ${this.state.animationName}`
