@@ -1,8 +1,26 @@
 import React, { PropTypes } from 'react';
 import Slick from 'react-slick';
+import {
+  FaAngleDoubleRight,
+  FaAngleDoubleLeft
+} from 'react-icons/lib/fa';
+
+const RightArrow = () => (
+  <div className="slick-right-arrow">
+    <FaAngleDoubleRight className="icon-medium icon-white" />
+  </div>
+);
+
+const LeftArrow = () => (
+  <div className="slick-left-arrow">
+    <FaAngleDoubleLeft className="icon-medium" />
+  </div>
+);
 
 const settings = {
   dots: true,
+  nextArrow: <RightArrow />,
+  prevArrow: <LeftArrow />,
   infinite: true,
   speed: 500,
   autoplay: true,
