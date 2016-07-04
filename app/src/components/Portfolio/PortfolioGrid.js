@@ -12,6 +12,7 @@ const PortfolioGrid = ({
         <PortfolioItem
           project={project}
           onLoad={onLoad}
+          projectCount={projects.length}
           key={project.id}
         />
       )}

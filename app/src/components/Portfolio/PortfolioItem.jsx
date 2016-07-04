@@ -24,7 +24,7 @@ class PortfolioItem extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     /* Call the handle scroll right away if it's the first project*/
-    if (this.props.project.id == 1) {
+    if (this.props.project.id === 1) {
       this.handleScroll();
     }
   }
@@ -47,6 +47,7 @@ class PortfolioItem extends React.Component {
   render() {
     const {
       project,
+      projectCount,
       onLoad
     } = this.props;
     return (
@@ -62,7 +63,7 @@ class PortfolioItem extends React.Component {
             <Thumbnail
               src={project.featureImage}
               className="portfolio-image"
-              onLoad={project.id === 1 ? onLoad : undefined}
+              onLoad={project.id === projectCount ? onLoad : undefined}
             />
             <PortfolioOverlay
               project={project}
@@ -76,7 +77,8 @@ class PortfolioItem extends React.Component {
 
 PortfolioItem.propTypes = {
   project: PropTypes.object.isRequired,
-  onLoad: PropTypes.func.isRequired
+  onLoad: PropTypes.func.isRequired,
+  projectCount: PropTypes.number.isRequired
 };
 
 export default PortfolioItem;
