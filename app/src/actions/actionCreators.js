@@ -150,7 +150,7 @@ const contactErrors = (errors) => ({
 });
 
 const contactMessages = (messages) => ({
-  type: CONTACT_ERRORS,
+  type: CONTACT_MESSAGES,
   messages
 });
 
@@ -164,19 +164,20 @@ export const contact = (params) =>
     }).then((response) =>
       response.json()
     ).then((_) => {
-      dispatch(contactSuccess());
       dispatch(
         contactMessages({
           messages: ['Thanks for contacting me!  I will get back to you as soon as possible.']
         })
       )
+      dispatch(contactSuccess());
     })
     .catch((error) => {
       dispatch(contactFailure());
       if (error) {
+        console.log(`An error occured: ${error}`)
         dispatch(
           contactErrors({
-            errors: [`An error occured: ${JSON.stringify(error)}`]
+            errors: [`An error occured: ${JSON.stringify(error.message)}`]
           })
         );
       }

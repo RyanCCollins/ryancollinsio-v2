@@ -54,7 +54,7 @@ exports = module.exports = function (app) {
   app.all('/api/posts/:id/update', routes.api.posts.update);
   app.get('/api/posts/:id/remove', routes.api.posts.remove);
 
-  app.all('/api/contact', routes.api.contact.create);
+  app.all('/api/contact/create', routes.api.contact.create);
 
   /* Unless the route happens before this, then send the index.html file */
   app.use(express.static('./public'));

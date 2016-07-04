@@ -1,38 +1,25 @@
 import {
   DISPLAY_MESSAGE,
-  DISMISS_MESSAGE
+  DISMISS_MESSAGE,
+  CONTACT_MESSAGES
 } from '../actions/actionCreators';
 import { combineReducers } from 'redux';
 
-const contact = (state = {
-  contact: []
-}, action) => {
+const contact = (state = [], action) => {
   switch (action.type) {
-    case DISPLAY_MESSAGE:
-      return Object.assign({}, state, {
-        contact: [...action.message]
-      });
-    case DISMISS_MESSAGE:
-      return Object.assign({}, state, {
-        contact: []
-      });
+    case CONTACT_MESSAGES:
+      return [...state, action.messages];
     default:
       return state;
   }
 };
 
-const posts = (state = {
-  posts: []
-}, action) => {
+const posts = (state = [], action) => {
   switch (action.type) {
     case DISPLAY_MESSAGE:
-      return Object.assign({}, state, {
-        posts: [...action.message]
-      });
+      return [...state, action.message];
     case DISMISS_MESSAGE:
-      return Object.assign({}, state, {
-        posts: []
-      });
+      return [];
     default:
       return state;
   }

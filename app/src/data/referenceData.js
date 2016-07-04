@@ -1,5 +1,19 @@
 const references = [
   {
+    id: 0,
+    text: `Ryan is a fantastic leader, teacher and project manager.
+      He has a wealth of knowledge expanding from the Front end technologies
+      to integrating the back-end aspect on projects. The information he brings
+      fundamentally makes everyone around him better. Anytime someone is
+      struggling to understand or complete a task he's available to walk through it.`,
+    person: {
+      image: 'https://media.licdn.com/media/AAEAAQAAAAAAAAbiAAAAJDkyOTRjMzZiLTA2MGUtNDI5Ni1iMWEzLTI4ODIxODM3NjNkYQ.jpg',
+      company: 'Perry\'s Development',
+      name: 'Cody Perry',
+      title: 'Front End Web Developer - Perry\'s Development'
+    }
+  },
+  {
     id: 1,
     text: 'Ryan is a brilliant, organized and fluent Full Stack Engineer. While working with Ryan he exemplified leadership in the areas of design, full stack engineering and web/mobile development. He has a vast range of skills and is able to pick up new technologies at the drop of a hat. I would definitely recommend this detail-oriented and qualified person for a full stack engineer or team lead position.',
     person: {
@@ -11,7 +25,7 @@ const references = [
   },
   {
     id: 2,
-    text: `Ryan is a fantastic leader, teacher and project manager. 
+    text: `Ryan is a fantastic leader, teacher and project manager.
       He has a wealth of knowledge expanding from the Front end
       technologies to integrating the back-end aspect on projects.
       The information he brings fundamentally makes everyone around him
