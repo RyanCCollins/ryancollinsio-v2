@@ -3,14 +3,14 @@ const projects = [
     id: 1,
     title: 'Hacksmiths App',
     type: 'iOS Mobile App - Swift',
-    description: 'Followed best practices to design and develop the Hacksmiths.io app, ' +
-    'a professional iOS mobile app built for the members of the Hacksmiths.  ' +
-    'Implemented best practices for design and user experience, creating a functional and aesthetically ' +
-    'appealing application. \r\n' +
-    'Founded by Ryan Collins and Sean Craig, the Hacksmiths are a group of software professionals working ' +
-    'collaboratively in a virtual environment in an effort to solve real world problems through the ' +
-    'development of software. We build tools designed to help non-profit organizations streamline their ' +
-    'philanthropic efforts, utilizing industry best practices and advanced software development methodologies.',
+    description: `Followed best practices to design and develop the Hacksmiths.io app,
+      a professional iOS mobile app built for the members of the Hacksmiths.
+      Implemented best practices for design and user experience, creating a functional and aesthetically
+      appealing application. \r\n
+      Founded by Ryan Collins and Sean Craig, the Hacksmiths are a group of software professionals working
+      collaboratively in a virtual environment in an effort to solve real world problems through the
+      development of software. We build tools designed to help non-profit organizations streamline their
+      philanthropic efforts, utilizing industry best practices and advanced software development methodologies.`,
     milestones: [
       "Designed a polished User Interface using Apple's UIKit libraries, Cocoapods and custom views.",
       "Implemented a scalable Node.js API with a persistent MongoDB store to synch server data in real-time to the app.",
@@ -51,10 +51,138 @@ const projects = [
     caption: "iOS Mobile Application built for the Hacksmiths.",
     images: [
       {
-        src: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0405_iphone6plus_gold_side2.png',
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community%403x.PNG'
+          ]
+        }
       },
       {
-        src: 'https://raw.githubusercontent.com/RyanCCollins/hacksmiths-app/master/IMG_0406_iphone6plus_gold_side2.png'
+        id: 1,
+        caption: 'Event Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/event%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 2,
+        caption: 'Idea Submission Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 3,
+        caption: 'Loading Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/loading%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 4,
+        caption: 'Participants Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/participants%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 5,
+        caption: 'Person Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/person%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 6,
+        caption: 'Profile Edit Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile-edit%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 7,
+        caption: 'Profile Page',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/profile%403x.PNG'
+          ]
+        }
+      },
+      {
+        id: 8,
+        caption: 'Slideout Nav',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout.PNG',
+        width: 667,
+        height: 375,
+        lightboxImage: {
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout%403x.PNG',
+          srcSet: [
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/slideout%403x.PNG'
+          ]
+        }
       }
     ]
   },

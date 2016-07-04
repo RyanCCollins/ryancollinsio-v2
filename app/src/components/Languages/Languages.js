@@ -8,7 +8,7 @@ const Languages = ({
   <div className="circle-chart">
     <Row>
       {languages.map((language, i) => (
-        <Column key={i} small={4} large={2} isColumn>
+        <Column key={i} small={6} medium={4} large={2} isColumn>
           <CircleChart
             item={language}
           />
