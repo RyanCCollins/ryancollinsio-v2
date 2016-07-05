@@ -12,9 +12,11 @@ const loggerMiddleware = createLogger();
 const middlewares = [thunkMiddleware, promiseMiddleware(), loggerMiddleware];
 
 const enhancers = [];
-const devToolsExtension = window.devToolsExtension
-if (typeof devToolsExtension === 'function') {
-  enhancers.push(devToolsExtension());
+if (process.env.NODE_ENV !== 'production') {
+  const devToolsExtension = window.devToolsExtension;
+  if (typeof devToolsExtension === 'function') {
+    enhancers.push(devToolsExtension());
+  }
 }
 
 const composedEnhancers = compose(

@@ -4,8 +4,7 @@
     src: url('../fonts/Glyphter.eot');
     src: url('../fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Glyphter.woff') format('woff'),
-         url('../fonts/Glyphter.ttf') format('truetype'),
-         url('../fonts/Glyphter.svg#Glyphter') format('svg');
+         url('../fonts/Glyphter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

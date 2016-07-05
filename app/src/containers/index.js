@@ -10,8 +10,11 @@ import SinglePostView from './Blog/SinglePostView/SinglePostView';
 import ResumePDF from './ResumePDF/ResumePDF';
 import ResumeSection from './ResumeSection/ResumeSection';
 import ReferenceSection from './ReferenceSection/ReferenceSection';
+import Footer from './Footer/Footer';
+import TechnologySection from './TechnologySection/TechnologySection';
 
 export {
+  TechnologySection,
   LandingPage,
   Portfolio,
   NotFound,
@@ -23,5 +26,6 @@ export {
   SinglePostView,
   ResumePDF,
   ResumeSection,
-  ReferenceSection
+  ReferenceSection,
+  Footer
 };

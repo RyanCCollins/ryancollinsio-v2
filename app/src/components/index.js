@@ -21,6 +21,7 @@ import Reference from './Reference/Reference';
 import Slider from './Slider/Slider';
 import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
 import FooterLinks from './FooterLinks/FooterLinks';
+import AboutSection from './AboutSection/AboutSection';
 
 export {
   Intro,
@@ -45,5 +46,6 @@ export {
   Reference,
   MessagesSection,
   PortfolioGallery,
-  FooterLinks
+  FooterLinks,
+  AboutSection
 };

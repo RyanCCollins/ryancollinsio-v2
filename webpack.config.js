@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
@@ -31,11 +33,11 @@ module.exports = {
     },
     {
       test: /\.scss$/,
-      loaders: ['style','css','sass']
+      loaders: ['style','css', 'postcss', 'sass']
     },
     {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: "style-loader!css-loader!postcss-loader"
     },
     {
       test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
@@ -75,6 +77,12 @@ module.exports = {
     hot: true,
     inline: true,
     progress: true
+  },
+  postcss: function () {
+    return {
+      defaults: [autoprefixer],
+      cleaner:  [autoprefixer({ browsers: [] })]
+    };
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

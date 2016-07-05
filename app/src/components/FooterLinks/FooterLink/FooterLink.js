@@ -1,18 +1,21 @@
 import React, { PropTypes } from 'react';
 import IconPicker from './IconPicker';
+import './FooterLink.scss';
 
 const FooterLink = ({
-  item
+  footerLink
 }) => (
   <li>
-    <div className="footer-link-item">
-      <a href={item.link}>
-        <IconPicker id={item.id} />
+    <div className="footer-link-item__wrapper">
+      <a href={footerLink.url} className="footer-link__item">
+        <IconPicker id={footerLink.id} />
       </a>
     </div>
   </li>
 );
 
 FooterLink.propTypes = {
-  item: PropTypes.object.isRequired
+  footerLink: PropTypes.object.isRequired
 };
+
+export default FooterLink;

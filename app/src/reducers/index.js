@@ -10,6 +10,7 @@ import errors from './errors';
 import contact from './contact';
 import resumeData from './resumeData';
 import references from './references';
+import footerLinks from './footerLinks';
 
 const rootReducer = combineReducers({
   posts,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   messages,
   errors,
   references,
+  footerLinks,
   contact,
   routing: routerReducer,
   form: formReducer,

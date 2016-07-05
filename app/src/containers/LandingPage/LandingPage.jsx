@@ -1,13 +1,18 @@
 import React from 'react';
-import Intro from '../../components/Intro/Intro';
-import AboutSection from '../../components/AboutSection/AboutSection';
-import TechnologySection from '../../containers/TechnologySection/TechnologySection';
-import SkillSection from '../../containers/SkillSection/SkillSection';
+
 import {
+  Intro,
+  AboutSection
+} from 'components';
+
+import {
+  Footer,
   LanguageSection,
   ResumeSection,
-  ReferenceSection
-} from '../../containers';
+  ReferenceSection,
+  TechnologySection,
+  SkillSection
+} from 'containers';
 
 import * as Constants from '../../constants';
 import './LandingPage.scss';
@@ -46,6 +51,7 @@ const LandingPage = props => (
       technologies={Constants.Technologies}
       technologyHeader={Constants.technologyHeader}
     />
+    <Footer {...props} />
   </div>
 );
 

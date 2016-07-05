@@ -1,20 +1,21 @@
 import React, { PropTypes } from 'react';
 import FooterLink from './FooterLink/FooterLink';
+import './FooterLinks.scss';
 
 const FooterLinks = ({
-  items
+  footerLinks
 }) => (
   <div className="footer-links">
-    <ul className="inline-list">
-      {items.map((item) =>
-        <FooterLink item={item} />
+    <ul className="list-inline">
+      {footerLinks.map((link) =>
+        <FooterLink footerLink={link} />
       )}
     </ul>
   </div>
 );
 
 FooterLinks.propTypes = {
-  items: PropTypes.array.isRequired
+  footerLinks: PropTypes.array.isRequired
 };
 
 export default FooterLinks;
