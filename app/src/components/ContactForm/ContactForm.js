@@ -9,10 +9,10 @@ import './ContactForm.scss';
 import contactValidation from './contactValidation';
 
 export const fields = [
-  'fullName',
-  'email',
-  'category',
-  'message'
+  'fullNameInput',
+  'emailInput',
+  'categoryInput',
+  'messageInput'
 ];
 
 const ContactForm = ({
@@ -20,10 +20,10 @@ const ContactForm = ({
   submitting,
   resetForm,
   fields: {
-    fullName,
-    email,
-    category,
-    message
+    fullNameInput,
+    emailInput,
+    categoryInput,
+    messageInput
   }
 }) => (
   <Row>
@@ -35,25 +35,27 @@ const ContactForm = ({
             id="full-name"
             type="text"
             placeholder="Full Name"
-            className={fullName.error ? 'form-control error' : 'form-control'}
-            {...fullName}
+            className={fullNameInput.error ? 'form-control error' : 'form-control'}
+            {...fullNameInput}
           />
-          {fullName.touched &&
-            fullName.error &&
+          {fullNameInput.touched &&
+            fullNameInput.error &&
             <small className="error">
-              {fullName.error}
+              {fullNameInput.error}
             </small>
           }
         </div>
         <div className="small-12 columns form-group">
           <label htmlFor="email">Email</label>
           <input
-            {...email}
+            {...emailInput}
             id="email"
             type="email"
             placeholder="Email"
           />
-        {email.touched && email.error && <small className="error">{email.error} </small>}
+        {emailInput.touched && emailInput.error &&
+          <small className="error">{emailInput.error} </small>
+        }
         </div>
         <div className="small-12 columns form-group">
           <label htmlFor="category">
@@ -61,10 +63,10 @@ const ContactForm = ({
           </label>
           <div>
             <select
-              {...category}
+              {...categoryInput}
               id="category"
-              value={category.value || ''}
-              className={category.error ? 'error' : ''}
+              value={categoryInput.value || ''}
+              className={categoryInput.error ? 'error' : ''}
             >
               <option></option>
               <option value="help">I need your help on a project.</option>
@@ -78,14 +80,16 @@ const ContactForm = ({
           <label htmlFor="message">Message</label>
           <div>
             <textarea
-              {...message}
+              {...messageInput}
               id="message"
-              value={message.value || ''}
-              className={message.error ? 'error' : ''}
+              value={messageInput.value || ''}
+              className={messageInput.error ? 'error' : ''}
               rows={5}
             />
           </div>
-          {message.touched && message.error && <small className="error">{message.error}</small>}
+          {messageInput.touched && messageInput.error &&
+            <small className="error">{messageInput.error}</small>
+          }
         </div>
         <div className="button-group">
           <Button isExpanded size={'large'} disabled={submitting}>
