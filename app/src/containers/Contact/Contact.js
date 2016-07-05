@@ -32,13 +32,10 @@ class Contact extends React.Component {
       clearMessages,
       clearErrors
     } = this.props;
-    switch (sender.target.id) {
-      case 'button-close-messages-panel':
-        return clearMessages();
-      case 'button-close-error-panel':
-        return clearErrors();
-      default:
-        break;
+    if (sender.target.id == 'button-close-messages-panel') {
+      clearMessages();
+    } else if (sender.target.id == 'button-close-error-panel') {
+      clearErrors();
     }
   }
   render() {

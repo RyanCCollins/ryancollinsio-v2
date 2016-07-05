@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Divider from '../../Divider/Divider';
 import {
   Row,
@@ -22,7 +22,7 @@ const Author = ({
       <div className="author-card paper__fit">
         <h1 className="section-header">About The Author</h1>
         <Divider />
-        <MediaObject stackForSmall>
+        <MediaObject className="center-stacked">
           <MediaObjectSection className="center-on-small">
             <img
               alt="Blog post's author"
@@ -41,7 +41,7 @@ const Author = ({
             :
               <div></div>
             }
-            <div className="author-social-links">
+            <span className="author-social-links">
               {author.github ?
                 <a
                   className="author-social-link"
@@ -62,12 +62,16 @@ const Author = ({
               :
                 <div></div>
               }
-            </div>
+            </span>
           </MediaObjectSection>
         </MediaObject>
       </div>
     </Column>
   </Row>
 );
+
+Author.propTypes = {
+  author: PropTypes.object.isRequired
+};
 
 export default Author;

@@ -35,6 +35,15 @@
   line-height: normal;
 }
 
+.center-stacked {
+  @media screen and (max-width: 39.9375em) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .center-on-small {
   @media screen and (max-width: 39.9375em) {
     display: flex;
@@ -59,8 +68,12 @@
 }
 
 .author-social-links {
-  margin: 10px 0;
+  margin-left: 20px;
   padding: 10px 0;
+}
+
+.author-social-links a.author-social-links {
+  padding: 10px;
 }
 
 .muted-link {
