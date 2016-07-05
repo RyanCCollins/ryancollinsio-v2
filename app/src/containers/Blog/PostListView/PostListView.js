@@ -58,6 +58,7 @@ class PostListView extends React.Component {
     this.handleSelectCategory = this.handleSelectCategory.bind(this);
     this.finishLoading = this.finishLoading.bind(this);
     this.handleChangePage = this.handleChangePage.bind(this);
+    this.handleClose = this.handleClose.bind(this);
     this.state = {
       isLoading: props.isFetching
     };
@@ -86,6 +87,9 @@ class PostListView extends React.Component {
   showMessage(message) {
     toastr.info(message);
   }
+  handleClose(sender) {
+
+  }
   render() {
     const {
       posts,
@@ -98,8 +102,9 @@ class PostListView extends React.Component {
     const items = posts.items;
     const visiblePosts = getFilteredPosts(selectedCategory, items);
     return (
-      <LoadingIndicator isLoading={isFetching}>>
+      <LoadingIndicator isLoading={isFetching}>
         <div className="post-list-view__wrapper">
+          <MessagesSection messages={messages} errors={errors} onClose={this.handleClose} />
           <h1 className="section-header">From the Blog</h1>
           <SectionSubTitle
             title={selectedCategory.name == 'All' ?
@@ -109,7 +114,6 @@ class PostListView extends React.Component {
             }
           />
           <Divider />
-          <MessagesSection messages={messages} errors={errors} />
           <Row className="category-links">
             <Column large={6} small={12} isColumn centerOnSmall>
               <CategoryList

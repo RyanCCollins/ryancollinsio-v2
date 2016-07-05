@@ -6,26 +6,37 @@ import './MessagesSection.scss';
 const MessagesSection = ({
   isFetching,
   messages,
-  errors
+  errors,
+  onClose
 }) => (
   <div className="messages-section">
-    {(!isFetching && errors.length) &&
-      <Row>
-        <ErrorPanel errors={errors} />
-      </Row>
-    }
-    {(!isFetching && messages.length && !errors.length) &&
-      <Row>
-        <MessagePanel messages={messages} />
-      </Row>
-    }
+    {(() => {
+      if (!isFetching && errors.length > 0) {
+        return (
+          <Row className="errors-row__wrapper">
+            <ErrorPanel errors={errors} onClose={onClose} />
+          </Row>
+        );
+      } else if (!isFetching && messages.length > 0 && errors.length < 0) {
+        return (
+          <Row className="messages-row__wrapper">
+            <MessagePanel messages={messages} onClose={onClose} />
+          </Row>
+        );
+      } else {
+        return (
+          <noscript />
+        );
+      }
+    })()}
   </div>
 );
 
 MessagesSection.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   messages: PropTypes.array,
-  errors: PropTypes.array
+  errors: PropTypes.array,
+  onClose: PropTypes.func.isRequired
 };
 
 export default MessagesSection;

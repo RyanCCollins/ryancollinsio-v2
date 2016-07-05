@@ -53,7 +53,8 @@ const fetchPostsAsync = () => {
       .catch(error => {
         dispatch(postsFailure());
         const errors = [];
-        const theError = `An error has occured ${JSON.stringify(error)}`;
+        const theError = `An error has occured ${JSON.stringify(error.message)}`;
+        console.log(theError);
         errors.push(theError);
         dispatch(postsErrors(errors));
       }
@@ -173,9 +174,12 @@ export const contact = (params) =>
       dispatch(contactFailure());
       if (error) {
         const errors = [];
-        errors.push(error);
-        dispatch(
-          contactErrors(errors)
+        const theError = `An error occured ${error.message}`
+        errors.push(theError);
+        setTimeout(
+          /* Server response happens so fast, need to fake server timeout */
+          dispatch(contactErrors(errors)),
+          2000
         );
       }
     }
