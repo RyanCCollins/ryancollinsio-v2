@@ -434,8 +434,8 @@ const projects = [
       'Implemented cutting edge Javascript including Webpack and React',
       'Utilized Redux to provide predictable state to the application',
       'Built several dozen custom components, focusing on reusability and best practices',
-      'Implemented the best features of ES6 using Babel to transpile to ES5.',
-      'Created stateless functional components using JSX best practices and style.',
+      'Implemented the best features of ES6 using Babel to transpile to ES6.',
+      'Created stateless functional and stateful ES6 Class components using JSX best practices and style.',
       'Utilized the AirBnb style guide to improve code readability and eliminate errors.',
       'Implemented Enzyme testing to test React Components.'
     ],
