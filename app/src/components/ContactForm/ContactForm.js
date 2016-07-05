@@ -27,10 +27,9 @@ const ContactForm = ({
   }
 }) => (
   <Row>
-    <Column small={12} large={8} isColumn centerOnSmall>
+    <Column small={12} large={12} isColumn centerOnSmall>
       <form onSubmit={handleSubmit} className="form-groups" data-abide>
         <div className="small-12 columns form-group">
-          <label htmlFor="first-name">First Name</label>
           <input
             id="full-name"
             type="text"
@@ -46,27 +45,26 @@ const ContactForm = ({
           }
         </div>
         <div className="small-12 columns form-group">
-          <label htmlFor="email">Email</label>
           <input
             {...emailInput}
             id="email"
-            type="email"
+            className={emailInput.error ? 'form-control error' : 'form-control'}
+            type="text"
             placeholder="Email"
           />
         {emailInput.touched && emailInput.error &&
-          <small className="error">{emailInput.error} </small>
+          <small className="error">{emailInput.error}</small>
         }
         </div>
         <div className="small-12 columns form-group">
-          <label htmlFor="category">
-            What are you contacting me about?
-          </label>
           <div>
+            <label htmlFor="category">What are you contacting me about?</label>
             <select
               {...categoryInput}
               id="category"
+              placeholder="What are you contacting me about?"
               value={categoryInput.value || ''}
-              className={categoryInput.error ? 'error' : ''}
+              className={categoryInput.error ? 'form-control error' : 'form-control'}
             >
               <option></option>
               <option value="help">I need your help on a project.</option>
@@ -77,14 +75,14 @@ const ContactForm = ({
           </div>
         </div>
         <div className="small-12 columns form-group">
-          <label htmlFor="message">Message</label>
           <div>
             <textarea
               {...messageInput}
               id="message"
+              placeholder="Leave me a message..."
               value={messageInput.value || ''}
-              className={messageInput.error ? 'error' : ''}
-              rows={5}
+              className={messageInput.error ? 'form-control error' : 'form-control'}
+              rows={3}
             />
           </div>
           {messageInput.touched && messageInput.error &&
@@ -92,12 +90,15 @@ const ContactForm = ({
           }
         </div>
         <div className="button-group">
-          <Button isExpanded size={'large'} disabled={submitting}>
-            {submitting ?
-              <FaCog className="fa-spin" />
-            :
-              <FaPaperPlane />
-            }{' Submit'}
+          <Button className="submit-form-button" isExpanded size={'large'} disabled={submitting}>
+            <div className="button-items__wrapper">
+              {submitting ?
+                <FaCog className="fa-spin" />
+              :
+                <FaPaperPlane />
+              }
+              <span>{' Submit'}</span>
+            </div>
           </Button>
           <Button
             type="button"
