@@ -31,7 +31,6 @@ const didReceivePosts = (data) => ({
   postCategories: data.categories
 });
 
-
 export const POSTS_FAILURE = 'POSTS_FAILURE';
 const postsFailure = () => ({
   type: POSTS_FAILURE
@@ -41,6 +40,16 @@ export const POSTS_ERRORS = 'POSTS_ERRORS';
 const postsErrors = (errors) => ({
   type: POSTS_ERRORS,
   errors
+});
+
+export const CLEAR_POSTS_ERRORS = 'CLEAR_POSTS_ERRORS';
+export const clearPostsErrors = () => ({
+  type: CLEAR_POSTS_ERRORS
+});
+
+export const CLEAR_POSTS_MESSAGES = 'CLEAR_POSTS_MESSAGES';
+export const clearPostsMessages = () => ({
+  type: CLEAR_POSTS_MESSAGES
 });
 
 /* Returns dispatch of promise for fetching posts from the API. */
@@ -131,6 +140,8 @@ export const CONTACT_SUCCESS = 'CONTACT_SUCCESS';
 export const CONTACT_FAILURE = 'CONTACT_FAILURE';
 export const CONTACT_ERRORS = 'CONTACT_ERRORS';
 export const CONTACT_MESSAGES = 'CONTACT_MESSAGES';
+export const CLEAR_CONTACT_MESSAGES = 'CLEAR_CONTACT_MESSAGES';
+export const CLEAR_CONTACT_ERRORS = 'CLEAR_CONTACT_ERRORS';
 
 const submitContact = (params) => ({
   type: SUBMIT_CONTACT,
@@ -153,6 +164,14 @@ const contactErrors = (errors) => ({
 const contactMessages = (messages) => ({
   type: CONTACT_MESSAGES,
   messages
+});
+
+export const clearContactErrors = () => ({
+  type: CLEAR_CONTACT_ERRORS
+});
+
+export const clearContactMessages = () => ({
+  type: CLEAR_CONTACT_MESSAGES
 });
 
 export const contact = (params) =>

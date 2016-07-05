@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import './PostListView.scss';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
-import { fetchPostsFromApi, selectPostCategory } from 'actions/actionCreators';
+import {
+  fetchPostsFromApi,
+  selectPostCategory,
+  clearPostsErrors,
+  clearPostsMessages
+} from 'actions/actionCreators';
 import {
   Row,
   Column
@@ -88,7 +93,16 @@ class PostListView extends React.Component {
     toastr.info(message);
   }
   handleClose(sender) {
-
+    const {
+      clearErrors,
+      clearMessages
+    } = this.props;
+    const theElement = sender.target.id;
+    if (theElement === 'button-close-error-panel') {
+      clearErrors();
+    } else if (theElement === 'button-close-messages-panel') {
+      clearMessages();
+    }
   }
   render() {
     const {
@@ -148,7 +162,9 @@ PostListView.propTypes = {
   fetchPosts: PropTypes.func.isRequired,
   selectPostCat: PropTypes.func.isRequired,
   postCategories: PropTypes.array.isRequired,
-  selectedCategory: PropTypes.object.isRequired
+  selectedCategory: PropTypes.object.isRequired,
+  clearMessages: PropTypes.func.isRequired,
+  clearErrors: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
@@ -163,7 +179,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     fetchPosts: () => fetchPostsFromApi(),
-    selectPostCat: (category) => selectPostCategory(category)
+    selectPostCat: (category) => selectPostCategory(category),
+    clearMessages: () => clearPostsMessages(),
+    clearErrors: () => clearPostsErrors()
   }, dispatch);
 
 export default connect(

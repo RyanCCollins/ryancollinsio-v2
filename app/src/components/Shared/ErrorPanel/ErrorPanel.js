@@ -21,17 +21,18 @@ const ErrorPanel = ({
     <Column small={12} large={8} isColumn centerOnSmall>
       <Callout
         color={'alert'}
-        size={'large'}
-        className="error-panel-callout"
+        size={'small'}
+        className="error-panel-callout radius"
         style={isVisible ? Styles.notHidden : Styles.hidden}
       >
         <button
+          id="button-close-error-panel"
           className="btn btn-close"
           onClick={onClose}
         >✕</button>
-        <MdWarning className="icon-medium" />
+        <MdWarning className="icon-medium icon-red" />
         <h4 className="error-header">Errors</h4>
-        <p className="error-sub-header">The following errors were returned from the server</p>
+        <p className="error-subheader">The following errors were returned from the server</p>
         <ul className="no-bullet error-list">
           {errors.map((error) =>
             <li className="error-list-item">

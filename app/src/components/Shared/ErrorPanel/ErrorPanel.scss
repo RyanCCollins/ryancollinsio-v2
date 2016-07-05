@@ -1,21 +1,36 @@
 .error-panel {
   text-align: center;
+  width: 100%;
 }
 
 .error-panel-callout {
-
+  color: rgb(78, 78, 78);
 }
 
 .error-header {
+  font-family: 'Lato';
+  font-size: 29px;
+  color: rgb(78, 78, 78);
+  text-transform: uppercase;
+}
 
+.error-subheader {
+  font-size: 22px;
+  font-family: 'Open Sans';
 }
 
 .error-list {
 
 }
 
-.error-list-item {
+.icon-red {
+  color: #ff1e40 !important;
+  font-size: 3rem;
+}
 
+.error-list-item {
+  font-size: 19px;
+  font-family: 'Open Sans';
 }
 
 .error-list-item__text {

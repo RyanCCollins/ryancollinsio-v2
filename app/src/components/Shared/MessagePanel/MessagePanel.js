@@ -16,9 +16,16 @@ const Styles = {
   }
 };
 
+const Style = {
+  rippingRed: {
+    color: '#ff1e40'
+  }
+};
+
 const MessagePanel = ({
   messages,
-  isVisible
+  isVisible,
+  onClose
 }) => (
   <Row className="message-panel">
     <Column small={12} large={8} isColumn centerOnSmall>
@@ -28,9 +35,14 @@ const MessagePanel = ({
         className="message-panel-callout"
         style={isVisible ? Styles.notHidden : Styles.hidden}
       >
-        <MdMessage className="icon-medium" />
+        <button
+          id="button-close-messages-panel"
+          className="btn btn-close"
+          onClick={onClose}
+        >✕</button>
+        <MdMessage style={Styles.rippingRed} className="icon-medium" />
         <h4 className="message-header">Messages</h4>
-        <p className="message-sub-header">The following messages were returned from the server</p>
+        <p className="message-subheader">The following messages were returned from the server</p>
         <ul className="no-bullet message-list">
           {messages.map((msg) =>
             <li className="message-list-item">
@@ -47,7 +59,8 @@ const MessagePanel = ({
 
 MessagePanel.propTypes = {
   messages: PropTypes.array.isRequired,
-  isVisible: PropTypes.bool.isRequired
+  isVisible: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 export default MessagePanel;

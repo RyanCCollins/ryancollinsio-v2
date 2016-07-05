@@ -4,7 +4,6 @@ import {
   ADD_POST,
   DELETE_POST,
   SELECT_POST_CATEGORY,
-  DESELECT_POST_CATEGORY,
   POSTS_FAILURE
 } from '../actions/actionCreators';
 

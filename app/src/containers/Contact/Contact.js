@@ -8,19 +8,38 @@ import { Column, Row } from 'react-foundation';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { contact } from 'actions/actionCreators';
+import {
+  contact,
+  clearContactMessages,
+  clearContactErrors
+} from 'actions/actionCreators';
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toastr = bindActionCreators(toastrActions, this.props.dispatch);
+    this.handleCloseMessages = this.handleCloseMessages.bind(this);
   }
   handleSubmit(params) {
     const {
       onSubmitContact
     } = this.props;
     onSubmitContact(params);
+  }
+  handleCloseMessages(sender) {
+    const {
+      clearMessages,
+      clearErrors
+    } = this.props;
+    switch (sender.target.id) {
+      case 'button-close-messages-panel':
+        return clearMessages();
+      case 'button-close-error-panel':
+        return clearErrors();
+      default:
+        break;
+    }
   }
   render() {
     const {
@@ -30,7 +49,12 @@ class Contact extends React.Component {
     } = this.props;
     return (
       <LoadingIndicator isLoading={isFetching}>
-        <MessagesSection isFetching={isFetching} messages={messages} errors={errors} />
+        <MessagesSection
+          isFetching={isFetching}
+          messages={messages}
+          errors={errors}
+          onClose={this.handleCloseMessages}
+        />
         <div className="contact-container">
           <Row>
             <Column small={12} medium={8} isColumn centerOnSmall>
@@ -47,6 +71,15 @@ class Contact extends React.Component {
   }
 }
 
+Contact.propTypes = {
+  onSubmitContact: PropTypes.func.isRequired,
+  errors: PropTypes.array,
+  messages: PropTypes.array,
+  isFetching: PropTypes.bool.isRequired,
+  clearErrors: PropTypes.func.isRequired,
+  clearMessages: PropTypes.func.isRequired
+};
+
 const mapStateToProps = (state) => ({
   errors: state.errors.contact,
   messages: state.messages.contact,
@@ -55,15 +88,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
-    onSubmitContact: (params) => contact(params)
+    onSubmitContact: (params) => contact(params),
+    clearMessage: () => clearContactMessages(),
+    clearErrors: () => clearContactErrors()
   }, dispatch);
-
-Contact.propTypes = {
-  onSubmitContact: PropTypes.func.isRequired,
-  errors: PropTypes.array,
-  messages: PropTypes.array,
-  isFetching: PropTypes.bool.isRequired
-};
 
 export default connect(
   mapStateToProps,
