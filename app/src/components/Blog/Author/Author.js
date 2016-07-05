@@ -25,13 +25,13 @@ const Author = ({
         <MediaObject stackForSmall>
           <MediaObjectSection className="center-on-small">
             <img
-              alt="Image of the blog post's author"
+              alt="Blog post's author"
               className="avatar-image avatar-image__small"
               src={author.avatar ? author.avatar.url : noPic}
             />
           </MediaObjectSection>
           <MediaObjectSection>
-            <h4>{`${author.name.first} ${author.name.last}`}</h4>
+            <h4 className="author-card__name">{`${author.name.first} ${author.name.last}`}</h4>
             <ReactMarkdown
               className="author-bio-text"
               source={author.bio ? author.bio.md : 'This author has no bio.'}
