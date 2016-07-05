@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Row } from 'react-foundation';
 import { ErrorPanel, MessagePanel } from 'components';
+import './MessagesSection.scss';
 
 const MessagesSection = ({
   isFetching,

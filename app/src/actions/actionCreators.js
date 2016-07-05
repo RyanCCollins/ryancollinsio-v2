@@ -166,21 +166,18 @@ export const contact = (params) =>
     }).then((response) =>
       response.json()
     ).then((_) => {
-      dispatch(
-        contactMessages({
-          messages: ['Thanks for contacting me!  I will get back to you as soon as possible.']
-        })
-      )
+      const messages = [];
+      messages.push('Thanks for contacting me!  I will get back to you as soon as possible.');
       dispatch(contactSuccess());
+      dispatch(contactMessages(messages));
     })
     .catch((error) => {
       dispatch(contactFailure());
       if (error) {
-        console.log(`An error occured: ${error}`)
+        const errors = [];
+        errors.push(error);
         dispatch(
-          contactErrors({
-            errors: [`An error occured: ${JSON.stringify(error.message)}`]
-          })
+          contactErrors(errors)
         );
       }
     }

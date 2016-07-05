@@ -47,8 +47,9 @@ const ErrorPanel = ({
 );
 
 ErrorPanel.propTypes = {
-  errors: PropTypes.array.isRequired,
-  isVisible: PropTypes.bool.isRequired
+  errors: PropTypes.array,
+  isVisible: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 export default ErrorPanel;

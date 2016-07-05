@@ -11,13 +11,13 @@ import SinglePost from './Blog/SinglePost/SinglePost';
 import PostList from './Blog/PostList/PostList';
 import MessagePanel from './Shared/MessagePanel/MessagePanel';
 import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
+import MessagesSection from './MessagesSection/MessagesSection';
 import CategoryList from './Blog/CategoryList/CategoryList';
 import Author from './Blog/Author/Author';
 import CommentThread from './Blog/CommentThread/CommentThread';
 import PDFViewer from './PDFViewer/PDFViewer';
 import ResumeItem from './ResumeItem/ResumeItem';
 import Reference from './Reference/Reference';
-import MessagesSection from './Shared/MessagesSection/MessagesSection';
 import Slider from './Slider/Slider';
 import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
 

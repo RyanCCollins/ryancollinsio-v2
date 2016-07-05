@@ -2,8 +2,7 @@ import React, { PropTypes } from 'react';
 import './Contact.scss';
 import { ContactForm,
   LoadingIndicator,
-  ErrorPanel,
-  MessagePanel
+  MessagesSection
 } from '../../components';
 import { Column, Row } from 'react-foundation';
 import { toastr, actions as toastrActions } from 'react-redux-toastr';
@@ -31,8 +30,7 @@ class Contact extends React.Component {
     } = this.props;
     return (
       <LoadingIndicator isLoading={isFetching}>
-        <ErrorPanel errors={errors} isVisible={!isFetching && errors.length > 0} />
-        <MessagePanel messages={messages} isVisible={!isFetching && messages.length > 0} />
+        <MessagesSection isFetching={isFetching} messages={messages} errors={errors} />
         <div className="contact-container">
           <Row>
             <Column small={12} medium={8} isColumn centerOnSmall>

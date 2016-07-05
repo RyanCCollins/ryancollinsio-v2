@@ -3,14 +3,10 @@ import {
 } from '../actions/actionCreators';
 import { combineReducers } from 'redux';
 
-const contact = (state = {
-  contact: []
-}, action) => {
+const contact = (state = [], action) => {
   switch (action.type) {
     case CONTACT_ERRORS:
-      return Object.assign(state, {
-        contact: action.errors
-      });
+      return [...action.errors];
     default:
       return state;
   }
