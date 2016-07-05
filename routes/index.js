@@ -9,6 +9,8 @@ const port = isDeveloping ? 8016 : process.env.PORT;
 const path = require('path');
 const compiler = webpack(config);
 const express = require('express');
+const React = require('react');
+const Router = require('react-router');
 
 const routes = {
   api: importRoutes('./api')

@@ -19,7 +19,7 @@ const DownChevron = () => (
   </div>
 );
 
-const Intro = props => (
+const Intro = () => (
   <div className="intro">
     <div className="intro-header">
       <div className="intro-header__content">

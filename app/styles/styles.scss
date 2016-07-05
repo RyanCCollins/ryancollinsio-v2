@@ -105,7 +105,11 @@ span.divider {
 }
 
 .top-bar {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(82, 82, 82, 0.57);
+}
+
+.top-bar__blended {
+  border-bottom: none;
 }
 
 .menu a {

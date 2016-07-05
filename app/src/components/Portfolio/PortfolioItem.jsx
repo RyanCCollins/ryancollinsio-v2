@@ -6,10 +6,19 @@ import elementInViewport from '../../../lib/isVisible';
 
 const alternatingAnimation = (id) => {
   let animationName = 'fadeSlideInUp';
-  if (id == 1) {
+  if (id === 1) {
     animationName = 'fadeIn';
   }
   return animationName;
+};
+
+const Styles = {
+  fadedOut: {
+    opacity: 0
+  },
+  fadedIn: {
+    opacity: 1
+  }
 };
 
 class PortfolioItem extends React.Component {
@@ -17,7 +26,8 @@ class PortfolioItem extends React.Component {
     super(props);
     this.state = {
       needsAnimation: true,
-      isAnimating: false
+      isAnimating: false,
+      isScrolledIntoView: this.props.id === 1
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -38,6 +48,7 @@ class PortfolioItem extends React.Component {
       if (this.state.needsAnimation === true) {
         this.setState({
           needsAnimation: false,
+          isScrolledIntoView: true,
           isAnimating: true,
           animationName: alternatingAnimation(this.props.project.id)
         });
@@ -60,6 +71,7 @@ class PortfolioItem extends React.Component {
           id={`portfolio-item-${project.id}`}
         >
           <div
+            style={this.state.isScrolledIntoView ? Styles.fadedIn : Styles.fadedOut}
             className={this.state.isAnimating ?
               `image-wrapper overlay-fade-in ${this.state.animationName}`
             :

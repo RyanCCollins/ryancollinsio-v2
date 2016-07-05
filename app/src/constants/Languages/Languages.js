@@ -1,5 +1,10 @@
 const Languages = [
   {
+    id: 0,
+    name: 'Javascript',
+    percent: 97
+  },
+  {
     id: 1,
     name: 'Swift',
     percent: 96
@@ -11,21 +16,16 @@ const Languages = [
   },
   {
     id: 3,
-    name: 'Javascript',
-    percent: 97
-  },
-  {
-    id: 4,
     name: 'Python',
     percent: 45
   },
   {
-    id: 5,
+    id: 4,
     name: 'Objective C',
     percent: 35
   },
   {
-    id: 6,
+    id: 5,
     name: 'Java',
     percent: 20
   }

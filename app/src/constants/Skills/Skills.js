@@ -2,12 +2,12 @@ const Skills = [
   {
     id: 1,
     name: 'Front End Web',
-    percent: 88
+    percent: 96
   },
   {
     id: 2,
     name: 'Back End Web',
-    percent: 93
+    percent: 95
   },
   {
     id: 3,
