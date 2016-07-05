@@ -9,7 +9,8 @@ const mapStateToProps = (state) => ({
   messages: state.messages,
   errors: state.errors,
   contact: state.contact,
-  posts: state.posts
+  posts: state.posts,
+  footerLinks: state.footerLinks
 });
 
 function mapDispatchToProps(dispatch) {

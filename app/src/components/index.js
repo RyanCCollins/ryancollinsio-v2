@@ -20,6 +20,7 @@ import ResumeItem from './ResumeItem/ResumeItem';
 import Reference from './Reference/Reference';
 import Slider from './Slider/Slider';
 import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
+import FooterLinks from './FooterLinks/FooterLinks';
 
 export {
   Intro,
@@ -43,5 +44,6 @@ export {
   ResumeItem,
   Reference,
   MessagesSection,
-  PortfolioGallery
+  PortfolioGallery,
+  FooterLinks
 };
