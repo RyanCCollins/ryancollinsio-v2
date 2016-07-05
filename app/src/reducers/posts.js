@@ -4,7 +4,8 @@ import {
   ADD_POST,
   DELETE_POST,
   SELECT_POST_CATEGORY,
-  DESELECT_POST_CATEGORY
+  DESELECT_POST_CATEGORY,
+  POSTS_FAILURE
 } from '../actions/actionCreators';
 
 function posts(state = {
@@ -28,6 +29,12 @@ function posts(state = {
         isFetching: false,
         items: action.items,
         categories: action.postCategories
+      });
+    case POSTS_FAILURE:
+      return Object.assign({}, state, {
+        isFetching: false,
+        items: [],
+        categories: []
       });
     case ADD_POST:
       const newState = [

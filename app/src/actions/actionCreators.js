@@ -20,27 +20,6 @@ const postHeaders = {
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export const DELETE_POST = 'DELETE_POST';
 
-/* Display messages or errors when adding posts */
-
-export const DISPLAY_ERROR = 'DISPLAY_ERROR';
-export const DISPLAY_MESSAGE = 'DISPLAY_MESSAGE';
-export const DISMISS_MESSAGE = 'DISMISS_MESSAGE';
-
-export const displayError = (error) => ({
-  type: DISPLAY_ERROR,
-  error
-});
-
-export const displayMessage = (message) => ({
-  type: DISPLAY_MESSAGE,
-  message
-});
-
-export const dismissMessage = (message) => ({
-  type: DISMISS_MESSAGE,
-  message
-});
-
 const requestAllPosts = () => ({
   type: REQUEST_POSTS
 });
@@ -52,6 +31,18 @@ const didReceivePosts = (data) => ({
   postCategories: data.categories
 });
 
+
+export const POSTS_FAILURE = 'POSTS_FAILURE';
+const postsFailure = () => ({
+  type: POSTS_FAILURE
+});
+
+export const POSTS_ERRORS = 'POSTS_ERRORS';
+const postsErrors = (errors) => ({
+  type: POSTS_ERRORS,
+  errors
+});
+
 /* Returns dispatch of promise for fetching posts from the API. */
 const fetchPostsAsync = () => {
   return dispatch => {
@@ -59,7 +50,14 @@ const fetchPostsAsync = () => {
     return fetch(listUrl)
       .then(response => response.json())
       .then(data => dispatch(didReceivePosts(data)))
-      .catch(error => dispatch({ type: DISPLAY_ERROR, error }));
+      .catch(error => {
+        dispatch(postsFailure());
+        const errors = [];
+        const theError = `An error has occured ${JSON.stringify(error)}`;
+        errors.push(theError);
+        dispatch(postsErrors(errors));
+      }
+    );
   };
 };
 

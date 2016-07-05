@@ -1,7 +1,6 @@
 import {
-  DISPLAY_MESSAGE,
-  DISMISS_MESSAGE,
-  CONTACT_MESSAGES
+  CONTACT_MESSAGES,
+  POSTS_MESSAGES
 } from '../actions/actionCreators';
 import { combineReducers } from 'redux';
 
@@ -16,10 +15,8 @@ const contact = (state = [], action) => {
 
 const posts = (state = [], action) => {
   switch (action.type) {
-    case DISPLAY_MESSAGE:
-      return [...state, action.message];
-    case DISMISS_MESSAGE:
-      return [];
+    case POSTS_MESSAGES:
+      return [...action.messages];
     default:
       return state;
   }

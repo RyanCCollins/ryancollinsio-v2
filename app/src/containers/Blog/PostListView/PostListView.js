@@ -81,7 +81,7 @@ class PostListView extends React.Component {
     const {
       selectPostCat
     } = this.props;
-      selectPostCat(category);
+    selectPostCat(category);
   }
   showMessage(message) {
     toastr.info(message);
@@ -91,45 +91,46 @@ class PostListView extends React.Component {
       posts,
       isFetching,
       postCategories,
-      selectedCategory
+      selectedCategory,
+      errors,
+      messages
     } = this.props;
     const items = posts.items;
     const visiblePosts = getFilteredPosts(selectedCategory, items);
     return (
-      <div className="post-list-view__wrapper">
-        <h1 className="section-header">From the Blog</h1>
-        <SectionSubTitle
-          title={selectedCategory.name == 'All' ?
-            'All Posts'
+      <LoadingIndicator isLoading={isFetching}>>
+        <div className="post-list-view__wrapper">
+          <h1 className="section-header">From the Blog</h1>
+          <SectionSubTitle
+            title={selectedCategory.name == 'All' ?
+              'All Posts'
+            :
+              `Selected Category: ${selectedCategory.name}`
+            }
+          />
+          <Divider />
+          <MessagesSection messages={messages} errors={errors} />
+          <Row className="category-links">
+            <Column large={6} small={12} isColumn centerOnSmall>
+              <CategoryList
+                categories={postCategories}
+                onSelectCategory={this.handleSelectCategory}
+                selectedCategory={selectedCategory}
+              />
+            </Column>
+          </Row>
+          {visiblePosts !== undefined && visiblePosts.length > 0 ?
+            <PostList
+              posts={visiblePosts}
+              onChangePage={this.handleChangePage}
+            />
           :
-            `Selected Category: ${selectedCategory.name}`
-          }
-        />
-        <Divider />
-        <MessagesSection {...this.props} />
-        {this.state.isLoading &&
-          <LoadingIndicator />
-        }
-        <Row className="category-links">
-          <Column large={6} small={12} isColumn centerOnSmall>
-            <CategoryList
-              categories={postCategories}
-              onSelectCategory={this.handleSelectCategory}
+            <NoPostsFound
               selectedCategory={selectedCategory}
             />
-          </Column>
-        </Row>
-        {visiblePosts !== undefined && visiblePosts.length > 0 ?
-          <PostList
-            posts={visiblePosts}
-            onChangePage={this.handleChangePage}
-          />
-        :
-          <NoPostsFound
-            selectedCategory={selectedCategory}
-          />
-        }
-      </div>
+          }
+        </div>
+      </LoadingIndicator>
     );
   }
 }
