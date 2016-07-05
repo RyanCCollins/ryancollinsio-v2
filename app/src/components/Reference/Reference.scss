@@ -2,6 +2,14 @@
   width: 200px;
   height: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .profile__image {
@@ -22,8 +30,14 @@
   font-family: 'Open Sans';
   text-align: justify;
   @media screen and (max-width: 768px) {
-    font-size: 25px;
+    font-weight: 300;
+    font-size: 22px;
     text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 19px;
+    text-align: center;
+    font-weight: 300;
   }
 }
 
@@ -48,10 +62,15 @@
   color: #958f8f;
   text-align: justify;
   font-family: 'Open Sans';
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 20px;
   @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 19px;
+    font-weight: 300;
   }
 }
 
@@ -150,4 +169,42 @@
 .reference-section:hover .slick-right-arrow {
   opacity: 1;
   left: -80px;
+}
+
+.panel-title h4 {
+  font-family: 'Raleway';
+  color: #b26fcc;
+  font-weight: 400;
+  @media screen and (max-width: 768px) {
+    font-weight: 400;
+    font-size: 22px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 19px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+
+.resume-year {
+  color: rgb(242, 242, 242);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.panel-body p {
+  font-size: 22px;
+  color: #555555;
+  text-align: justify;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  @media screen and (max-width: 768px) {
+    font-weight: 400;
+    font-size: 22px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 19px;
+    font-weight: 300;
+    text-align: left;
+  }
 }

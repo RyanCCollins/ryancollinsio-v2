@@ -277,18 +277,6 @@ const projects = [
       },
       {
         id: 3,
-        caption: 'Single Event Page',
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/single%20event.png',
-        width: 1200,
-        height: 1080,
-        aspectRatio: 1.1,
-        lightboxImage: {
-          caption: 'Single Event Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/single%20event.png'
-        }
-      },
-      {
-        id: 4,
         caption: 'Members Page',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/members.png',
         width: 1200,
@@ -300,7 +288,7 @@ const projects = [
         }
       },
       {
-        id: 5,
+        id: 4,
         caption: 'Who We Are',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/who%20we%20are.png',
         width: 1200,
@@ -312,7 +300,7 @@ const projects = [
         }
       },
       {
-        id: 6,
+        id: 5,
         caption: 'Blog',
         src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-web/blog.png',
         width: 1200,
@@ -568,7 +556,7 @@ const projects = [
       'driver will come pick it up, bringing it to the less fortunate.',
     milestones: [
       'Utilized the Model View Controller and Model View Presenter architectures',
-      'Lead a team of 18 developers to build the project from the ground up',
+      'Led a team of 18 developers to build the project from the ground up',
       'Provided support and guidance to the team, coordinating the creation of a multi-client application and API.',
     ],
     technicalInformation: {
@@ -617,11 +605,11 @@ const projects = [
         aspectRatio: 0.5622,
         lightboxImage: {
           caption: 'Donation Map View',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%403x.PNG',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG',
           srcSet: [
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance.PNG',
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%402x.PNG',
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%403x.PNG'
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG'
           ]
         }
       },
@@ -862,7 +850,7 @@ const projects = [
     featureImage: 'https://raw.githubusercontent.com/teamhacksmiths/food-drivr-frontend/master/food-drivr-donate-mock.jpg',
     caption: 'Rails JSON API and Back End built to drive the Food Drivr project.',
     milestones: [
-      'Lead the development of a scalable REST API utilizing the Ruby on Rails web framework.',
+      'Led the development of a scalable REST API utilizing the Ruby on Rails web framework.',
       'Utilized Docker to completely automate the deployment and allow for maximum scalability.',
       'Implemented a PostgreSQL database, providing an API to persist data for the project.',
       'Wrote tests utilizing Rspec to eliminate regressions.',
@@ -947,7 +935,7 @@ const projects = [
   },
   {
     id: 8,
-    title: 'Digital Tourist',
+    title: 'Virtual Tourist',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including CoreData, UIKit, CoreNetworking, the Flickr API, and several Cocoa Pod based libraries.',
     repositoryURL: 'https://github.com/RyanCCollins/Virtual-Tourist',
@@ -1027,7 +1015,7 @@ const projects = [
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'Virtual Tourist iOS App Image Four',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one-four.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-four.png'
         }
       }
     ]

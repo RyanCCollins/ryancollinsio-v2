@@ -63,7 +63,7 @@ const AboutSection = (props) => (
         </Column>
       </Row>
       <Row className="resume-button-row">
-        <Column small={4} centerOnSmall>
+        <Column small={8} medium={4} large={4} centerOnSmall>
           <Link to="/resume/view" className="button__flex-wrapper">
             <Button isHollow className="large button__golden">
               View Resume

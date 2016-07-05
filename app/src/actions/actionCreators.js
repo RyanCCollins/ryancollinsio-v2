@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch';
 const host = process.env.NODE_ENV !== 'production' ?
   'http://localhost:3000/' : process.env.BASE_URL;
 
-const apiUrl = `${host}api/posts/`;
+const apiUrl = `/api/posts/`;
 const listUrl = `${apiUrl}list`;
 const postUrl = `${apiUrl}create`;
 
