@@ -1,4 +1,4 @@
-{ 
+{
   "extends": "eslint-config-airbnb",
   "parser": "babel-eslint",
   "env": {
@@ -13,5 +13,6 @@
   },
   "plugins": [
     "react",
+    "jsx-a11y"
   ]
 }

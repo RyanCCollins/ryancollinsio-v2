@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Row, Column } from 'react-foundation';
 import './Skills.scss';
 import SkillItemBarChart from './SkillItemBarChart';
@@ -16,5 +16,9 @@ const Skills = ({
     </Column>
   </Row>
 );
+
+Skills.propTypes = {
+  skills: PropTypes.array.isRequired
+};
 
 export default Skills;

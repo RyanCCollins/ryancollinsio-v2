@@ -1,177 +1,104 @@
-import moment from 'moment';
+/* Note: used this as a starting place to create the higher order functions
+ * https://github.com/rszczypka/swd-p1-meetup/blob/master/common/validation.js
+ */
 
-const isEmpty = value => value === undefined || value === null || value === '';
-const join = (rules) => (value, data) => rules.map(rule => rule(value, data)).filter(error => !!error)[0 /* first error */ ];
+const isIntegerRE = /^\+?(0|[1-9]\d*)$/;
+const numberRE = /^(?=.*[0-9]).+$/;
+const twoWordsRE = /^[a-z]([-']?[a-z]+)*( [a-z]([-']?[a-z]+)*)+$/;
+const lowercaseRE = /^(?=.*[a-z]).+$/;
+const uppercaseRE = /^(?=.*[A-Z]).+$/;
+const specialCharRE = /^(?=.*[_\W]).+$/;
+const emailRE = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-export function email(value) {
-  if (!isEmpty(value) && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    return 'Invalid email address';
-  }
-}
 
-export function dateOfBirth(value) {
-  if(isEmpty(value)) return false;
+/**
+ * @function join
+ * @description takes a collection of validation rules, joining into an array
+ * @param [function] - an array of functions to call to validate
+ * @param value - the value to validate
+ * @param data - the data to validate
+ * @return error - the first error returned from the validation function
+ */
+const join = (rules) =>
+(value, data) =>
+  rules.map(rule =>
+    rule(value, data)).filter(error =>
+      !!error
+    )[0];
 
-  if(!/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{2}$/.test(value)){
-    var birthday = moment(value, 'DD/MM/YYYY');
-    var oneHundretThirtyYearsAgo = moment().subtract(130, "years");
+const noValue = value =>
+  value === undefined ||
+    value === null ||
+      value === '';
 
-    if (!birthday.isValid()) {
-      return "Invalid birthday date";
-    }
-    else if (oneHundretThirtyYearsAgo.isAfter(birthday)) {
-      return "You must be the oldest man in the world!";
-    }
-  } else {
-    return "Invalid date";
-  }
-}
-
-export function dateAndTime(value) {
-  if(isEmpty(value)) return false;
-
-  var today = new Date();
-  var dateObject = createDateFromString(value);
-
-  if (dateObject === null) return "Your date and time format doesn't look right";
-
-  var date = new Date(dateObject.year,dateObject.month,dateObject.day,dateObject.hour,dateObject.minute);
-  if (date.getFullYear() !== dateObject.year
-    || date.getMonth() != dateObject.month
-    || date.getDate() !== dateObject.day
-    || date.getHours() !== dateObject.hour
-    || date.getMinutes() !== dateObject.minute
-  ) {
-    return "Your date and time format doesn't look right";
-  }
-  if (date < today) {
-    return "Please choose a date in future"
-  }
-}
-
-function createDateFromString(value) {
-  if(isEmpty(value)) return false;
-  var matches = value.match(/^(\d{2}).(\d{2}).(\d{4}) (\d{2}):(\d{2})$/);
-
-  if (matches === null) return null;
-  var date = new Object();
-
-  date['year']  = parseInt(matches[3], 10);
-  date['month']  = parseInt(matches[2], 10) - 1; // months are 0-11
-  date['day']  = parseInt(matches[1], 10);
-  date['hour'] = parseInt(matches[4], 10);
-  date['minute'] = parseInt(matches[5], 10);
-  return date;
-}
-
-export function laterThan(field) {
-  return (value, data) => {
-    if (data) {
-      if(isEmpty(value)) return false;
-      var start = createDateFromString(data[field]);
-      if (start === null) return false;
-      var startDate = new Date(start.year,start.month,start.day,start.hour,start.minute);
-
-      var end = createDateFromString(value);
-      if (end === null) return false;
-      var endDate = new Date(end.year,end.month,end.day,end.hour,end.minute);
-
-      if (endDate < startDate) {
-        return "The end date must be after start date";
-      }
+/**
+ * @function validateWithRE
+ * @description - takes a regular expression and a message and returns a function that will return
+ * The message if the re does not pass with the value passed into the curried function.
+ * @param {RegExp} = the regular expression to be used to test the value.
+ * @param String - the message value to return upon failure
+ * @return Function - a function that takes a value and returns a string message if the RE fails.
+ */
+const validateWithRE = (RE, message) =>
+  (value) => {
+    if (!RE.test(value)) {
+      return message;
     }
   };
-}
 
-export function required(value) {
-  if (isEmpty(value)) {
-    return 'Required';
-  }
-}
-
-export function minLength(min) {
-  return value => {
-    if (!isEmpty(value) && value.length < min) {
-      return `Must be at least ${min} characters`;
+export const minLength = (minimum) =>
+  (value) => {
+    if (!noValue(value) && value.length < minimum) {
+      return `Value must contain at least ${minimum} characters`;
     }
   };
-}
 
-export function maxLength(max) {
-  return value => {
-    if (!isEmpty(value) && value.length > max) {
-      return `Must be no more than ${max} characters`;
+export const maxLength = (maximum) =>
+  (value) => {
+    if (!noValue(value) && value.length > maximum) {
+      return `Value must be no more than ${maximum} characters in length`;
     }
   };
-}
 
-export function integer(value) {
-  if (!Number.isInteger(Number(value))) {
-    return 'Must be an integer';
-  } else {
-    return 'Something went wrong.';
+export const valueRequired = (value) => {
+  if (noValue(value)) {
+    return 'Value Required';
   }
-}
+};
 
-export function oneOf(enumeration) {
-  return value => {
-    if (!~enumeration.indexOf(value)) {
-      return `Must be one of: ${enumeration.join(', ')}`;
-    }
-  };
-}
+export const containsSpecialChar = (value) =>
+  value && validateWithRE(specialCharRE, 'Must contain 1 special character.')(value);
 
-export function atLeastOneSymbol(value) {
-  var re = /[\!\@\#\$\%\^\&\*]/i;
-  if (!re.test(value)) {
-    return 'Use at least one of these symbols: !, @, #, $, %, ^, &, *;';
-  }
-}
+export const isInteger = (value) => {
+  return value && validateWithRE(isIntegerRE, 'Must be an integer value.')(value);
+};
 
-export function atLeastOneNumber(value) {
-  var re = /[0-9]/g;
-  if(!re.test(value)) {
-    return 'Use at least one number';
-  }
-}
+export const containsNumber = (value) => {
+  return value && validateWithRE(numberRE, 'Must Contain at least one number')(value);
+};
 
-export function atLeastOneLowercase(value) {
-  var re = /[a-z]/g;
-  if(!re.test(value)) {
-    return 'Use at least one lowercase letter';
-  }
-}
+export const containsLowercase = (value) => {
+  return value && validateWithRE(lowercaseRE, 'Must contain at least one lowercase letter.')(value);
+};
 
-export function atLeastOneUppercase(value) {
-  var re = /[A-Z]/g;
-  if(!re.test(value)) {
-    return 'Use at least one uppercase letter';
-  }
-}
+export const containsUppercase = (value) => {
+  return value && validateWithRE(uppercaseRE, 'Must contain at least one uppercase letter')(value);
+};
 
-export function illegalCharacter(value) {
-  let re = /[^A-z0-9\!\@\#\$\%\^\&\*]/g;
-  if (re.test(value)) {
-    return 'It cannot contain illegal characters';
-  }
-}
+export const containsTwoWords = (value) => {
+  const lowercaseValue = value ? value.toLowerCase() : '';
+  return value && validateWithRE(twoWordsRE, 'Must contain two words, i.e. full name.')(lowercaseValue);
+};
 
+export const isEmail = (value) => {
+  return value && validateWithRE(emailRE, 'Must be a valid email address.')(value);
+};
 
-export function match(field) {
-  return (value, data) => {
-    if (data) {
-      if (value !== data[field]) {
-        return 'Do not match';
-      }
-    }
-  };
-}
-
-export function createValidator(rules) {
-  return (data = {}) => {
+export const createValidator = (validationRules) =>
+  (data = {}) => {
     const errors = {};
-    Object.keys(rules).forEach((key) => {
-      const rule = join([].concat(rules[key]));
+    Object.keys(validationRules).forEach((key) => {
+      const rule = join([].concat(validationRules[key]));
       const error = rule(data[key], data);
       if (error) {
         errors[key] = error;
@@ -179,4 +106,3 @@ export function createValidator(rules) {
     });
     return errors;
   };
-}
