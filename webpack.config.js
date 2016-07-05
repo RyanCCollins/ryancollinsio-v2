@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
-const precss = require('precss');
 const autoprefixer = require('autoprefixer');
+const precss = require('precss');
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
@@ -80,7 +80,7 @@ module.exports = {
   },
   postcss: function () {
     return {
-      defaults: [autoprefixer],
+      defaults: [precss, autoprefixer],
       cleaner:  [autoprefixer({ browsers: [] })]
     };
   },

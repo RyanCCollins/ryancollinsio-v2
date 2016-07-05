@@ -20,7 +20,7 @@ const DownChevron = () => (
 );
 
 const Intro = () => (
-  <div className="intro">
+  <section className="intro">
     <div className="intro-header">
       <div className="intro-header__content">
         <IntroImage />
@@ -29,7 +29,7 @@ const Intro = () => (
         <DownChevron />
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Intro;

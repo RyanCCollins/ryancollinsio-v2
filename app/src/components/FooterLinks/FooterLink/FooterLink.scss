@@ -2,13 +2,32 @@
   position: relative;
   width: 48px;
   height: 48px;
-  background-color: #2e2e2e;
+  background-color: rgb(0, 216, 255);
   border-radius: 4px;
-  box-shadow: 0 3px 0 #212121;
+  box-shadow: 0 3px 0 rgb(93, 61, 112);
 }
 
 .list-inline {
     padding-left: 0;
     list-style: none;
     margin-left: -5px;
+}
+
+.footer-link-item__list-item {
+  margin: 10px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 42px;
+}
+
+.footer-link-item__list-item:hover {
+  transform: skew(0deg, 0deg);
+}
+
+.icon-social {
+  color: rgb(93, 61, 112) !important;
+}
+
+.icon-social:hover {
+  color: white !important;
 }

@@ -319,3 +319,12 @@ span.error, small.error {
   background: #f04124;
   color: #FFFFFF;
 }
+
+
+section {
+  z-index: 99;
+}
+
+.gradient-green-blue {
+  background-image: linear-gradient(#0d8d99, #0d7799 60%, #0d5b99);
+}

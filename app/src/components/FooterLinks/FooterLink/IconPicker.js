@@ -12,7 +12,7 @@ import './udacity-logo-font/css/Glyphter.css';
 
 
 const UdacityLogo = () => (
-  <i className="icon-udacity-logo footer-link-icon" />
+  <i className="icon-udacity-logo icon-social" />
 );
 
 const IconPicker = ({
