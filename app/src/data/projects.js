@@ -976,46 +976,46 @@ const projects = [
     images: [
       {
         id: 0,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one.PNG',
         width: 1125,
         height: 2001,
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'Virtual Tourist iOS App Image One',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-one.PNG'
         }
       },
       {
         id: 1,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-two.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-two.PNG',
         width: 1125,
         height: 2001,
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'Virtual Tourist iOS App Image Two',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-two.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-two.PNG'
         }
       },
       {
         id: 2,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-three.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-three.PNG',
         width: 1125,
         height: 2001,
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'Virtual Tourist iOS App Image Three',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-three.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-three.PNG'
         }
       },
       {
         id: 3,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-four.png',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-four.PNG',
         width: 1125,
         height: 2001,
         aspectRatio: 0.56,
         lightboxImage: {
           caption: 'Virtual Tourist iOS App Image Four',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-four.png'
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/virtual-tourist/image-four.PNG'
         }
       }
     ]
