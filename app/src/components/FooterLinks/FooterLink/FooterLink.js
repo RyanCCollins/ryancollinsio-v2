@@ -26,7 +26,7 @@ const FooterLink = ({
           className="footer-link-item__wrapper"
           style={interpolatingStyle}
         >
-          <ReactTooltip />
+          <ReactTooltip place="top" effect="solid" class="tooltip__tilted" />
           <a
             href={footerLink.url}
             className="footer-link__item"

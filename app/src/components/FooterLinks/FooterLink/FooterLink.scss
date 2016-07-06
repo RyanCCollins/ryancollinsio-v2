@@ -5,6 +5,10 @@
   background-color: rgb(0, 216, 255);
   border-radius: 4px;
   box-shadow: 0 3px 0 rgb(93, 61, 112);
+  @media screen and (max-width: 600px) {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .list-inline {
@@ -18,10 +22,17 @@
   font-size: 2rem;
   text-align: center;
   line-height: 52px;
+  @media screen and (max-width: 600px) {
+    line-height: 42px;
+  }
 }
 
 .footer-link-item__list-item:hover {
   transform: rotate(-10deg);
+}
+
+.tooltip__tilted {
+  transform: rotate(-10deg) !important;
 }
 
 .icon-social {
