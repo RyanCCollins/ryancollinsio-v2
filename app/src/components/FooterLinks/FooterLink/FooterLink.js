@@ -52,20 +52,20 @@ class FooterLink extends Component {
     const {
       footerLink
     } = this.props;
-    const {
-      isHovering
-    } = this.state;
     return (
       <li
         className="footer-link-item__list-item"
         onMouseEnter={this.handleHoverEnter}
         onMouseLeave={this.handleHoverLeave}
       >
-        <Motion defaultStyles={{transform: ''}} style={{ transform: `skew(${spring(20)}deg, ${spring(20)}deg)`}}>
-          {value =>
+        <Motion
+          defaultStyles={{ transform: '' }}
+          style={{ transform: `rotate(${spring(360)}deg)` }}
+        >
+          {interpolatingStyle =>
             <div
               className="footer-link-item__wrapper"
-              style={value}
+              style={interpolatingStyle}
             >
               <a href={footerLink.url} className="footer-link__item">
                 <IconPicker id={footerLink.id} />

@@ -99,7 +99,7 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0",
     "postcss-loader": "^0.9.1",
-    "precss": "^1.4.0",
+    "precss": "^1.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta4",
