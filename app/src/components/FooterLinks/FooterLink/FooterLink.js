@@ -61,14 +61,18 @@ class FooterLink extends Component {
         onMouseEnter={this.handleHoverEnter}
         onMouseLeave={this.handleHoverLeave}
       >
-        <div
-          className="footer-link-item__wrapper"
-          style={isHovering ? initialStyle.notTransformed : this.getTransformationStyle()}
-        >
-          <a href={footerLink.url} className="footer-link__item">
-            <IconPicker id={footerLink.id} />
-          </a>
-        </div>
+        <Motion defaultStyles={{transform: ''}} style={{ transform: `skew(${spring(20)}deg, ${spring(20)}deg)`}}>
+          {value =>
+            <div
+              className="footer-link-item__wrapper"
+              style={value}
+            >
+              <a href={footerLink.url} className="footer-link__item">
+                <IconPicker id={footerLink.id} />
+              </a>
+            </div>
+          }
+        </Motion>
       </li>
     );
   }
