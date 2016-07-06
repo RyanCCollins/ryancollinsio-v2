@@ -4,8 +4,11 @@ import './FooterLink.scss';
 import { Motion, spring } from 'react-motion';
 
 const initialStyle = {
-  transformation: {
+  transformOutwards: {
     transform: 'skew(10deg, 10deg)'
+  },
+  transformInwards: {
+    transform: 'skew(-10deg, -10deg)'
   },
   notTransformed: {
     transform: ''
@@ -13,16 +16,37 @@ const initialStyle = {
 };
 
 class FooterLink extends Component {
-  constructor() {
+  constructor(props) {
+    super(props);
+    this.handleHoverEnter = this.handleHoverEnter.bind(this);
+    this.handleHoverLeave = this.handleHoverLeave.bind(this);
+    this.getTransformationStyle = this.getTransformationStyle.bind(this);
     this.state = {
       isHovering: false
     };
-    this.handleHover = this.handleHover.bind(this);
   }
-  handleHover(isHovering) {
+  componentDidMount() {
+    this.state = {
+      isHovering: false
+    };
+  }
+  handleHoverEnter() {
     this.setState({
-      isHovering
+      isHovering: true
     });
+  }
+  handleHoverLeave() {
+    this.setState({
+      isHovering: false
+    });
+  }
+  getTransformationStyle() {
+    const { id } = this.props.footerLink;
+    if (id % 2 === 0) {
+      return initialStyle.transformInwards;
+    } else {
+      return initialStyle.transformOutwards;
+    }
   }
   render() {
     const {
@@ -34,12 +58,12 @@ class FooterLink extends Component {
     return (
       <li
         className="footer-link-item__list-item"
-        onMouseEnter={this.handleHover.bind(this, true)}
-        onMouseLeave={this.handleHover.bind(this, false)}
+        onMouseEnter={this.handleHoverEnter}
+        onMouseLeave={this.handleHoverLeave}
       >
         <div
           className="footer-link-item__wrapper"
-          style={isHovering ? initialStyle.notTransformed : initialStyle.transformation}
+          style={isHovering ? initialStyle.notTransformed : this.getTransformationStyle()}
         >
           <a href={footerLink.url} className="footer-link__item">
             <IconPicker id={footerLink.id} />
@@ -51,8 +75,7 @@ class FooterLink extends Component {
 }
 
 FooterLink.propTypes = {
-  footerLink: PropTypes.object.isRequired,
-  onHover: PropTypes.func.isRequired
+  footerLink: PropTypes.object.isRequired
 };
 
 export default FooterLink;

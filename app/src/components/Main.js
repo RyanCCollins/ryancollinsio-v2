@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar/Navbar';
 
 const Main = (props) => (
-  <div>
+  <div className="body__wrapper">
     <Navbar />
     {React.cloneElement(props.children, props)}
   </div>
