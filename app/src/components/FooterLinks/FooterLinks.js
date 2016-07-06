@@ -15,7 +15,8 @@ const FooterLinks = ({
 );
 
 FooterLinks.propTypes = {
-  footerLinks: PropTypes.array.isRequired
+  footerLinks: PropTypes.array.isRequired,
+  onHover: PropTypes.func.isRequired
 };
 
 export default FooterLinks;

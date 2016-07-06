@@ -7,7 +7,6 @@ const Footer = ({
   footerLinks
 }) => (
   <footer className="footer__wrapper gradient-green-blue">
-    <h1 className="section-header text-primary">Find me on my favorite social networks</h1>
     <FooterLinks footerLinks={footerLinks} />
   </footer>
 );

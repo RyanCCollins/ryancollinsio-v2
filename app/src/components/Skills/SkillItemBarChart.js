@@ -25,7 +25,8 @@ class SkillItemBarChart extends React.Component {
   }
   setWidthStyle(w) {
     // const barRef = this.refs.barDiv.getDOMNode();
-    const barRect = { width: w };
+    const calculatedWidth = w - 10;
+    const barRect = { width: calculatedWidth };
     const left = barRect.width * (this.props.skill.percent / 100);
     const width = left + 40;
     this.setState({
