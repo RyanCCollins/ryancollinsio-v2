@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import PortfolioGrid from '../../components/Portfolio/PortfolioGrid';
 import { Divider, LoadingIndicator } from '../../components';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   SingleProject,
-  LoadingIndicator,
-  Divider
+  LoadingIndicator
 } from '../../components';
 import './SingleProjectContainer.scss';
 

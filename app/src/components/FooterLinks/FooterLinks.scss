@@ -8,4 +8,11 @@
 
 .list-inline {
   display: flex;
+  flex-direction: row;
+}
+
+.up-on-small {
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }

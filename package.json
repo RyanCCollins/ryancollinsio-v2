@@ -63,6 +63,8 @@
     "motion-ui": "^1.2.2",
     "node-sass": "^3.4.2",
     "paginator": "^1.0.0",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
     "react": "^15.0.2",
     "react-addons-css-transition-group": "^15.0.2",
     "react-disqus-thread": "^0.4.0",
@@ -73,6 +75,7 @@
     "react-icons": "^2.1.0",
     "react-markdown": "^2.3.0",
     "react-motion": "^0.4.4",
+    "react-motion-loop": "^1.0.0",
     "react-motion-ui-pack": "^0.7.3",
     "react-photo-gallery": "^4.2.8",
     "react-redux": "^4.4.5",
@@ -85,6 +88,7 @@
     "react-slick": "^0.12.2",
     "react-spinkit": "^1.1.7",
     "react-timeout": "^1.0.0",
+    "react-tooltip": "^3.0.8",
     "react-waypoint": "^2.0.3",
     "redux": ">=3.1.0",
     "redux-form": "^5.2.5",
@@ -97,9 +101,7 @@
     "svg-react-loader": "^0.3.5",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.10.0",
-    "postcss-loader": "^0.9.1",
-    "precss": "^1.4.0"
+    "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta4",

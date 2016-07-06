@@ -2,43 +2,43 @@ const footerLinks = [
   {
     id: 0,
     url: 'https://www.linkedin.com/in/ryancollinsio',
-    type: 'linked in',
+    type: 'Linked In',
     name: 'ryancollinsio'
   },
   {
     id: 1,
     url: 'https://twitter.com/ryancollinsio',
-    type: 'twitter',
+    type: 'Twitter',
     name: 'ryancollinsio'
   },
   {
     id: 2,
     url: 'https://github.com/ryanccollins',
-    type: 'github',
+    type: 'Github',
     name: 'ryanccollins'
   },
   {
     id: 3,
     url: 'http://stackoverflow.com/jobs/cv/employer/385048',
-    type: 'stack overflow',
+    type: 'Stack Overflow CV',
     name: ''
   },
   {
     id: 4,
     url: 'https://angel.co/ryancollinsio',
-    type: 'angellist',
+    type: 'AngelList CV',
     name: 'ryanccollins'
   },
   {
     id: 5,
     url: 'https://profiles.udacity.com/u/ryancollins',
-    type: 'udacity',
+    type: 'Udacity CV',
     name: 'ryancollins'
   },
   {
     id: 6,
     url: 'mailto:admin@ryancollins.io',
-    type: 'email',
+    type: 'Email Me',
     name: 'admin@ryancollins.io'
   }
 ];
