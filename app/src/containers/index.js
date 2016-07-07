@@ -12,6 +12,9 @@ import ResumeSection from './ResumeSection/ResumeSection';
 import ReferenceSection from './ReferenceSection/ReferenceSection';
 import Footer from './Footer/Footer';
 import TechnologySection from './TechnologySection/TechnologySection';
+import ServicesPage from './ServicesPage/ServicesPage';
+import ServicesSectionOne from './Services/SectionOne/ServicesSectionOne';
+import ServicesSectionTwo from './Services/SectionTwo/ServicesSectionTwo';
 
 export {
   TechnologySection,
@@ -27,5 +30,8 @@ export {
   ResumePDF,
   ResumeSection,
   ReferenceSection,
-  Footer
+  Footer,
+  ServicesPage,
+  ServicesSectionOne,
+  ServicesSectionTwo
 };

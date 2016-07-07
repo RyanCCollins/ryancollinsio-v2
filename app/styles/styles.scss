@@ -38,13 +38,17 @@ body {
 }
 
 .section-header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
   color: #454545;
   font-family: 'Raleway';
   letter-spacing: 1px;
   padding: 40px;
+  margin-top: 50px;
+  @media screen and (max-width: 700px) {
+    font-size: 2rem;
+  }
 }
 
 section {
@@ -323,7 +327,6 @@ span.error, small.error {
 .body__wrapper {
   overflow-x: hidden;
 }
-
 
 section {
   z-index: 99;

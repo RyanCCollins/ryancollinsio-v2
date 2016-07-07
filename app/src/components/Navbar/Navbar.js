@@ -43,6 +43,9 @@ const Navbar = () => (
                 <Link to="/blog" className="active">Blog</Link>
               </MenuItem>
               <MenuItem>
+                <Link to="/services" className="active">Services</Link>
+              </MenuItem>
+              <MenuItem>
                 <Link to="/contact">
                   <Button isHollow className="button__golden button-contact">Contact Me</Button>
                 </Link>

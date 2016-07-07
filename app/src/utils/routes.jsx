@@ -27,6 +27,7 @@ const router = (
             component={Containers.SinglePostView}
           />
           <Route path="/resume/view" name="ResumeViewer" component={Containers.ResumePDF} />
+          <Route path="/services" name="ServicesPage" component={Containers.ServicesPage} />
           <Route path="*" component={Containers.NotFound} />
         </Route>
       </Router>

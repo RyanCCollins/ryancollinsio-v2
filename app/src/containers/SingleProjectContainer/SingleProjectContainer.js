@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
   SingleProject,
   LoadingIndicator
@@ -38,5 +38,9 @@ class SingleProjectContainer extends React.Component {
     );
   }
 }
+
+SingleProjectContainer.propTypes = {
+  projects: PropTypes.array.isRequired
+};
 
 export default SingleProjectContainer;
