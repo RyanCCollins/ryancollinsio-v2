@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ServicesSectionOne = () => (
+const ServicesSectionTwo = () => (
   <section className="services-section-two">
 
   </section>
