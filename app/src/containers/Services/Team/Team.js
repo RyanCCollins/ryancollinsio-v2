@@ -29,6 +29,14 @@ const TeamMemberGithub = ({
   </span>
 );
 
+const TeamMemberTwitter = ({
+  twitterHandle
+}) => (
+  <Link to={`https://twitter.com/${twitterHandle}`}>
+    <p className="team-member__twitter-handle">@{twitterHandle.toLowerCase()}</p>
+  </Link>
+);
+
 const TeamMember = ({
   member
 }) => (
@@ -43,9 +51,10 @@ const TeamMember = ({
     <div className="team-member-item__info">
       <div className="team-member-item__name">{member.name}</div>
       <div className="team-member__social-wrapper">
-        <TeamMemberGithub github={member.github} />
-        <TeamMemberLink website={member.website} />
+        {member.github && <TeamMemberGithub github={member.github} />}
+        {member.website && <TeamMemberLink website={member.website} />}
       </div>
+      {member.twitter && <TeamMemberTwitter twitterHandle={member.twitter} />}
     </div>
     <p className="team-member-item__bio">{member.bio}</p>
   </div>
