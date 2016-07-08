@@ -1,12 +1,33 @@
 import React, { PropTypes } from 'react';
 import { Divider } from 'components';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import {
   Row,
   Column
 } from 'react-foundation';
 import './Team.scss';
 import { TiLinkOutline, TiSocialGithub } from 'react-icons/lib/ti'
+
+const TeamMemberLink = ({
+  website
+}) => (
+  <span className="team-member__social">
+    <Link to={website}>
+      <TiLinkOutline className="icon-website" />
+    </Link>
+  </span>
+);
+
+const TeamMemberGithub = ({
+  github
+}) => (
+  <span className="team-member__social">
+    <Link to={github}>
+      <TiSocialGithub className="icon-github" />
+    </Link>
+  </span>
+);
 
 const TeamMember = ({
   member
@@ -21,6 +42,10 @@ const TeamMember = ({
     </div>
     <div className="team-member-item__info">
       <div className="team-member-item__name">{member.name}</div>
+      <div className="team-member__social-wrapper">
+        <TeamMemberGithub github={member.github} />
+        <TeamMemberLink website={member.website} />
+      </div>
     </div>
     <p className="team-member-item__bio">{member.bio}</p>
   </div>
@@ -34,7 +59,7 @@ const Team = ({
   teamMembers
 }) => (
   <div className="team-section">
-    <div className="section-title">Available Mentors</div>
+    <div className="section-title text-white">Mentors</div>
     <Divider />
     <Row>
       {teamMembers.map((member, i) =>

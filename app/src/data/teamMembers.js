@@ -1,5 +1,10 @@
 const teamMembers = [
   {
+    id: 0,
+    name: 'Ryan Collins',
+    imageUrl: ''
+  },
+  {
     id: 1,
     name: 'Frank Robert',
     imageUrl: 'http://res.cloudinary.com/dxlayenjj/image/upload/c_thumb,f_auto,g_faces,h_600,w_600/v1457645272/phqpz735yknva1h3euyj.jpg',
@@ -24,7 +29,7 @@ const teamMembers = [
     bio: 'I am a passionate Computer Engineer from Italy with experience in machine learning, computer vision and web development. I am becoming a Full Stack Engineer with a special love for Front End Development. I am part of the Front End Team for the Food Drivr - Waste Not Food Taxi project!'
   },
   {
-    id: 3,
+    id: 4,
     name: 'Cody Perry',
     imageUrl: 'http://res.cloudinary.com/dxlayenjj/image/upload/c_thumb,f_auto,g_faces,h_600,w_600/v1458698878/kkabl1ne4ooksmlhuc4t.jpg',
     github: 'https://github.com/cperry24',
