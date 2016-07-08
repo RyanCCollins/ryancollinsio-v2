@@ -28,7 +28,7 @@ const ServicesPage = props => (
       >
       <div className="services-intro">
         <p>Included on this page are some of the services that I offer as an independant consultant.</p>
-        <p>In some cases, I will connect you to some of my colleaguew through the Hacksmiths platform if you are seeking a specific set of skills that I don't have.</p>
+        <p>In some cases, I may try to connect you to one of my colleagues if you are seeking a specific set of skills that I don't have.</p>
         <p>Head on over to <a href="http://hacksmiths.io">Hacksmiths.io</a> for more information about the Hacksmiths Platform and what we do.</p>
       </div>
       </Column>
