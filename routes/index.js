@@ -9,9 +9,11 @@ const port = isDeveloping ? 8016 : process.env.PORT;
 const path = require('path');
 const compiler = webpack(config);
 const express = require('express');
-const React = require('react');
-const Router = require('react-router');
-const ReactDOMServer = require('react-dom/server');
+
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { match, RouterContext } from 'react-router';
+import serverRoutes from './routes';
 
 const routes = {
   api: importRoutes('./api')
@@ -58,22 +60,26 @@ exports = module.exports = function (app) {
 
   app.all('/api/contact/create', routes.api.contact.create);
 
-  /* Unless the route happens before this, then send the index.html file */
-
-  function router (req, res, next) {
-    const context = {
-      routes,
-      location: req.url
-    };
-    Router.create(context).run(function ran (Handler, state) {
-      res.render('layout', {
-        reactHtml: ReactDOMServer.renderToString(<Handler />)
-      });
+  app.use((req, res) => {
+    // Note that req.url here should be the full URL path from
+    // the original request, including the query string.
+    match({ serverRoutes, location: req.url }, (error, redirectLocation, renderProps) => {
+      if (error) {
+        res.status(500).send(error.message)
+      } else if (redirectLocation) {
+        res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+      } else if (renderProps) {
+        // You can also check renderProps.components or renderProps.routes for
+        // your "not found" component or route respectively, and send a 404 as
+        // below, if you're using a catch-all route.
+        res.status(200).send(renderToString(<RouterContext {...renderProps} />))
+      } else {
+        res.status(404).send('Not found')
+      }
     });
-  }
+  });
 
   app.use(express.static('./public'));
-  app.use(router);
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
   });
