@@ -8,7 +8,8 @@ import {
 } from 'containers';
 import {
   Column,
-  Row
+  Row,
+  Button
 } from 'react-foundation';
 import './ServicesPage.scss';
 
@@ -26,10 +27,22 @@ const ServicesPage = props => (
         className="services--intro-wrapper"
       >
       <div className="services-intro">
-        <p>Included on this page are some of the services that I offer through as an independant consultant.</p>
-        <p>In some cases, I will connect you to some of my colleaguew through the Hacksmiths platform if you are seeking a specific set of skills that are better handled by someone else.</p>
+        <p>Included on this page are some of the services that I offer as an independant consultant.</p>
+        <p>In some cases, I will connect you to some of my colleaguew through the Hacksmiths platform if you are seeking a specific set of skills that I don't have.</p>
         <p>Head on over to <a href="http://hacksmiths.io">Hacksmiths.io</a> for more information about the Hacksmiths Platform and what we do.</p>
       </div>
+      </Column>
+      <Column
+        large={8}
+        medium={10}
+        small={12}
+        isColumn
+        centerOnSmall
+        className="services__button-wrapper"
+      >
+        <Button size={'large'} className="button__contact">
+          <a href="mailto:admin@ryancollins.io">Contact Me</a>
+        </Button>
       </Column>
     </Row>
     <hr />

@@ -6,6 +6,7 @@ import {
   Column,
   Row
 } from 'react-foundation';
+import './VideoSeries.scss';
 
 const VideoSeries = () => (
   <div className="video-series-section">
