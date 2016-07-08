@@ -14,9 +14,9 @@ const TeamMemberLink = ({
   website
 }) => (
   <span className="team-member__social">
-    <Link to={website}>
+    <a href={website}>
       <TiLinkOutline className="icon-website" />
-    </Link>
+    </a>
   </span>
 );
 
@@ -24,18 +24,18 @@ const TeamMemberGithub = ({
   github
 }) => (
   <span className="team-member__social">
-    <Link to={github}>
+    <a href={github}>
       <TiSocialGithub className="icon-github" />
-    </Link>
+    </a>
   </span>
 );
 
 const TeamMemberTwitter = ({
   twitterHandle
 }) => (
-  <Link to={`https://twitter.com/${twitterHandle}`}>
+  <a href={`https://twitter.com/${twitterHandle}`}>
     <p className="team-member__twitter-handle">@{twitterHandle.toLowerCase()}</p>
-  </Link>
+  </a>
 );
 
 const TeamMember = ({

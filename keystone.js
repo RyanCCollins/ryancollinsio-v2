@@ -1,5 +1,6 @@
 const keystone = require('keystone');
 const secrets = require('./lib/secrets');
+require("babel-core/register");
 
 
 keystone.init({

@@ -11,6 +11,7 @@ const compiler = webpack(config);
 const express = require('express');
 const React = require('react');
 const Router = require('react-router');
+const ReactDOMServer = require('react-dom/server');
 
 const routes = {
   api: importRoutes('./api')
@@ -39,7 +40,6 @@ exports = module.exports = function (app) {
     heartbeat: 10 * 1000
   }));
 
-
   if (isDeveloping) {
     app.all('*', (req, res, next) => {
       res.header('Access-Control-Allow-Origin', '*');
@@ -59,7 +59,21 @@ exports = module.exports = function (app) {
   app.all('/api/contact/create', routes.api.contact.create);
 
   /* Unless the route happens before this, then send the index.html file */
+
+  function router (req, res, next) {
+    const context = {
+      routes,
+      location: req.url
+    };
+    Router.create(context).run(function ran (Handler, state) {
+      res.render('layout', {
+        reactHtml: ReactDOMServer.renderToString(<Handler />)
+      });
+    });
+  }
+
   app.use(express.static('./public'));
+  app.use(router);
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
   });
