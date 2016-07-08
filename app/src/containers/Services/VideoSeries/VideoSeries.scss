@@ -3,9 +3,8 @@
   padding-bottom: 200px;
 }
 
-.coming-soon__paragraph-wrapper {
+.coming-soon__paragraph-wrapper p {
   @media screen and (min-width: 768) {
-    text-align: right;
+    text-align: right !important;
   }
-  text-aling: center;
 }

@@ -51,7 +51,6 @@ const ServicesPage = props => (
     <ServicesSectionTwo {...props} />
     <Team {...props} />
     <VideoSeries {...props} />
-    <div className="big-empty-row"></div>
   </div>
 );
 
