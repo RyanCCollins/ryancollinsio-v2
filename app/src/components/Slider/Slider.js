@@ -20,7 +20,7 @@ const LeftArrow = () => (
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 10000,
   autoplay: true,
   autoPlaySpeed: 20000,
   arrows: true,
