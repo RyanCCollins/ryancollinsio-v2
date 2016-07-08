@@ -47,26 +47,26 @@ const ServicesSectionTwo = () => (
       </Column>
     </Row>
     <Row className="review-wrapper">
-      <Column large={4} medium={6} small={12}>
+      <Column large={4} medium={12} small={12}>
         <CodeReview />
       </Column>
-      <Column large={8} medium={6} small={12}>
+      <Column large={8} medium={12} small={12}>
         <h4 className="centered raleway-header">Code Reviews</h4>
         <p>A one hour code review of 500 lines of code generally results in the elimination of 70-90% of software defects.</p>
         <p>We can work together one on one or with the team to help take your code style to the next level.</p>
       </Column>
     </Row>
     <Row className="review-wrapper">
-      <Column large={8}>
+      <Column large={8} medium={12} small={12}>
         <h4 className="centered raleway-header">Design Reviews</h4>
         <p>A design review is a milestone within the product development lifecycle whereby the design of your product is evaluated according to its requirements.</p>
         <p>Working with one of our professional designers, we will ensure that your product stands out.</p>
       </Column>
-      <Column large={4}>
+      <Column large={4} medium={12} small={12}>
         <DesignReview />
       </Column>
     </Row>
-    <Row>
+    <Row className="last-row__needs-room">
       <Column
         large={8}
         medium={10}
