@@ -1,0 +1,32 @@
+.team-section {
+  background-color: #4b4f51;
+}
+
+.team-member-item {
+  display: inline-block;
+  height: 240px;
+  margin-bottom: 25px;
+  width: 360px;
+}
+
+.team-member-item__photo {
+  overflow: hidden;
+  float: left;
+}
+
+.team-member-item__image {
+  @media (min-width: 768px) {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.team-member-item__info {
+  background-color: #a82e79;
+  color: #FFF;
+  float: left;
+  width: 180px;
+  height: 180px;
+  padding: 45px 5px 0;
+  line-height: 1.2;
+}

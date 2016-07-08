@@ -53,14 +53,14 @@ const ServicesSectionTwo = () => (
       <Column large={8} medium={6} small={12}>
         <h4 className="centered raleway-header">Code Reviews</h4>
         <p>A one hour code review of 500 lines of code generally results in the elimination of 70-90% of software defects.</p>
-        <p>I, or one of the Hacksmiths community mentors, can work with you to help apply industry best practices to your work.</p>
+        <p>We can work together one on one or with the team to help take your code style to the next level.</p>
       </Column>
     </Row>
     <Row className="review-wrapper">
       <Column large={8}>
         <h4 className="centered raleway-header">Design Reviews</h4>
         <p>A design review is a milestone within the product development lifecycle whereby the design of your product is evaluated according to its requirements.</p>
-        <p>One of our professional designers with work with you to ensure that your end users will love your product.</p>
+        <p>.</p>
       </Column>
       <Column large={4}>
         <DesignReview />

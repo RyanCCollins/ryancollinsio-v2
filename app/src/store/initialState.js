@@ -2,9 +2,11 @@ import projects from '../data/projects';
 import resumeData from '../data/resumeData';
 import references from '../data/referenceData';
 import footerLinks from '../data/footerLinks';
+import teamMembers from '../data/teamMembers';
 
 const initialState = {
   projects,
+  teamMembers,
   resumeData,
   references,
   footerLinks,

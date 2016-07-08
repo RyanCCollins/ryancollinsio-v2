@@ -3,7 +3,8 @@ import { Divider } from 'components';
 import {
   ServicesSectionTwo,
   ServicesSectionOne,
-  VideoSeries
+  VideoSeries,
+  Team
 } from 'containers';
 import './ServicesPage.scss';
 
@@ -19,6 +20,8 @@ const ServicesPage = props => (
     <ServicesSectionTwo {...props} />
     <hr />
     <VideoSeries {...props} />
+    <hr />
+    <Team {...props} />
   </div>
 );
 
