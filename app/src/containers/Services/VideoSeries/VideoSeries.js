@@ -30,7 +30,7 @@ const VideoSeries = () => (
         centerOnSmall
         className="services--video-series-wrapper"
       >
-        <div className="coming-soon">
+        <div className="coming-soon__paragraph-wrapper">
           <p>Coming soon, we will be releasing a video series aimed to teach cutting-edge functional JavaScript, among other topics.</p>
           <p>Stay tuned!</p>
         </div>
