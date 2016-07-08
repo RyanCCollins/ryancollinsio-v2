@@ -15,18 +15,33 @@
 }
 
 .team-member-item__image {
-  @media (min-width: 768px) {
-    width: 180px;
-    height: 180px;
-  }
+  width: 180px;
+  height: 180px;
 }
 
 .team-member-item__info {
-  background-color: #a82e79;
+  background-color: rgba(0, 216, 255, 1.0);
   color: #FFF;
   float: left;
   width: 180px;
   height: 180px;
   padding: 45px 5px 0;
   line-height: 1.2;
+}
+
+.team-member-item__name {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-right: 50px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  color: red;
+}
+
+.team-member-item__bio {
+  line-height: 18px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  text-align: justify;
+  color: #fff;
+  font-size: 15px;
 }

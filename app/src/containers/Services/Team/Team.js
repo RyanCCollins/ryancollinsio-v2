@@ -6,17 +6,23 @@ import {
   Column
 } from 'react-foundation';
 import './Team.scss';
+import { TiLinkOutline, TiSocialGithub } from 'react-icons/lib/ti'
 
 const TeamMember = ({
   member
 }) => (
   <div className="team-member-item">
     <div className="team-member-item__photo">
-      <img src={member.imageUrl} />
+      <img
+        className="team-member-item__image"
+        src={member.imageUrl}
+        alt={`A person named ${member.name}`}
+      />
     </div>
     <div className="team-member-item__info">
-
+      <div className="team-member-item__name">{member.name}</div>
     </div>
+    <p className="team-member-item__bio">{member.bio}</p>
   </div>
 );
 
@@ -32,7 +38,7 @@ const Team = ({
     <Divider />
     <Row>
       {teamMembers.map((member, i) =>
-        <Column small={12} medium={4} large={3}>
+        <Column small={12} medium={6} large={4}>
           <TeamMember key={i} member={member} />
         </Column>
       )}

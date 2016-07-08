@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
   errors: state.errors,
   contact: state.contact,
   posts: state.posts,
-  footerLinks: state.footerLinks
+  footerLinks: state.footerLinks,
+  teamMembers: state.teamMembers
 });
 
 function mapDispatchToProps(dispatch) {
