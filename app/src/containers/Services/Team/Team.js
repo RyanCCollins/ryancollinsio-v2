@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import {
   Row,
-  Column
+  Column,
+  Button
 } from 'react-foundation';
 import './Team.scss';
 import { TiLinkOutline, TiSocialGithub } from 'react-icons/lib/ti'
@@ -68,14 +69,41 @@ const Team = ({
   teamMembers
 }) => (
   <div className="team-section">
-    <div className="section-title text-white">Mentors</div>
+    <div className="section-title text-white team-section-headline">Mentors</div>
     <Divider />
-    <Row>
+    <Row className="team-member__flex-wrapper">
       {teamMembers.map((member, i) =>
-        <Column small={12} medium={6} large={4}>
+        <Column
+          small={12}
+          medium={6}
+          large={4}
+          isColumn
+          centerOnSmall
+          className="team-member-item__wrapper"
+        >
           <TeamMember key={i} member={member} />
         </Column>
       )}
+    </Row>
+    <Row>
+      <Column
+        large={8}
+        medium={10}
+        small={12}
+        isColumn
+        centerOnSmall
+        className="services__button-wrapper__with-text"
+      >
+        <Button size={'large'} className="button__contact button__centered-margin">
+          <a href="https://github.com/teamhacksmiths">Take me there!</a>
+        </Button>
+        <h4
+          id="servicesButtonText"
+          className="raleway-header text-white centered"
+        >
+          Click the button to view our open source work.
+        </h4>
+      </Column>
     </Row>
   </div>
 );

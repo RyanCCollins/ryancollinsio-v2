@@ -60,7 +60,7 @@ const ServicesSectionTwo = () => (
       <Column large={8}>
         <h4 className="centered raleway-header">Design Reviews</h4>
         <p>A design review is a milestone within the product development lifecycle whereby the design of your product is evaluated according to its requirements.</p>
-        <p>.</p>
+        <p>Working with one of our professional designers, we will ensure that your product stands out.</p>
       </Column>
       <Column large={4}>
         <DesignReview />
