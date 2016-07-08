@@ -1,0 +1,47 @@
+$gradient: linear-gradient(45deg, pink, skyblue);
+$gradient2: linear-gradient(45deg, #2ecc71, dodgerblue);
+.button__contact {
+  background-color: $gradient2 !important;
+  background-image: $gradient2 !important;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  padding: 10px;
+  border: 4px solid transparent;
+
+  &:hover {
+    border-image: $gradient;
+    background: $gradient;
+  }
+}
+
+.button__contact a {
+  color: white !important;
+}
+
+.review-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.img-rounded {
+  box-shadow: 0 0 8px rgba(0,0,0,.5);
+  border-radius: 10px;
+}
+
+.raleway-header {
+  font-family: 'Raleway';
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.review-wrapper p {
+  font-size: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 5px;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: 'Open Sans';
+}

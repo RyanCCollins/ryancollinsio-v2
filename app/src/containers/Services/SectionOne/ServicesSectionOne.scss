@@ -13,6 +13,9 @@
 
 .services--paragraph-wrapper {
   margin: 40px;
+  @media screen and (max-width: 768px) {
+    margin: 0px;
+  }
 }
 
 .services__button-wrapper {

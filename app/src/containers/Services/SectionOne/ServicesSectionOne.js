@@ -10,7 +10,7 @@ import {
 } from 'components';
 
 const ServicesSectionOne = () => (
-  <section className="services-section-one">
+  <div className="services-section-one">
     <div className="section-title">Mentoring</div>
     <Divider />
     <Row>
@@ -22,8 +22,9 @@ const ServicesSectionOne = () => (
         centerOnSmall
         className="services--paragraph-wrapper"
       >
-        <p>Getting job ready is tough.  Through the <a href="https://hacksmiths.io">Hacksmiths.io</a> platform, we have proven that working on meaningful projects that are used by real people is one of the fastest ways into a job.</p>
-        <p>Whether you are just starting out or are a seasoned developer, we can match you with an appropriate mentor who will work with you to get you in tip top shape.</p>
+        <p>Through the <a href="https://hacksmiths.io">Hacksmiths.io</a> platform, we have proven that working collaboratively on meaningful open sources projects together is an incredible way to improve skills.</p>
+        <p>If you are interested in working with us on a meaningful project with a social impact, we can pair you with a mentor who will work with you to get you up to speed with React and the rest of our stack.</p>
+        <p>You'll get an oppurtunity to work with a real-life distributed agile team, working towards a common goal of social good.</p>
       </Column>
       <Column
         large={8}
@@ -33,12 +34,12 @@ const ServicesSectionOne = () => (
         centerOnSmall
         className="services__button-wrapper"
       >
-        <Button size={'large'}>
-          Contact Me
+        <Button size={'large'} className="button__contact">
+          <a href="mailto:admin@ryancollins.io">Contact Me</a>
         </Button>
       </Column>
     </Row>
-  </section>
+  </div>
 );
 
 export default ServicesSectionOne;

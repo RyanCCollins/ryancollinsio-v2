@@ -15,6 +15,7 @@ import TechnologySection from './TechnologySection/TechnologySection';
 import ServicesPage from './ServicesPage/ServicesPage';
 import ServicesSectionOne from './Services/SectionOne/ServicesSectionOne';
 import ServicesSectionTwo from './Services/SectionTwo/ServicesSectionTwo';
+import VideoSeries from './Services/VideoSeries/VideoSeries';
 
 export {
   TechnologySection,
@@ -33,5 +34,6 @@ export {
   Footer,
   ServicesPage,
   ServicesSectionOne,
-  ServicesSectionTwo
+  ServicesSectionTwo,
+  VideoSeries
 };
