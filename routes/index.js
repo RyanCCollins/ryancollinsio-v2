@@ -79,6 +79,7 @@ exports = module.exports = function (app) {
     });
   });
 
+
   app.use(express.static('./public'));
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));

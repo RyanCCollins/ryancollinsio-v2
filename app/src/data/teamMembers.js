@@ -41,7 +41,7 @@ const teamMembers = [
     imageUrl: 'http://res.cloudinary.com/dxlayenjj/image/upload/c_thumb,f_auto,g_faces,h_600,w_600/v1458698878/kkabl1ne4ooksmlhuc4t.jpg',
     github: 'https://github.com/cperry24',
     website: 'http://codyperry.com/',
-    bio: 'Founder of Perry\'s Development and Front End Web Developer.',
+    bio: 'Leveraging cutting-edge web technologies, I deliver interactive solutions to clients of all sizes. Focusing on building intuitive web based applications that help improve life daily. Passion for technologies of all kinds with a focused approach on the front end.',
     twitter: 'CodyPerry24'
   }
 ];
