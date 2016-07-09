@@ -15,7 +15,15 @@
   }
 }
 
+.flexed-media-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .avatar-image__small {
+  border-radius: 50%;
+  margin: 20px;
   width: 60px !important;
   height: 60px !important;
 }

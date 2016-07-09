@@ -22,7 +22,7 @@ const Author = ({
       <div className="author-card paper__fit">
         <h1 className="section-header">About The Author</h1>
         <Divider />
-        <MediaObject className="center-stacked">
+        <MediaObject className="center-stacked flexed-media-item">
           <MediaObjectSection className="center-on-small">
             <img
               alt="Blog post's author"
