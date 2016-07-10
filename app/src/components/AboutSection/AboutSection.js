@@ -27,7 +27,7 @@ const MeImage = () => (
     <h4
       className="title uppercase text-white text__fit-width"
     >
-      Creative Developer
+      Creative Engineer
     </h4>
   </div>
 );
