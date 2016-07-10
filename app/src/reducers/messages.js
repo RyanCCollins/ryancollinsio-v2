@@ -9,7 +9,10 @@ import { combineReducers } from 'redux';
 const contact = (state = [], action) => {
   switch (action.type) {
     case CONTACT_MESSAGES:
-      return [...state, action.messages];
+      return [
+        ...state,
+        ...action.messages
+      ];
     case CLEAR_CONTACT_MESSAGES:
       return [];
     default:
@@ -20,7 +23,10 @@ const contact = (state = [], action) => {
 const posts = (state = [], action) => {
   switch (action.type) {
     case POSTS_MESSAGES:
-      return [...action.messages];
+      return [
+        ...state,
+        ...action.messages
+      ];
     case CLEAR_POSTS_MESSAGES:
       return [];
     default:

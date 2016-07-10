@@ -86,7 +86,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     onSubmitContact: (params) => contact(params),
-    clearMessage: () => clearContactMessages(),
+    clearMessages: () => clearContactMessages(),
     clearErrors: () => clearContactErrors()
   }, dispatch);
 

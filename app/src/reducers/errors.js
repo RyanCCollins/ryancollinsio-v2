@@ -9,7 +9,10 @@ import { combineReducers } from 'redux';
 const contact = (state = [], action) => {
   switch (action.type) {
     case CONTACT_ERRORS:
-      return [...action.errors];
+      return [
+        ...state,
+        ...action.errors
+      ];
     case CLEAR_CONTACT_ERRORS:
       return [];
     default:

@@ -44,8 +44,8 @@ const MessagePanel = ({
         <h4 className="message-header">Messages</h4>
         <p className="message-subheader">The following messages were returned from the server</p>
         <ul className="no-bullet message-list">
-          {messages.map((msg) =>
-            <li className="message-list-item">
+          {messages.map((msg, i) =>
+            <li key={i} className="message-list-item">
               <p className="message-list-item__text">
                 {msg}
               </p>
