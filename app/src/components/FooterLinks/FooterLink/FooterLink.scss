@@ -37,9 +37,10 @@
 
 .icon-social {
   color: rgb(93, 61, 112) !important;
+  transition: all .6s ease-in-out;
 }
 
 .icon-social:hover {
   color: white !important;
-  
+  transform: scale(1.2);
 }
