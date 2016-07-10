@@ -23,13 +23,16 @@
 }
 
 .intro {
-  // background: linear-gradient(160deg, #34b6d9, #3464d9);
   background-image: url("../../../images/tswirls.png"), linear-gradient(160deg, #34b6d9, #3464d9);
-  max-height: 100vh;
+  height: calc(100vh - 90px);
   transition: background linear .5s;
   width: 100%;
   z-index: 99;
   text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media screen and (max-height: 750px) {
     min-height: 750px;
   }
@@ -48,7 +51,6 @@
 }
 
 .intro-header__content {
-  max-width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +102,10 @@
 }
 
 .intro-header__chevron {
-  margin-bottom: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
   @include fadeInDown(
     $duration: 0.5s,
     $count: 1,
@@ -110,6 +115,7 @@
   )
 }
 
+
 .intro-header__chevron-down {
   @media screen and (max-width: 700px) {
     font-size: 2rem;
@@ -117,7 +123,7 @@
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
   }
-  margin-top: 100px;
+  left: 0;
   color: white;
   font-size: 3rem;
   cursor: pointer;
