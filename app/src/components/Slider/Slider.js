@@ -20,9 +20,9 @@ const LeftArrow = () => (
 const settings = {
   dots: true,
   infinite: true,
-  speed: 5000,
+  speed: 1000,
   autoplay: true,
-  autoPlaySpeed: 10000,
+  autoplaySpeed: 15000,
   arrows: true,
   centerMode: true,
   slidesToShow: 1,
