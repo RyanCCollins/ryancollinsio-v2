@@ -25,7 +25,7 @@ node keystone
 To see the admin interface, go to /keystone.
 
 ## Deployment
-Deployed via Docker to AWS EC2.
+Deployed to Heroku
 
 ## Built With
 React,
