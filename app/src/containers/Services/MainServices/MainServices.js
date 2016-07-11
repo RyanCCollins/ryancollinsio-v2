@@ -3,13 +3,13 @@ import {
   Column,
   Row
 } from 'react-foundation';
+import './MainServices.scss';
 
 const MainServiceItem = ({
   item
 }) => (
   <Column small={12} medium={6} large={12} className={`item match-height ${item.id > 2 ? 'bottom' : 'top'}`}>
     <div className="inner-content">
-      <i></i>
       <h4>{item.title}</h4>
       <p>{item.description}</p>
     </div>
@@ -21,8 +21,8 @@ const MainServices = ({
 }) => (
   <Row>
     <Column isColumn small={12} medium={12} large={12}>
-      {services.map((item) =>
-        <MainServiceItem item={item} />
+      {services.map((item, i) =>
+        <MainServiceItem key={i} item={item} />
       )}
     </Column>
   </Row>
