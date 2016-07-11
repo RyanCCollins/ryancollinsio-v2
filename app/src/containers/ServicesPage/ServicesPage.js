@@ -5,7 +5,8 @@ import {
   ServicesSectionOne,
   VideoSeries,
   Team,
-  MainServices
+  MainServices,
+  Footer
 } from 'containers';
 import {
   Column,
@@ -52,6 +53,7 @@ const ServicesPage = props => (
     <ServicesSectionTwo {...props} />
     <Team {...props} />
     <VideoSeries {...props} />
+    <Footer />
   </div>
 );
 
