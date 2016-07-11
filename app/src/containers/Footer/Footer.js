@@ -11,7 +11,7 @@ const Footer = ({
     <h4
       className="footer-copyright-text centered text-white raleway uppercase"
     >
-      © 2016 - Ryan Collins and Friends
+      © 2016 - Ryan Collins
     </h4>
   </footer>
 );
