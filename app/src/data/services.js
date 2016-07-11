@@ -27,7 +27,7 @@ const services = [
   {
     id: 5,
     title: 'Pro Bono Consulting',
-    description: 'Through the <a href="https://hacksmiths.io">Hacksmiths.io</a> platform, I offer Pro Bono software development and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a talented group of professional software developers!'
+    description: 'Through the Hacksmiths.io platform, I offer Pro Bono software development and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a talented group of professional software developers!'
   }
 ];
 
