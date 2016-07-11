@@ -24,7 +24,7 @@ const MainServiceItem = ({
 const MainServices = ({
   services
 }) => (
-  <section className="services">
+  <section className="main-services">
     <Row>
       <Column isColumn small={12} medium={12} large={12}>
         {services.map((item, i) =>
