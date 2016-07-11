@@ -5,6 +5,11 @@ const autoprefixer = require('autoprefixer');
 const precss = require('precss');
 const ROOT_PATH = path.resolve(__dirname);
 
+const env = process.env.NODE_ENV || 'development';
+const PORT = process.env.PORT || 8080;
+const HOST = '0.0.0.0'; // Set to localhost if need be.
+const URL = `http://${HOST}:${PORT}`;
+
 module.exports = {
   devtool: process.env.NODE_ENV === 'production' ? '' : 'source-map',
   entry: [
@@ -76,7 +81,9 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    progress: true
+    progress: true,
+    host: HOST,
+    port: PORT
   },
   postcss: function () {
     return {

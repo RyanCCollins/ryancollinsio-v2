@@ -1,0 +1,86 @@
+@media (min-width: 768px) {
+    .services {
+        margin-top:30px
+    }
+}
+
+.services .item {
+    padding: 0
+}
+
+@media (min-width: 768px) {
+    .services .item:after {
+        position:absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        border-right: 1px solid #3b3b3b
+    }
+}
+
+.services .item>.inner-content {
+    position: relative;
+    padding: 25px 15px 15px;
+    text-align: justify
+}
+
+@media (min-width: 480px) {
+    .services .item>.inner-content {
+        padding:25px 78px 15px
+    }
+}
+
+@media (min-width: 640px) {
+    .services .item>.inner-content {
+        padding:25px 118px 15px
+    }
+}
+
+@media (max-width: 767px) {
+    .services .item {
+        margin-top:10px
+    }
+
+    .services .item>.inner-content {
+        text-align: center
+    }
+}
+
+.services .item>.inner-content>i {
+    font-size: 38px
+}
+
+.services .item>.inner-content>h4 {
+    margin-top: 15px;
+    letter-spacing: 1px
+}
+
+.services .item>.inner-content>p {
+    margin: 8px 0 0
+}
+
+@media (min-width: 768px) {
+    .services .item>.inner-content {
+        padding:25px 28px 15px
+    }
+
+    .services .item.top:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #3b3b3b
+    }
+
+    .services .item.top>.inner-content {
+        padding: 15px 28px 25px
+    }
+
+    .services .item.dark-bg {
+        background-color: #080708
+    }
+}
