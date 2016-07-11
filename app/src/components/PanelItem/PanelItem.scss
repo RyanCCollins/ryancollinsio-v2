@@ -15,7 +15,6 @@
   flex: 1 0 auto;
 }
 
-
 .panel-item.bordered:after {
   @media screen and (min-width: 1025px) {
     position: absolute;
@@ -81,6 +80,11 @@
   height: 44px;
   background: rgb(153, 13, 152);
   transform: rotate(-2deg);
+  cursor:grab;
+}
+
+.ribbon-text:hover:before {
+  transform: rotate(2deg);
 }
 
 .ribbon-text span {
