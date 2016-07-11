@@ -8,7 +8,12 @@ import './MainServices.scss';
 const MainServiceItem = ({
   item
 }) => (
-  <Column small={12} medium={6} large={12} className={`item match-height ${item.id > 2 ? 'bottom' : 'top'}`}>
+  <Column
+    small={12}
+    medium={6}
+    large={4}
+    className={`item match-height ${item.id > 2 ? 'bottom' : 'top'}`}
+  >
     <div className="inner-content">
       <h4>{item.title}</h4>
       <p>{item.description}</p>
@@ -19,13 +24,15 @@ const MainServiceItem = ({
 const MainServices = ({
   services
 }) => (
-  <Row>
-    <Column isColumn small={12} medium={12} large={12}>
-      {services.map((item, i) =>
-        <MainServiceItem key={i} item={item} />
-      )}
-    </Column>
-  </Row>
+  <section className="services">
+    <Row>
+      <Column isColumn small={12} medium={12} large={12}>
+        {services.map((item, i) =>
+          <MainServiceItem key={i} item={item} />
+        )}
+      </Column>
+    </Row>
+  </section>
 );
 
 export default MainServices;
