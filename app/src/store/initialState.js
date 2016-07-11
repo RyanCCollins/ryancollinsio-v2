@@ -3,8 +3,10 @@ import resumeData from '../data/resumeData';
 import references from '../data/referenceData';
 import footerLinks from '../data/footerLinks';
 import teamMembers from '../data/teamMembers';
+import services from '../data/services';
 
 const initialState = {
+  services,
   projects,
   teamMembers,
   resumeData,

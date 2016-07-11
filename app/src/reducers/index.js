@@ -12,9 +12,11 @@ import resumeData from './resumeData';
 import references from './references';
 import footerLinks from './footerLinks';
 import teamMembers from './teamMembers';
+import services from './services';
 
 const rootReducer = combineReducers({
   posts,
+  services,
   teamMembers,
   projects,
   resumeData,
