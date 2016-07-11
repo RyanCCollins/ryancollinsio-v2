@@ -8,6 +8,11 @@ const Footer = ({
 }) => (
   <footer className="footer__wrapper gradient-green-blue">
     <FooterLinks footerLinks={footerLinks} />
+    <h4
+      className="footer-copyright-text centered text-white raleway uppercase"
+    >
+      © 2016 - Ryan Collins and Friends
+    </h4>
   </footer>
 );
 

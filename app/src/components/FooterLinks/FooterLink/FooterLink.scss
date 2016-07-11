@@ -22,17 +22,14 @@
   font-size: 2rem;
   text-align: center;
   line-height: 52px;
+  transition: all .6s ease-in-out;
   @media screen and (max-width: 600px) {
     line-height: 42px;
   }
 }
 
 .footer-link-item__list-item:hover {
-  transform: rotate(-10deg);
-}
-
-.tooltip__tilted {
-  //transform: rotate(-10deg) !important;
+  transform: scale(1.3);
 }
 
 .icon-social {
@@ -42,5 +39,5 @@
 
 .icon-social:hover {
   color: white !important;
-  transform: scale(1.2);
+  transform: scale(1.3);
 }

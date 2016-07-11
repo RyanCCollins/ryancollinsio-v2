@@ -5,9 +5,13 @@
   width: 100%;
   height: 40rem;
   display: flex;
+  flex-direction: column;
 }
-
 
 .footer-wrapper .active {
   display: block;
+}
+
+.footer-copyright-text {
+
 }
