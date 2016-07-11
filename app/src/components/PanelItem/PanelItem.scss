@@ -17,7 +17,7 @@
 
 
 .panel-item.bordered:after {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     position: absolute;
     content: '';
     top: 0;
@@ -28,8 +28,33 @@
   }
 }
 
+.panel-item:before {
+  @media screen and (max-width: 1025px) {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid rgb(153, 13, 152);
+  }
+}
+
+
+.panel-item:after {
+  @media screen and (max-width: 638px) {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    border-bottom: 1px solid rgb(153, 13, 152);
+  }
+}
+
 .panel-item.top:before {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     position: absolute;
     content: '';
     bottom: 0;
@@ -38,4 +63,27 @@
     height: 1px;
     border-bottom: 1px dashed rgb(153, 13, 152);
   }
+}
+
+.ribbon-text {
+  position: relative;
+  display: inline-block;
+  margin: 0 40px 16px;
+  color: white;
+}
+
+.ribbon-text:before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -44px;
+  right: -44px;
+  height: 44px;
+  background: rgb(153, 13, 152);
+  transform: rotate(-2deg);
+}
+
+.ribbon-text span {
+  display: inline-block;
+  position: relative;
 }

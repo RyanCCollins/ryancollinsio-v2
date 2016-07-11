@@ -18,7 +18,7 @@ const PanelItem = ({
   >
     <div className="inner-content">
       {icon}
-      <h4 className="centered raleway uppercase">{item.title}</h4>
+      <h4 className="centered raleway uppercase ribbon-text"><span>{item.title}</span></h4>
       <p className="text-small text-light justified">{item.description}</p>
     </div>
   </Column>

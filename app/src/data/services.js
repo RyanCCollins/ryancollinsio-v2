@@ -11,8 +11,8 @@ const services = [
   },
   {
     id: 2,
-    title: 'Big Data / Machine Learning',
-    description: 'With experience in big data and Deep Learning, I can help make your software smarter.'
+    title: 'Machine Learning',
+    description: 'With experience in big data and Machine Learning, I can help make your software smarter.'
   },
   {
     id: 3,
@@ -21,12 +21,12 @@ const services = [
   },
   {
     id: 4,
-    title: 'Agile Project Management',
+    title: 'Agile',
     description: 'Agile software development helps you to get software into the hands of your end users faster. Utilizing Scrum and other Agile methodologies, I can help you to keep your project moving on schedule.'
   },
   {
     id: 5,
-    title: 'Pro Bono Consulting',
+    title: 'Consulting',
     description: 'Through the Hacksmiths.io platform, I offer Pro Bono software development and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a talented group of professional software developers!'
   }
 ];
