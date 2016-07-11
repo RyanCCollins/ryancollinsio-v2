@@ -1,0 +1,15 @@
+.panel-item {
+
+}
+
+.panel-item > .inner-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
+}
+
+.panel-item > .inner-content p {
+  flex: 1 0 auto;
+}

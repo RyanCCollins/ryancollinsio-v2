@@ -22,6 +22,7 @@ import Slider from './Slider/Slider';
 import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
 import FooterLinks from './FooterLinks/FooterLinks';
 import AboutSection from './AboutSection/AboutSection';
+import PanelItem from './PanelItem/PanelItem';
 
 export {
   Intro,
@@ -47,5 +48,6 @@ export {
   MessagesSection,
   PortfolioGallery,
   FooterLinks,
-  AboutSection
+  AboutSection,
+  PanelItem
 };
