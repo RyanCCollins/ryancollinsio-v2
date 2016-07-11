@@ -17,7 +17,7 @@ import {
 const ServiceIcon = ({
   id
 }) => (
-  <span className="text-xlarge primary-color centered pb-2">
+  <span className="text-giant primary-color centered pb-3">
     {(() => {
       switch (id) {
         case 0:

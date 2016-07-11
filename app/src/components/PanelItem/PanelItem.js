@@ -10,7 +10,11 @@ const PanelItem = ({
     small={12}
     medium={6}
     large={4}
-    className={`panel-item ${item.id > 2 ? 'bottom' : 'top'}`}
+    className={
+      `panel-item ${item.id > 2 ?
+        'bottom' : 'top'} ${item.id !== 2 && item.id !== 5 ?
+        'bordered' : 'not-bordered'}`
+    }
   >
     <div className="inner-content">
       {icon}
