@@ -63,31 +63,3 @@
     border-bottom: 1px dashed rgb(153, 13, 152);
   }
 }
-
-.ribbon-text {
-  position: relative;
-  display: inline-block;
-  margin: 0 40px 16px;
-  color: white;
-}
-
-.ribbon-text:before {
-  content: '';
-  position: absolute;
-  top: -9px;
-  left: -44px;
-  right: -44px;
-  height: 44px;
-  background: rgb(153, 13, 152);
-  transform: rotate(-2deg);
-  cursor:grab;
-}
-
-.ribbon-text:hover:before {
-  transform: rotate(2deg);
-}
-
-.ribbon-text span {
-  display: inline-block;
-  position: relative;
-}

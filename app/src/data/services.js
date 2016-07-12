@@ -2,32 +2,32 @@ const services = [
   {
     id: 0,
     title: 'Progressive Web',
-    description: 'With years of experience and expertise building progressive web software built for the Internet of Things. I have built software in use in appliances and smart products across the world and can help you to build out your product using the lateset and greatest web technologies available today.'
+    description: 'A Progressive Web App uses modern web capabilities to deliver an app-like user experience.  We can work together to implement offline-first capabilities using Service Worker, advanced sensor device access, web accessibility best practices and many other cutting edge web APIs.'
   },
   {
     id: 1,
     title: 'Mobile',
-    description: 'I focus on creating web software with a mobile-first approach using responsive web technologies and progressive JavaScript frameworks. Utilizing Swift for native iOS applications and React Native, I can build you pixel perfect mobile applications.'
+    description: 'With certification in native iOS development and experience building cross-platform mobile apps with React Native, we can work together on mobile apps of all shapes and sizes.'
   },
   {
     id: 2,
     title: 'Machine Learning',
-    description: 'With experience in big data and Machine Learning, I can help make your software smarter.'
+    description: 'Machine learning is the science of getting computers to act without being explicitly programmed.  With experience working with machine learning teams, we can work together to apply the latest web technologies to build training datasets, or to build an interface to your product.'
   },
   {
     id: 3,
     title: 'Data Architecture',
-    description: 'You don\'t need to be Google to employ an intelligent cloud computing system. With nearly 8 years experience architecting scalable data systems, I can help you to implement the latest and greatest real-time distributed server technologies, including Docker, MongoDB, SQL, Puppet, Chef, et. al.'
+    description: 'Data architecture provides a formal approach to creating and managing the flow of data and how it is processed across an organization.  Employing nearly 7 years of experience in data systems architecture we can work together to build a scalable distributed system for your web application.'
   },
   {
     id: 4,
     title: 'Agile',
-    description: 'Agile software development helps you to get software into the hands of your end users faster. Utilizing Scrum and other Agile methodologies, I can help you to keep your project moving on schedule.'
+    description: 'Agile development methodologies provide opportunities to assess the direction of a project throughout the development lifecycle.  Using agile and scrum means keeping your project on schedule and delivering it to your customers sooner.'
   },
   {
     id: 5,
     title: 'Consulting',
-    description: 'Through the Hacksmiths.io platform, I offer Pro Bono software development and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a talented group of professional software developers!'
+    description: 'Through the Hacksmiths.io platform, I offer Pro Bono software engineering and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a talented group of professional software engineers!'
   }
 ];
 

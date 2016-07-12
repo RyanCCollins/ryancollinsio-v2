@@ -260,16 +260,36 @@ span.divider {
   margin-bottom: 200px;
 }
 
-.tilted-background:before {
+.ribbon-text {
+  position: relative;
+  display: inline-block;
+  color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+.ribbon-text:before {
   content: '';
   position: absolute;
   top: -9px;
   left: -44px;
   right: -44px;
   height: 44px;
-  background: #f4f5be;
+  background: rgb(153, 13, 152);
   transform: rotate(-2deg);
 }
+
+.ribbon-text:hover:before {
+  transform: rotate(2deg);
+}
+
+.ribbon-text span {
+  display: inline-block;
+  position: relative;
+}
+
 
 .paragraph-header-text {
   margin: 0;
