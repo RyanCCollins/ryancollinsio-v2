@@ -12,7 +12,7 @@ const CategoryFilterContainer = ({
   listName
 }) => (
   <Row className="category-links">
-    <Column large={6} small={12} isColumn centerOnSmall>
+    <Column large={8} small={12} isColumn>
       <CategoryFilter
         listName={listName}
         categories={categories}

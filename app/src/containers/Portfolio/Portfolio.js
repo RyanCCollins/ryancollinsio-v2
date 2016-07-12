@@ -15,13 +15,17 @@ const Styles = {
   }
 };
 
-const filterProjects = (projects, category) =>
-  category.value === 'all' ?
+const filterProjects = (
+  projects,
+  category
+) => {
+  return category.value === 'all' ?
     projects
   :
     projects.filter(project =>
       project.category.toLowerCase() === category.value
     );
+};
 
 class Portfolio extends Component {
   constructor(props) {
@@ -29,6 +33,7 @@ class Portfolio extends Component {
     this.handleEndLoad = this.handleEndLoad.bind(this);
     this.setLoading = this.setLoading.bind(this);
     this.setNotLoading = this.setNotLoading.bind(this);
+    this.handleSelectCategory = this.handleSelectCategory.bind(this);
     const { projects, selectedCategory } = this.props;
     this.state = {
       isLoading: false,
@@ -43,6 +48,12 @@ class Portfolio extends Component {
     if (!isLoading) {
       setTimeout(this.setLoading(), 200);
     }
+  }
+  handleSelectCategory(category) {
+    const {
+      onSelectCategory
+    } = this.props;
+    onSelectCategory(category);
   }
   setLoading() {
     this.setState({ isLoading: true });
@@ -59,7 +70,6 @@ class Portfolio extends Component {
       filteredProjects
     } = this.state;
     const {
-      onSelectCategory,
       selectedCategory,
       categories
     } = this.props;
@@ -70,8 +80,9 @@ class Portfolio extends Component {
           <h1 className="section-header text-grey portfolio__section-header">Portfolio</h1>
           <Divider />
           <CategoryFilterContainer
+            listName="Projects"
             categories={categories}
-            onSelectCategory={onSelectCategory}
+            onSelectCategory={this.handleSelectCategory}
             selectedCategory={selectedCategory}
           />
           <PortfolioGrid

@@ -34,7 +34,7 @@ class CategoryFilter extends React.Component {
           <Menu>
             <CategoryLink
               category={{ name: 'All' }}
-              onClick={this.handleOnSelectCategory.bind(this, { name: 'All' })}
+              onClick={this.handleOnSelectCategory.bind(this, { name: 'All', value: 'all' })}
               isActive={selectedCategory.name == 'All'}
             >
               All

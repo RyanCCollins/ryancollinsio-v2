@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
 import { MenuItem } from 'react-foundation';
+import './CategoryLink.scss';
 
 const CategoryLink = ({
   category,
   isActive,
   onClick
 }) => (
-  <MenuItem isActive={isActive} onClick={onClick}>
+  <MenuItem className="flex-menu" isActive={isActive} onClick={onClick}>
     <a>{category.name}</a>
   </MenuItem>
 );
