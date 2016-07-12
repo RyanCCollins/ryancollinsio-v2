@@ -170,6 +170,13 @@ export const clearContactErrors = () => ({
   type: CLEAR_CONTACT_ERRORS
 });
 
+/* Post categories */
+export const SELECT_PROJECT_CATEGORY = 'SELECT_PROJECT_CATEGORY';
+export const selectProjectCategory = (category) => ({
+  type: SELECT_PROJECT_CATEGORY,
+  category
+});
+
 export const clearContactMessages = () => ({
   type: CLEAR_CONTACT_MESSAGES
 });

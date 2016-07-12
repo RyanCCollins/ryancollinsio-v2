@@ -4,14 +4,19 @@ import references from '../data/referenceData';
 import footerLinks from '../data/footerLinks';
 import teamMembers from '../data/teamMembers';
 import services from '../data/services';
+import projectCategories from '../data/projectCategories';
 
 const initialState = {
   services,
-  projects,
   teamMembers,
   resumeData,
   references,
   footerLinks,
+  portfolio: {
+    projects,
+    categories: projectCategories,
+    selectedCategory: { name: 'All', key: 'all' }
+  },
   contact: {
     params: {},
     isFetching: false

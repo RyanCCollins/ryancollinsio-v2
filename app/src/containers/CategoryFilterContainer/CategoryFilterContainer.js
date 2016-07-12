@@ -8,12 +8,13 @@ import {
 const CategoryFilterContainer = ({
   categories,
   onSelectCategory,
-  selectedCategory
+  selectedCategory,
+  listName
 }) => (
   <Row className="category-links">
     <Column large={6} small={12} isColumn centerOnSmall>
       <CategoryFilter
-        listName="Posts"
+        listName={listName}
         categories={categories}
         onSelectCategory={onSelectCategory}
         selectedCategory={selectedCategory}
@@ -23,6 +24,7 @@ const CategoryFilterContainer = ({
 );
 
 CategoryFilterContainer.propTypes = {
+  listName: PropTypes.string.isRequired,
   categories: PropTypes.array.isRequired,
   onSelectCategory: PropTypes.func.isRequired,
   selectedCategory: PropTypes.object.isRequired
