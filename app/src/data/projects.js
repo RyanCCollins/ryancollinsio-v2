@@ -1,6 +1,7 @@
 const projects = [
   {
     id: 1,
+    category: 'ios',
     title: 'Hacksmiths App',
     type: 'iOS Mobile App - Swift',
     description: `Followed best practices to design and develop the Hacksmiths.io app,
@@ -199,6 +200,7 @@ const projects = [
   {
     id: 2,
     title: 'Hacksmiths Website',
+    category: 'frontend',
     type: "Web Application",
     description: `Implemented the Foundation web framework and React JS to
       design and develop a multi user web application for the members of the Hacksmiths.
@@ -316,6 +318,7 @@ const projects = [
   {
     id: 3,
     title: 'Hacksmiths API, Admin Dashboard',
+    category: 'backend',
     type: "Full Stack Web API",
     description: `Followed best practices to build a Node JS web API containing
       data driven microservices and React JS / Keystone JS Admin Dashboard.
@@ -424,7 +427,8 @@ const projects = [
   {
     id: 4,
     title: 'RyanCollins.io',
-    type: 'Front End Web',
+    category: 'frontend',
+    type: 'React SPA',
     description: 'My masterpiece.  A culmination of all of my advanced web knowledge, RyanCollins.io is a professionally designed and developed single page web application.  Built using cutting edge technologies and advanced techniques and design patterns, including React, Redux, ES6, Webpack.  The site communicates with a custom built API built on Node JS.  The sites data is made available through the Node API and is stored in MongoDb.  The backend boasts a ReactJS built admin dashboard, for updating all of the dynamic data on the site.',
     repositoryURL: 'https://github.com/RyanCCollins/ryancollins.io',
     projectUrl: 'http://ryancollins.io',
@@ -546,6 +550,7 @@ const projects = [
     id: 5,
     title: 'Food Drivr - iOS App',
     type: 'iOS Mobile Application',
+    category: 'ios',
     description: 'Coordinated collaborative efforts to create open source software with 18 ' +
       'experienced software developers from no less than 5 countries across the world. Leading ' +
       'the team in creating the Food Drivr project and building a JSON REST API for the project ' +
@@ -604,7 +609,7 @@ const projects = [
         height: 667,
         aspectRatio: 0.5622,
         lightboxImage: {
-          caption: 'Donation Map View',
+          caption: 'Profile View',
           src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile%403x.PNG',
           srcSet: [
             'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/profile.PNG',
@@ -615,17 +620,17 @@ const projects = [
       },
       {
         id: 2,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance.PNG',
         width: 375,
         height: 667,
         aspectRatio: 0.5622,
         lightboxImage: {
           caption: 'Idea Submission Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%403x.PNG',
           srcSet: [
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission.PNG',
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%402x.PNG',
-            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/idea-submission%403x.PNG'
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%402x.PNG',
+            'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-app/donation-acceptance%403x.PNG'
           ]
         }
       },
@@ -683,6 +688,7 @@ const projects = [
     id: 6,
     title: 'Food Drivr - React Web App',
     type: 'Front End Web',
+    category: 'frontend',
     description: 'Coordinated collaborative efforts and contributed to the development of a React JS web application for the Food Drivr project.',
     repositoryURL: 'https://github.com/teamhacksmiths/food-drivr-frontend',
     featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/food-drivr-web/wastenotmock.jpg',
@@ -840,6 +846,7 @@ const projects = [
   {
     id: 7,
     title: 'Food Drivr - Rails API',
+    category: 'backend',
     type: 'Back End Web',
     description: 'Coordinated collaborative efforts and lead the ' +
       'development team of the Food Drivr food donation web and mobile applications. \r\n' +
@@ -936,6 +943,7 @@ const projects = [
   {
     id: 8,
     title: 'Virtual Tourist',
+    category: 'ios',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including CoreData, UIKit, CoreNetworking, the Flickr API, and several Cocoa Pod based libraries.',
     repositoryURL: 'https://github.com/RyanCCollins/Virtual-Tourist',
@@ -1023,6 +1031,7 @@ const projects = [
   {
     id: 9,
     title: 'On the Map',
+    category: 'ios',
     type: 'iOS Mobile',
     description: 'A production ready iOS App that utilizes best practices and conventional design patterns including MVC, Protocol Oriented and Object Oriented Programming, the Delegate Pattern, etc. Built using a multitude of libraries and frameworks from Apple and others including UIKit, CoreNetworking, the Parse API, and several Cocoa Pod based libraries.',
     repositoryURL: 'https://github.com/RyanCCollins/On-the-Map',
@@ -1087,6 +1096,7 @@ const projects = [
   {
     id: 10,
     title: 'Tech Rapport',
+    category: 'frontend',
     type: 'Front End Web',
     description: 'Developed a responsive website for the Tech Rapport Consulting Agency using best practices.  ' +
       'The site is built with Bootstrap, HTML5, CSS3, Javascript, jQuery, the Liquid templating language, Ruby Gems  and more.  ' +

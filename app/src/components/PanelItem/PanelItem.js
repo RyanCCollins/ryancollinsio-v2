@@ -23,7 +23,7 @@ const PanelItem = ({
     <div className="inner-content">
       {icon}
       <h4
-        className="centered raleway uppercase ribbon-text pt-2"
+        className="centered raleway uppercase ribbon-text"
       >
         <span>{item.title}</span>
       </h4>

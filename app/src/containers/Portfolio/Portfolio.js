@@ -11,7 +11,6 @@ const Styles = {
   }
 };
 
-
 class Portfolio extends Component {
   constructor(props) {
     super(props);
