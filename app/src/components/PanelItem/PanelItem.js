@@ -2,6 +2,10 @@ import React, { PropTypes } from 'react';
 import { Column } from 'react-foundation';
 import './PanelItem.scss';
 
+const createMarkup = (item) => ({
+  __html: item.description
+});
+
 const PanelItem = ({
   item,
   icon
@@ -19,11 +23,13 @@ const PanelItem = ({
     <div className="inner-content">
       {icon}
       <h4
-        className="centered raleway uppercase ribbon-text"
+        className="centered raleway uppercase ribbon-text pt-2"
       >
         <span>{item.title}</span>
       </h4>
-      <p className="text-small text-light justified">{item.description}</p>
+      <p className="text-small text-light justified">
+        <span dangerouslySetInnerHTML={createMarkup(item)} />
+      </p>
     </div>
   </Column>
 );

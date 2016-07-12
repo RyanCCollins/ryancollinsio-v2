@@ -30,7 +30,7 @@ const ServicesPage = props => (
         className="services--intro-wrapper"
       >
       <div className="services-intro">
-        <p>Included on this page are some of the services that I offer as an independant consultant.</p>
+        <p>Included on this page are some of the services that I offer as an Independant Consultant.</p>
       </div>
       </Column>
       <MainServices services={props.services} />

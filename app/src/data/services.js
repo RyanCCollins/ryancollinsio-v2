@@ -2,22 +2,22 @@ const services = [
   {
     id: 0,
     title: 'Progressive Web',
-    description: 'A Progressive Web App uses modern web capabilities to deliver an app-like user experience.  We can work together to implement offline-first capabilities using Service Worker, advanced sensor device access, web accessibility best practices and many other cutting edge web APIs.'
+    description: 'A Progressive Web App uses modern web capabilities to deliver an app-like user experience.  We can work together to implement <strong>offline-first capabilities</strong> using Service Worker, advanced sensor device access, web accessibility best practices and many other <strong>cutting edge web APIs</strong>.'
   },
   {
     id: 1,
     title: 'Mobile',
-    description: 'With certification in native iOS development and experience building cross-platform mobile apps with React Native, we can work together on mobile apps of all shapes and sizes.'
+    description: 'With <strong>certification in native iOS development</strong> and experience building cross-platform mobile apps with React Native, we can work together on mobile apps of <em>all</em> shapes and sizes.'
   },
   {
     id: 2,
     title: 'Machine Learning',
-    description: 'Machine learning is the science of getting computers to act without being explicitly programmed.  With experience working with machine learning teams, we can work together to apply the latest web technologies to build training datasets, or to build an interface to your product.'
+    description: 'Machine learning is the science of getting computers to act without being explicitly programmed.  With <strong>experience working with machine learning teams</strong>, we can work together to apply the <strong>latest web technologies</strong> to build training datasets, or to build an interface to your product.'
   },
   {
     id: 3,
     title: 'Data Architecture',
-    description: 'Data architecture provides a formal approach to creating and managing the flow of data and how it is processed across an organization.  Employing nearly 7 years of experience in data systems architecture we can work together to build a scalable distributed system for your web application.'
+    description: 'Data architecture provides a formal approach to creating and managing the flow of data and how it is processed across an organization.  Employing nearly <strong>seven years of experience</strong> in data systems architecture we can work together to build a <strong>scalable distributed</strong> system for your web application.'
   },
   {
     id: 4,
@@ -27,7 +27,7 @@ const services = [
   {
     id: 5,
     title: 'Consulting',
-    description: 'Through the Hacksmiths.io platform, I offer Pro Bono software engineering and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a talented group of professional software engineers!'
+    description: 'Through the <a href="https://hacksmiths.io">Hacksmiths.io</a> platform, I offer <strong>Pro Bono software engineering</strong> and consulting services to charitable and philanthrophic organizations. Please contact me if your charitable organization can use the help of a <strong>talented group of professional</strong> software engineers!'
   }
 ];
 
