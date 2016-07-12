@@ -1,0 +1,16 @@
+.filter-label {
+  text-align: center;
+}
+
+.filter-label__text {
+  font-weight: 100;
+  font-family: 'Open Sans';
+  text-decoration: underline;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

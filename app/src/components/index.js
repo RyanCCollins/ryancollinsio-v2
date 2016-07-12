@@ -12,7 +12,6 @@ import PostList from './Blog/PostList/PostList';
 import MessagePanel from './Shared/MessagePanel/MessagePanel';
 import ErrorPanel from './Shared/ErrorPanel/ErrorPanel';
 import MessagesSection from './Shared/MessagesSection/MessagesSection';
-import CategoryList from './Blog/CategoryList/CategoryList';
 import Author from './Blog/Author/Author';
 import CommentThread from './Blog/CommentThread/CommentThread';
 import PDFViewer from './PDFViewer/PDFViewer';
@@ -23,6 +22,8 @@ import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
 import FooterLinks from './FooterLinks/FooterLinks';
 import AboutSection from './AboutSection/AboutSection';
 import PanelItem from './PanelItem/PanelItem';
+import CategoryLink from './CategoryLink/CategoryLink';
+import CategoryFilter from './CategoryFilter/CategoryFilter';
 
 export {
   Intro,
@@ -39,7 +40,6 @@ export {
   PostList,
   MessagePanel,
   ErrorPanel,
-  CategoryList,
   Author,
   CommentThread,
   PDFViewer,
@@ -49,5 +49,7 @@ export {
   PortfolioGallery,
   FooterLinks,
   AboutSection,
-  PanelItem
+  PanelItem,
+  CategoryLink,
+  CategoryFilter
 };

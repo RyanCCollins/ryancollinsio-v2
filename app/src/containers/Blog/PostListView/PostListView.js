@@ -10,15 +10,13 @@ import {
   clearPostsMessages
 } from 'actions/actionCreators';
 import {
-  Row,
-  Column
-} from 'react-foundation';
+  CategoryFilterContainer
+} from 'containers';
 import {
   PostList,
   LoadingIndicator,
   Divider,
-  MessagesSection,
-  CategoryList
+  MessagesSection
 } from '../../../components';
 import NoPostsFound from '../Misc/NoPostsFound';
 
@@ -128,15 +126,11 @@ class PostListView extends React.Component {
             }
           />
           <Divider />
-          <Row className="category-links">
-            <Column large={6} small={12} isColumn centerOnSmall>
-              <CategoryList
-                categories={postCategories}
-                onSelectCategory={this.handleSelectCategory}
-                selectedCategory={selectedCategory}
-              />
-            </Column>
-          </Row>
+          <CategoryFilterContainer
+            categories={postCategories}
+            onSelectCategory={this.handleSelectCategory}
+            selectedCategory={selectedCategory}
+          />
           {visiblePosts !== undefined && visiblePosts.length > 0 ?
             <PostList
               posts={visiblePosts}
