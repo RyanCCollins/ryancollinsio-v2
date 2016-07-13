@@ -15,7 +15,7 @@ const ProjectMilestones = ({
     </h1>
     <Divider />
     <div className="project-milestones callout">
-      <ul>
+      <ul className="starred">
         {project.milestones.map((milestone) =>
           <li>
             <p className="paragraph-text">

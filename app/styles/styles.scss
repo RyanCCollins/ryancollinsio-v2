@@ -24,6 +24,24 @@ body {
   padding-bottom: 60px;
 }
 
+ul.starred {
+  list-style: none;
+  padding: 0px;
+}
+
+ul.starred li:before {
+  content: '✭';
+  margin: 0 1em;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  top: 11px;
+}
+
+ul.starred li {
+  position: relative;
+}
+
 .open-sans {
   font-family: 'Open Sans';
 }

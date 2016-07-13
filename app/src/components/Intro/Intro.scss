@@ -2,6 +2,13 @@
 
 .logo-wrap {
   padding: 20px;
+  @include fadeInUp(
+    $duration: 1s,
+    $count: 1,
+    $delay: 2.0s,
+    $function: ease,
+    $fill: both
+  )
 }
 
 .logo-text-wrap {
