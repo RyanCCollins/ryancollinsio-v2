@@ -15,7 +15,7 @@ const initialState = {
   portfolio: {
     projects,
     categories: projectCategories,
-    selectedCategory: { name: 'All', key: 'all' }
+    selectedCategory: { name: 'All', value: 'all' }
   },
   contact: {
     params: {},
