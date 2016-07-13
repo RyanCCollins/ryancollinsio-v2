@@ -1,17 +1,28 @@
 import React, { PropTypes } from 'react';
+import './ExpandingSearch.scss';
 
 const ExpandingSearch = ({
-  onSearch
+  onSearch,
+  onClear,
+  value
 }) => (
   <div>
     <form id="expanding-search">
-      <input type="search" placeholder="Search" onChange={onSearch} />
+      <input
+        type="search"
+        placeholder="Search"
+        onChange={(value) => onSearch(value)}
+        value={value}
+        onBlur={onClear}
+      />
     </form>
   </div>
 );
 
 ExpandingSearch.propTypes = {
-  onSearch: PropTypes.func.isRequired
+  onSearch: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired,
+  value: PropTypes.string
 };
 
 export default ExpandingSearch;

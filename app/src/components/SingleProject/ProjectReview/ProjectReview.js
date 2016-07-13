@@ -18,11 +18,11 @@ const ProjectReview = ({
     <div className="project-review callout">
       <blockquote>
         <p className="paragraph-text text-grey">
-          "{project.review.snippet}"
+          "{project.technicalReview.snippet}"
         </p>
         <cite>
-          {project.review.author ?
-            project.review.author
+          {project.technicalReview.author ?
+            project.technicalReview.author
           :
             'Expert Code Reviewer'
           }
@@ -36,7 +36,7 @@ const ProjectReview = ({
     </div>
     <div className="review-button-container">
       <Button className="large hollow button__golden button__center">
-        <a className="review-link" href={project.review.url}>Read the review</a>
+        <a className="review-link" href={project.technicalReview.url}>Read the review</a>
       </Button>
     </div>
   </Column>

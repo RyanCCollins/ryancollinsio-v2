@@ -7,7 +7,7 @@ import {
 function portfolio(state = {
   projects: [],
   isSearching: false,
-  searchTerm: null,
+  searchTerm: '',
   categories: [],
   selectedCategory: { name: 'All', value: 'all', index: -1 }
 }, action) {

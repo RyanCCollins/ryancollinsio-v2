@@ -14,6 +14,7 @@ const initialState = {
   footerLinks,
   portfolio: {
     projects,
+    searchTerm: '',
     categories: projectCategories,
     selectedCategory: { name: 'All', value: 'all' }
   },

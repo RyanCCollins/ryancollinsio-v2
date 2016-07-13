@@ -48,28 +48,28 @@ const SingleProject = ({
           project={project}
         />
       :
-        <div></div>
+        <noscript />
       }
       {project.technicalReview ?
         <ProjectReview
           project={project}
         />
       :
-        <div></div>
+        <noscript />
       }
       {project.technicalInformation ?
         <ProjectTechnicalInfo
           project={project}
         />
       :
-        <div></div>
+        <noscript />
       }
       {project.designPatterns ?
         <ProjectDesignPatterns
           project={project}
         />
       :
-        <div></div>
+        <noscript />
       }
     </Row>
     <div className="full-width-container">

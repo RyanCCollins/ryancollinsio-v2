@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import PortfolioGrid from '../../components/Portfolio/PortfolioGrid';
+import './Portfolio.scss';
 import {
   Divider,
   LoadingIndicator,
@@ -25,8 +26,10 @@ const filterProjects = (
       project.category === category.value
     );
 
-const search = (text, projects) =>
-  projects.filter((item) => item.title.includes(text));
+const search = (projects, searchTerm) =>
+  projects.filter((item) =>
+    item.title.includes(searchTerm) || item.category.includes(searchTerm)
+  );
 
 class Portfolio extends Component {
   constructor(props) {
@@ -36,14 +39,8 @@ class Portfolio extends Component {
     this.handleClearSearch = this.handleClearSearch.bind(this);
     this.handleSelectCategory = this.handleSelectCategory.bind(this);
     this.handleFakeLoading = this.handleFakeLoading.bind(this);
-    const {
-      selectedCategory,
-      searchTerm
-    } = this.props;
     this.state = {
-      isLoading: true,
-      selectedCategory,
-      searchTerm
+      isLoading: true
     };
   }
   componentDidMount() {
@@ -57,10 +54,14 @@ class Portfolio extends Component {
     setTimeout(this.setState({ isLoading: false }), 2000);
   }
   handleSearch(text) {
-
+    const { onSetSearchTerm } = this.props;
+    if (text.length > 0) {
+      onSetSearchTerm(text);
+    }
   }
   handleClearSearch() {
-
+    const { onClearSearch } = this.props;
+    onClearSearch();
   }
   handleSelectCategory(category) {
     const {
@@ -76,9 +77,11 @@ class Portfolio extends Component {
     const {
       selectedCategory,
       categories,
-      projects
+      projects,
+      searchTerm
     } = this.props;
     const visibleProjects = filterProjects(projects, selectedCategory);
+    const searchFilteredProducts = search(projects, searchTerm);
     return (
       <div>
         <LoadingIndicator isLoading={isLoading} />
@@ -91,9 +94,20 @@ class Portfolio extends Component {
             onSelectCategory={this.handleSelectCategory}
             selectedCategory={selectedCategory}
           />
+          <div className="perfect-center">
+            <ExpandingSearch
+              onSearch={this.handleSearch}
+              onClear={this.handleClearSearch}
+              value={searchTerm}
+            />
+          </div>
           <PortfolioGrid
             {...this.props}
-            projects={visibleProjects}
+            projects={searchTerm && searchTerm.length < 0 ?
+              visibleProjects
+            :
+              searchFilteredProducts
+            }
             onLoad={this.handleEndLoad}
           />
         </div>
@@ -107,7 +121,7 @@ Portfolio.propTypes = {
   categories: PropTypes.array.isRequired,
   onSelectCategory: PropTypes.func.isRequired,
   selectedCategory: PropTypes.object.isRequired,
-  searchTerm: PropTypes.string.isRequired,
+  searchTerm: PropTypes.string,
   onSetSearchTerm: PropTypes.func.isRequired,
   onClearSearch: PropTypes.func.isRequired
 };
@@ -116,7 +130,7 @@ const mapStateToProps = (state) => ({
   projects: state.portfolio.projects,
   categories: state.portfolio.categories,
   selectedCategory: state.portfolio.selectedCategory,
-  searchTerm: PropTypes.string
+  searchTerm: state.portfolio.searchTerm
 });
 
 const mapDispatchToProps = (dispatch) =>
