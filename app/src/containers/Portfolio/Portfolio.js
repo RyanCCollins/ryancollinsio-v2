@@ -94,7 +94,7 @@ class Portfolio extends Component {
             onSelectCategory={this.handleSelectCategory}
             selectedCategory={selectedCategory}
           />
-          <div className="perfect-center">
+          <div className="perfect-center" style={{ display: 'none' }}>
             <ExpandingSearch
               onSearch={this.handleSearch}
               onClear={this.handleClearSearch}
@@ -103,11 +103,7 @@ class Portfolio extends Component {
           </div>
           <PortfolioGrid
             {...this.props}
-            projects={searchTerm && searchTerm.length < 0 ?
-              visibleProjects
-            :
-              searchFilteredProducts
-            }
+            projects={visibleProjects}
             onLoad={this.handleEndLoad}
           />
         </div>

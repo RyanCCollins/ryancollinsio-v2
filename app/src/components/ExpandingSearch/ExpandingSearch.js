@@ -11,7 +11,7 @@ const ExpandingSearch = ({
       <input
         type="search"
         placeholder="Search"
-        onChange={(value) => onSearch(value)}
+        onChange={onSearch}
         value={value}
         onBlur={onClear}
       />
