@@ -18,13 +18,19 @@ import PDFViewer from './PDFViewer/PDFViewer';
 import ResumeItem from './ResumeItem/ResumeItem';
 import Reference from './Reference/Reference';
 import Slider from './Slider/Slider';
-import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
 import FooterLinks from './FooterLinks/FooterLinks';
 import AboutSection from './AboutSection/AboutSection';
 import PanelItem from './PanelItem/PanelItem';
 import CategoryLink from './CategoryLink/CategoryLink';
 import CategoryFilter from './CategoryFilter/CategoryFilter';
 import ExpandingSearch from './ExpandingSearch/ExpandingSearch';
+import AppStoreButton from './AppStoreButton/AppStoreButton';
+import ProjectLinks from './SingleProject/ProjectLinks/ProjectLinks';
+import ProjectDesignPatterns from './SingleProject/ProjectDesignPatterns/ProjectDesignPatterns';
+import ProjectTechnicalInfo from './SingleProject/ProjectTechnicalInfo/ProjectTechnicalInfo';
+import ProjectReview from './SingleProject/ProjectReview/ProjectReview';
+import ProjectMilestones from './SingleProject/ProjectMilestones/ProjectMilestones';
+import PortfolioGallery from './SingleProject/PortfolioGallery/PortfolioGallery';
 
 export {
   Intro,
@@ -53,5 +59,11 @@ export {
   PanelItem,
   CategoryLink,
   CategoryFilter,
-  ExpandingSearch
+  ExpandingSearch,
+  AppStoreButton,
+  ProjectLinks,
+  ProjectDesignPatterns,
+  ProjectTechnicalInfo,
+  ProjectReview,
+  ProjectMilestones
 };

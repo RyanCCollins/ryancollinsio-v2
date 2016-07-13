@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import './AppStoreButton.scss';
 import AppStore from './app-store.png';
 import { Thumbnail } from 'react-foundation';
@@ -14,5 +14,9 @@ const AppStoreButton = ({
     />
   </a>
 );
+
+AppStoreButton.propTypes = {
+  url: PropTypes.string.isRequired
+};
 
 export default AppStoreButton;
