@@ -1,5 +1,98 @@
 const projects = [
   {
+    id: 0,
+    category: 'frontend',
+    title: 'Meetup Event Planner',
+    type: 'React Single Page App',
+    description: `Built a dynamic single page application using React and
+      Redux showcasing best practices for building dynamic and interactive web forms built
+      to increase conversions. Built a responsive web application that allows the user to establish a meet-up event.`,
+    milestones: [
+      'Followed ES2015 best practices',
+      'Crafted reusable modules using webpack as a module bundler',
+      'Utilized cutting-edge functional reactive programming techniques',
+      'Authored a single page app utilizing React JS, Redux, among other notable JavaScript libraries',
+      'Created several dozen reusable stateful and stateless functional React components using best practices',
+      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality.',
+      'Wrote tests utilizing Mocha and the Expect assertion library to provide solid code and eliminate regressions.',
+      'Utilized the Flux unidirectional data architecture',
+      'Used CSS modules and followed the best practices for scalable React as noted by Max Stoibr'
+    ],
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and, Mocha and JSDOM to provide high quality code.  Uses the react-redux connect method to hook up react components to the redux store.",
+      tags: [
+        'React',
+        'Redux',
+        'Flux',
+        'ES2015',
+        'CSS Modules',
+        'Mocha',
+        'Expect',
+        'React-Redux'
+      ]
+    },
+    designPatterns: {
+      description: 'Most notably, this app uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  Follows best practices for stateless functional components.',
+      tags: [
+        'Flux',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'Stateless Functional Components'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/meetups',
+    appStoreUrl: '',
+    projectUrl: 'https://meetup-events-planner.firebase.com/',
+    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/main-mockup.jpg',
+    caption: 'Project 1 for Senior Web Nanodegree.',
+    images: [
+      {
+        id: 0,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community.PNG',
+        width: 1200,
+        height: 900,
+        aspectRatio: 1.333,
+        lightboxImage: {
+          caption: 'Landing Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/landing-page.png'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signin-page.png',
+        width: 1200,
+        height: 900,
+        aspectRatio: 1.333,
+        lightboxImage: {
+          caption: 'Sign in Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signin-page.png'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signup-page.png',
+        width: 1200,
+        height: 900,
+        aspectRatio: 1.333,
+        lightboxImage: {
+          caption: 'Signup Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signup-page.png'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/meetup-dashboard.png',
+        width: 1200,
+        height: 900,
+        aspectRatio: 1.333,
+        lightboxImage: {
+          caption: 'Meetup Page',
+          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/meetup-dashboard.png'
+        }
+      }
+    ]
+  },
+  {
     id: 1,
     category: 'ios',
     title: 'Hacksmiths App',
