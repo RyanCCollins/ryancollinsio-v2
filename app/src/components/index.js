@@ -31,6 +31,7 @@ import ProjectTechnicalInfo from './SingleProject/ProjectTechnicalInfo/ProjectTe
 import ProjectReview from './SingleProject/ProjectReview/ProjectReview';
 import ProjectMilestones from './SingleProject/ProjectMilestones/ProjectMilestones';
 import PortfolioGallery from './SingleProject/PortfolioGallery/PortfolioGallery';
+import DownChevron from './DownChevron/DownChevron';
 
 export {
   Intro,
@@ -65,5 +66,6 @@ export {
   ProjectDesignPatterns,
   ProjectTechnicalInfo,
   ProjectReview,
-  ProjectMilestones
+  ProjectMilestones,
+  DownChevron
 };
