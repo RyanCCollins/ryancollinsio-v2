@@ -7,7 +7,7 @@ const CategoryLink = ({
   isActive,
   onClick
 }) => (
-  <MenuItem className="flex-menu" isActive={isActive} onClick={onClick}>
+  <MenuItem isActive={isActive} onClick={onClick}>
     <a>{category.name}</a>
   </MenuItem>
 );

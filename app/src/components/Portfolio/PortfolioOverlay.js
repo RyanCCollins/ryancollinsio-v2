@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { Button } from 'react-foundation';
-import { GoSearch } from 'react-icons/lib/go';
 
 const PortfolioOverlay = ({
   project
@@ -15,5 +13,9 @@ const PortfolioOverlay = ({
     </div>
   </Link>
 );
+
+PortfolioOverlay.propTypes = {
+  project: PropTypes.object.isRequired
+};
 
 export default PortfolioOverlay;

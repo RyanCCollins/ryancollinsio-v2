@@ -16,7 +16,6 @@ $off-white: #E9EAEC;
 $light-grey: #a1a1a1;
 $global-radius: 4px;
 
-
 body {
   font-family: Lato,sans-serif;
   font-size: 16px;
@@ -116,6 +115,12 @@ section {
   line-height: 1.42857143;
 }
 
+.flex-wrap__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 span.divider {
   background-color: $primary-color;

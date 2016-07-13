@@ -143,44 +143,65 @@ export const CONTACT_MESSAGES = 'CONTACT_MESSAGES';
 export const CLEAR_CONTACT_MESSAGES = 'CLEAR_CONTACT_MESSAGES';
 export const CLEAR_CONTACT_ERRORS = 'CLEAR_CONTACT_ERRORS';
 
+// submitContact :: {Object :: params} -> Action
 const submitContact = (params) => ({
   type: SUBMIT_CONTACT,
   params
 });
 
+// contactSuccess :: None -> Action
 const contactSuccess = () => ({
   type: CONTACT_SUCCESS
 });
 
+// contactFailure :: None -> Action
 const contactFailure = () => ({
   type: CONTACT_FAILURE
 });
 
+// contactErrors :: {Array :: errors} -> Action
 const contactErrors = (errors) => ({
   type: CONTACT_ERRORS,
   errors
 });
 
+// contactMessages :: {Array :: messages} -> Action
 const contactMessages = (messages) => ({
   type: CONTACT_MESSAGES,
   messages
 });
 
+// clearContactErrors :: None -> Action
 export const clearContactErrors = () => ({
   type: CLEAR_CONTACT_ERRORS
 });
 
-/* Post categories */
 export const SELECT_PROJECT_CATEGORY = 'SELECT_PROJECT_CATEGORY';
+// selectProjectCategory :: {String :: category} -> Action
 export const selectProjectCategory = (category) => ({
   type: SELECT_PROJECT_CATEGORY,
   category
 });
 
+export const SET_PORTFOLIO_SEARCH = 'SET_PORTFOLIO_SEARCH';
+// setPortfolioSearch :: {String :: term } -> Action
+export const setPortfolioSearch = (searchTerm) => ({
+  type: SET_PORTFOLIO_SEARCH,
+  searchTerm
+});
+
+export const CLEAR_PORTFOLIO_SEARCH = 'CLEAR_PORTFOLIO_SEARCH';
+// clearPortfolioSearch :: None -> Action
+export const clearPortfolioSearch = () => ({
+  type: CLEAR_PORTFOLIO_SEARCH
+});
+
+// clearContactMessages :: None -> Action
 export const clearContactMessages = () => ({
   type: CLEAR_CONTACT_MESSAGES
 });
 
+// contact :: {Object :: params} -> dispatch -> Promise Success Error
 export const contact = (params) =>
   (dispatch) => {
     dispatch(submitContact(params));

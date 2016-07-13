@@ -44,7 +44,7 @@ const PostListItem = ({
           </Link>
         </div>
         {post.tags.length ?
-          <div className="tag-list-wrapper">
+          <div className="tag-list-wrapper flex-wrap__center">
             <TagList
               tags={post.tags}
             />

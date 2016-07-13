@@ -31,7 +31,7 @@ class CategoryFilter extends React.Component {
           <span className="filter-label">
             <p className="filter-label__text">Filter {listName || 'Items'} by Category</p>
           </span>
-          <Menu>
+          <Menu className="flex-menu">
             <CategoryLink
               category={{ name: 'All' }}
               onClick={this.handleOnSelectCategory.bind(this, { name: 'All', value: 'all' })}

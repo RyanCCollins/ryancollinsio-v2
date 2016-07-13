@@ -24,6 +24,7 @@ import AboutSection from './AboutSection/AboutSection';
 import PanelItem from './PanelItem/PanelItem';
 import CategoryLink from './CategoryLink/CategoryLink';
 import CategoryFilter from './CategoryFilter/CategoryFilter';
+import ExpandingSearch from './ExpandingSearch/ExpandingSearch';
 
 export {
   Intro,
@@ -51,5 +52,6 @@ export {
   AboutSection,
   PanelItem,
   CategoryLink,
-  CategoryFilter
+  CategoryFilter,
+  ExpandingSearch
 };
