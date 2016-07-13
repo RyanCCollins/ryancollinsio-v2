@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Column } from 'react-foundation';
-import Divider from 'components';
+import { Divider } from 'components';
 import { GoMilestone } from 'react-icons/lib/go';
 
 

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Divider } from 'components';
 import {
   Column,
-  Label,
+  Label
 } from 'react-foundation';
 
 const ProjectDesignPatterns = ({

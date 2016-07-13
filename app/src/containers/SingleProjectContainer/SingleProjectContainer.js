@@ -26,20 +26,17 @@ class SingleProjectContainer extends React.Component {
     this.setProject(filteredProjects[0]);
   }
   setProject(project) {
-    console.log(`Setting selected project: ${project}`);
     this.setState({ selectedProject: project });
   }
   render() {
     return (
       <div className="single-project-container">
-        {this.state.selectedProject === null ?
-          <LoadingIndicator />
-          :
+        <LoadingIndicator isLoading={this.state.selectedProject === null}>
           <SingleProject
             {...this.props}
             project={this.state.selectedProject}
           />
-        }
+        </LoadingIndicator>
       </div>
     );
   }

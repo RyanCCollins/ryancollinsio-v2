@@ -23,7 +23,7 @@ const ProjectLinks = ({
             </Button>
           </a>
         :
-          <div></div>
+          <noscript />
         }
         {project.repositoryURL && project.repositoryURL.length ?
           <a href={project.repositoryURL}>
@@ -33,7 +33,7 @@ const ProjectLinks = ({
             </Button>
           </a>
         :
-          <div></div>
+          <noscript />
         }
       </div>
       {project.appStoreUrl && project.appStoreUrl.length > 0 ?
@@ -41,7 +41,7 @@ const ProjectLinks = ({
           url={project.appStoreUrl}
         />
       :
-        <div></div>
+        <noscript />
       }
     </div>
   </Column>

@@ -48,7 +48,7 @@ const projects = [
     images: [
       {
         id: 0,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/hacksmiths-ios/community.PNG',
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/landing-page.png',
         width: 1200,
         height: 900,
         aspectRatio: 1.333,

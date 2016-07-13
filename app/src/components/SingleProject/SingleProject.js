@@ -52,7 +52,7 @@ const SingleProject = ({
       }
       {project.technicalReview ?
         <ProjectReview
-          review={project.technicalReview}
+          project={project}
         />
       :
         <div></div>
@@ -78,7 +78,7 @@ const SingleProject = ({
           <h1 className="section-header">Project Gallery</h1>
           <Divider />
         </Column>
-        <PortfolioGallery project={project} />
+        <PortfolioGallery images={project.images} />
       </Row>
     </div>
   </div>

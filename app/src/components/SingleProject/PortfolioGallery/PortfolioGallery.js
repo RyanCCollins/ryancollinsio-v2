@@ -3,15 +3,15 @@ import PhotoGallery from 'react-photo-gallery';
 import './PortfolioGallery.scss';
 
 const PortfolioGallery = ({
-  project
+  images
 }) => (
   <div className="photo-gallery-wrapper">
-    <PhotoGallery photos={project.images} />
+    <PhotoGallery photos={images} />
   </div>
 );
 
 PortfolioGallery.propTypes = {
-  project: PropTypes.object.isRequired
+  images: PropTypes.array.isRequired
 };
 
 export default PortfolioGallery;
