@@ -3,25 +3,31 @@ import {
   SingleProject,
   LoadingIndicator
 } from '../../components';
+import { connect } from 'react-redux';
 import './SingleProjectContainer.scss';
 
 class SingleProjectContainer extends React.Component {
   constructor(props) {
     super(props);
-    const projects = props.projects;
+    this.setProject = this.setProject.bind(this);
     this.state = {
-      projects,
       selectedProject: null
     };
   }
   componentDidMount() {
-    const projectId = this.props.params.projectId;
-    let filteredProjects = this.state.projects.filter((item) => {
-      return item.id == projectId;
-    });
-    this.setState({
-      selectedProject: filteredProjects[0]
-    });
+    const {
+      params,
+      projects
+    } = this.props;
+    const projectId = params.projectId;
+    const filteredProjects = projects.filter((item) =>
+      item.id == projectId
+    );
+    this.setProject(filteredProjects[0]);
+  }
+  setProject(project) {
+    console.log(`Setting selected project: ${project}`);
+    this.setState({ selectedProject: project });
   }
   render() {
     return (
@@ -40,7 +46,12 @@ class SingleProjectContainer extends React.Component {
 }
 
 SingleProjectContainer.propTypes = {
-  projects: PropTypes.array.isRequired
+  projects: PropTypes.array.isRequired,
+  params: PropTypes.object.isRequired
 };
 
-export default SingleProjectContainer;
+const mapStateToProps = (state) => ({
+  projects: state.portfolio.projects
+});
+
+export default connect(mapStateToProps)(SingleProjectContainer);
