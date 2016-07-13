@@ -8,8 +8,9 @@ const PortfolioGrid = ({
 }) => (
   <div className="portfolio-grid">
     <Column isColumn large={12} centerOnSmall>
-      {projects.map((project) =>
+      {projects.map((project, i) =>
         <PortfolioItem
+          i={i}
           project={project}
           onLoad={onLoad}
           projectCount={projects.length}

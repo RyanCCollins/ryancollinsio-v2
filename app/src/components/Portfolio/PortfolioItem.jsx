@@ -24,17 +24,20 @@ const Styles = {
 class PortfolioItem extends React.Component {
   constructor(props) {
     super(props);
+    const { i } = this.props;
     this.state = {
       needsAnimation: true,
       isAnimating: false,
-      isScrolledIntoView: this.props.id === 1
+      isScrolledIntoView: i === 0
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     /* Call the handle scroll right away if it's the first project*/
-    if (this.props.project.id === 1) {
+    const { i } = this.props;
+    const { isScrolledIntoView } = this.state;
+    if (isScrolledIntoView) {
       this.handleScroll();
     }
   }
@@ -59,10 +62,11 @@ class PortfolioItem extends React.Component {
     const {
       project,
       projectCount,
-      onLoad
+      onLoad,
+      i
     } = this.props;
     return (
-      <Row className="display portfolio-item">
+      <Row className="display portfolio-item" key={i}>
         <Column
           small={12}
           medium={10}
@@ -96,7 +100,8 @@ class PortfolioItem extends React.Component {
 PortfolioItem.propTypes = {
   project: PropTypes.object.isRequired,
   onLoad: PropTypes.func.isRequired,
-  projectCount: PropTypes.number.isRequired
+  projectCount: PropTypes.number.isRequired,
+  i: PropTypes.number.isRequired
 };
 
 export default PortfolioItem;
