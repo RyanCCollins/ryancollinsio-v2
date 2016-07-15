@@ -3,9 +3,9 @@
 .logo-wrap {
   padding: 20px;
   @include fadeInUp(
-    $duration: 1s,
+    $duration: 0.5s,
     $count: 1,
-    $delay: 2.0s,
+    $delay: 0.5s,
     $function: ease,
     $fill: both
   )
@@ -31,10 +31,9 @@
 
 .intro {
   background-image: url("../../../images/tswirls.png"), linear-gradient(160deg, #34b6d9, #3464d9);
-  height: calc(100vh - 90px);
+  height: calc(100vh - 85px);
   transition: background linear .5s;
   width: 100%;
-  z-index: 99;
   text-align: center;
   position: relative;
   display: flex;
@@ -69,7 +68,7 @@
   text-transform: uppercase;
   font-weight: 500;
   color: white;
-  font-size: 3.5rem;
+  font-size: 4rem;
   flex: 1;
   @media screen and (max-width: 700px) {
     font-size: 2.7rem;
@@ -80,7 +79,7 @@
   @include fadeInUp(
     $duration: 0.5s,
     $count: 1,
-    $delay: 0.2s,
+    $delay: 1.0s,
     $function: ease,
     $fill: both
   )
@@ -102,7 +101,7 @@
   @include fadeInUp(
     $duration: 0.5s,
     $count: 1,
-    $delay: 0.7s,
+    $delay: 1.5s,
     $function: ease,
     $fill: both
   )
@@ -113,10 +112,10 @@
   width: 100%;
   bottom: 10px;
   left: 0;
-  @include fadeInDown(
+  @include fadeInUp(
     $duration: 0.5s,
     $count: 1,
-    $delay: 1.2s,
+    $delay: 2.0s,
     $function: ease,
     $fill: both
   )

@@ -20,12 +20,15 @@ const Styles = {
     display: 'none'
   },
   zIndex: {
+    height: 85,
     zIndex: 20
   }
 };
 
-const Navbar = () => (
-  <Headroom style={Styles.zIndex}>
+const Navbar = ({
+  activeRoute
+}) => (
+  <Headroom className="headroom__wrapper" style={Styles.zIndex}>
     <TopBar className={'navbar active'}>
       <Row>
         <Column className="navbar__center-on-small">
@@ -37,18 +40,13 @@ const Navbar = () => (
           <TopBarRight className="navbar__right">
             <Menu className="menu__centered">
               <MenuItem>
-                <Link to="/portfolio" className="active">Portfolio</Link>
+                <Link to="/portfolio">Portfolio</Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/blog" className="active">Blog</Link>
+                <Link to="/blog">Blog</Link>
               </MenuItem>
               <MenuItem>
-                <Link to="/services" className="active">Services</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/contact">
-                  <Button isHollow className="button__golden button-contact">Contact Me</Button>
-                </Link>
+                <Link to="/services">Services</Link>
               </MenuItem>
             </Menu>
           </TopBarRight>

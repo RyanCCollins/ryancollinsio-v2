@@ -3,7 +3,6 @@ import { Column } from 'react-foundation';
 import { Divider } from 'components';
 import { GoMilestone } from 'react-icons/lib/go';
 
-
 const ProjectMilestones = ({
   project
 }) => (

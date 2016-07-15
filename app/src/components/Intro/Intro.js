@@ -11,7 +11,7 @@ const Intro = () => (
         <IntroImage />
         <h1 className="intro-header__headline">{Constants.IntroHeadline}</h1>
         <h4 className="intro-header__subheadline">{Constants.IntroSubHeadline}</h4>
-        <DownChevron section="aboutSection" />
+        <DownChevron scrollToSection="aboutSection" />
       </div>
     </div>
   </section>
