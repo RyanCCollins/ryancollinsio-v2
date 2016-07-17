@@ -6,6 +6,7 @@ import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from '../reducers/index';
 import initialState from './initialState';
+import createHistory from 'history/lib/createMemoryHistory';
 
 const loggerMiddleware = createLogger();
 
@@ -30,7 +31,8 @@ const store = createStore(
   composedEnhancers,
 );
 
-export const history = syncHistoryWithStore(browserHistory, store);
+export const history = syncHistoryWithStore(browserHistory, store) ||
+  syncHistoryWithStore(createHistory);
 
 if (module.hot) {
   module.hot.accept('../reducers/', () => {
