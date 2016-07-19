@@ -13,7 +13,7 @@ const express = require('express');
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import serverRoutes from '../app/src/utils/routes';
+//import serverRoutes from '../app/src/utils/routes';
 
 const routes = {
   api: importRoutes('./api')
