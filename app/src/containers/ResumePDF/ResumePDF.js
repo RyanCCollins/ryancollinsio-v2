@@ -6,7 +6,7 @@ import {
 
 const ResumePDF = () => (
   <PDFViewer
-    url="https://s3.amazonaws.com/accredible-profile-uploads/udacity/resumes/1468378609166"
+    url="https://s3.amazonaws.com/accredible-profile-uploads/udacity/resumes/1468948504753"
   />
 );
 
