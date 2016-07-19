@@ -17,17 +17,17 @@ const Languages = [
   {
     id: 3,
     name: 'Python',
-    percent: 45
+    percent: 65
   },
   {
     id: 4,
-    name: 'Objective C',
-    percent: 35
+    name: 'Scala',
+    percent: 55
   },
   {
     id: 5,
-    name: 'Java',
-    percent: 20
+    name: 'Go',
+    percent: 35
   }
 ];
 
