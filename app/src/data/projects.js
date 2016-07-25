@@ -120,7 +120,7 @@ const projects = [
       },
       {
         id: 1,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signin-page.png',
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/slideout.png?raw=true',
         width: 1200,
         height: 1200,
         aspectRatio: 1,

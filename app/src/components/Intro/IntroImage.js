@@ -7,7 +7,7 @@ const ReactLogo = () => (
     style={{ height: 80, width: 80 }}
     src={ReactLogoSrc}
     alt="React Logo"
-    className="wicked-cool-react-logo"
+    className="wicked-cool-react-logo spin-image"
   />
 );
 
@@ -24,7 +24,6 @@ const IntroImage = () => (
     <CrownLogo />
     <div className="logo-text-wrap">
       <ReactLogo />
-      {/*<h1 className="logo-text">RC</h1>*/}
     </div>
   </div>
 );
