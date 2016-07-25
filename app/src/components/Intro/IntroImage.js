@@ -1,6 +1,6 @@
 import React from 'react';
 import CrownLogoImage from '../../../images/crown.png';
-import ReactLogoSrc from './react-logo.png';
+import ReactLogoSrc from './logo.png';
 
 const ReactLogo = () => (
   <img

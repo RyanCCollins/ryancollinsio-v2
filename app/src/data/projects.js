@@ -2,6 +2,160 @@ const projects = [
   {
     id: 0,
     category: 'frontend',
+    title: 'React Redux Simple Starter',
+    type: 'Best Practices Boilerplate and Generator',
+    description: `Released an open-source boilerplate, starter project and component generator using the knowledge and best
+      practices gained from working on several large-scale React projects.
+      The boilerplate aims to implement best practices for developing with cutting-edge JavaScript
+      in 2016 and provides a useful starting place for any of my projects going forward.
+      The generator automates all of the most time consuming parts of working with React,
+      scaffolding out components, containers, action creators, reducers and tests in a similar fashion to Rails.`,
+    milestones: [
+      'Used the experience gained from scaling several large-scale React projects to create an open source project for others to use to learn the best practices.',
+      'Created a demo application using React and Redux to showcase the project',
+      'Wrote a slush generator that scaffolds out React components, automating the most time consuming parts of working with React',
+      'Wrote a contribution guide and maintained an open-source community that uses the best practices outlined in the boilerplate project',
+      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality'
+    ],
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Uses the react-redux connect method to hook up react components to the redux store.",
+      tags: [
+        'React',
+        'Redux',
+        'Flux',
+        'ES2015',
+        'CSS Modules',
+        'Mocha',
+        'Expect',
+        'React-Redux'
+      ]
+    },
+    designPatterns: {
+      description: 'Most notably, this app uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  Follows best practices for stateless functional components.',
+      tags: [
+        'Flux',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'ESLint Config AirBnb',
+        'Stateless Functional Components'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/react-redux-simple-starter',
+    appStoreUrl: '',
+    projectUrl: 'https://github.com/RyanCCollins/react-redux-simple-starter',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler-main.png?raw=true',
+    caption: 'Project 1 for Senior Web Nanodegree.',
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler.png?raw=true',
+        width: 3082,
+        height: 1726,
+        aspectRatio: 1.7775,
+        lightboxImage: {
+          caption: 'Example application',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler.png?raw=true'
+        }
+      }
+    ]
+  },
+  {
+    id: 10,
+    category: 'frontend',
+    title: 'Public Transportation',
+    type: 'Offline First Single Page Web Application',
+    description: `Developed an offline-first, progressive web application
+      that allows selection of train stations from a map and loads a train
+      schedule in real-time.  Using cutting edge offline technologies such as Service Worker,
+      the application intelligently caches all of the data and assets, making the application
+      function both on and offline. `,
+    milestones: [
+      'Built a dynamic single page application using offline first technologies',
+      'Transpiled cutting edge JavaScript with ES6 using Babel',
+      'Implemented service worker and IDB to provide persistent offline data',
+      'Utilized reachability to determine when the app was offline',
+      'Wrote several dozen reusable React components',
+      'Utilized Redux and unidirectional data-flow to manage dynamic state predictably',
+      'Wrote tests to eliminate regressions and provide a solid user experience',
+      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality'
+    ],
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Uses the react-redux connect method to hook up react components to the redux store.",
+      tags: [
+        'React',
+        'Redux',
+        'Flux',
+        'ES2015',
+        'CSS Modules',
+        'Mocha',
+        'Expect',
+        'React-Redux'
+      ]
+    },
+    designPatterns: {
+      description: 'Most notably, this app uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  Follows best practices for stateless functional components.',
+      tags: [
+        'Flux',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'Stateless Functional Components'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/public-transportation',
+    appStoreUrl: '',
+    projectUrl: 'https://github.com/RyanCCollins/public-transportation',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true',
+    caption: 'Project 1 for Senior Web Nanodegree.',
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true',
+        width: 1200,
+        height: 1200,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'Train Schedule Search',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signin-page.png',
+        width: 1200,
+        height: 1200,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'Slide Out Nav',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/slideout.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/about.png?raw=true',
+        width: 1200,
+        height: 1200,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'About Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/about.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/help.png?raw=true',
+        width: 1200,
+        height: 1200,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'Help Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/help.png?raw=true'
+        }
+      }
+    ]
+  },
+  {
+    id: 20,
+    category: 'frontend',
     title: 'Meetup Event Planner',
     type: 'React Single Page App',
     description: `Built a dynamic single page application using React and
@@ -93,7 +247,7 @@ const projects = [
     ]
   },
   {
-    id: 1,
+    id: 30,
     category: 'ios',
     title: 'Hacksmiths App',
     type: 'iOS Mobile App - Swift',
@@ -291,7 +445,7 @@ const projects = [
     ]
   },
   {
-    id: 2,
+    id: 40,
     title: 'Hacksmiths Website',
     category: 'frontend',
     type: "Web Application",
@@ -409,7 +563,7 @@ const projects = [
     ]
   },
   {
-    id: 3,
+    id: 50,
     title: 'Hacksmiths API, Admin Dashboard',
     category: 'backend',
     type: "Full Stack Web API",
@@ -518,7 +672,7 @@ const projects = [
     ]
   },
   {
-    id: 4,
+    id: 60,
     title: 'RyanCollins.io',
     category: 'frontend',
     type: 'React SPA',
@@ -640,7 +794,7 @@ const projects = [
     ]
   },
   {
-    id: 5,
+    id: 70,
     title: 'Food Drivr - iOS App',
     type: 'iOS Mobile Application',
     category: 'ios',
@@ -778,7 +932,7 @@ const projects = [
     ]
   },
   {
-    id: 6,
+    id: 80,
     title: 'Food Drivr - React Web App',
     type: 'Front End Web',
     category: 'frontend',
@@ -937,7 +1091,7 @@ const projects = [
     }
   },
   {
-    id: 7,
+    id: 90,
     title: 'Food Drivr - Rails API',
     category: 'backend',
     type: 'Back End Web',
@@ -1034,7 +1188,7 @@ const projects = [
     ]
   },
   {
-    id: 8,
+    id: 100,
     title: 'Virtual Tourist',
     category: 'ios',
     type: 'iOS Mobile',
@@ -1122,7 +1276,7 @@ const projects = [
     ]
   },
   {
-    id: 9,
+    id: 110,
     title: 'On the Map',
     category: 'ios',
     type: 'iOS Mobile',
@@ -1187,7 +1341,7 @@ const projects = [
     ]
   },
   {
-    id: 10,
+    id: 120,
     title: 'Tech Rapport',
     category: 'frontend',
     type: 'Front End Web',
