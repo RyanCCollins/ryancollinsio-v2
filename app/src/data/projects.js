@@ -4,7 +4,7 @@ const projects = [
     category: 'frontend',
     title: 'React Redux Simple Starter',
     type: 'Best Practices Boilerplate and Generator',
-    description: `Released an open-source boilerplate, starter project and component generator using the knowledge and best
+    description: `Released an open-source boilerplate, scaffolding tool and component generator using the knowledge and best
       practices gained from working on several large-scale React projects.
       The boilerplate aims to implement best practices for developing with cutting-edge JavaScript
       in 2016 and provides a useful starting place for any of my projects going forward.
@@ -42,9 +42,9 @@ const projects = [
     },
     repositoryURL: 'https://github.com/RyanCCollins/react-redux-simple-starter',
     appStoreUrl: '',
-    projectUrl: 'https://github.com/RyanCCollins/react-redux-simple-starter',
+    projectUrl: 'https://github.com/RyanCCollins/slush-react-generator',
     featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler-main.png?raw=true',
-    caption: 'Project 1 for Senior Web Nanodegree.',
+    caption: 'Best Practices Boilerplate, Scaffolding Tool, NPM Module and Generator',
     images: [
       {
         id: 0,
