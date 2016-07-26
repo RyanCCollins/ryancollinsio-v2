@@ -27,7 +27,8 @@ const projects = [
         'CSS Modules',
         'Mocha',
         'Expect',
-        'React-Redux'
+        'React-Redux',
+        'Gulp'
       ]
     },
     designPatterns: {
