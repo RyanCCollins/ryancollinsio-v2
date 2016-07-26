@@ -57,6 +57,39 @@ const projects = [
           caption: 'Example application',
           src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler.png?raw=true'
         }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/npm-package.png?raw=true',
+        width: 1200,
+        height: 11,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'NPM Package',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/npm-package.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/readme-boilerplate.png?raw=true',
+        width: 1200,
+        height: 11,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Readme for Boilerplate Project',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/readme-boilerplate.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/code.png?raw=true',
+        width: 1200,
+        height: 11,
+        aspectRatio: 1.1,
+        lightboxImage: {
+          caption: 'Sample Code',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/code.png?raw=true'
+        }
       }
     ]
   },
