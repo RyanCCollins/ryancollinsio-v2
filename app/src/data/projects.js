@@ -138,18 +138,18 @@ const projects = [
     repositoryURL: 'https://github.com/RyanCCollins/public-transportation',
     appStoreUrl: '',
     projectUrl: 'https://github.com/RyanCCollins/public-transportation',
-    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/map.png?raw=true',
     caption: 'Project 2 for Senior Web Nanodegree.',
     images: [
       {
         id: 0,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true',
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/map.png?raw=true',
         width: 1200,
         height: 1200,
         aspectRatio: 1,
         lightboxImage: {
           caption: 'Train Schedule Search',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true'
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/map.png?raw=true'
         }
       },
       {
@@ -165,6 +165,17 @@ const projects = [
       },
       {
         id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/confirm-details.png?raw=true',
+        width: 1200,
+        height: 1200,
+        aspectRatio: 1,
+        lightboxImage: {
+          caption: 'Confirm Details',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/confirm-details.png?raw=true'
+        }
+      },
+      {
+        id: 3,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/about.png?raw=true',
         width: 1200,
         height: 1200,
@@ -175,7 +186,18 @@ const projects = [
         }
       },
       {
-        id: 3,
+        id: 4,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/schedule.png?raw=true',
+        width: 1200,
+        height: 1800,
+        aspectRatio: 1.5,
+        lightboxImage: {
+          caption: 'Train Schedule',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/schedule.png?raw=true'
+        }
+      },
+      {
+        id: 5,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/help.png?raw=true',
         width: 1200,
         height: 1200,
