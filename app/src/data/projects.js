@@ -139,7 +139,7 @@ const projects = [
     appStoreUrl: '',
     projectUrl: 'https://github.com/RyanCCollins/public-transportation',
     featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/main.png?raw=true',
-    caption: 'Project 1 for Senior Web Nanodegree.',
+    caption: 'Project 2 for Senior Web Nanodegree.',
     images: [
       {
         id: 0,
