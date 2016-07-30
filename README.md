@@ -50,3 +50,6 @@ A big thanks to all of the project contributors for the libraries used in this p
 
 ## Screen Shots
 ![RyanCollins.io Mocks](https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-mockup.jpg)
+
+## Timeline / Todos
+* [ ] Integrate Graphql   
