@@ -8,7 +8,13 @@ import { Divider } from 'components';
 const ProjectTechnicalInfo = ({
   project
 }) => (
-  <Column className="project-technical-info-section" small={12} large={8} isColumn centerOnSmall>
+  <Column
+    className="project-technical-info-section"
+    small={12}
+    large={8}
+    isColumn
+    centerOnSmall
+  >
     <h1 className="section-header">Technical Information</h1>
     <h4 className="section-sub-title">Overview of technologies and best practices used</h4>
     <Divider />
