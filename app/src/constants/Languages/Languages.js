@@ -26,7 +26,7 @@ const Languages = [
   },
   {
     id: 5,
-    name: 'Go',
+    name: 'Haskell',
     percent: 35
   }
 ];
