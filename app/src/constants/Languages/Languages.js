@@ -21,12 +21,12 @@ const Languages = [
   },
   {
     id: 4,
-    name: 'Scala',
+    name: 'Haskell',
     percent: 55
   },
   {
     id: 5,
-    name: 'Haskell',
+    name: 'Scala',
     percent: 35
   }
 ];
