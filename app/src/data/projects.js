@@ -1,19 +1,143 @@
 const projects = [
   {
     id: 0,
-    category: 'frontend',
-    title: 'React Redux Simple Starter',
-    type: 'Best Practices Boilerplate and Generator',
-    description: `Released an open-source boilerplate, scaffolding tool and component generator using the knowledge and best
-      practices gained from working on several large-scale React projects.
-      The boilerplate aims to implement best practices for developing with cutting-edge JavaScript
-      in 2016 and provides a useful starting place for any of my projects going forward.
-      The generator automates all of the most time consuming parts of working with React,
-      scaffolding out components, containers, action creators, reducers and tests in a similar fashion to Rails.`,
+    category: 'fullstack',
+    title: 'Restaurant Reviewer App',
+    type: 'A11y Best Practices',
+    description: `Full Stack web application built with a focus
+      on UX and A11y Accessibility best practices.  Shows a list
+      of restaurants retrieved through a web scraper and corresponding
+      reviews for the restaurants.  The application allows users to submit
+      new reviews for restaurants and focuses on providing a world-class
+      user experience no matter the end-user's device.`,
     milestones: [
-      'Used the experience gained from scaling several large-scale React projects to create an open source project for others to use to learn the best practices.',
-      'Created a demo application using React and Redux to showcase the project',
-      'Wrote a slush generator that scaffolds out React components, automating the most time consuming parts of working with React',
+      'Front End Milestones:',
+      'Followed the feature-first approach, whereby components exist in isolation from the app, encouraging encapsulation and reusability.',
+      'Wrote dozens of scalable react components and connected containers.',
+      'Followed functional programming best practices, utilizing the immutable architecture and encapsulating business logic in the Redux store.',
+      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality',
+      'Back End Milestones:',
+      'Wrote unit tests using RSpec, providing a solid framework for the app',
+      'Utilized the Ruby on Rails v.5 API only mode in an effort to build a micro-service oriented API to serve JSON data to the front end.',
+      'Utilized Docker to encourage maximum scalability and build automation.',
+      'As always, followed the Ruby style guide and best practices.'
+    ],
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Built a Rails API to serve and persist data for the application.",
+      tags: [
+        'React',
+        'Redux',
+        'Flux',
+        'ES2015',
+        'Rails',
+        'PostgreSQL',
+        'RSpec'
+      ]
+    },
+    designPatterns: {
+      description: 'Most notably, the app utilizes A11y accessibility and UX best practices.  It also uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  On the back end, it follows the micro-service architecture, serving custom endpoints via a RESTful API.  The application uses Docker to automate the build process.',
+      tags: [
+        'A11y',
+        'Flux',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'Build Automation',
+        'Micro services',
+        'REST'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/restaurant-reviewer',
+    appStoreUrl: '',
+    projectUrl: 'https://github.com/RyanCCollins/restaurant-reviewer-api',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/mainpage.png?raw=true',
+    caption: 'Restaurant Reviewer A11y Best Practices App',
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/mainpage.png?raw=true',
+        width: 1200,
+        height: 1400,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Main page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/mainpage.png?raw=true'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/skiplinks.png?raw=true',
+        width: 1400,
+        height: 1200,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Skiplinks 1',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/skiplinks.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/skiplinks2.png?raw=true',
+        width: 1400,
+        height: 1200,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Skiplinks 2',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/skiplinks2.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/addreview.png?raw=true',
+        width: 1400,
+        height: 1200,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Add Review',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/addreview.png?raw=true'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/restaurantsmain.png?raw=true',
+        width: 1400,
+        height: 2763,
+        aspectRatio: 0.50,
+        lightboxImage: {
+          caption: 'Restaurants Full Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/restaurantsmain.png?raw=true'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviewsmain.png?raw=true',
+        width: 1400,
+        height: 3773,
+        aspectRatio: 0.37,
+        lightboxImage: {
+          caption: 'Reviews Main Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviewsmain.png?raw=true'
+        }
+      }
+    ]
+  },
+  {
+    id: 1,
+    category: 'frontend',
+    title: 'Open Source Boierplates',
+    type: 'Best Practices Boilerplates and Generators',
+    description: `Released two open-source boilerplates, multiple scaffolding tools and React component generators using the knowledge and best
+      practices gained from working on several large-scale React projects.
+      The boilerplates aim to implement best practices for developing with cutting-edge JavaScript
+      in 2016 and both provide a useful starting place for any of my projects going forward.
+      The generators automate all of the most time consuming parts of working with React,
+      scaffolding out components, containers, action creators, reducers and
+      tests in a similar fashion to Rails.  The two projects showcase seperate
+      organizational strategies, offering multiple options for different situations.`,
+    milestones: [
+      'Used the experience gained from scaling several large-scale React projects to create multiple open source projects for others to use to learn the best practices.',
+      'Created demo applications using React and Redux to showcase the projects',
+      'Wrote slush generators that scaffolds out the starter projects',
+      'Created scaffolding generators to automate the creation of react / redux components and containers',
       'Wrote a contribution guide and maintained an open-source community that uses the best practices outlined in the boilerplate project',
       'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality'
     ],
@@ -32,37 +156,36 @@ const projects = [
       ]
     },
     designPatterns: {
-      description: 'Most notably, this app uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  Follows best practices for stateless functional components.',
+      description: 'Both boilerplates utilize the Flux unidirectional data flow architecture.  The scalable project implements the feature-first organizational pattern, providing maximum scalability.',
       tags: [
         'Flux',
         'Unidirectional Data Flow',
-        'Functional Reactive Programming',
         'ESLint Config AirBnb',
-        'Stateless Functional Components'
+        'Feature First'
       ]
     },
     repositoryURL: 'https://github.com/RyanCCollins/react-redux-simple-starter',
     appStoreUrl: '',
-    projectUrl: 'https://github.com/RyanCCollins/slush-react-generator',
+    projectUrl: 'https://github.com/RyanCCollins/scalable-react-boilerplate',
     featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler-main.png?raw=true',
     caption: 'Best Practices Boilerplate, Scaffolding Tool, NPM Module and Generator',
     images: [
       {
         id: 0,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler.png?raw=true',
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler-main.png?raw=true',
         width: 3082,
         height: 1726,
         aspectRatio: 1.7775,
         lightboxImage: {
           caption: 'Example application',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler.png?raw=true'
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/boiler-main.png?raw=true'
         }
       },
       {
         id: 1,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/npm-package.png?raw=true',
         width: 1200,
-        height: 11,
+        height: 1100,
         aspectRatio: 1.1,
         lightboxImage: {
           caption: 'NPM Package',
@@ -73,7 +196,7 @@ const projects = [
         id: 2,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/readme-boilerplate.png?raw=true',
         width: 1200,
-        height: 11,
+        height: 1100,
         aspectRatio: 1.1,
         lightboxImage: {
           caption: 'Readme for Boilerplate Project',
@@ -82,13 +205,13 @@ const projects = [
       },
       {
         id: 3,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/code.png?raw=true',
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/scalable.png?raw=true',
         width: 1200,
-        height: 11,
+        height: 1100,
         aspectRatio: 1.1,
         lightboxImage: {
-          caption: 'Sample Code',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/code.png?raw=true'
+          caption: 'Scalable React Boilerplate',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-redux-simple-starter/scalable.png?raw=true'
         }
       }
     ]
