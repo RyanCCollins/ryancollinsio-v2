@@ -10,7 +10,7 @@ const references = [
       to grasp. Whether as a team member or as a leader, Ryan would be
       an asset to any project. `,
     person: {
-      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/AAEAAQAAAAAAAAP1AAAAJGY3NDVkY2MyLWE4MmMtNDEwMi1hZWM4LWYxNTIzYjA2Y2EyMw.jpg?raw=true',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/mikael.jpg?raw=true',
       company: 'Hacksmiths',
       name: 'Mikael Mukhsikaroyan',
       title: 'iOS Engineer - Hacksmiths'
@@ -44,7 +44,7 @@ const references = [
       fundamentally makes everyone around him better. Anytime someone is
       struggling to understand or complete a task he's available to walk through it.`,
     person: {
-      image: 'https://media.licdn.com/media/AAEAAQAAAAAAAAbiAAAAJDkyOTRjMzZiLTA30MGUtNDI5Ni1iMWEzLTI4ODIxODM3NjNkYQ.jpg',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/cody.jpg?raw=true',
       company: 'Perry\'s Development',
       name: 'Cody Perry',
       title: 'Front End Web Developer - Perry\'s Development'
@@ -54,7 +54,7 @@ const references = [
     id: 30,
     text: 'Ryan is a brilliant, organized and fluent Full Stack Engineer. While working with Ryan he exemplified leadership in the areas of design, full stack engineering and web/mobile development. He has a vast range of skills and is able to pick up new technologies at the drop of a hat. I would definitely recommend this detail-oriented and qualified person for a full stack engineer or team lead position.',
     person: {
-      image: 'http://techrapport.com/assets/images/references/harry.jpg',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/cody.jpg?raw=true',
       company: 'GENIUS WEAR INDUSTRIES',
       name: 'Harry Merzin',
       title: 'CEO - Genius Wear Industries'
@@ -64,7 +64,7 @@ const references = [
     id: 40,
     text: "Ryan has been an outstanding leader from the day that I've met him. He constantly shows initiative and well-developed problem-solving skills that have allowed him to create several large-scale projects on his own, freelance, create his own company, and even begin working towards a Hackathon. Ryan is also extremely insightful and has helped me learn quite a bit. He has pushed everyone on the Hacksmiths team to perform their best and on schedule. I believe that Ryan will succeed and compliment any development team he joins.",
     person: {
-      image: 'http://techrapport.com/assets/images/references/frank.jpg',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/frank.jpg?raw=true',
       company: 'Hacksmiths',
       name: 'Frank Robert',
       title: 'Front-End Web Developer - Hacksmiths'
@@ -74,7 +74,7 @@ const references = [
     id: 50,
     text: "Ryan is one of the most focused developers I've had the privilege to work with. His knowledge base is also incredibly deep. We have partnered on several projects and all of them are world class. Ryan is also an incredibly enjoyable person to work with and I've had a blast working with him.",
     person: {
-      image: 'http://techrapport.com/assets/images/references/sean.jpg',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/sean.jpg?raw=true',
       company: 'Applied Rater',
       name: 'Sean Craig',
       title: 'Lead Designer - Applied Rater'
@@ -84,7 +84,7 @@ const references = [
     id: 60,
     text: "Ryan was one of the standout employees in my tenure ... More importantly, Ryan was innovative and always looking for new ways to solve problems.  He has tremendous leadership potential, both in terms of his interpersonal skills and his solid knowledge of data systems...",
     person: {
-      image: 'http://techrapport.com/assets/images/references/alice-bonner.jpeg',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/frank.jpg?raw=true',
       company: 'CMS - Division of Nursing Homes',
       name: 'Alice Bonner',
       title: 'Director - CMS - Division of Nursing Homes'
