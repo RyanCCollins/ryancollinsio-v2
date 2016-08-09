@@ -75,29 +75,7 @@ const projects = [
         }
       },
       {
-        id: 2,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviews.png?raw=true',
-        width: 1400,
-        height: 1200,
-        aspectRatio: 1.166,
-        lightboxImage: {
-          caption: 'Restaurant Review Grid',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviews.png?raw=true'
-        }
-      },
-      {
-        id: 3,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviewmodal.png?raw=true',
-        width: 1400,
-        height: 1200,
-        aspectRatio: 1.166,
-        lightboxImage: {
-          caption: 'Full Review Modal',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviewmodal.png?raw=true'
-        }
-      },
-      {
-        id: 4,
+        id: 1,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurantmain.png?raw=true',
         width: 1400,
         height: 1200,
@@ -108,7 +86,7 @@ const projects = [
         }
       },
       {
-        id: 5,
+        id: 2,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/addreview.png?raw=true',
         width: 1400,
         height: 1200,
@@ -116,6 +94,28 @@ const projects = [
         lightboxImage: {
           caption: 'Add Review',
           src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/addreview.png?raw=true'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviews.png?raw=true',
+        width: 1400,
+        height: 1200,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Restaurant Review Grid',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviews.png?raw=true'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviewmodal.png?raw=true',
+        width: 1400,
+        height: 1200,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Full Review Modal',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/reviewmodal.png?raw=true'
         }
       },
       {
