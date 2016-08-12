@@ -48,7 +48,7 @@ const projects = [
     },
     repositoryURL: 'https://github.com/RyanCCollins/restaurant-reviewer',
     appStoreUrl: '',
-    projectUrl: 'https://github.com/RyanCCollins/restaurant-reviewer-api',
+    projectUrl: 'https://restaurant-reviewer-client.herokuapp.com',
     featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/mainpage.png?raw=true',
     caption: 'Restaurant Reviewer A11y Best Practices App',
     images: [
