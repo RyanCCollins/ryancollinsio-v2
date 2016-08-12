@@ -14,7 +14,10 @@ const router = (
         newestOnTop
         position="bottom-right"
       />
-      <Router history={history}>
+    <Router /* eslint-disable */
+      onUpdate={() => window.scrollTo(0, 0)}
+      history={history} /* eslint-enable */
+    >
         <Route path="/" component={App}>
           <IndexRoute component={Containers.LandingPage} />
           <Route path="/portfolio" name="portfolio" component={Containers.Portfolio} />
