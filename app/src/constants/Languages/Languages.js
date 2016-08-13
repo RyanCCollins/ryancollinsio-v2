@@ -2,7 +2,7 @@ const Languages = [
   {
     id: 0,
     name: 'Javascript',
-    percent: 97
+    percent: 98
   },
   {
     id: 1,
@@ -12,22 +12,22 @@ const Languages = [
   {
     id: 2,
     name: 'Ruby',
-    percent: 93
+    percent: 95
   },
   {
     id: 3,
     name: 'Python',
-    percent: 65
+    percent: 77
   },
   {
     id: 4,
-    name: 'Haskell',
-    percent: 55
+    name: 'Elixir',
+    percent: 80
   },
   {
     id: 5,
-    name: 'Scala',
-    percent: 35
+    name: 'Haskell',
+    percent: 49
   }
 ];
 
