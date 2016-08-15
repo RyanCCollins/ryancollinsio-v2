@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { Divider, Languages } from '../../components';
 import './LanguageSection.scss';
 
+// TODO: move to components after refactor
 const LanguageSection = ({
   languages,
   languageSectionHeader
