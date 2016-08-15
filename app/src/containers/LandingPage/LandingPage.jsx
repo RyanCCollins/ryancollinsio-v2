@@ -51,7 +51,9 @@ const LandingPage = props => (
       technologies={Constants.Technologies}
       technologyHeader={Constants.technologyHeader}
     />
-    <Footer {...props} />
+    <Footer
+      {...props}
+    />
   </div>
 );
 
