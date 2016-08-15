@@ -20,6 +20,7 @@ Footer.propTypes = {
   footerLinks: PropTypes.array.isRequired
 };
 
+// mapStateToProps :: {State} -> {Props} 
 const mapStateToProps = (state) => ({
   footerLinks: state.footerLinks
 });
