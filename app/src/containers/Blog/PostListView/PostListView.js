@@ -20,6 +20,7 @@ import {
 } from '../../../components';
 import NoPostsFound from '../Misc/NoPostsFound';
 
+// containsCategory :: Object -> Object  -> Bool
 const containsCategory = (post, category) => {
   const categories = post.categories.filter(
     (cat) => cat._id == category.id
@@ -27,6 +28,7 @@ const containsCategory = (post, category) => {
   return categories.length > 0;
 };
 
+// getFilteredPosts :: Object -> [Object]  -> [Object]
 const getFilteredPosts = (
   category,
   posts
@@ -161,6 +163,7 @@ PostListView.propTypes = {
   clearErrors: PropTypes.func.isRequired
 };
 
+// mapStateToProps :: {State} -> {Props}
 const mapStateToProps = (state) => ({
   posts: state.posts,
   postCategories: state.posts.categories,
@@ -170,6 +173,7 @@ const mapStateToProps = (state) => ({
   isFetching: state.posts.isFetching
 });
 
+// mapDispatchToProps :: {Dispatch} -> {Props} 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     fetchPosts: () => fetchPostsFromApi(),
