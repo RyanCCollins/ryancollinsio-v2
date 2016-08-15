@@ -3,6 +3,7 @@ import { FooterLinks } from 'components';
 import { connect } from 'react-redux';
 import './Footer.scss';
 
+// TODO: move to components after refactor
 const Footer = ({
   footerLinks
 }) => (
