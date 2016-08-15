@@ -4,12 +4,12 @@ import {
   Column
 } from 'react-foundation';
 
-const categoryText = (selectedCategory) => {
-  return selectedCategory.name !== 'All' ?
+// categoryText :: Object -> String 
+const categoryText = (selectedCategory) =>
+  selectedCategory.name !== 'All' ?
     `No Posts in the ${selectedCategory.name} category.`
   :
     'No Posts Found';
-};
 
 const NoPostsFound = ({
   selectedCategory
