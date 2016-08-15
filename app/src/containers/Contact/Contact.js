@@ -77,12 +77,14 @@ Contact.propTypes = {
   clearMessages: PropTypes.func.isRequired
 };
 
+// mapStateToProps :: {State} -> {Props} 
 const mapStateToProps = (state) => ({
   errors: state.errors.contact,
   messages: state.messages.contact,
   isFetching: state.contact.isFetching
 });
 
+// mapDispatchToProps :: {Dispatch} -> {Props} 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     onSubmitContact: (params) => contact(params),
