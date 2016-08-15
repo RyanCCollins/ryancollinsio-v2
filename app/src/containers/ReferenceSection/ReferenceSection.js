@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Reference, Slider, Divider } from 'components';
 import './ReferenceSection.scss';
 
+// TODO: move to components
 const ReferenceSection = ({
   references
 }) => (
