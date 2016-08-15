@@ -73,6 +73,7 @@ SinglePostView.propTypes = {
   posts: PropTypes.object.isRequired
 };
 
+// mapStateToProps :: {State} -> {Props} 
 const mapStateToProps = (state) => ({
   posts: state.posts
 });
