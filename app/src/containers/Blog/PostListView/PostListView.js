@@ -79,7 +79,7 @@ class PostListView extends React.Component {
     this.setState({ isLoading: false });
   }
   handleChangePage() {
-
+    //TODO: Implement me!!
   }
   handleSelectCategory(category) {
     const {
