@@ -15,6 +15,7 @@ import {
   clearPortfolioSearch
 } from 'actions/actionCreators';
 
+// filterProjects :: [Object] -> String -> [Object] 
 const filterProjects = (
   projects,
   category
@@ -26,6 +27,7 @@ const filterProjects = (
       project.category === category.value
     );
 
+// search :: [Object] -> String -> Object 
 const search = (projects, searchTerm) =>
   projects.filter((item) =>
     item.title.includes(searchTerm) || item.category.includes(searchTerm)
@@ -122,6 +124,7 @@ Portfolio.propTypes = {
   onClearSearch: PropTypes.func.isRequired
 };
 
+// mapStateToProps :: {State} -> {Props}
 const mapStateToProps = (state) => ({
   projects: state.portfolio.projects,
   categories: state.portfolio.categories,
@@ -129,6 +132,7 @@ const mapStateToProps = (state) => ({
   searchTerm: state.portfolio.searchTerm
 });
 
+// mapDispatchToProps :: {Dispatch} -> {Props} 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     onSelectCategory: (category) => selectProjectCategory(category),
