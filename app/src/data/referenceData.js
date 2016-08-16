@@ -54,7 +54,7 @@ const references = [
     id: 30,
     text: 'Ryan is a brilliant, organized and fluent Full Stack Engineer. While working with Ryan he exemplified leadership in the areas of design, full stack engineering and web/mobile development. He has a vast range of skills and is able to pick up new technologies at the drop of a hat. I would definitely recommend this detail-oriented and qualified person for a full stack engineer or team lead position.',
     person: {
-      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/cody.jpg?raw=true',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/harry.jpg?raw=true',
       company: 'GENIUS WEAR INDUSTRIES',
       name: 'Harry Merzin',
       title: 'CEO - Genius Wear Industries'
