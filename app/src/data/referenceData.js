@@ -84,7 +84,7 @@ const references = [
     id: 60,
     text: "Ryan was one of the standout employees in my tenure ... More importantly, Ryan was innovative and always looking for new ways to solve problems.  He has tremendous leadership potential, both in terms of his interpersonal skills and his solid knowledge of data systems...",
     person: {
-      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/frank.jpg?raw=true',
+      image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/alice.jpg?raw=true',
       company: 'CMS - Division of Nursing Homes',
       name: 'Alice Bonner',
       title: 'Director - CMS - Division of Nursing Homes'
