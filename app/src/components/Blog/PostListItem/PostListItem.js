@@ -10,16 +10,15 @@ import {
 } from 'react-foundation';
 import PostImage from '../Shared/PostImage';
 
-const formattedDate = (dateString) => {
-  return moment(dateString).format('MMM Do YY');
-};
+const formattedDate = (dateString) =>
+  moment(dateString).format('MMM Do YY');
 
 const PostListItem = ({
   post
 }) => (
   <div className="post-list-item">
     <div className="card post-item-card">
-      <Link to={`/blog/posts/${post["_id"]}`}>
+      <Link to={`/blog/posts/${post._id}`}>
         <PostImage
           className="card-image"
           url={post.featureImage ? post.featureImage.url : undefined}
@@ -39,7 +38,7 @@ const PostListItem = ({
         <h4 className="post-item-card__header">{post.title}</h4>
         <PostSnippet content={post.content.md} />
         <div className="read-more-button">
-          <Link to={`/blog/posts/${post["_id"]}`}>
+          <Link to={`/blog/posts/${post._id}`}>
             <Button className="button__primary">Read More</Button>
           </Link>
         </div>
@@ -50,7 +49,7 @@ const PostListItem = ({
             />
           </div>
         :
-          <div></div>
+          <noscript />
         }
       </div>
     </div>
