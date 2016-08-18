@@ -44,7 +44,7 @@ class Paginator extends React.Component {
       selectedPage
     } = this.props;
     return (
-      <div className="pagination-wrapper">
+      <div className="pagination-wrapper" style={{ display: 'none' }}>
         <div className="pagination">
           {getNumberOfPages}
           <Pagination aria-label="Pagination" isCentered>
