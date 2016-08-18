@@ -52,4 +52,11 @@ A big thanks to all of the project contributors for the libraries used in this p
 ![RyanCollins.io Mocks](https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-mockup.jpg)
 
 ## Timeline / Todos
-* [ ] Integrate Graphql   
+* [ ] Integrate Graphql
+* [ ] Add a tech stack component
+
+
+# License
+This app is licensed under the MIT license.  Please see the [license file](https://github.com/RyanCCollins/ryancollins.io/blob/master/LICENSE) for details.
+
+Feel free to reverse engineer, fork, copy, or do whatever you want with it!
