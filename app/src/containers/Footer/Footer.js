@@ -14,11 +14,14 @@ const Footer = ({
     >
       © 2016 - Ryan Collins
     </h4>
-    <h5
+    <p
       className="footer-text centered text-white raleway"
     >
-      Licensed under the MIT license.  Feel free to <a href="https://github.com/RyanCCollins/ryancollins.io">dig through the code</a>.
-    </h5>
+      {'Licensed under the MIT license.  Feel free to '}
+      <a href="https://github.com/RyanCCollins/ryancollins.io">
+        dig through the code
+      </a>.
+    </p>
   </footer>
 );
 
