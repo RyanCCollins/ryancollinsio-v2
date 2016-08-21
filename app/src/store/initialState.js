@@ -5,6 +5,7 @@ import footerLinks from '../data/footerLinks';
 import teamMembers from '../data/teamMembers';
 import services from '../data/services';
 import projectCategories from '../data/projectCategories';
+import technologies from '../data/techStackData';
 
 const initialState = {
   services,
@@ -12,6 +13,7 @@ const initialState = {
   resumeData,
   references,
   footerLinks,
+  technologies,
   portfolio: {
     projects,
     searchTerm: '',

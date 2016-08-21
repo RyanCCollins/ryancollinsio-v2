@@ -19,6 +19,7 @@ import VideoSeries from './Services/VideoSeries/VideoSeries';
 import Team from './Services/Team/Team';
 import MainServices from './Services/MainServices/MainServices';
 import CategoryFilterContainer from './CategoryFilterContainer/CategoryFilterContainer';
+import TechnologyStack from './TechnologyStack/TechnologyStack';
 
 export {
   TechnologySection,
@@ -41,5 +42,6 @@ export {
   VideoSeries,
   Team,
   MainServices,
-  CategoryFilterContainer
+  CategoryFilterContainer,
+  TechnologyStack
 };

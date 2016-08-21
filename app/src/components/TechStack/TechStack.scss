@@ -1,4 +1,9 @@
-.stackItem {
-  background-color: rgba(2,30,39,0.7);
-  height: 244px;
+.tech-stack__wrapper {
+  width: 100%;
+  display: flex;
+}
+.tech-stack__item {
+  background-color: rgba(23,57,67,0.69);
+  width: 970px;
+  height: 200px;
 }

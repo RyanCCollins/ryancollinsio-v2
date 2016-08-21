@@ -11,6 +11,7 @@ import {
   ResumeSection,
   ReferenceSection,
   TechnologySection,
+  TechnologyStack,
   SkillSection
 } from 'containers';
 
@@ -51,6 +52,7 @@ const LandingPage = props => (
       technologies={Constants.Technologies}
       technologyHeader={Constants.technologyHeader}
     />
+    <TechnologyStack />
     <Footer
       {...props}
     />
