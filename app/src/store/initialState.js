@@ -5,7 +5,7 @@ import footerLinks from '../data/footerLinks';
 import teamMembers from '../data/teamMembers';
 import services from '../data/services';
 import projectCategories from '../data/projectCategories';
-import technologies from '../data/techStackData';
+import technologies from '../data/technologies';
 
 const initialState = {
   services,

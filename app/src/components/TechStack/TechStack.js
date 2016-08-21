@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import './TechStack.scss';
 
 const TechStackItem = ({
@@ -14,7 +14,7 @@ const TechStack = ({
 }) => (
   <section>
     <div className="tech-stack__wrapper">
-      {technologies.map(item =>
+      {typeof technologies !== undefined && technologies.map(item =>
         <TechStackItem key={item.id} item={item} />
       )}
     </div>
@@ -22,7 +22,7 @@ const TechStack = ({
 );
 
 TechStack.propTypes = {
-  technologies: PropTypes.array.isRequired,
+  technologies: PropTypes.array.isRequired
 };
 
 export default TechStack;

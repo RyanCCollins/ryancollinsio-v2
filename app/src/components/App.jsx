@@ -4,6 +4,7 @@ import * as actionCreators from '../actions/actionCreators';
 import Main from './Main';
 
 const mapStateToProps = (state) => ({
+  technologies: state.technologies,
   porfolio: state.porfolio,
   resumeData: state.resumeData,
   messages: state.messages,
