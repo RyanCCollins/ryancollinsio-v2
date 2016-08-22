@@ -33,6 +33,7 @@ import ProjectMilestones from './SingleProject/ProjectMilestones/ProjectMileston
 import PortfolioGallery from './SingleProject/PortfolioGallery/PortfolioGallery';
 import DownChevron from './DownChevron/DownChevron';
 import TechStack from './TechStack/TechStack';
+import BlurUpImage from './BlurUpImage/BlurUpImage';
 
 export {
   Intro,
@@ -69,5 +70,6 @@ export {
   ProjectReview,
   ProjectMilestones,
   DownChevron,
-  TechStack
+  TechStack,
+  BlurUpImage
 };

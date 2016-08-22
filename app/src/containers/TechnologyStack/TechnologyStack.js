@@ -15,7 +15,7 @@ class TechnologyStack extends Component {
       <section className="tech-stack-section">
         <h1 className="section-header text-white">Tech Stack</h1>
         <Divider />
-        <TechStack technologies={technologies} />
+        {/* <TechStack technologies={technologies} /> */}
       </section>
     );
   }
