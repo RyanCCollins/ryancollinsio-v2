@@ -75,17 +75,6 @@ const projects = [
         }
       },
       {
-        id: 1,
-        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurantmain.png?raw=true',
-        width: 1400,
-        height: 1200,
-        aspectRatio: 1.166,
-        lightboxImage: {
-          caption: 'Single Restaurant Page',
-          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurantmain.png?raw=true'
-        }
-      },
-      {
         id: 2,
         src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/addreview.png?raw=true',
         width: 1400,
@@ -94,6 +83,17 @@ const projects = [
         lightboxImage: {
           caption: 'Add Review',
           src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/addreview.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurantmain.png?raw=true',
+        width: 1400,
+        height: 1200,
+        aspectRatio: 1.166,
+        lightboxImage: {
+          caption: 'Single Restaurant Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurantmain.png?raw=true'
         }
       },
       {
@@ -134,7 +134,7 @@ const projects = [
         src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurant.png?raw=true',
         width: 1400,
         height: 2036,
-        aspectRatio: 0.687,
+        aspectRatio: 0.5,
         lightboxImage: {
           caption: 'Reviews Main Page',
           src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/restaurant-reviewer-swnd/singlerestaurant.png?raw=true'

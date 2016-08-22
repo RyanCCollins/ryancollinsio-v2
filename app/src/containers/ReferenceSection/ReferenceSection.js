@@ -12,9 +12,8 @@ const ReferenceSection = ({
     <Divider />
     <Slider>
       {references.map((ref, i) =>
-        <div>
+        <div key={i}>
           <Reference
-            key={i}
             reference={ref}
           />
         </div>

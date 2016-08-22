@@ -47,11 +47,6 @@ const LandingPage = props => (
     <ReferenceSection
       {...props}
     />
-    <TechnologySection
-      {...props}
-      technologies={Constants.Technologies}
-      technologyHeader={Constants.technologyHeader}
-    />
     <TechnologyStack />
     <Footer
       {...props}

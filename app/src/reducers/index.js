@@ -13,6 +13,7 @@ import references from './references';
 import footerLinks from './footerLinks';
 import teamMembers from './teamMembers';
 import services from './services';
+import technologies from './technologies';
 
 const rootReducer = combineReducers({
   posts,
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   resumeData,
   messages,
   errors,
+  technologies,
   references,
   footerLinks,
   contact,
