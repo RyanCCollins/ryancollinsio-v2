@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+
+.tech-stack__items--wrapper {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
 .tech-stack__item {
   background-color: rgba(23,57,67,0.69);
   position: relative;
@@ -20,6 +26,7 @@
     flex-direction: column;
   }
 }
+
 
 .tech-stack__item--odd-item {
   background-color: rgba(2,30,39,0.77);

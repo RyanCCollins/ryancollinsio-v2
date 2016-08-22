@@ -32,13 +32,15 @@ const TechStack = ({
 }) => (
   <section>
     <div className="tech-stack__wrapper">
-      {typeof technologies !== undefined &&
-        technologies.reverse().map(item =>
-          <TechStackItem
-            key={item.id}
-            item={item}
-          />
-      )}
+      <div className="tech-stack__items--wrapper">
+        {typeof technologies !== undefined &&
+          technologies.reverse().map(item =>
+            <TechStackItem
+              key={item.id}
+              item={item}
+            />
+        )}
+      </div>
     </div>
   </section>
 );

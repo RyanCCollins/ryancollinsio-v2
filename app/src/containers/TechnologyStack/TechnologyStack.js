@@ -12,9 +12,11 @@ class TechnologyStack extends Component {
       technologies
     } = this.props;
     return (
-      <section className="section__off-white tech-stack-section ">
-        <h1 className="section-header">Tech Stack</h1>
-        <Divider />
+      <section className="tech-stack-section">
+        <div className="tech-stack__section-header">
+          <h1 className="section-header text-white">Tech Stack</h1>
+          <Divider />
+        </div>
         <TechStack technologies={technologies} />
       </section>
     );

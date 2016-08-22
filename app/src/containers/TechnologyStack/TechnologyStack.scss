@@ -1,4 +1,10 @@
 .tech-stack-section {
   width: 100%;
   min-height: 100vh;
+  background-size: cover;
+  background: url('https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techstack/aurora-simple.jpeg?raw=true') no-repeat center center fixed;
+}
+
+.tech-stack__section-header {
+  color: white;
 }
