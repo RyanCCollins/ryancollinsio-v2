@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import { Button } from 'react-foundation';
 
 const PortfolioOverlay = ({
   project
@@ -10,6 +11,9 @@ const PortfolioOverlay = ({
   >
     <div className="image-overlay-content">
       <h2>{project.title}</h2>
+      <Button style={{ marginTop: 20 }} size={'LARGE'}>
+        More Info
+      </Button>
     </div>
   </Link>
 );

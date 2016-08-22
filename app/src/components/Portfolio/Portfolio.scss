@@ -94,8 +94,22 @@
   }
 
   &:hover img {
-    transform: scale(1.2);
+    animation: filter-animation 20s ease-in-out;
   }
+
+  @-webkit-keyframes filter-animation {
+  0% {
+    filter: blur(0px);
+  }
+
+  50% {
+    filter: blur(10px);
+  }
+
+  100% {
+    filter: blur(20px);
+  }
+}
 
   &:hover .image-overlay-content {
     opacity: 1;

@@ -1,7 +1,7 @@
 import React from 'react';
-import './BlurUpImage.scss';
+import './PerfectImg.scss';
 
-class BlurUpImage extends React.Component {
+class PerfectImg extends React.Component {
   constructor() {
     super();
     this.stripNameFromSrc = ::this.stripNameFromSrc;
@@ -25,4 +25,4 @@ class BlurUpImage extends React.Component {
   }
 }
 
-export default BlurUpImage;
+export default PerfectImg;

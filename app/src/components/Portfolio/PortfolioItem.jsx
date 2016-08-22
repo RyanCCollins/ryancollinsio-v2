@@ -4,7 +4,7 @@ import './Portfolio.scss';
 import PortfolioOverlay from './PortfolioOverlay';
 import elementInViewport from '../../../lib/isVisible';
 import {
-  BlurUpImage
+  PerfectImg
 } from 'components';
 
 const alternatingAnimation = () =>
@@ -81,15 +81,10 @@ class PortfolioItem extends React.Component {
               'image-wrapper overlay-fade-in'
             }
           >
-            <BlurUpImage
+            <PerfectImg
               onLoad={project.id === projectCount ? onLoad : undefined}
               src={project.featureImage}
             />
-            {/* <Thumbnail
-              src={project.featureImage}
-              className="portfolio-image"
-              onLoad={project.id === projectCount ? onLoad : undefined}
-            /> */}
             <PortfolioOverlay
               project={project}
             />
