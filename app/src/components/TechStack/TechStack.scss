@@ -17,13 +17,14 @@
   position: relative;
   opacity: 0.7;
   margin: 5px 0;
-  width: 970px;
+  max-width: 970px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 200px;
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 525px) {
     flex-direction: column;
+    height: 300px;
   }
 }
 
@@ -61,6 +62,21 @@
   @media screen and (max-width: 736px) {
     font-size: 2.3rem;
   }
+  @media screen and (max-width: 1000px) {
+    font-size: 2.5rem;
+  }
+}
+
+.tech-stack__item--title-wrapper {
+  padding-left: 120px;
+  @media screen and (max-width: 414px) {
+    font-size: 2rem;
+    padding-left: 0px !important;
+  }
+  @media screen and (max-width: 736px) {
+    font-size: 2.3rem;
+    padding-left: 40px;
+  }
 }
 
 .tech-stack__item--overlay {
@@ -73,7 +89,7 @@
   background: rgb(35, 126, 210);
   cursor: pointer;
   &:hover {
-    opacity: .9;
+    opacity: 1.0;
     transition: opacity 1s;
   }
 }
