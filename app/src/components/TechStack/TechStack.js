@@ -27,6 +27,9 @@ const TechStackItem = ({
   </div>
 );
 
+const reversed = (items) =>
+  items.reverse();
+
 const TechStack = ({
   technologies
 }) => (
@@ -34,7 +37,7 @@ const TechStack = ({
     <div className="tech-stack__wrapper">
       <div className="tech-stack__items--wrapper">
         {typeof technologies !== undefined &&
-          technologies.reverse().map(item =>
+          reversed(technologies).map(item =>
             <TechStackItem
               key={item.id}
               item={item}

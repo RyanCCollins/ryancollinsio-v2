@@ -35,7 +35,7 @@ const technologies = [
     id: 4,
     image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techstack/redux.png?raw=true',
     name: 'Redux',
-    title: 'Front End',
+    title: 'Middle End',
     description: 'Predictable State management for front end web applications',
     moreInfo: 'Immutable architecure provides a solid approach to build reliable web software.'
   },
@@ -46,6 +46,14 @@ const technologies = [
     title: 'UI & UX',
     description: 'Reactive web User Interfaces, Cross Platform Native Apps',
     moreInfo: 'Used with other functional reactive programming techniques and immutable data structures.'
+  },
+  {
+    id: 6,
+    image: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/techstack/es6.png?raw=true',
+    name: 'ES6',
+    title: 'Front End',
+    description: 'Javascript, the language that runs the web!',
+    moreInfo: 'JavaScript has gone through a transformation and is more powerful than ever with ES6, TypeScript, and Babel.'
   }
 ];
 
