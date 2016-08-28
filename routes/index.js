@@ -13,7 +13,7 @@ const express = require('express');
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import serverRoutes from '../app/src/utils/routes';
+//import serverRoutes from '../app/src/utils/routes';
 import { configureStore } from '../app/src/store/store';
 import { Provider } from 'react-redux';
 import { fetchComponentData } from './util/fetchData';
@@ -100,7 +100,7 @@ exports = module.exports = function (app) {
   app.use((req, res, next) => {
     // Note that req.url here should be the full URL path from
     // the original request, including the query string.
-    match({ routes: serverRoutes, location: req.url },
+    match({ routes: {}, location: req.url },
       (err, redirectLocation, renderProps) => {
         if (err) {
           return res.status(500).end(renderError(err));
