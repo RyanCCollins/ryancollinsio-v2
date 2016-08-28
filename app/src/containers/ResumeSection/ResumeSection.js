@@ -16,6 +16,13 @@ const ResumeSection = ({
   <section className="resume-section section-content gradient-blue" id="resume">
     <h1 className="section-header">Qualifications</h1>
     <Divider />
+    <Row className="resume-section__row-full">
+      <Column small={12} medium={12} centerOnSmall>
+        <div className="description-text description-text__full-width">
+          Hello World
+        </div>
+      </Column>
+    </Row>
     <div className="container">
       <Row>
         <Column
