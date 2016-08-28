@@ -2,6 +2,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
 import { browserHistory } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 import createLogger from 'redux-logger';
 import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from '../reducers/index';
@@ -29,7 +30,9 @@ const store = createStore(
   composedEnhancers,
 );
 
-export const history = syncHistoryWithStore(browserHistory, store);
+export const history = isClient ?
+  syncHistoryWithStore(browserHistory, store) : undefined;
+
 
 if (module.hot) {
   module.hot.accept('../reducers/', () => {

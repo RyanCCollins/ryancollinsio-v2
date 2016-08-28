@@ -16,7 +16,7 @@ const router = (
       />
       <Router /* eslint-disable */
         onUpdate={() => window.scrollTo(0, 0)}
-        history={history} /* eslint-enable */
+        // history={history} /* eslint-enable */
       >
         <Route path="/" component={App}>
           <IndexRoute component={Containers.LandingPage} />
