@@ -34,10 +34,11 @@ const ResumeSection = ({
             <div className="description-paragraph-wrapper">
               <h4><strong>Life-long Learning</strong></h4>
               <p>
-                {`My educational path is to focus on Front End web mastery,
+                My educational path is to focus on<strong> Front End web mastery</strong>{`,
                     while studying academic subjects such as Data Science and
-                    Human Computer Interaction.  I intend to receive my Master's
-                    and at least one certification per year.`}
+                    Human Computer Interaction.  I intend to receive at
+                    least one professional certification per year and will pursue my Master's in
+                    Data Science beginning early 2017.`}
               </p>
             </div>
             <div className="description-paragraph-wrapper">
@@ -45,9 +46,9 @@ const ResumeSection = ({
               <p>
                 {`I am very intrigued by the possibilities in implementing
                     cutting-edge computer science research into the mainstream.
-                    Particularly, I am interested in the effect of
-                    Functional Programming (Lambda Calculus) in
-                    mainstream JavaScript web development.`}
+                    Particularly, I am interested in the effect of `}
+                    <strong>Functional Programming</strong>
+                    in mainstream JavaScript web development.
               </p>
             </div>
           </div>
