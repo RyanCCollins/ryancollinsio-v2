@@ -145,7 +145,7 @@ const projects = [
   {
     id: 1,
     category: 'frontend',
-    title: 'Open Source Boierplates',
+    title: 'Open Source Boilerplates',
     type: 'Best Practices Boilerplates and Generators',
     description: `Released two open-source boilerplates, multiple scaffolding tools and React component generators using the knowledge and best
       practices gained from working on several large-scale React projects.
