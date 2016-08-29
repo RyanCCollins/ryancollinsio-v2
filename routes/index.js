@@ -13,10 +13,10 @@ const express = require('express');
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-//import serverRoutes from '../app/src/utils/routes';
+import serverRoutes from '../app/src/utils/routes';
 import { configureStore } from '../app/src/store/store';
 import { Provider } from 'react-redux';
-import { fetchComponentData } from './util/fetchData';
+import { fetchComponentData } from './utils/fetchData';
 
 const routes = {
   api: importRoutes('./api')
@@ -97,38 +97,38 @@ exports = module.exports = function (app) {
     return renderFullPage(`Server Error${errTrace}`, {});
   };
 
-  // app.use((req, res, next) => {
-  //   // Note that req.url here should be the full URL path from
-  //   // the original request, including the query string.
-  //   match({ routes: {}, location: req.url },
-  //     (err, redirectLocation, renderProps) => {
-  //       if (err) {
-  //         return res.status(500).end(renderError(err));
-  //       }
-  //
-  //       if (redirectLocation) {
-  //         return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-  //       }
-  //
-  //       if (!renderProps) {
-  //         return next();
-  //       }
-  //
-  //       const store = configureStore();
-  //       return fetchComponentData(store, renderProps.components, renderProps.params)
-  //         .then(() => {
-  //           const initialView = renderToString(
-  //             <Provider store={store}>
-  //               <RouterContext {...renderProps} />
-  //             </Provider>
-  //           );
-  //           const finalState = store.getState();
-  //           res.set('Content-Type', 'text/html')
-  //             .status(200)
-  //             .end(renderFullPage(initialView, finalState));
-  //         });
-  //     });
-  // });
+  app.use((req, res, next) => {
+    // Note that req.url here should be the full URL path from
+    // the original request, including the query string.
+    match({ routes: serverRoutes, location: req.url },
+      (err, redirectLocation, renderProps) => {
+        if (err) {
+          return res.status(500).end(renderError(err));
+        }
+
+        if (redirectLocation) {
+          return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+        }
+
+        if (!renderProps) {
+          return next();
+        }
+
+        const store = configureStore();
+        return fetchComponentData(store, renderProps.components, renderProps.params)
+          .then(() => {
+            const initialView = renderToString(
+              <Provider store={store}>
+                <RouterContext {...renderProps} />
+              </Provider>
+            );
+            const finalState = store.getState();
+            res.set('Content-Type', 'text/html')
+              .status(200)
+              .end(renderFullPage(initialView, finalState));
+          });
+      });
+  });
 
   app.use(express.static('./public'));
   app.get('/*', (req, res) => {
