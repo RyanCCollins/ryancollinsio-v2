@@ -81,7 +81,7 @@ exports = module.exports = function (app) {
       <body>
         <!-- The app will bootstrap into this div -->
         <div id="app">${html}</div>
-        <script src="/app/build/bundle.js"></script>
+        <script src="/public/bundle.js"></script>
         <script>
           window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
         </script>
