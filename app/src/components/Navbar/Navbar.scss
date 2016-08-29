@@ -18,13 +18,13 @@
 }
 
 .menu > li > a {
+  font-size: 1.2rem;
   @media screen and (max-width: 500px) {
     font-size: 0.8rem;
   }
   @media screen and (max-width: 600px) {
-  font-size: 1.0rem;
+    font-size: 1.0rem;
   }
-  font-size: 1.2rem;
 }
 
 .menu > li > a.active {
@@ -41,6 +41,7 @@
 }
 
 .button-contact {
+  font-size: 1.2rem !important;
   @media screen and (max-width: 500px) {
     font-size: 0.6rem !important;
   }
@@ -50,7 +51,6 @@
   @media screen and (max-width: 700px) {
     font-size: 1.0rem !important;
   }
-  font-size: 1.2rem !important;
 }
 
 .navbar__right {
