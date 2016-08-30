@@ -20,11 +20,13 @@ const postHeaders = {
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export const DELETE_POST = 'DELETE_POST';
 
+// requestAllPosts :: None -> Action
 const requestAllPosts = () => ({
   type: REQUEST_POSTS
 });
 
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
+// didReceivePosts :: Object -> {Action}
 const didReceivePosts = (data) => ({
   type: RECEIVE_POSTS,
   items: data.posts,
@@ -32,27 +34,31 @@ const didReceivePosts = (data) => ({
 });
 
 export const POSTS_FAILURE = 'POSTS_FAILURE';
+// postsFailure :: None -> {Action}
 const postsFailure = () => ({
   type: POSTS_FAILURE
 });
 
 export const POSTS_ERRORS = 'POSTS_ERRORS';
+// postsErrors :: Array -> Action
 const postsErrors = (errors) => ({
   type: POSTS_ERRORS,
   errors
 });
 
 export const CLEAR_POSTS_ERRORS = 'CLEAR_POSTS_ERRORS';
+// clearPostsErrors :: None -> {Action}
 export const clearPostsErrors = () => ({
   type: CLEAR_POSTS_ERRORS
 });
 
 export const CLEAR_POSTS_MESSAGES = 'CLEAR_POSTS_MESSAGES';
+// clearPostsMessages :: None -> {Action}
 export const clearPostsMessages = () => ({
   type: CLEAR_POSTS_MESSAGES
 });
 
-/* Returns dispatch of promise for fetching posts from the API. */
+// fetchPostsAsync :: None -> Thunk -> Promise :: Success : Error
 const fetchPostsAsync = () => {
   return dispatch => {
     dispatch(requestAllPosts());
@@ -72,6 +78,7 @@ const fetchPostsAsync = () => {
 };
 
 /* Returns whether the posts should be fetched or not. */
+// shouldFetchPosts :: Object -> Boolean
 const shouldFetchPosts = (state) => {
   const posts = state.posts;
   if (!posts.items) {
@@ -83,6 +90,7 @@ const shouldFetchPosts = (state) => {
 };
 
 /* Fetch the posts asynchronously through the api. */
+// fetchPostsFromApi :: None -> Thunk -> Maybe :: Func : Promise
 export const fetchPostsFromApi = () => {
   return (dispatch, getState) => {
     if (shouldFetchPosts(getState())) {
@@ -100,6 +108,7 @@ export const addPost = (post) => ({
   post
 });
 
+// encodePost :: Object -> Object
 function encodePost(post) {
   return {
     title: post.title,
@@ -110,12 +119,14 @@ function encodePost(post) {
   };
 }
 
+// encodedPost :: Object -> {Action}
 const encodedPost = (data) => ({
   title: data.title,
   author: data.author,
   content: { md: data.content }
 });
 
+// addPostToApi :: Object -> Thunk -> Promise :: Success : Error
 const addPostToApi = (post) => {
   const newPost = encodedPost(post);
   return dispatch => {
@@ -130,6 +141,7 @@ const addPostToApi = (post) => {
 
 /* Post categories */
 export const SELECT_POST_CATEGORY = "SELECT_POST_CATEGORY";
+// selectPostCategory :: Object -> {Action}
 export const selectPostCategory = (category) => ({
   type: SELECT_POST_CATEGORY,
   category
@@ -201,7 +213,7 @@ export const clearContactMessages = () => ({
   type: CLEAR_CONTACT_MESSAGES
 });
 
-// contact :: {Object :: params} -> dispatch -> Promise Success Error
+// contact :: {Object :: params} -> Thunk -> Promise :: Success : Error
 export const contact = (params) =>
   (dispatch) => {
     dispatch(submitContact(params));
