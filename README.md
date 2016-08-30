@@ -1,5 +1,7 @@
 ![Ryancollins.io logo](https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-logo.png)
 
+# RyanCollins.io
+
 Rewrite of my professional portfolio and blog utilizing React, Redux, Keystone, Node, MongoDb, Foundation, etc.
 
 Running a Node API with a Mongo DB backed database.  I couldn't find blogging software suitable to my needs, so I wrote my own.  Blog posts are loaded through the admin dashboard and served through the API to redux.  On the front end, the posts are loaded by React dynamically using Redux's connect method and parsed as Markdown.
