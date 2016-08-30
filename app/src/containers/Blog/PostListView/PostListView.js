@@ -33,7 +33,7 @@ const getFilteredPosts = (
   category,
   posts
 ) => {
-  if (category === null || category.name == 'All') {
+  if (category === null || category.name === 'All') {
     return posts;
   }
   return posts.filter((post) => {
@@ -173,7 +173,7 @@ const mapStateToProps = (state) => ({
   isFetching: state.posts.isFetching
 });
 
-// mapDispatchToProps :: {Dispatch} -> {Props} 
+// mapDispatchToProps :: {Dispatch} -> {Props}
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     fetchPosts: () => fetchPostsFromApi(),

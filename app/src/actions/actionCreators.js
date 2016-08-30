@@ -1,8 +1,7 @@
 import axios from 'axios';
 import fetch from 'isomorphic-fetch';
 
-const host = process.env.NODE_ENV !== 'production' ?
-  'http://localhost:3000/' : 'http://www.ryancollins.io/';
+const host = 'http://www.ryancollins.io/';
 
 const apiUrl = `${host}api/posts/`;
 const listUrl = `${apiUrl}list`;
@@ -63,7 +62,6 @@ const fetchPostsAsync = () => {
         dispatch(postsFailure());
         const errors = [];
         const theError = `An error has occured ${JSON.stringify(error.message)}`;
-        console.log(theError);
         errors.push(theError);
         dispatch(postsErrors(errors));
       }
@@ -87,9 +85,8 @@ export const fetchPostsFromApi = () => {
   return (dispatch, getState) => {
     if (shouldFetchPosts(getState())) {
       return dispatch(fetchPostsAsync());
-    } else {
-      return Promise.resolve();
     }
+    return Promise.resolve();
   };
 };
 
