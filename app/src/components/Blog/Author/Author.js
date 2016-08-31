@@ -9,6 +9,7 @@ import {
 import AuthorSocialLinks from '../AuthorSocialLinks/AuthorSocialLinks';
 import ReactMarkdown from 'react-markdown';
 import noPic from '../../../../images/nopic.png';
+import './Author.scss';
 
 const Author = ({
   author
