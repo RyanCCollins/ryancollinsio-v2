@@ -13,17 +13,19 @@ class PostList extends React.Component {
       posts,
       onChangePage
     } = this.props;
-    const postItems = posts.reverse().map((post, ind) =>
-      <Column
-        key={ind}
-        xlarge={4}
-        large={6}
-        medium={6}
-        small={12}
-        isColumn
-      >
-        <PostListItem post={post} />
-      </Column>
+    const postItems = posts
+      .reverse()
+      .map((post, ind) =>
+        <Column
+          key={ind}
+          xlarge={4}
+          large={6}
+          medium={6}
+          small={12}
+          isColumn
+        >
+          <PostListItem post={post} />
+        </Column>
     );
     return (
       <div className="post-list">
