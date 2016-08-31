@@ -1,20 +1,3 @@
-.avatar-image {
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 100%;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  @media screen and (max-width: 39.9375em) {
-    width: 25%;
-    height: 100%;
-  }
-}
-
 .flexed-media-item {
   display: flex !important;
   align-items: center;
