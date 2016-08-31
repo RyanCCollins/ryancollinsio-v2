@@ -6,11 +6,7 @@ import {
   MediaObject,
   MediaObjectSection
 } from 'react-foundation';
-import {
-  FaGithub,
-  FaTwitter
-} from 'react-icons/lib/fa';
-import './Author.scss';
+import { AuthorSocialLinks } from '../AuthorSocialLinks/AuthorSocialLinks';
 import ReactMarkdown from 'react-markdown';
 import noPic from '../../../../images/nopic.png';
 
@@ -36,34 +32,7 @@ const Author = ({
               className="author-bio-text"
               source={author.bio ? author.bio.md : 'This author has no bio.'}
             />
-          <div className="author-bio__social-links--wrapper">
-            {author.website &&
-              <a
-                className="muted-link"
-                href={author.website}
-              >
-                {author.website}
-              </a>
-            }
-            <span className="author-social-links">
-              {author.github &&
-                <a
-                  className="author-social-link"
-                  href={author.github.url}
-                >
-                  <FaGithub className="text-medium dark-grey" />
-                </a>
-              }
-              {author.twitter &&
-                <a
-                  className="author-social-link"
-                  href={author.twitter.url}
-                >
-                  <FaTwitter className="text-medium dark-grey" />
-                </a>
-              }
-            </span>
-          </div>
+          <AuthorSocialLinks author={author} />
           </MediaObjectSection>
         </MediaObject>
       </div>

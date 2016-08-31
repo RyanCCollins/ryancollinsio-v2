@@ -1,0 +1,26 @@
+.author-social-links {
+  margin-left: 20px;
+}
+
+.author-social-links a.author-social-link {
+  margin-left: 20px;
+}
+
+.muted-link {
+  color: rgba(0,0,0,.8);
+  text-decoration: none;
+}
+
+.author-social-link {
+  padding: 10px 0;
+  font-size: 2rem;
+}
+
+.author-social-link:hover {
+  color: rgb(13, 95, 154);
+}
+
+.author-bio__social-links--wrapper {
+  display: flex;
+  justify-content: space-between;
+}

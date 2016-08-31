@@ -34,6 +34,7 @@ import PortfolioGallery from './SingleProject/PortfolioGallery/PortfolioGallery'
 import DownChevron from './DownChevron/DownChevron';
 import TechStack from './TechStack/TechStack';
 import PerfectImg from './PerfectImg/PerfectImg';
+import AuthorSocialLinks from './Blog/AuthorSocialLinks/AuthorSocialLinks';
 
 export {
   Intro,
@@ -71,5 +72,6 @@ export {
   ProjectMilestones,
   DownChevron,
   TechStack,
-  PerfectImg
+  PerfectImg,
+  AuthorSocialLinks
 };
