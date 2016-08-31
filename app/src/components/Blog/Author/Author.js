@@ -6,7 +6,7 @@ import {
   MediaObject,
   MediaObjectSection
 } from 'react-foundation';
-import { AuthorSocialLinks } from '../AuthorSocialLinks/AuthorSocialLinks';
+import { AuthorSocialLinks } from 'components';
 import ReactMarkdown from 'react-markdown';
 import noPic from '../../../../images/nopic.png';
 
