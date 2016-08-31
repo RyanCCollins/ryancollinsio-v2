@@ -4,7 +4,8 @@ import './Portfolio.scss';
 import {
   Divider,
   LoadingIndicator,
-  ExpandingSearch
+  ExpandingSearch,
+  Author
 } from '../../components';
 import { CategoryFilterContainer } from 'containers';
 import { connect } from 'react-redux';
@@ -15,7 +16,7 @@ import {
   clearPortfolioSearch
 } from 'actions/actionCreators';
 
-// filterProjects :: [Object] -> String -> [Object] 
+// filterProjects :: [Object] -> String -> [Object]
 const filterProjects = (
   projects,
   category
@@ -27,7 +28,7 @@ const filterProjects = (
       project.category === category.value
     );
 
-// search :: [Object] -> String -> Object 
+// search :: [Object] -> String -> Object
 const search = (projects, searchTerm) =>
   projects.filter((item) =>
     item.title.includes(searchTerm) || item.category.includes(searchTerm)
@@ -132,7 +133,7 @@ const mapStateToProps = (state) => ({
   searchTerm: state.portfolio.searchTerm
 });
 
-// mapDispatchToProps :: {Dispatch} -> {Props} 
+// mapDispatchToProps :: {Dispatch} -> {Props}
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     onSelectCategory: (category) => selectProjectCategory(category),

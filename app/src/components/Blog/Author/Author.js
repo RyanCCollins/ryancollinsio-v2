@@ -2,7 +2,9 @@ import React, { PropTypes } from 'react';
 import Divider from '../../Divider/Divider';
 import {
   Row,
-  Column
+  Column,
+  MediaObject,
+  MediaObjectSection
 } from 'react-foundation';
 import {
   FaGithub,
@@ -20,43 +22,45 @@ const Author = ({
       <div className="author-card paper__fit">
         <h1 className="section-header">About The Author</h1>
         <Divider />
-        <Column small={12} large={4} medium={6}>
-          <img
-            alt="Blog post's author"
-            className="avatar-image avatar-image__small"
-            src={author.avatar ? author.avatar.url : noPic}
-          />
-        </Column>
-        <Column small={12} large={8} medium={6}>
-          <h4 className="author-card__name">{`${author.name.first} ${author.name.last}`}</h4>
-          <ReactMarkdown
-            className="author-bio-text"
-            source={author.bio ? author.bio.md : 'This author has no bio.'}
-          />
-          {author.website &&
-            <a className="muted-link" href={author.website}>{author.website}</a>
-          }
-          <span className="author-social-links">
-            {author.github ?
-              <a
-                className="author-social-link"
-                href={author.github.url}
-              >
-                <FaGithub className="text-medium dark-grey" />
-              </a>
-            :
-              <div></div>
+        <MediaObject className="center-stacked flexed-media-item">
+          <MediaObjectSection className="center-on-small">
+            <img
+              alt="Blog post's author"
+              className="avatar-image avatar-image__small"
+              src={author.avatar ? author.avatar.url : noPic}
+            />
+          </MediaObjectSection>
+          <MediaObjectSection>
+            <h4 className="author-card__name">{`${author.name.first} ${author.name.last}`}</h4>
+            <ReactMarkdown
+              className="author-bio-text"
+              source={author.bio ? author.bio.md : 'This author has no bio.'}
+            />
+            {author.website &&
+              <a className="muted-link" href={author.website}>{author.website}</a>
             }
-            {author.twitter &&
-              <a
-                className="author-social-link"
-                href={author.twitter.url}
-              >
-                <FaTwitter className="text-medium dark-grey" />
-              </a>
-            }
-          </span>
-        </Column>
+            <span className="author-social-links">
+              {author.github ?
+                <a
+                  className="author-social-link"
+                  href={author.github.url}
+                >
+                  <FaGithub className="text-medium dark-grey" />
+                </a>
+              :
+                <div></div>
+              }
+              {author.twitter &&
+                <a
+                  className="author-social-link"
+                  href={author.twitter.url}
+                >
+                  <FaTwitter className="text-medium dark-grey" />
+                </a>
+              }
+            </span>
+          </MediaObjectSection>
+        </MediaObject>
       </div>
     </Column>
   </Row>
