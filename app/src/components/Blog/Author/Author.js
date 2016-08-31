@@ -36,19 +36,23 @@ const Author = ({
               className="author-bio-text"
               source={author.bio ? author.bio.md : 'This author has no bio.'}
             />
+          <div className="author-bio__social-links--wrapper">
             {author.website &&
-              <a className="muted-link" href={author.website}>{author.website}</a>
+              <a
+                className="muted-link"
+                href={author.website}
+              >
+                {author.website}
+              </a>
             }
             <span className="author-social-links">
-              {author.github ?
+              {author.github &&
                 <a
                   className="author-social-link"
                   href={author.github.url}
                 >
                   <FaGithub className="text-medium dark-grey" />
                 </a>
-              :
-                <div></div>
               }
               {author.twitter &&
                 <a
@@ -59,6 +63,7 @@ const Author = ({
                 </a>
               }
             </span>
+          </div>
           </MediaObjectSection>
         </MediaObject>
       </div>

@@ -77,11 +77,10 @@
 
 .author-social-links {
   margin-left: 20px;
-  padding: 10px 0;
 }
 
-.author-social-links a.author-social-links {
-  padding: 10px;
+.author-social-links a.author-social-link {
+  margin-left: 20px;
 }
 
 .muted-link {
@@ -96,4 +95,10 @@
 
 .author-social-link:hover {
   color: rgb(13, 95, 154);
+}
+
+.author-bio__social-links--wrapper {
+  display: flex;
+  justify-content: space-between;
+
 }
