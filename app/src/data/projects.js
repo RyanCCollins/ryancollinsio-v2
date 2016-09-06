@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 0,
-    category: 'fullstack',
+    category: 'frontend',
     title: 'Restaurant Reviewer App',
     type: 'A11y Best Practices',
     description: `Full Stack web application built with a focus
