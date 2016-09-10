@@ -24,7 +24,10 @@ const ErrorPanel = ({
     <MdWarning />
     <h4 className="callout-title">Errors</h4>
     <ul className="no-bullet">
-      {errors.map((err) => <li>{err}</li>)}
+      {errors != null && errors.length > 0 &&
+        errors.map((err) =>
+          <li>{err}</li>
+        )}
     </ul>
   </Callout>
 );
@@ -32,6 +35,10 @@ const ErrorPanel = ({
 ErrorPanel.propTypes = {
   errors: PropTypes.array.isRequired,
   isVisible: PropTypes.bool.isRequired
+};
+
+ErrorPanel.defaultProps = {
+  isVisible: false
 };
 
 export default ErrorPanel;
