@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react/lib/ReactTestRenderer';
-
-import Divider from '../../src/components/Divider/Divider';
+import ErrorPane from '../../src/components/ErrorPane/ErrorPane';
+// import jest, { expect, describe, it } from 'jest';
 
 // needed because of this:
 // https://github.com/facebook/jest/issues/1353
@@ -10,14 +10,21 @@ jest.mock('react-dom');
 describe('<Divider />', () => {
   it('renders with default props', () => {
     const component = renderer.create(
-      <Divider />
+      <ErrorPane />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-  it('renders with a color set', () => {
+  it('renders visible with errors', () => {
     const component = renderer.create(
-      <Divider color="blue" />
+      <ErrorPane isVisibile errors={['OOps 😋', 'What? 🤔']} />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('renders invinsible with no errors', () => {
+    const component = renderer.create(
+      <ErrorPane isVisibile={false} />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

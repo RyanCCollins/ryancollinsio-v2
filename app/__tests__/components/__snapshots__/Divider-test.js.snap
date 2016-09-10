@@ -1,6 +1,6 @@
 exports[`<Divider /> renders with a color set 1`] = `
 <span
-  className="divider #123456" />
+  className="divider divider__blue" />
 `;
 
 exports[`<Divider /> renders with default props 1`] = `
