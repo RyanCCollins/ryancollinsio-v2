@@ -36,6 +36,10 @@
     "mocha",
     "sass"
   ],
+  "engines": {
+    "node": "5.2.0",
+    "npm": "3.10.7"
+  },
   "author": "Ryan Collins",
   "license": "MIT",
   "bugs": {
