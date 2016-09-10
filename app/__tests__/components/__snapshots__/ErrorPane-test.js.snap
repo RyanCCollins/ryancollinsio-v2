@@ -1,4 +1,4 @@
-exports[`<Divider /> renders invinsible with no errors 1`] = `
+exports[`<Divider /> renders invisible with no errors 1`] = `
 <div
   className="callout error-panel alert large"
   size="large"

@@ -22,7 +22,7 @@ describe('<Divider />', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-  it('renders invinsible with no errors', () => {
+  it('renders invisible with no errors', () => {
     const component = renderer.create(
       <ErrorPane isVisibile={false} />
     );
