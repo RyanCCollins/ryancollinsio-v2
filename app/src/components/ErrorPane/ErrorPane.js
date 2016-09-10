@@ -25,15 +25,15 @@ const ErrorPanel = ({
     <h4 className="callout-title">Errors</h4>
     <ul className="no-bullet">
       {errors != null && errors.length > 0 &&
-        errors.map((err) =>
-          <li>{err}</li>
+        errors.map((err, i) =>
+          <li key={i}>{err}</li>
         )}
     </ul>
   </Callout>
 );
 
 ErrorPanel.propTypes = {
-  errors: PropTypes.array.isRequired,
+  errors: PropTypes.array,
   isVisible: PropTypes.bool.isRequired
 };
 
