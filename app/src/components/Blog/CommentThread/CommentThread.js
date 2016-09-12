@@ -25,8 +25,8 @@ const CommentThread = ({
 
 CommentThread.propTypes = {
   post: React.PropTypes.object.isRequired,
-  onNewComment: React.PropTypes.func,
-  location: React.PropTypes.object
+  onNewComment: React.PropTypes.func.isRequired,
+  location: React.PropTypes.object.isRequired
 };
 
 export default CommentThread;
