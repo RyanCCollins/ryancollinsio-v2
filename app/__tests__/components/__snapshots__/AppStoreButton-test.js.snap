@@ -1,0 +1,10 @@
+exports[`<AppStoreButton /> renders with required props 1`] = `
+<a
+  className="app-store-button"
+  href="https://www.ryancollins.io">
+  <img
+    alt="App Store Button"
+    className="thumbnail app-store-button-image"
+    src="app/src/components/AppStoreButton/app-store.5fd010aba3dbc491333be65fbaeefc2b.png" />
+</a>
+`;
