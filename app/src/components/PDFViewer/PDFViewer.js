@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const PDFViewer = ({
   url
@@ -8,5 +8,9 @@ const PDFViewer = ({
     style={{ width: '100vw', height: '100vh' }}
   />
 );
+
+PDFViewer.propTypes = {
+  url: PropTypes.string.isRequired
+};
 
 export default PDFViewer;

@@ -9,7 +9,8 @@
   "rules": {
     "comma-dangle": [2, "never"],
     "func-names": 0,
-    "eol-last": 0
+    "eol-last": 0,
+    "react/jsx-no-bind": 0
   },
   "plugins": [
     "react",

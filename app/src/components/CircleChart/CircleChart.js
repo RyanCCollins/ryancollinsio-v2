@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import './CircleChart.scss';
 import { StaggeredMotion, spring } from 'react-motion';
 import elementInViewport from '../../../lib/isVisible';
@@ -25,7 +25,7 @@ class CircleChart extends React.Component {
       height
     });
   }
-  handleScroll(event) {
+  handleScroll() {
     const elem = this.refs.item;
     if (elementInViewport(elem)) {
       if (this.state.needsAnimation) {
@@ -42,12 +42,13 @@ class CircleChart extends React.Component {
       <div className="item last" id={`language-item-${item.id}`} ref="item">
         <StaggeredMotion
           defaultStyles={[{ height: 0 }]}
-          styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
-            return i === 0 ?
-              { height: spring(this.state.height) }
-            :
-              { height: spring(prevInterpolatedStyles[i - 1].height) }
-          })}
+          styles={prevInterpolatedStyles =>
+            prevInterpolatedStyles.map((_, i) =>
+              i === 0 ?
+                { height: spring(this.state.height) }
+              :
+                { height: spring(prevInterpolatedStyles[i - 1].height) }
+          )}
         >
           {interpolatingStyles =>
             <div className="circle">
@@ -68,5 +69,9 @@ class CircleChart extends React.Component {
     );
   }
 }
+
+CircleChart.propTypes = {
+  item: PropTypes.object.isRequired,
+};
 
 export default CircleChart;

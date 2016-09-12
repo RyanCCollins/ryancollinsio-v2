@@ -69,7 +69,6 @@ exports = module.exports = function (app) {
   app.use(express.static('./public'));
 
   app.use((req, res) => {
-    console.log('Requesting server rendered stuff.')
     match({ routes: routes(), location: req.url },
       (error, redirectLocation, renderProps) => {
         if (error) {
@@ -77,7 +76,6 @@ exports = module.exports = function (app) {
         } else if (redirectLocation) {
           res.redirect(302, redirectLocation.pathname + redirectLocation.search);
         } else if (renderProps) {
-          console.log('Made it!!')
           const body = renderToString(
             React.createElement(Provider, { store },
               React.createElement(RouterContext, renderProps)

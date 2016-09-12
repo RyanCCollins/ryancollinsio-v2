@@ -1,0 +1,10 @@
+exports[`<Divider /> renders with default props 1`] = `
+<iframe
+  src="http://docs.google.com/gview?url=https://s3.amazonaws.com/accredible-profile-uploads/udacity/resumes/1469994565898&embedded=true"
+  style={
+    Object {
+      "height": "100vh",
+      "width": "100vw"
+    }
+  } />
+`;
