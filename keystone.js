@@ -33,7 +33,6 @@ keystone.set('cloudinary config', 'cloudinary://596455341385367:YHmhydy3idqIicv6
 keystone.import('models');
 
 keystone.set('locals', {
-  _: require('underscore'),
   env: keystone.get('env'),
   utils: keystone.utils,
   editable: keystone.content.editable
