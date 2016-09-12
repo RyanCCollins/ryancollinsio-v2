@@ -1,13 +1,12 @@
-const keystone = require('keystone');
-const importRoutes = keystone.importer(__dirname);
-const webpack = require('webpack');
-const webpackMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const config = require('../webpack.config.js');
+import keystone from 'keystone';
+import webpackMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import path from 'path';
+import compiler from 'compiler';
+import express from 'express';
+import config from '../webpack.config.js';
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const path = require('path');
-const compiler = webpack(config);
-const express = require('express');
+const importRoutes = keystone.importer(__dirname);
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -32,7 +31,7 @@ if (isDeveloping) {
   }));
 
   keystone.pre('routes', webpackHotMiddleware(compiler, {
-    log: console.log
+    log: console.log // eslint-disable-line
   }));
 }
 
@@ -43,7 +42,7 @@ exports = module.exports = function (app) {
   }));
 
   app.use(webpackHotMiddleware(compiler, {
-    log: console.log,
+    log: console.log, // eslint-disable-line
     path: '/__webpack_hmr',
     heartbeat: 10 * 1000
   }));

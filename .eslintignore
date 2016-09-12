@@ -1,3 +1,5 @@
 app/build/
 app/dist/
 webpack.config.js
+app/__tests__
+./keystone.js
