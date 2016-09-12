@@ -3,9 +3,7 @@ import { Row, Column, Thumbnail } from 'react-foundation';
 import './Portfolio.scss';
 import PortfolioOverlay from './PortfolioOverlay';
 import elementInViewport from '../../../lib/isVisible';
-import {
-  PerfectImg
-} from 'components';
+import PerfectImg from '../PerfectImg/PerfectImg';
 
 const alternatingAnimation = () =>
   'fadeSlideInUp';

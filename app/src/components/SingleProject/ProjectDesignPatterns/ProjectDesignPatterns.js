@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Divider } from 'components';
+import Divider from '../../Divider/Divider';
 import {
   Column,
   Label

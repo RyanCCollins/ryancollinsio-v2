@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Column } from 'react-foundation';
-import { Divider } from 'components';
 import { GoMilestone } from 'react-icons/lib/go';
+import Divider from '../../Divider/Divider';
 
 const ProjectMilestones = ({
   project

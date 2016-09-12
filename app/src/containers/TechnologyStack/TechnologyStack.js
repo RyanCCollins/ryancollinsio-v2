@@ -4,7 +4,7 @@ import './TechnologyStack.scss';
 import {
   TechStack,
   Divider
-} from 'components';
+} from '../../components';
 
 class TechnologyStack extends Component {
   render() {

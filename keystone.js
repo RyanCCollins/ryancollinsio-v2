@@ -12,6 +12,10 @@ require.extensions['.png'] = () => {
   return;
 };
 
+require.extensions['.jpg'] = () => {
+  return;
+};
+
 keystone.init({
   'name': 'RyanCollins.io',
   'brand': 'RyanCollins.io',

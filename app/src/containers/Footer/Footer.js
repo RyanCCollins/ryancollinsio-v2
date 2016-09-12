@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { FooterLinks } from 'components';
+import { FooterLinks } from '../../components';
 import { connect } from 'react-redux';
 import './Footer.scss';
 

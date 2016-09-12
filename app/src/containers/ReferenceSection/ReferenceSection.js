@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Reference, Slider, Divider } from 'components';
+import { Reference, Slider, Divider } from '../../components';
 import './ReferenceSection.scss';
 
 // TODO: move to components

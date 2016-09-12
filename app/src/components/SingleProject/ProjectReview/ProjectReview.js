@@ -3,7 +3,7 @@ import {
   Column,
   Button
 } from 'react-foundation';
-import { Divider } from 'components';
+import Divider from '../../Divider/Divider';
 import {
   GoQuote
 } from 'react-icons/lib/go';
