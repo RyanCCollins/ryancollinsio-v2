@@ -1,0 +1,111 @@
+exports[`<Divider /> renders invisible with no errors 1`] = `
+<div
+  className="callout error-panel alert large"
+  size="large"
+  style={
+    Object {
+      "display": ""
+    }
+  }>
+  <svg
+    fill="currentColor"
+    fit={true}
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "verticalAlign": "middle"
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em">
+    <g>
+      <path
+        d="m21.6 23.4v-6.8h-3.2v6.8h3.2z m0 6.6v-3.4h-3.2v3.4h3.2z m-20 5l18.4-31.6 18.4 31.6h-36.8z" />
+    </g>
+  </svg>
+  <h4
+    className="callout-title">
+    Errors
+  </h4>
+  <ul
+    className="no-bullet" />
+</div>
+`;
+
+exports[`<Divider /> renders visible with errors 1`] = `
+<div
+  className="callout error-panel alert large"
+  size="large"
+  style={
+    Object {
+      "display": ""
+    }
+  }>
+  <svg
+    fill="currentColor"
+    fit={true}
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "verticalAlign": "middle"
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em">
+    <g>
+      <path
+        d="m21.6 23.4v-6.8h-3.2v6.8h3.2z m0 6.6v-3.4h-3.2v3.4h3.2z m-20 5l18.4-31.6 18.4 31.6h-36.8z" />
+    </g>
+  </svg>
+  <h4
+    className="callout-title">
+    Errors
+  </h4>
+  <ul
+    className="no-bullet">
+    <li>
+      OOps 😋
+    </li>
+    <li>
+      What? 🤔
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Divider /> renders with default props 1`] = `
+<div
+  className="callout error-panel alert large"
+  size="large"
+  style={
+    Object {
+      "display": ""
+    }
+  }>
+  <svg
+    fill="currentColor"
+    fit={true}
+    height="1em"
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "verticalAlign": "middle"
+      }
+    }
+    viewBox="0 0 40 40"
+    width="1em">
+    <g>
+      <path
+        d="m21.6 23.4v-6.8h-3.2v6.8h3.2z m0 6.6v-3.4h-3.2v3.4h3.2z m-20 5l18.4-31.6 18.4 31.6h-36.8z" />
+    </g>
+  </svg>
+  <h4
+    className="callout-title">
+    Errors
+  </h4>
+  <ul
+    className="no-bullet" />
+</div>
+`;
