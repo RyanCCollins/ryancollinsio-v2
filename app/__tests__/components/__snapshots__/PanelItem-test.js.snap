@@ -1,0 +1,34 @@
+exports[`<PanelItem /> renders with default props 1`] = `
+<div
+  className="columns panel-item
+        top
+        bordered small-12 medium-6 large-4"
+  large={4}
+  medium={6}
+  small={12}>
+  <div
+    className="inner-content">
+    <svg
+      height="24px"
+      role="img"
+      version="1.1"
+      viewBox="0 0 24 24.3616"
+      width="24px" />
+    <h4
+      className="centered raleway uppercase ribbon-text">
+      <span>
+        Hello World
+      </span>
+    </h4>
+    <p
+      className="text-small text-light justified">
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Lorem ipsum"
+          }
+        } />
+    </p>
+  </div>
+</div>
+`;

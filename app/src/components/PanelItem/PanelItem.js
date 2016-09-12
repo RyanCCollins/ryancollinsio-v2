@@ -33,7 +33,7 @@ const PanelItem = ({
 );
 
 PanelItem.propTypes = {
-  icon: React.Children,
+  icon: PropTypes.node,
   item: PropTypes.object.isRequired
 };
 
