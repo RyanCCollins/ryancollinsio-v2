@@ -1,0 +1,41 @@
+exports[`<CommentThread /> renders with required props 1`] = `
+<div
+  className="row comment-thread-container">
+  <div
+    centerOnSmall={true}
+    className="column small-12 large-8 small-centered"
+    isColumn={true}
+    large={8}
+    small={12}>
+    <div
+      category_id={null}
+      identifier="ryancollinsio-undefined"
+      onNewComment={[Function onNewComment]}
+      shortname="ryancollinsio"
+      title="Hello World"
+      url="https://ryancollins.io/blog">
+      <div
+        id="disqus_thread" />
+      <noscript>
+        <span>
+          Please enable JavaScript to view the
+          <a
+            href="http://disqus.com/?ref_noscript">
+            comments powered by Disqus.
+          </a>
+        </span>
+      </noscript>
+      <a
+        className="dsq-brlink"
+        href="http://disqus.com">
+        Blog comments powered by 
+        <span
+          className="logo-disqus">
+          Disqus
+        </span>
+        .
+      </a>
+    </div>
+  </div>
+</div>
+`;
