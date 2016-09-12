@@ -13,7 +13,7 @@ const URL = `http://${HOST}:${PORT}`;
 module.exports = {
   devtool: process.env.NODE_ENV === 'production' ? '' : 'source-map',
   entry: [
-    path.resolve(ROOT_PATH,'app/src/BrowserEntry')
+    path.resolve(ROOT_PATH,'app/src/index')
   ],
   module: {
     preLoaders: [

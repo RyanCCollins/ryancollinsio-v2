@@ -32,7 +32,7 @@ const MeImage = () => (
   </div>
 );
 
-const AboutSection = (props) => (
+const AboutSection = () => (
   <section className="about-section" id="aboutSection">
     <ScrollDest name="aboutSection" />
     <h1 className="about-section__header section-header text-grey">About Me</h1>
