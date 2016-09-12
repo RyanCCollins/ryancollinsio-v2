@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import './Divider.scss';
 
-const Divider = (props) => (
+const Divider = ({
+  color
+}) => (
   <span
-    className={props.color ? `divider divider__${props.color}` : 'divider'}
+    className={color ? `divider divider__${color}` : 'divider'}
   />
 );
+
+Divider.propTypes = {
+  color: PropTypes.string
+};
 
 export default Divider;
