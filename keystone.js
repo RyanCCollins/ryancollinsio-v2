@@ -1,7 +1,20 @@
 const keystone = require('keystone');
 const secrets = require('./lib/secrets');
 require("babel-core/register");
+require.extensions['.scss'] = () => {
+  return;
+};
+require.extensions['.css'] = () => {
+  return;
+};
 
+require.extensions['.png'] = () => {
+  return;
+};
+
+require.extensions['.jpg'] = () => {
+  return;
+};
 
 keystone.init({
   'name': 'RyanCollins.io',

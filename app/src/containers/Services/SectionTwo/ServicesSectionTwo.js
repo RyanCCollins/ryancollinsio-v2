@@ -7,7 +7,7 @@ import {
 } from 'react-foundation';
 import {
   Divider
-} from 'components';
+} from '../../../components';
 
 import CodeReviewImage from './code-review.jpg';
 import DesignReviewImage from './design-review.jpg';

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Intro.scss';
-import { DownChevron } from 'components';
+import DownChevron from '../DownChevron/DownChevron';
 import IntroImage from './IntroImage';
 import * as Constants from '../../constants';
 

@@ -7,17 +7,17 @@ import {
 } from 'react-foundation';
 import {
   Divider
-} from 'components';
+} from '../../../components';
 
-const paragraph1P1 = `Through the `
-const paragraph1P2 = ` platform, we have proven that working collaboratively on 
-  meaningful open sources projects together is an incredible way to improve skills.`
+const paragraph1P1 = `Through the `;
+const paragraph1P2 = ` platform, we have proven that working collaboratively on
+  meaningful open sources projects together is an incredible way to improve skills.`;
 
-const paragraph2 = `If you are interested in working with us on a meaningful project with 
-  a social impact, we can pair you with a mentor who will work with you 
+const paragraph2 = `If you are interested in working with us on a meaningful project with
+  a social impact, we can pair you with a mentor who will work with you
   to get you up to speed with React and the rest of our stack.`;
-  
-const paragraph3 = `You'll get an oppurtunity to work with 
+
+const paragraph3 = `You'll get an oppurtunity to work with
   a real-life distributed agile team, working towards a common goal of social good.`;
 
 const ServicesSectionOne = () => (

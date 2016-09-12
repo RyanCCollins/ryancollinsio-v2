@@ -1,17 +1,15 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import './PostListView.scss';
-import { toastr, actions as toastrActions } from 'react-redux-toastr';
+import { toastr } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
 import {
   fetchPostsFromApi,
   selectPostCategory,
   clearPostsErrors,
   clearPostsMessages
-} from 'actions/actionCreators';
-import {
-  CategoryFilterContainer
-} from 'containers';
+} from '../../../actions/actionCreators';
+import CategoryFilterContainer from '../../CategoryFilterContainer/CategoryFilterContainer';
 import {
   PostList,
   LoadingIndicator,

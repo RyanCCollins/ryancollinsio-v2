@@ -3,7 +3,7 @@ import {
   Column,
   Button
 } from 'react-foundation';
-import { AppStoreButton } from 'components';
+import AppStoreButton from '../../AppStoreButton/AppStoreButton';
 import {
   GoMarkGithub,
   GoLink

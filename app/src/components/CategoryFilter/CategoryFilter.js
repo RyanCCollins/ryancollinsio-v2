@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { CategoryLink } from 'components';
+import CategoryLink from '../CategoryLink/CategoryLink';
 import './CategoryFilter.scss';
 import {
   Menu,

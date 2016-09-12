@@ -3,17 +3,15 @@ import React from 'react';
 import {
   Intro,
   AboutSection
-} from 'components';
-
+} from '../../components';
 import {
   Footer,
   LanguageSection,
   ResumeSection,
   ReferenceSection,
-  TechnologySection,
   TechnologyStack,
   SkillSection
-} from 'containers';
+} from '../../containers';
 
 import * as Constants from '../../constants';
 import './LandingPage.scss';

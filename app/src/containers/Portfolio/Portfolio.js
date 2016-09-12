@@ -4,17 +4,16 @@ import './Portfolio.scss';
 import {
   Divider,
   LoadingIndicator,
-  ExpandingSearch,
-  Author
+  ExpandingSearch
 } from '../../components';
-import { CategoryFilterContainer } from 'containers';
+import { CategoryFilterContainer } from '../../containers';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
   selectProjectCategory,
   setPortfolioSearch,
   clearPortfolioSearch
-} from 'actions/actionCreators';
+} from '../../actions/actionCreators';
 
 // filterProjects :: [Object] -> String -> [Object]
 const filterProjects = (

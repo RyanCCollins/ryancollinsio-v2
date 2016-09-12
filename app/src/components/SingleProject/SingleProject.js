@@ -5,15 +5,13 @@ import {
   Column,
   Thumbnail
 } from 'react-foundation';
-import {
-  ProjectLinks,
-  ProjectDesignPatterns,
-  ProjectTechnicalInfo,
-  ProjectReview,
-  ProjectMilestones,
-  Divider,
-  PortfolioGallery
-} from 'components';
+import PortfolioGallery from './PortfolioGallery/PortfolioGallery';
+import ProjectMilestones from './ProjectMilestones/ProjectMilestones';
+import ProjectReview from './ProjectReview/ProjectReview';
+import ProjectTechnicalInfo from './ProjectTechnicalInfo/ProjectTechnicalInfo';
+import ProjectDesignPatterns from './ProjectDesignPatterns/ProjectDesignPatterns';
+import ProjectLinks from './ProjectLinks/ProjectLinks';
+import Divider from '../Divider/Divider';
 
 const SingleProject = ({
   project

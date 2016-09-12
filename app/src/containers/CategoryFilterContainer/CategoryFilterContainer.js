@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { CategoryFilter } from 'components';
+import { CategoryFilter } from '../../components';
 import {
   Row,
   Column

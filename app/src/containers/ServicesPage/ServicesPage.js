@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Divider } from 'components';
+import { Divider } from '../../components';
 import {
   ServicesSectionTwo,
   ServicesSectionOne,
@@ -7,7 +7,7 @@ import {
   Team,
   MainServices,
   Footer
-} from 'containers';
+} from '../../containers';
 import {
   Column,
   Row,

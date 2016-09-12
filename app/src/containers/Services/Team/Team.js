@@ -1,14 +1,13 @@
 import React, { PropTypes } from 'react';
-import { Divider } from 'components';
+import { Divider } from '../../../components';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 import {
   Row,
   Column,
   Button
 } from 'react-foundation';
 import './Team.scss';
-import { TiLinkOutline, TiSocialGithub } from 'react-icons/lib/ti'
+import { TiLinkOutline, TiSocialGithub } from 'react-icons/lib/ti';
 
 const TeamMemberLink = ({
   website

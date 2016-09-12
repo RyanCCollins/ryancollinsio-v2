@@ -3,7 +3,7 @@ import {
   Column,
   Label
 } from 'react-foundation';
-import { Divider } from 'components';
+import Divider from '../../Divider/Divider';
 
 const ProjectTechnicalInfo = ({
   project

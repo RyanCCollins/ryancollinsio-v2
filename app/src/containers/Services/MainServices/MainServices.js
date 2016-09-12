@@ -4,7 +4,7 @@ import {
   Row
 } from 'react-foundation';
 import './MainServices.scss';
-import { PanelItem } from 'components';
+import { PanelItem } from '../../../components';
 import {
   GoDatabase,
   GoDeviceMobile,
