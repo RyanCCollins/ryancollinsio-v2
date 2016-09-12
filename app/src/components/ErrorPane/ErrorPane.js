@@ -24,7 +24,7 @@ const ErrorPanel = ({
     <MdWarning />
     <h4 className="callout-title">Errors</h4>
     <ul className="no-bullet">
-      {errors != null && errors.length > 0 &&
+      {errors != null && errors.length > 0 && // eslint-disable-line
         errors.map((err, i) =>
           <li key={i}>{err}</li>
         )}
