@@ -5,6 +5,8 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import path from 'path';
 import express from 'express';
 import config from '../webpack.config.js';
+import createTemplate from './utils/createTemplate';
+
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const importRoutes = keystone.importer(__dirname);
 const compiler = webpack(config);
@@ -68,25 +70,27 @@ exports = module.exports = function (app) {
 
   app.use(express.static('./public'));
 
-  // app.use((req, res) => {
-  //   match({ routes, location: req.url },
-  //     (error, redirectLocation, renderProps) => {
-  //       if (error) {
-  //         res.status(500).send(error.message);
-  //       } else if (redirectLocation) {
-  //         res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-  //       } else if (renderProps) {
-  //         const body = renderToString(
-  //           React.createElement(Provider, { store },
-  //             React.createElement(RouterContext, renderProps)
-  //           )
-  //         );
-  //         res.status(200).send(template({ body }));
-  //       } else {
-  //         res.status(400).send('Not Found 🤔');
-  //       }
-  //     });
-  // });
+  app.use((req, res) => {
+    match({ routes, location: req.url },
+      (error, redirectLocation, renderProps) => {
+        if (error) {
+          res.status(500).send(error.message);
+        } else if (redirectLocation) {
+          res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+        } else if (renderProps) {
+          const body = renderToString(
+            <Provider store={store}>
+              <RouterContext {...renderProps} />
+            </Provider>
+          );
+          res.set('Content-Type', 'text/html')
+            .status(200)
+            .send(createTemplate(body, store.getState()));
+        } else {
+          res.status(400).send('Not Found 🤔');
+        }
+      });
+  });
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
   });
