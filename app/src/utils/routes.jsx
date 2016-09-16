@@ -110,8 +110,8 @@ export const routes = () => (
   </Route>
 );
 
-const router = (
-  <Provider store={store}>
+const RouterApp = (props) => (
+  <Provider {...props} store={store}>
     <div>
       <ReduxToastr
         timeOut={4000}
@@ -128,4 +128,4 @@ const router = (
   </Provider>
 );
 
-export default router;
+export default RouterApp;
