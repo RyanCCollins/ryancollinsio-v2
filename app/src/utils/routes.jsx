@@ -2,7 +2,6 @@ import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from '../store/store';
-import App from '../components/App';
 import * as Containers from '../containers/';
 import ReduxToastr from 'react-redux-toastr';
 
@@ -16,88 +15,117 @@ export const asyncRoutes = () => (
   <Route
     path="/"
     getComponent={(location, callback) => {
-      callback(null, App);
+      require.ensure([], (require) => {
+        const App = require('../components/App');
+        callback(null, App);
+      });
     }}
   >
     <IndexRoute
       getComponent={(location, callback) => {
-        callback(null, Containers.LandingPage);
+        require.ensure([], (require) => {
+          const LandingPage = require('../containers/LandingPage');
+          callback(null, LandingPage);
+        });
       }}
     />
     <Route
       path="/portfolio"
       name="portfolio"
       getComponent={(location, callback) => {
-        callback(null, Containers.Portfolio);
+        require.ensure([], (require) => {
+          const Portfolio = require('../containers/Portfolio');
+          callback(null, Portfolio);
+        });
       }}
     />
     <Route
       path="/projects/:projectId"
       getComponent={(location, callback) => {
-        callback(null, Containers.SingleProjectContainer);
+        require.ensure([], (require) => {
+          const SingleProjectContainer = require('../containers/SingleProjectContainer');
+          callback(null, SingleProjectContainer);
+        });
       }}
     />
     <Route
       path="/contact"
       getComponent={(location, callback) => {
-        callback(null, Containers.Contact);
+        require.ensure([], (require) => {
+          const Contact = require('../containers/Contact');
+          callback(null, Contact);
+        });
       }}
     />
     <Route
       path="/blog"
       name="blog"
       getComponent={(location, callback) => {
-        callback(null, Containers.PostListView);
+        require.ensure([], (require) => {
+          const PostListView = require('../containers/PostListView');
+          callback(null, PostListView);
+        });
       }}
     />
     <Route
       path="/blog/posts/:postId"
       name="SinglePostView"
       getComponent={(location, callback) => {
-        callback(null, Containers.SinglePostView);
+        require.ensure([], (require) => {
+          const SinglePostView = require('../containers/SinglePostView');
+          callback(null, SinglePostView);
+        });
       }}
     />
     <Route
       path="/resume/view"
       name="ResumeViewer"
       getComponent={(location, callback) => {
-        callback(null, Containers.ResumePDF);
+        require.ensure([], (require) => {
+          const ResumePDF = require('../containers/ResumePDF');
+          callback(null, ResumePDF);
+        });
       }}
     />
     <Route
       path="/services"
       name="services"
       getComponent={(location, callback) => {
-        callback(null, Containers.ServicesPage);
+        require.ensure([], (require) => {
+          const ServicesPage = require('../containers/ServicesPage');
+          callback(null, ServicesPage);
+        });
       }}
-      component={Containers.ServicesPage}
     />
     <Route
       path="*"
       getComponent={(location, callback) => {
-        callback(null, Containers.NotFound);
+        require.ensure([], (require) => {
+          const NotFound = require('../containers/NotFound');
+          callback(null, NotFound);
+        });
       }}
     />
   </Route>
 );
 
-export const routes = () => (
-  <Route path="/" component={App}>
-    <IndexRoute component={Containers.LandingPage} />
-    <Route path="/portfolio" name="portfolio" component={Containers.Portfolio} />
-    <Route path="/projects/:projectId" component={Containers.SingleProjectContainer} />
-    <Route path="/contact" component={Containers.Contact} />
-    <Route path="/blog" name="blog" component={Containers.PostListView} />
-    <Route
-      path="/blog/posts/:postId"
-      name="SinglePostView"
-      component={Containers.SinglePostView}
-    />
-    <Route path="/resume/view" name="ResumeViewer" component={Containers.ResumePDF} />
-    <Route path="/services" name="services" component={Containers.ServicesPage} />
-    <Route path="*" component={Containers.NotFound} />
-  </Route>
-);
+// export const routes = () => (
+//   <Route path="/" component={App}>
+//     <IndexRoute component={Containers.LandingPage} />
+//     <Route path="/portfolio" name="portfolio" component={Containers.Portfolio} />
+//     <Route path="/projects/:projectId" component={Containers.SingleProjectContainer} />
+//     <Route path="/contact" component={Containers.Contact} />
+//     <Route path="/blog" name="blog" component={Containers.PostListView} />
+//     <Route
+//       path="/blog/posts/:postId"
+//       name="SinglePostView"
+//       component={Containers.SinglePostView}
+//     />
+//     <Route path="/resume/view" name="ResumeViewer" component={Containers.ResumePDF} />
+//     <Route path="/services" name="services" component={Containers.ServicesPage} />
+//     <Route path="*" component={Containers.NotFound} />
+//   </Route>
+// );
 
 const router = (
   <Provider store={store}>
