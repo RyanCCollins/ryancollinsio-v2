@@ -78,6 +78,8 @@ module.exports = {
     publicPath: '/',
     filename: isDeveloping ? 'bundle.js' : '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
+  stats: {
+    chunks: true
   },
   devServer: {
     contentBase: path.resolve(ROOT_PATH, 'app/build'),
