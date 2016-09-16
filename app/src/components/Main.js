@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navbar from './Navbar/Navbar';
 
-const Main = (props) => (
-  <div>
-    <Navbar />
-    {
-      typeof props !== 'undefined' &&
-      React.cloneElement(props.children, props)
-    }
-  </div>
-);
+class Main extends Component {
+  render() {
+    return (
+      <div>
+        <Navbar />
+        {React.cloneElement(this.props.children, this.props)}
+      </div>
+    );
+  }
+}
 
 Main.propTypes = {
   children: React.PropTypes.element
