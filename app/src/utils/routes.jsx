@@ -118,9 +118,9 @@ const router = (
         newestOnTop
         position="bottom-right"
       />
-      <Router /* eslint-disable */
-        onUpdate={() => window.scrollTo(0, 0)}
-        history={history} /* eslint-enable */
+      <Router
+        onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
+        history={history}
       >
         {routes()}
       </Router>

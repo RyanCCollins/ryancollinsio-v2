@@ -16,7 +16,8 @@
       "test": {
         "plugins": [
           [
-            "babel-plugin-webpack-loaders", {
+            "babel-plugin-webpack-loaders",
+            {
               "config": "./webpack.test.config.js",
               "verbose": false
             }
@@ -107,6 +108,7 @@
     "model-transform": "^1.1.0",
     "moment": "^2.13.0",
     "motion-ui": "^1.2.2",
+    "node-ensure": "0.0.0",
     "node-sass": "^3.4.2",
     "paginator": "^1.0.0",
     "postcss-loader": "^0.9.1",
