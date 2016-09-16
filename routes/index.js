@@ -18,7 +18,7 @@ import _ from 'lodash';
 import fs from 'fs';
 import { routes } from '../app/src/utils/routes.jsx';
 
-const baseTemplate = fs.readFileSync(path.join(__dirname, '../index.html'));
+const baseTemplate = fs.readFileSync(path.join(__dirname, '../public/templates/_index.html'));
 const template = _.template(baseTemplate);
 
 const serverApiRoutes = {
@@ -71,6 +71,10 @@ exports = module.exports = function (app) {
   app.use((req, res) => {
     match({ routes, location: req.url },
       (error, redirectLocation, renderProps) => {
+        console.log(`Rendering with error: ${JSON.stringify(error)}
+                    redirectLocation: ${redirectLocation} and
+                    renderProps: ${JSON.stringify(renderProps)}
+                    Routes: ${routes} location: ${req.url}`);
         if (error) {
           res.status(500).send(error.message);
         } else if (redirectLocation) {

@@ -106,7 +106,7 @@ module.exports = {
       async: true,
     }),
     new HtmlwebpackPlugin({
-      template: 'public/_index.html',
+      template: 'public/templates/_index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
