@@ -16,12 +16,7 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
 import store from '../app/src/store/store.js';
-import _ from 'lodash';
-import fs from 'fs';
 import { routes } from '../app/src/utils/routes.jsx';
-
-const baseTemplate = fs.readFileSync(path.join(__dirname, '../public/index.html'));
-const template = _.template(baseTemplate);
 
 const serverApiRoutes = {
   api: importRoutes('./api')
@@ -83,8 +78,7 @@ exports = module.exports = function (app) {
               <RouterContext {...renderProps} />
             </Provider>
           );
-          res.set('Content-Type', 'text/html')
-            .status(200)
+          res.status(200)
             .send(createTemplate(body, store.getState()));
         } else {
           res.status(400).send('Not Found 🤔');
