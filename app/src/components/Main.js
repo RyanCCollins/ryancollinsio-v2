@@ -6,7 +6,7 @@ class Main extends Component {
     return (
       <div>
         <Navbar />
-        {typeof this.props !== undefined ?
+        {typeof this !== undefined ?
           React.cloneElement(this.props.children, this.props) : null}
       </div>
     );
