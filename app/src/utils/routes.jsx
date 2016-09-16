@@ -74,6 +74,13 @@ export const routes = {
     },
     {
       path: 'blog',
+      getIndexRoute(partialNextState, cb) {
+        cb(null, {
+          getComponent(loc, callback) {
+            callback(null, App);
+          }
+        });
+      },
       getComponent(location, callback) {
         require.ensure([], (error) => {
           if (error) {
