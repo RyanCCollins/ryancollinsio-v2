@@ -11,7 +11,7 @@ if (typeof module !== 'undefined' && module.require) {
   }
 }
 
-export const routes = () => ({
+export const routes = {
   component: App,
   path: '/',
   indexRoute: {
@@ -98,7 +98,7 @@ export const routes = () => ({
       }
     }
   ]
-});
+};
 
 const RouterApp = (props) => (
   <Provider {...props} store={store}>
@@ -112,7 +112,7 @@ const RouterApp = (props) => (
         onUpdate={() => window.scrollTo(0, 0)} // eslint-disable-line
         history={history}
       >
-        {routes()}
+        {routes}
       </Router>
     </div>
   </Provider>
