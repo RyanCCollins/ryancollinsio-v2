@@ -72,7 +72,8 @@ module.exports = {
     },
   },
   output: {
-    path: process.env.NODE_ENV === 'production' ? path.resolve(ROOT_PATH, 'public') : path.resolve(ROOT_PATH, 'app/build'),
+    path: process.env.NODE_ENV === 'production' ?
+      path.resolve(ROOT_PATH, 'public') : path.resolve(ROOT_PATH, 'app/build'),
     publicPath: '/',
     filename: 'bundle.js',
   },
@@ -91,14 +92,25 @@ module.exports = {
       cleaner:  [autoprefixer({ browsers: [] })]
     };
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlwebpackPlugin({
-      title: 'RyanCollins.io',
-      template: 'index.html'
-    }),
+  plugins: process.env.NODE_ENV === 'production' ?
+  [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
-    })
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
+  ]
+:
+  [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlwebpackPlugin({
+      title: 'React Weekly',
+      template: 'index.html'
+    }),
   ]
 };

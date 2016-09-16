@@ -3,15 +3,21 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import createLogger from 'redux-logger';
-import promiseMiddleware from 'redux-promise-middleware';
 import rootReducer from '../reducers/index';
 import initialState from './initialState';
 
 const isClient = typeof document !== 'undefined';
+const isDeveloping = process.env.NODE_ENV !== 'production';
+
 const loggerMiddleware = createLogger();
-const middlewares = [thunkMiddleware, promiseMiddleware(), loggerMiddleware];
+const middlewares = [thunkMiddleware];
+
+if (isDeveloping) {
+  middlewares.push(loggerMiddleware);
+}
+
 const enhancers = [];
-if (isClient) {
+if (isClient && isDeveloping) {
   const devToolsExtension = window.devToolsExtension;
   if (typeof devToolsExtension === 'function') {
     enhancers.push(devToolsExtension());
