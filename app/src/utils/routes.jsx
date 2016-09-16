@@ -19,7 +19,7 @@ export const routes = {
       require.ensure([], (error) => {
         if (error) {
           return console.error( // eslint-disable-line
-            'ClientApp Landing require.ensure error', error
+            'LandingPage Landing require.ensure error', error
           );
         }
         const LandingPage = require('../containers/LandingPage/LandingPage');
@@ -34,7 +34,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'Portfolio Landing require.ensure error', error
             );
           }
           const Portfolio = require('../containers/Portfolio/Portfolio');
@@ -48,7 +48,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'SingleProjectContainer Landing require.ensure error', error
             );
           }
           const SingleProjectContainer = require(
@@ -64,7 +64,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'Contact Landing require.ensure error', error
             );
           }
           const Contact = require('../containers/Contact/Contact');
@@ -78,7 +78,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'PostListView Landing require.ensure error', error
             );
           }
           const PostListView = require('../containers/Blog/PostListView/PostListView');
@@ -92,7 +92,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'SinglePostView Landing require.ensure error', error
             );
           }
           const SinglePostView = require('../containers/Blog/SinglePostView/SinglePostView');
@@ -106,7 +106,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'ResumePDF Landing require.ensure error', error
             );
           }
           const ResumePDF = require('../containers/ResumePDF/ResumePDF');
@@ -120,7 +120,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'ServicesPage Landing require.ensure error', error
             );
           }
           const ServicesPage = require('../containers/ServicesPage/ServicesPage');
@@ -134,7 +134,7 @@ export const routes = {
         require.ensure([], (error) => {
           if (error) {
             return console.error( // eslint-disable-line
-              'ClientApp Landing require.ensure error', error
+              'NotFound Landing require.ensure error', error
             );
           }
           const NotFound = require('../containers/NotFound/NotFound');

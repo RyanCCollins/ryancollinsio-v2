@@ -4,7 +4,10 @@ import Navbar from './Navbar/Navbar';
 const Main = (props) => (
   <div>
     <Navbar />
-    {props !== null && React.cloneElement(props.children, props)}
+    {
+      typeof props !== 'undefined' &&
+      React.cloneElement(props.children, props)
+    }
   </div>
 );
 
