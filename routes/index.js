@@ -71,10 +71,6 @@ exports = module.exports = function (app) {
   app.use((req, res) => {
     match({ routes, location: req.url },
       (error, redirectLocation, renderProps) => {
-        console.log(`Rendering with error: ${JSON.stringify(error)}
-                    redirectLocation: ${redirectLocation} and
-                    renderProps: ${JSON.stringify(renderProps)}
-                    Routes: ${routes} location: ${req.url}`);
         if (error) {
           res.status(500).send(error.message);
         } else if (redirectLocation) {
@@ -90,9 +86,5 @@ exports = module.exports = function (app) {
           res.status(400).send('Not Found 🤔');
         }
       });
-  });
-
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
   });
 };
