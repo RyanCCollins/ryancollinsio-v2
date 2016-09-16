@@ -13,6 +13,7 @@ if (typeof module !== 'undefined' && module.require) {
 export const routes = () => (
   <Route
     path="/"
+    name="home"
     getComponent={(location, callback) => {
       require.ensure([], (require) => {
         const App = require('../components/App');
@@ -29,7 +30,7 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/portfolio"
+      path="portfolio"
       name="portfolio"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
@@ -39,7 +40,8 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/projects/:projectId"
+      path="projects/:projectId"
+      name="singleproject"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
           const SingleProjectContainer = require(
@@ -50,7 +52,8 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/contact"
+      path="contact"
+      name="contact"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
           const Contact = require('../containers/Contact/Contact');
@@ -59,7 +62,7 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/blog"
+      path="blog"
       name="blog"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
@@ -69,8 +72,8 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/blog/posts/:postId"
-      name="SinglePostView"
+      path="blog/posts/:postId"
+      name="singlepost"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
           const SinglePostView = require('../containers/Blog/SinglePostView/SinglePostView');
@@ -79,8 +82,8 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/resume/view"
-      name="ResumeViewer"
+      path="resume/view"
+      name="resume"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
           const ResumePDF = require('../containers/ResumePDF/ResumePDF');
@@ -89,7 +92,7 @@ export const routes = () => (
       }}
     />
     <Route
-      path="/services"
+      path="services"
       name="services"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
@@ -100,6 +103,7 @@ export const routes = () => (
     />
     <Route
       path="*"
+      name="notfound"
       getComponent={(location, callback) => {
         require.ensure([], (require) => {
           const NotFound = require('../containers/NotFound/NotFound');
