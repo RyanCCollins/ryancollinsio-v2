@@ -16,7 +16,12 @@ export const routes = {
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
-      require.ensure([], (require) => {
+      require.ensure([], (error) => {
+        if (error) {
+          return console.error( // eslint-disable-line
+            'ClientApp Landing require.ensure error', error
+          );
+        }
         const LandingPage = require('../containers/LandingPage/LandingPage');
         callback(null, LandingPage);
       });
@@ -26,7 +31,12 @@ export const routes = {
     {
       path: 'portfolio',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const Portfolio = require('../containers/Portfolio/Portfolio');
           callback(null, Portfolio);
         });
@@ -35,7 +45,12 @@ export const routes = {
     {
       path: 'projects/:projectId',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const SingleProjectContainer = require(
             '../containers/SingleProjectContainer/SingleProjectContainer'
           );
@@ -46,7 +61,12 @@ export const routes = {
     {
       path: 'contact',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const Contact = require('../containers/Contact/Contact');
           callback(null, Contact);
         });
@@ -55,7 +75,12 @@ export const routes = {
     {
       path: 'blog',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const PostListView = require('../containers/Blog/PostListView/PostListView');
           callback(null, PostListView);
         });
@@ -64,7 +89,12 @@ export const routes = {
     {
       path: 'blog/posts/:postId',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const SinglePostView = require('../containers/Blog/SinglePostView/SinglePostView');
           callback(null, SinglePostView);
         });
@@ -73,7 +103,12 @@ export const routes = {
     {
       path: 'resume/view',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const ResumePDF = require('../containers/ResumePDF/ResumePDF');
           callback(null, ResumePDF);
         });
@@ -82,7 +117,12 @@ export const routes = {
     {
       path: 'services',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const ServicesPage = require('../containers/ServicesPage/ServicesPage');
           callback(null, ServicesPage);
         });
@@ -91,7 +131,12 @@ export const routes = {
     {
       path: 'notfound',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], (error) => {
+          if (error) {
+            return console.error( // eslint-disable-line
+              'ClientApp Landing require.ensure error', error
+            );
+          }
           const NotFound = require('../containers/NotFound/NotFound');
           callback(null, NotFound);
         });
