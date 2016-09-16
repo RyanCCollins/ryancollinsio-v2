@@ -6,6 +6,81 @@ import App from '../components/App';
 import * as Containers from '../containers/';
 import ReduxToastr from 'react-redux-toastr';
 
+if (typeof module !== 'undefined' && module.require) {
+  if (typeof require.ensure === 'undefined') {
+    require.ensure = require('node-ensure');
+  }
+}
+
+export const asyncRoutes = () => (
+  <Route
+    path="/"
+    getComponent={(location, callback) => {
+      callback(null, App);
+    }}
+  >
+    <IndexRoute
+      getComponent={(location, callback) => {
+        callback(null, Containers.LandingPage);
+      }}
+    />
+    <Route
+      path="/portfolio"
+      name="portfolio"
+      getComponent={(location, callback) => {
+        callback(null, Containers.Portfolio);
+      }}
+    />
+    <Route
+      path="/projects/:projectId"
+      getComponent={(location, callback) => {
+        callback(null, Containers.SingleProjectContainer);
+      }}
+    />
+    <Route
+      path="/contact"
+      getComponent={(location, callback) => {
+        callback(null, Containers.Contact);
+      }}
+    />
+    <Route
+      path="/blog"
+      name="blog"
+      getComponent={(location, callback) => {
+        callback(null, Containers.PostListView);
+      }}
+    />
+    <Route
+      path="/blog/posts/:postId"
+      name="SinglePostView"
+      getComponent={(location, callback) => {
+        callback(null, Containers.SinglePostView);
+      }}
+    />
+    <Route
+      path="/resume/view"
+      name="ResumeViewer"
+      getComponent={(location, callback) => {
+        callback(null, Containers.ResumePDF);
+      }}
+    />
+    <Route
+      path="/services"
+      name="services"
+      getComponent={(location, callback) => {
+        callback(null, Containers.ServicesPage);
+      }}
+      component={Containers.ServicesPage}
+    />
+    <Route
+      path="*"
+      getComponent={(location, callback) => {
+        callback(null, Containers.NotFound);
+      }}
+    />
+  </Route>
+);
+
 export const routes = () => (
   <Route path="/" component={App}>
     <IndexRoute component={Containers.LandingPage} />
@@ -36,7 +111,7 @@ const router = (
         onUpdate={() => window.scrollTo(0, 0)}
         history={history} /* eslint-enable */
       >
-        {routes()}
+        {asyncRoutes()}
       </Router>
     </div>
   </Provider>

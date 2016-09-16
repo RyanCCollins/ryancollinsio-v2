@@ -72,9 +72,19 @@ module.exports = {
     },
   },
   output: {
-    path: process.env.NODE_ENV === 'production' ? path.resolve(ROOT_PATH, 'public') : path.resolve(ROOT_PATH, 'app/build'),
-    publicPath: '/',
+    path: process.env.NODE_ENV === 'production' ?
+      path.resolve(ROOT_PATH, 'public')
+    :
+      path.resolve(ROOT_PATH, 'app/build'),
+    publicPath: process.env.NODE_ENV === 'production' ?
+      '/public/'
+    :
+      '/',
     filename: 'bundle.js',
+    chunkFilename: '[name].chunk.js',
+  },
+  stats: {
+    chunks: true
   },
   devServer: {
     contentBase: path.resolve(ROOT_PATH, 'app/build'),
@@ -92,6 +102,7 @@ module.exports = {
     };
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
       title: 'RyanCollins.io',
