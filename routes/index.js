@@ -1,12 +1,13 @@
 import keystone from 'keystone';
+import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import path from 'path';
-import compiler from 'compiler';
 import express from 'express';
 import config from '../webpack.config.js';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const importRoutes = keystone.importer(__dirname);
+const compiler = webpack(config);
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
