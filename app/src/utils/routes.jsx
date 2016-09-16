@@ -2,7 +2,6 @@ import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from '../store/store';
-import * as Containers from '../containers/';
 import ReduxToastr from 'react-redux-toastr';
 
 if (typeof module !== 'undefined' && module.require) {
@@ -11,7 +10,7 @@ if (typeof module !== 'undefined' && module.require) {
   }
 }
 
-export const asyncRoutes = () => (
+export const routes = () => (
   <Route
     path="/"
     getComponent={(location, callback) => {
@@ -109,24 +108,6 @@ export const asyncRoutes = () => (
   </Route>
 );
 
-// export const routes = () => (
-//   <Route path="/" component={App}>
-//     <IndexRoute component={Containers.LandingPage} />
-//     <Route path="/portfolio" name="portfolio" component={Containers.Portfolio} />
-//     <Route path="/projects/:projectId" component={Containers.SingleProjectContainer} />
-//     <Route path="/contact" component={Containers.Contact} />
-//     <Route path="/blog" name="blog" component={Containers.PostListView} />
-//     <Route
-//       path="/blog/posts/:postId"
-//       name="SinglePostView"
-//       component={Containers.SinglePostView}
-//     />
-//     <Route path="/resume/view" name="ResumeViewer" component={Containers.ResumePDF} />
-//     <Route path="/services" name="services" component={Containers.ServicesPage} />
-//     <Route path="*" component={Containers.NotFound} />
-//   </Route>
-// );
-
 const router = (
   <Provider store={store}>
     <div>
@@ -139,7 +120,7 @@ const router = (
         onUpdate={() => window.scrollTo(0, 0)}
         history={history} /* eslint-enable */
       >
-        {asyncRoutes()}
+        {routes()}
       </Router>
     </div>
   </Provider>
