@@ -6,6 +6,7 @@ const precss = require('precss');
 const ROOT_PATH = path.resolve(__dirname);
 
 const env = process.env.NODE_ENV || 'development';
+const isDeveloping = env !== 'production';
 const PORT = process.env.PORT || 8080;
 const HOST = '0.0.0.0'; // Set to localhost if need be.
 const URL = `http://${HOST}:${PORT}`;
@@ -19,7 +20,7 @@ module.exports = {
     preLoaders: [
       {
         test: /\.jsx?$/,
-        loaders: process.env.NODE_ENV === 'production' ? [] : ['eslint'],
+        loaders: isDeveloping ? ['eslint'] : [],
         include: path.resolve(ROOT_PATH, './app')
       }
     ],
@@ -72,10 +73,11 @@ module.exports = {
     },
   },
   output: {
-    path: process.env.NODE_ENV === 'production' ?
+    path: !isDeveloping ?
       path.resolve(ROOT_PATH, 'public') : path.resolve(ROOT_PATH, 'app/build'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: isDeveloping ? 'bundle.js' : '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].chunk.js',
   },
   devServer: {
     contentBase: path.resolve(ROOT_PATH, 'app/build'),
@@ -94,6 +96,28 @@ module.exports = {
   },
   plugins: process.env.NODE_ENV === 'production' ?
   [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      children: true,
+      minChunks: 2,
+      async: true,
+    }),
+    new HtmlwebpackPlugin({
+      template: 'public/_index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+      inject: true,
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
