@@ -18,7 +18,7 @@ import _ from 'lodash';
 import fs from 'fs';
 import { routes } from '../app/src/utils/routes.jsx';
 
-const baseTemplate = fs.readFileSync(path.join(__dirname, '../public/templates/_index.html'));
+const baseTemplate = fs.readFileSync(path.join(__dirname, '../public/index.html'));
 const template = _.template(baseTemplate);
 
 const serverApiRoutes = {
