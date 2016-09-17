@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 1,
+    id: 0,
     category: 'frontend',
     title: 'React Weekly',
     type: 'Front End Single Page App',
