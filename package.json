@@ -16,8 +16,7 @@
       "test": {
         "plugins": [
           [
-            "babel-plugin-webpack-loaders",
-            {
+            "babel-plugin-webpack-loaders", {
               "config": "./webpack.test.config.js",
               "verbose": false
             }
@@ -128,7 +127,7 @@
     "react-photo-gallery": "^4.2.8",
     "react-redux": "^4.4.5",
     "react-redux-toastr": "^3.1.4",
-    "react-router": "^2.4.0",
+    "react-router": "^2.8.1",
     "react-router-redux": "^4.0.5",
     "react-scroll": "^1.0.17",
     "react-scrollspy": "^2.0.0",
