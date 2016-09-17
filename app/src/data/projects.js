@@ -48,7 +48,7 @@ const projects = [
     appStoreUrl: '',
     projectUrl: 'http://www.reactweekly.co/',
     featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-main.png?raw=true',
-    caption: 'Restaurant Reviewer A11y Best Practices App',
+    caption: 'Performance Oriented SPA, React & GraphQL',
     images: [
       {
         id: 0,

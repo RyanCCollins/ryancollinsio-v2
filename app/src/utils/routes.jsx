@@ -16,7 +16,7 @@ export const routes = {
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
-      require.ensure([], (require) => {
+      require.ensure([], () => {
         const LandingPage = require('../containers/LandingPage/LandingPage').default;
         callback(null, LandingPage);
       });
@@ -26,7 +26,7 @@ export const routes = {
     {
       path: 'portfolio',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const Portfolio = require('../containers/Portfolio/Portfolio').default;
           callback(null, Portfolio);
         });
@@ -35,7 +35,7 @@ export const routes = {
     {
       path: 'projects/:projectId',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const SingleProjectContainer = require(
             '../containers/SingleProjectContainer/SingleProjectContainer'
           ).default;
@@ -46,7 +46,7 @@ export const routes = {
     {
       path: 'contact',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const Contact = require(
             '../containers/Contact/Contact'
         ).default;
@@ -57,7 +57,7 @@ export const routes = {
     {
       path: 'blog',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const PostListView = require(
             '../containers/Blog/PostListView/PostListView'
           ).default;
@@ -68,7 +68,7 @@ export const routes = {
     {
       path: 'blog/posts/:postId',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const SinglePostView = require(
             '../containers/Blog/SinglePostView/SinglePostView'
           ).default;
@@ -79,7 +79,7 @@ export const routes = {
     {
       path: 'resume/view',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const ResumePDF = require(
             '../containers/ResumePDF/ResumePDF'
           ).default;
@@ -90,7 +90,7 @@ export const routes = {
     {
       path: 'services',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const ServicesPage = require('../containers/ServicesPage/ServicesPage').default;
           callback(null, ServicesPage);
         });
@@ -99,7 +99,7 @@ export const routes = {
     {
       path: 'notfound',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const NotFound = require('../containers/NotFound/NotFound').default;
           callback(null, NotFound);
         });
