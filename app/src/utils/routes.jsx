@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router';
+import { Router } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from '../store/store';
 import ReduxToastr from 'react-redux-toastr';
@@ -7,7 +7,7 @@ import App from '../components/App';
 
 if (typeof module !== 'undefined' && module.require) {
   if (typeof require.ensure === 'undefined') {
-    require.ensure = require('node-ensure')
+    require.ensure = require('node-ensure');
   }
 }
 
@@ -16,7 +16,7 @@ export const routes = {
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
-      require.ensure([], (require) => {
+      require.ensure([], () => {
         const LandingPage = require('../containers/LandingPage/LandingPage').default;
         callback(null, LandingPage);
       });
@@ -26,7 +26,7 @@ export const routes = {
     {
       path: 'portfolio',
       getComponent(location, callback) {
-        require.ensure([], (require) => {
+        require.ensure([], () => {
           const Portfolio = require('../containers/Portfolio/Portfolio').default;
           callback(null, Portfolio);
         });
