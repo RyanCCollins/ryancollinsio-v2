@@ -33,7 +33,7 @@ const createTemplate = (html, initialState) =>
       <body>
         <div id="app">${html}</div>
           <script type="text/javascript" src="/vendor.158ebf10428e11d2ccc7.js"></script>
-          <script type="text/javascript" src="/main.269d6cf516f193f850c3.js"></script>
+          <script type="text/javascript" src="/main.c3ec5ca613eb2680d87b.js"></script>
           <script>
             window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
           </script>

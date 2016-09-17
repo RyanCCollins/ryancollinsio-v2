@@ -47,7 +47,7 @@ const projects = [
     repositoryURL: 'https://github.com/RyanCCollins/react-weekly',
     appStoreUrl: '',
     projectUrl: 'http://www.reactweekly.co/',
-    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-main.png?raw=true',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-mockup-2.jpg?raw=true',
     caption: 'Performance Oriented SPA, React & GraphQL',
     images: [
       {
