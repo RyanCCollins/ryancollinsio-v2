@@ -1,6 +1,114 @@
 const projects = [
   {
-    id: 0,
+    id: 1,
+    category: 'frontend',
+    title: 'React Weekly',
+    type: 'Front End Single Page App',
+    description: `Front End Single Page application
+      built with a focus on performance and UX.
+      Custom built back end running GraphQL, Python and Node JS. `,
+    milestones: [
+      'Front End Milestones:',
+      'Implemented Advanced Webpack Code Chunking and server rendering to increase performance exponentiallt',
+      'Followed the feature-first approach, whereby components exist in isolation from the app, encouraging encapsulation and reusability.',
+      'Wrote dozens of scalable react components and connected containers.',
+      'Followed functional programming best practices, utilizing the immutable architecture and encapsulating business logic in the Redux store.',
+      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality',
+      'Back End Milestones:',
+      'Implemented a custom GraphQL schema.',
+      'Wrote an Express JS Server to serve content in real-time with increased I/O performance',
+      'Integrated custom Python scripts in order to scrape the medium API for posts for the site.'
+    ],
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, Grommet, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Built a custom GraphQL back end schema.",
+      tags: [
+        'React',
+        'Redux',
+        'GraphQL',
+        'Flux',
+        'ES2015',
+        'ExpressJS',
+        'Python'
+      ]
+    },
+    designPatterns: {
+      description: 'Most notably, the app utilizes A11y accessibility and UX best practices.  It also uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  On the back end, it follows the micro-service architecture, serving data via a sinlge endpoint with GraphQL.',
+      tags: [
+        'A11y',
+        'Webpack Chunking',
+        'GraphQL',
+        'Flux',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'Python Scripting',
+        'Micro services'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/react-weekly',
+    appStoreUrl: '',
+    projectUrl: 'http://www.reactweekly.co/',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-main.png?raw=true',
+    caption: 'Restaurant Reviewer A11y Best Practices App',
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-main.png?raw=true',
+        width: 1416,
+        height: 824,
+        aspectRatio: 1.7,
+        lightboxImage: {
+          caption: 'Main Page Top Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-main.png?raw=true'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/about-main.png?raw=true',
+        width: 1416,
+        height: 824,
+        aspectRatio: 1.7,
+        lightboxImage: {
+          caption: 'About Page Main',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/about-main.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/made-with.png?raw=true',
+        width: 1416,
+        height: 824,
+        aspectRatio: 1.7,
+        lightboxImage: {
+          caption: 'Made With',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/made-with.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-all.png?raw=true',
+        width: 1418,
+        height: 8159,
+        aspectRatio: 0.17,
+        lightboxImage: {
+          caption: 'Main All Content',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/main-all.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/about-all.png?raw=true',
+        width: 1418,
+        height: 3478,
+        aspectRatio: 0.40,
+        lightboxImage: {
+          caption: 'About All Content',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/react-weekly/images/about-all.png?raw=true'
+        }
+      }
+    ]
+  },
+  {
+    id: 1,
     category: 'frontend',
     title: 'Restaurant Reviewer App',
     type: 'A11y Best Practices',

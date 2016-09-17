@@ -20,10 +20,7 @@ body {
   font-family: Lato,sans-serif;
   font-size: 16px;
   line-height: 25px;
-}
-
-body {
-  overflow-x:hidden
+  overflow-x:hidden !important;
 }
 
 ul.starred {

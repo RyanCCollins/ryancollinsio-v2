@@ -16,13 +16,8 @@ export const routes = {
   path: '/',
   indexRoute: {
     getComponent(location, callback) {
-      require.ensure([], (error) => {
-        if (error) {
-          return console.error( // eslint-disable-line
-            'LandingPage Landing require.ensure error', error
-          );
-        }
-        const LandingPage = require('../containers/LandingPage/LandingPage');
+      require.ensure([], (require) => {
+        const LandingPage = require('../containers/LandingPage/LandingPage').default;
         callback(null, LandingPage);
       });
     }
@@ -31,13 +26,8 @@ export const routes = {
     {
       path: 'portfolio',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'Portfolio Landing require.ensure error', error
-            );
-          }
-          const Portfolio = require('../containers/Portfolio/Portfolio');
+        require.ensure([], (require) => {
+          const Portfolio = require('../containers/Portfolio/Portfolio').default;
           callback(null, Portfolio);
         });
       }
@@ -45,15 +35,10 @@ export const routes = {
     {
       path: 'projects/:projectId',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'SingleProjectContainer Landing require.ensure error', error
-            );
-          }
+        require.ensure([], (require) => {
           const SingleProjectContainer = require(
             '../containers/SingleProjectContainer/SingleProjectContainer'
-          );
+          ).default;
           callback(null, SingleProjectContainer);
         });
       }
@@ -61,13 +46,10 @@ export const routes = {
     {
       path: 'contact',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'Contact Landing require.ensure error', error
-            );
-          }
-          const Contact = require('../containers/Contact/Contact');
+        require.ensure([], (require) => {
+          const Contact = require(
+            '../containers/Contact/Contact'
+        ).default;
           callback(null, Contact);
         });
       }
@@ -75,13 +57,10 @@ export const routes = {
     {
       path: 'blog',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'PostListView Landing require.ensure error', error
-            );
-          }
-          const PostListView = require('../containers/Blog/PostListView/PostListView');
+        require.ensure([], (require) => {
+          const PostListView = require(
+            '../containers/Blog/PostListView/PostListView'
+          ).default;
           callback(null, PostListView);
         });
       }
@@ -89,13 +68,10 @@ export const routes = {
     {
       path: 'blog/posts/:postId',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'SinglePostView Landing require.ensure error', error
-            );
-          }
-          const SinglePostView = require('../containers/Blog/SinglePostView/SinglePostView');
+        require.ensure([], (require) => {
+          const SinglePostView = require(
+            '../containers/Blog/SinglePostView/SinglePostView'
+          ).default;
           callback(null, SinglePostView);
         });
       }
@@ -103,13 +79,10 @@ export const routes = {
     {
       path: 'resume/view',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'ResumePDF Landing require.ensure error', error
-            );
-          }
-          const ResumePDF = require('../containers/ResumePDF/ResumePDF');
+        require.ensure([], (require) => {
+          const ResumePDF = require(
+            '../containers/ResumePDF/ResumePDF'
+          ).default;
           callback(null, ResumePDF);
         });
       }
@@ -117,13 +90,8 @@ export const routes = {
     {
       path: 'services',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'ServicesPage Landing require.ensure error', error
-            );
-          }
-          const ServicesPage = require('../containers/ServicesPage/ServicesPage');
+        require.ensure([], (require) => {
+          const ServicesPage = require('../containers/ServicesPage/ServicesPage').default;
           callback(null, ServicesPage);
         });
       }
@@ -131,13 +99,8 @@ export const routes = {
     {
       path: 'notfound',
       getComponent(location, callback) {
-        require.ensure([], (error) => {
-          if (error) {
-            return console.error( // eslint-disable-line
-              'NotFound Landing require.ensure error', error
-            );
-          }
-          const NotFound = require('../containers/NotFound/NotFound');
+        require.ensure([], (require) => {
+          const NotFound = require('../containers/NotFound/NotFound').default;
           callback(null, NotFound);
         });
       }

@@ -1,12 +1,15 @@
 .bar-chart {
-    position: relative;
-    margin-top: 40px
+  position: relative;
+  margin-top: 40px
 }
 
 .bar-chart>.item {
-    position: relative;
-    margin-bottom: 40px;
-    width: 100%
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
 }
 
 .bar-chart>.item:last-child {
@@ -14,50 +17,53 @@
 }
 
 .bar-chart>.item>h4 {
-    margin-bottom: 18px;
-    letter-spacing: 1px
+  margin-bottom: 18px;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 1280px) {
-    .bar-chart>.item>h4 {
-        margin-bottom:12px
-    }
+  .bar-chart>.item>h4 {
+      margin-bottom:12px;
+  }
 }
 
 .bar-chart>.item>.bar {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 20px;
-    margin-top: 3px;
-    border-radius: 2px;
-    background-color: #a1a1a1
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin-top: 3px;
+  border-radius: 2px;
+  background-color: #a1a1a1;
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
 }
 
 .bar-chart>.item>.bar>.item-progress {
-    z-index: 5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1%;
-    height: 100%;
-    border-radius: 2px;
-    background-color: #3b3b3b
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #3b3b3b;
 }
 
 .bar-chart>.item>.bar>.percent {
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    right: calc(100% - 40px);
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    background-color: rgba(0, 216, 255, .9);
-    border-radius: 4px;
-    color: white;
-    text-align: center;
-    font-family: 'Lato';
-    font-weight: bold;
-    line-height: 40px;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 40px);
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background-color: rgba(0, 216, 255, .9);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  font-family: 'Lato';
+  font-weight: bold;
+  line-height: 40px;
 }

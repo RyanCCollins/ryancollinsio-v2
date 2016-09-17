@@ -55,7 +55,7 @@
     "dev": "`npm bin`/webpack-dev-server",
     "lint": "`npm bin`/eslint . --ext .js --ext .jsx",
     "backend": "node keystone.js",
-    "deploy": "NODE_ENV=production `npm bin`/webpack -p",
+    "deploy": "NODE_ENV=production `npm bin`/webpack",
     "start": "npm run dev && npm run backend",
     "clean": "rm -rf app/dist app/build"
   },

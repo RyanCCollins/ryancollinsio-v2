@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import RouterApp from './utils/routes';
-import { history } from '../store/store';
+import { history } from './store/store';
 import { routes } from './utils/routes';
 import { match } from 'react-router';
 import '../styles/styles.scss';
