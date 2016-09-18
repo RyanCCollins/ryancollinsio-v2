@@ -48,7 +48,7 @@ class Portfolio extends Component {
     } = this.props;
     if (index === projects.length - 1) {
       const { endLoad } = this.props;
-      serverLatency(3000).then(() => {
+      serverLatency(2000).then(() => {
         endLoad();
       });
     }
