@@ -9,6 +9,11 @@ import {
 const Styles = {
   hidden: {
     display: 'none'
+  },
+  centered: {
+    display: 'flex',
+    alignContent: 'center',
+    justifyContent: 'center'
   }
 };
 
@@ -26,7 +31,10 @@ class CategoryFilter extends React.Component {
       selectedCategory
     } = this.props;
     return (
-      <div className="category-list" style={categories.length ? {} : Styles.hidden}>
+      <div
+        className="category-list"
+        style={categories.length ? Styles.centered : Styles.hidden}
+      >
         <Callout>
           <span className="filter-label">
             <p className="filter-label__text">Filter {listName || 'Items'} by Category</p>
@@ -35,7 +43,7 @@ class CategoryFilter extends React.Component {
             <CategoryLink
               category={{ name: 'All' }}
               onClick={this.handleOnSelectCategory.bind(this, { name: 'All', value: 'all' })}
-              isActive={selectedCategory.name == 'All'}
+              isActive={selectedCategory.name == 'All'} // eslint-disable-line
             >
               All
             </CategoryLink>
