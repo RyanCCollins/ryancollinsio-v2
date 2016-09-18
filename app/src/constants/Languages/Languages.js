@@ -17,7 +17,7 @@ const Languages = [
   {
     id: 3,
     name: 'Python',
-    percent: 77
+    percent: 87
   },
   {
     id: 4,

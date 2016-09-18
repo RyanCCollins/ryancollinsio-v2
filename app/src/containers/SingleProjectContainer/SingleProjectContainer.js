@@ -19,7 +19,7 @@ class SingleProjectContainer extends React.Component {
       params,
       projects
     } = this.props;
-    const projectId = params.projectId;
+    const projectId = parseInt(params.projectId, 10);
     const filteredProjects = projects.filter((item) =>
       item.id === projectId
     );
