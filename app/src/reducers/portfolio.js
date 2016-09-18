@@ -1,7 +1,9 @@
 import {
   SELECT_PROJECT_CATEGORY,
   SET_PORTFOLIO_SEARCH,
-  CLEAR_PORTFOLIO_SEARCH
+  CLEAR_PORTFOLIO_SEARCH,
+  PORTFOLIO_BEGIN_LOADING,
+  PORTFOLIO_END_LOADING
 } from '../actions/actionCreators';
 
 function portfolio(state = {
@@ -9,7 +11,8 @@ function portfolio(state = {
   isSearching: false,
   searchTerm: '',
   categories: [],
-  selectedCategory: { name: 'All', value: 'all', index: -1 }
+  selectedCategory: { name: 'All', value: 'all', index: -1 },
+  isLoading: true
 }, action) {
   switch (action.type) {
     case SELECT_PROJECT_CATEGORY:
@@ -23,6 +26,14 @@ function portfolio(state = {
     case CLEAR_PORTFOLIO_SEARCH:
       return Object.assign({}, state, {
         searchTerm: null
+      });
+    case PORTFOLIO_BEGIN_LOADING:
+      return Object.assign({}, state, {
+        isLoading: true
+      });
+    case PORTFOLIO_END_LOADING:
+      return Object.assign({}, state, {
+        isLoading: false
       });
     default:
       return state;

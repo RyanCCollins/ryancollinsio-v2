@@ -28,15 +28,16 @@ const LoadingIndicator = ({
         </div>
       </div>
     :
-      <div>
-        {children}
-      </div>
+      <noscript />
     }
+    <div style={isLoading ? { display: 'none' } : {}}>
+      {children}
+    </div>
   </div>
 );
 
 LoadingIndicator.propTypes = {
-  children: React.Children,
+  children: PropTypes.node,
   isLoading: PropTypes.bool.isRequired
 };
 

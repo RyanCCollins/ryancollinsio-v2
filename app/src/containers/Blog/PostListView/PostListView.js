@@ -59,12 +59,8 @@ class PostListView extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelectCategory = this.handleSelectCategory.bind(this);
-    this.finishLoading = this.finishLoading.bind(this);
     this.handleChangePage = this.handleChangePage.bind(this);
     this.handleClose = this.handleClose.bind(this);
-    this.state = {
-      isLoading: props.isFetching
-    };
   }
   componentDidMount() {
     const {
@@ -74,9 +70,6 @@ class PostListView extends React.Component {
     if (!posts.items || posts.items.length === 0) {
       fetchPosts();
     }
-  }
-  finishLoading() {
-    this.setState({ isLoading: false });
   }
   handleChangePage() {
     //TODO: Implement me!!
@@ -119,7 +112,7 @@ class PostListView extends React.Component {
           <MessagesSection messages={messages} errors={errors} onClose={this.handleClose} />
           <h1 className="section-header">From the Blog</h1>
           <SectionSubTitle
-            title={selectedCategory.name == 'All' ?
+            title={selectedCategory.name == 'All' ? // eslint-disable-line
               'All Posts'
             :
               `Selected Category: ${selectedCategory.name}`

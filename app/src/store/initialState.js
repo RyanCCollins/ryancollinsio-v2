@@ -18,7 +18,8 @@ const initialState = {
     projects,
     searchTerm: '',
     categories: projectCategories,
-    selectedCategory: { name: 'All', value: 'all' }
+    selectedCategory: { name: 'All', value: 'all' },
+    isLoading: true
   },
   contact: {
     params: {},

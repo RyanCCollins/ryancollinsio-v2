@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Row, Column, Thumbnail } from 'react-foundation';
+import { Row, Column } from 'react-foundation';
 import './Portfolio.scss';
 import PortfolioOverlay from './PortfolioOverlay';
 import elementInViewport from '../../../lib/isVisible';
@@ -58,7 +58,6 @@ class PortfolioItem extends React.Component {
   render() {
     const {
       project,
-      projectCount,
       onLoad,
       i
     } = this.props;
@@ -80,7 +79,7 @@ class PortfolioItem extends React.Component {
             }
           >
             <PerfectImg
-              onLoad={project.id === projectCount ? onLoad : undefined}
+              onLoad={onLoad}
               src={project.featureImage}
             />
             <PortfolioOverlay
@@ -96,7 +95,6 @@ class PortfolioItem extends React.Component {
 PortfolioItem.propTypes = {
   project: PropTypes.object.isRequired,
   onLoad: PropTypes.func.isRequired,
-  projectCount: PropTypes.number.isRequired,
   i: PropTypes.number.isRequired
 };
 

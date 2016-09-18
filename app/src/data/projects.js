@@ -295,7 +295,7 @@ const projects = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     category: 'frontend',
     title: 'Open Source Boilerplates',
     type: 'Best Practices Boilerplates and Generators',

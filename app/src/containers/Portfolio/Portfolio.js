@@ -9,51 +9,28 @@ import {
 import { CategoryFilterContainer } from '../../containers';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import serverLatency from 'utils/server';
 import {
   selectProjectCategory,
   setPortfolioSearch,
-  clearPortfolioSearch
+  clearPortfolioSearch,
+  portfolioLoading,
+  endPortfolioLoading,
+  beginPortfolioLoading
 } from '../../actions/actionCreators';
-
-// filterProjects :: [Object] -> String -> [Object]
-const filterProjects = (
-  projects,
-  category
-) =>
-  category.value == 'all' ?
-    projects
-  :
-    projects.filter(project =>
-      project.category === category.value
-    );
-
-// search :: [Object] -> String -> Object
-const search = (projects, searchTerm) =>
-  projects.filter((item) =>
-    item.title.includes(searchTerm) || item.category.includes(searchTerm)
-  );
+import { filterProjects } from './helpers';
 
 class Portfolio extends Component {
   constructor(props) {
     super(props);
-    this.handleEndLoad = this.handleEndLoad.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleClearSearch = this.handleClearSearch.bind(this);
     this.handleSelectCategory = this.handleSelectCategory.bind(this);
-    this.handleFakeLoading = this.handleFakeLoading.bind(this);
-    this.state = {
-      isLoading: true
-    };
+    this.handleEndLoad = this.handleEndLoad.bind(this);
   }
   componentDidMount() {
-    this.handleFakeLoading();
-  }
-  handleFakeLoading() {
-    this.setState({ isLoading: true });
-    this.handleEndLoad();
-  }
-  handleEndLoad() {
-    setTimeout(this.setState({ isLoading: false }), 2000);
+    const { startLoad } = this.props;
+    startLoad();
   }
   handleSearch(text) {
     const { onSetSearchTerm } = this.props;
@@ -65,30 +42,38 @@ class Portfolio extends Component {
     const { onClearSearch } = this.props;
     onClearSearch();
   }
+  handleEndLoad(index) {
+    const {
+      projects
+    } = this.props;
+    if (index === projects.length - 1) {
+      const { endLoad } = this.props;
+      serverLatency(3000).then(() => {
+        endLoad();
+      });
+    }
+  }
   handleSelectCategory(category) {
     const {
       onSelectCategory
     } = this.props;
     onSelectCategory(category);
-    this.handleFakeLoading();
   }
   render() {
-    const {
-      isLoading
-    } = this.state;
     const {
       selectedCategory,
       categories,
       projects,
-      searchTerm
+      searchTerm,
+      isLoading
     } = this.props;
     const visibleProjects = filterProjects(projects, selectedCategory);
-    const searchFilteredProducts = search(projects, searchTerm);
     return (
-      <div>
-        <LoadingIndicator isLoading={isLoading} />
+      <LoadingIndicator isLoading={isLoading}>
         <div className="portfolio-container">
-          <h1 className="section-header text-grey portfolio__section-header">Portfolio</h1>
+          <h1 className="section-header text-grey portfolio__section-header">
+            Portfolio
+          </h1>
           <Divider />
           <CategoryFilterContainer
             listName="Projects"
@@ -109,7 +94,7 @@ class Portfolio extends Component {
             onLoad={this.handleEndLoad}
           />
         </div>
-      </div>
+      </LoadingIndicator>
     );
   }
 }
@@ -121,7 +106,11 @@ Portfolio.propTypes = {
   selectedCategory: PropTypes.object.isRequired,
   searchTerm: PropTypes.string,
   onSetSearchTerm: PropTypes.func.isRequired,
-  onClearSearch: PropTypes.func.isRequired
+  onClearSearch: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  onLoad: PropTypes.func.isRequired,
+  endLoad: PropTypes.func.isRequired,
+  startLoad: PropTypes.func.isRequired
 };
 
 // mapStateToProps :: {State} -> {Props}
@@ -129,7 +118,8 @@ const mapStateToProps = (state) => ({
   projects: state.portfolio.projects,
   categories: state.portfolio.categories,
   selectedCategory: state.portfolio.selectedCategory,
-  searchTerm: state.portfolio.searchTerm
+  searchTerm: state.portfolio.searchTerm,
+  isLoading: state.portfolio.isLoading
 });
 
 // mapDispatchToProps :: {Dispatch} -> {Props}
@@ -137,7 +127,10 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators({
     onSelectCategory: (category) => selectProjectCategory(category),
     onSetSearchTerm: (searchTerm) => setPortfolioSearch(searchTerm),
-    onClearSearch: () => clearPortfolioSearch()
+    onClearSearch: () => clearPortfolioSearch(),
+    onLoad: () => portfolioLoading(),
+    endLoad: () => endPortfolioLoading(),
+    startLoad: () => beginPortfolioLoading()
   }, dispatch);
 
 export default connect(

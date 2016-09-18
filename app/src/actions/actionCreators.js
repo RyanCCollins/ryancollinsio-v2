@@ -205,6 +205,19 @@ export const clearPortfolioSearch = () => ({
   type: CLEAR_PORTFOLIO_SEARCH
 });
 
+export const PORTFOLIO_BEGIN_LOADING = 'PORTFOLIO_BEGIN_LOADING';
+export const PORTFOLIO_END_LOADING = 'PORTFOLIO_END_LOADING';
+
+// beginPortfolioLoading :: None -> {Action}
+export const beginPortfolioLoading = () => ({
+  type: PORTFOLIO_BEGIN_LOADING
+});
+
+// endPortfolioLoading :: None -> {Action}
+export const endPortfolioLoading = () => ({
+  type: PORTFOLIO_END_LOADING
+});
+
 // clearContactMessages :: None -> Action
 export const clearContactMessages = () => ({
   type: CLEAR_CONTACT_MESSAGES

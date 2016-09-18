@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import './PerfectImg.scss';
 
 class PerfectImg extends React.Component {
@@ -12,17 +12,28 @@ class PerfectImg extends React.Component {
   }
   render() {
     const {
-      src
+      src,
+      onLoad
     } = this.props;
     return (
       <figure>
         <picture className="intrinsic intrinsic--4x3">
           <source media="(min-width: 500px)" srcSet={src} />
-          <img className="intrinsic-item" srcSet={src} alt={this.stripNameFromSrc(src)} />
+          <img
+            onLoad={onLoad}
+            className="intrinsic-item"
+            srcSet={src}
+            alt={this.stripNameFromSrc(src)}
+          />
         </picture>
       </figure>
     );
   }
 }
+
+PerfectImg.propTypes = {
+  src: PropTypes.string.isRequired,
+  onLoad: PropTypes.func
+};
 
 export default PerfectImg;

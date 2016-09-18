@@ -50,10 +50,13 @@ module.exports = {
     },
     {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract({
-        fallbackLoader: 'style-loader',
-        loader: 'css-loader!postcss-loader'
-      })
+      loader: isDeveloping ?
+        'style-loader!css-loader!postcss-loader'
+      :
+        ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!postcss-loader'
+        })
     },
     {
       test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
