@@ -9,7 +9,7 @@ import {
 import { CategoryFilterContainer } from '../../containers';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import serverLatency from 'utils/server';
+import serverLatency from '../../utils/server';
 import {
   selectProjectCategory,
   setPortfolioSearch,
