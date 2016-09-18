@@ -4,6 +4,7 @@ const HtmlwebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
 const ROOT_PATH = path.resolve(__dirname);
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isDeveloping = env !== 'production';
@@ -39,11 +40,20 @@ module.exports = {
     },
     {
       test: /\.scss$/,
-      loaders: ['style','css', 'postcss', 'sass']
+      loader: isDeveloping ?
+        'style-loader!css-loader!postcss-loader!sass-loader'
+      :
+        ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!postcss-loader!sass-loader'
+        })
     },
     {
       test: /\.css$/,
-      loader: "style-loader!css-loader!postcss-loader"
+      loader: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        loader: 'css-loader!postcss-loader'
+      })
     },
     {
       test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
@@ -99,6 +109,7 @@ module.exports = {
   },
   plugins: process.env.NODE_ENV === 'production' ?
   [
+    new ExtractTextPlugin('[name].[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       children: true,

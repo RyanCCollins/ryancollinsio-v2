@@ -93,6 +93,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "bookshelf": "^0.9.1",
     "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^v2.0.0-beta.3",
     "foundation-sites": "^6.2.3",
     "history": "^1.14.0",
     "html-webpack-plugin": "^2.7.1",
@@ -147,7 +148,7 @@
     "style-loader": "^0.13.0",
     "svg-react-loader": "^0.3.5",
     "underscore": "^1.8.3",
-    "webpack": "^1.12.9",
+    "webpack": "^v2.1.0-beta.19",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   },
