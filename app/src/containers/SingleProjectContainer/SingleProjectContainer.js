@@ -21,7 +21,7 @@ class SingleProjectContainer extends React.Component {
     } = this.props;
     const projectId = params.projectId;
     const filteredProjects = projects.filter((item) =>
-      item.id == projectId
+      item.id === projectId
     );
     this.setProject(filteredProjects[0]);
   }
@@ -29,13 +29,18 @@ class SingleProjectContainer extends React.Component {
     this.setState({ selectedProject: project });
   }
   render() {
+    const {
+      selectedProject
+    } = this.state;
     return (
       <div className="single-project-container">
-        <LoadingIndicator isLoading={this.state.selectedProject === null}>
-          <SingleProject
-            {...this.props}
-            project={this.state.selectedProject}
-          />
+        <LoadingIndicator isLoading={typeof selectedProject === 'undefined'}>
+          {selectedProject &&
+            <SingleProject
+              {...this.props}
+              project={this.state.selectedProject}
+            />
+          }
         </LoadingIndicator>
       </div>
     );
