@@ -40,7 +40,11 @@
 }
 
 .button__github {
-  margin: 10px;
+  margin-left: 10px;
+  @media screen and (max-width: 500px) {
+    margin: 10px;
+    margin-left: 0;
+  }
 }
 
 .button__link {

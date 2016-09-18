@@ -4,6 +4,12 @@ import { Provider } from 'react-redux';
 import store, { history } from '../store/store';
 import ReduxToastr from 'react-redux-toastr';
 import App from '../components/App';
+import { install } from 'offline-plugin/runtime';
+
+// Install the service worker
+if (typeof document !== 'undefined') {
+  install();
+}
 
 if (typeof module !== 'undefined' && module.require) {
   if (typeof require.ensure === 'undefined') {
