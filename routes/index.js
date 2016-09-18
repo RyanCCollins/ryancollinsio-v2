@@ -2,7 +2,6 @@ import keystone from 'keystone';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import path from 'path';
 import express from 'express';
 import config from '../webpack.config.js';
 import createTemplate from './utils/createTemplate';
@@ -10,6 +9,8 @@ import createTemplate from './utils/createTemplate';
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const importRoutes = keystone.importer(__dirname);
 const compiler = webpack(config);
+const mainHash = 'ad807fa5016f97e62e7d';
+const vendorHash = '158ebf10428e11d2ccc7';
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -79,7 +80,7 @@ exports = module.exports = function (app) {
             </Provider>
           );
           res.status(200)
-            .send(createTemplate(body, store.getState()));
+            .send(createTemplate(body, store.getState(), mainHash, vendorHash));
         } else {
           res.status(400).send('Not Found 🤔');
         }

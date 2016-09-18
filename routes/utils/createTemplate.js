@@ -1,4 +1,4 @@
-const createTemplate = (html, initialState) =>
+const createTemplate = (html, initialState, mainHash, vendorHash) =>
   `
   <!DOCTYPE html>
   <html lang="en">
@@ -32,8 +32,8 @@ const createTemplate = (html, initialState) =>
       </head>
       <body>
         <div id="app">${html}</div>
-          <script type="text/javascript" src="/vendor.158ebf10428e11d2ccc7.js"></script>
-          <script type="text/javascript" src="/main.c3ec5ca613eb2680d87b.js"></script>
+        <script type="text/javascript" src="/main.${mainHash}.js"></script>
+        <script type="text/javascript" src="/vendor.${vendorHash}.js"></script>
           <script>
             window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
           </script>
