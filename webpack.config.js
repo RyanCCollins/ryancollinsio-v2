@@ -146,7 +146,7 @@ module.exports = {
     }),
     new OfflinePlugin({
       relativePaths: false,
-      publicPath: '/',
+      publicPath: '/public',
 
       excludes: [],
 
@@ -171,6 +171,26 @@ module.exports = {
     new HtmlwebpackPlugin({
       title: 'React Weekly',
       template: 'index.html'
+    }),
+    new OfflinePlugin({
+      relativePaths: false,
+      publicPath: '/public',
+
+      excludes: [],
+
+      caches: {
+        main: [':rest:'],
+
+        // All chunks marked as `additional`, loaded after main section
+        // and do not prevent SW to install. Change to `optional` if
+        // do not want them to be preloaded at all (cached only when first loaded)
+        additional: ['*.chunk.js'],
+      },
+
+      // Removes warning for about `additional` section usage
+      safeToUseOptionalCaches: true,
+
+      AppCache: false,
     }),
   ]
 }
