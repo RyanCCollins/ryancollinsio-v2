@@ -4,6 +4,7 @@ import RouterApp from './utils/routes';
 import { history } from './store/store';
 import { routes } from './utils/routes';
 import { match } from 'react-router';
+import { install } from 'offline-plugin/runtime';
 import '../styles/styles.scss';
 
 match({ history, routes },
@@ -13,3 +14,5 @@ match({ history, routes },
     }
     render(<RouterApp {...renderProps} />, document.getElementById('app'));
   });
+
+install();
