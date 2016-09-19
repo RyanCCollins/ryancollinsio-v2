@@ -8,7 +8,6 @@ import initialState from './initialState';
 
 const isClient = typeof document !== 'undefined';
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const preloadedState = isClient ? window.__INITIAL_STATE__ : initialState;
 
 const loggerMiddleware = createLogger();
 const middlewares = [thunkMiddleware];
@@ -32,7 +31,7 @@ const composedEnhancers = compose(
 
 const store = createStore(
   rootReducer,
-  preloadedState,
+  initialState,
   composedEnhancers,
 );
 
