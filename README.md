@@ -7,7 +7,7 @@
 
 Rewrite of my professional portfolio and blog utilizing React, Redux, Keystone, Node, MongoDb, Foundation, etc.
 
-Running a Node API with a Mongo DB backed database.  I couldn't find blogging software suitable to my needs, so I wrote my own.  Blog posts are loaded through the admin dashboard and served through the API to redux.  On the front end, the posts are loaded by React dynamically using Redux's connect method and parsed as Markdown.
+A performance optimized React single page app and NodeJS backend.  Take a look at my [Medium Article](https://medium.com/@ryancollinsio/performance-optimizing-a-react-single-page-app-a68985fa72cc#.ngv8a88mr) about performance optimizing React SPAs.
 
 ## Getting Started
 The application utilizes Webpack and Webpack dev server.  The package.json is setup with all of the install and other scripts to make setup running and building a breeze.  Once running, view the app at: http://localhost:8080/
