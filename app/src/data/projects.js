@@ -164,11 +164,6 @@ const projects = [
       'Wrote an Express JS Server to serve content in real-time with increased I/O performance',
       'Integrated custom Python scripts in order to scrape the medium API for posts for the site.'
     ],
-    technicalReview: {
-      snippet: "I really appreciate your hard work with both Backend and Frontend! Very professionally built app and very enjoyable to use. Keep it up!",
-      url: 'https://review.udacity.com/#!/reviews/221700',
-      author: 'Expert Code Reviewer'
-    },
     technicalInformation: {
       description: "Built with functional JavaScript, ES2015, React, Redux, Grommet, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Built a custom GraphQL back end schema.",
       tags: [
@@ -280,6 +275,11 @@ const projects = [
       'Utilized Docker to encourage maximum scalability and build automation.',
       'As always, followed the Ruby style guide and best practices.'
     ],
+    technicalReview: {
+      snippet: "I really appreciate your hard work with both Backend and Frontend! Very professionally built app and very enjoyable to use. Keep it up!",
+      url: 'https://review.udacity.com/#!/reviews/221700',
+      author: 'Expert Code Reviewer'
+    },
     technicalInformation: {
       description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Built a Rails API to serve and persist data for the application.",
       tags: [
