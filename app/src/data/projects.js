@@ -1,6 +1,151 @@
 const projects = [
   {
     id: 0,
+    category: 'backend',
+    title: 'Corporate Analytic Dashboard',
+    type: 'Single Page App and GraphQL Backend',
+    description: `Blazingly fast Corporate analytic dashboard application,
+      built with a focus on component-oriented design,
+      UI  / UX, Accessibility and performance optimization.
+      Implemented a GraphQL server with subscriptions to serve
+      data in realtime over web sockets.  `,
+    milestones: [
+      'Incorporated best practices to build an interactive application, including data visualizations and a mobile responsive layout.',
+      'Integrated GraphQL with Apollo Client to load realtime data from a NodeJS server.',
+      'Utilized UI / UX and Accessibility best practices',
+      'Built dozens of reusable React components with 100% test coverage',
+      'Utilized Server rendered React and Code Chunking to increase performance exponentially.',
+      'As always, followed the AirBnB React and JavaScript style guides.',
+    ],
+    technicalReview: {
+      snippet: "Excellent work, all data are very nicely presented in the DOM! ... Great work with GraphQl and React / Redux!",
+      url: 'https://review.udacity.com/#!/reviews/240841',
+      author: 'Expert Code Reviewer'
+    },
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, Grommet, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Jest and Enzyme to provide high quality code.  Built a custom GraphQL back end schema.",
+      tags: [
+        'React',
+        'Jest',
+        'Redux',
+        'GraphQL',
+        'Flux',
+        'ES2015',
+        'ExpressJS'
+      ]
+    },
+    designPatterns: {
+      description: 'The app utilizes A11y accessibility and UX best practices.  It uses many performance enhancement techniques to make it blindingly performant.  It also uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  On the back end, it follows the micro-service architecture, serving data via a single endpoint with GraphQL.',
+      tags: [
+        'A11y',
+        'Webpack Chunking',
+        'CSS Chunking',
+        'Performance',
+        'GraphQL',
+        'Flux',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'Micro services'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/corporate-dashboard',
+    appStoreUrl: '',
+    projectUrl: 'https://corporate-dashboard-client.herokuapp.com/',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-mockup.jpg?raw=true',
+    caption: 'Performance Oriented SPA, React & GraphQL',
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/home-nav.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Home Page Top With Nav',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/home-nav.png?raw=true'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/home.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Home Page Top Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/home.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/key-metrics-main.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Key Metrics Page Top Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/key-metrics-main.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/key-metrics-bottom.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Key Metrics Page Bottom Section',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/key-metrics-bottom.png?raw=true'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/geospatial.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Geospatial Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/geospatial.png?raw=true'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/data-view-main.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Data View Page Main',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/data-view-main.png?raw=true'
+        }
+      },
+      {
+        id: 6,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/data-view-search.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Data View Page Search',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/data-view-search.png?raw=true'
+        }
+      },
+      {
+        id: 7,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/data-page-filter.png?raw=true',
+        width: 1200,
+        height: 933,
+        aspectRatio: 1.28,
+        lightboxImage: {
+          caption: 'Data View Page Filter',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/corporate-dashboard/main-images/data-page-filter.png?raw=true'
+        }
+      }
+    ]
+  },
+  {
+    id: 1,
     category: 'frontend',
     title: 'React Weekly',
     type: 'Front End Single Page App',
@@ -9,7 +154,7 @@ const projects = [
       Custom built back end running GraphQL, Python and Node JS. `,
     milestones: [
       'Front End Milestones:',
-      'Implemented Advanced Webpack Code Chunking and server rendering to increase performance exponentiallt',
+      'Implemented Advanced Webpack Code Chunking and server rendering to increase performance exponentially',
       'Followed the feature-first approach, whereby components exist in isolation from the app, encouraging encapsulation and reusability.',
       'Wrote dozens of scalable react components and connected containers.',
       'Followed functional programming best practices, utilizing the immutable architecture and encapsulating business logic in the Redux store.',
@@ -19,6 +164,11 @@ const projects = [
       'Wrote an Express JS Server to serve content in real-time with increased I/O performance',
       'Integrated custom Python scripts in order to scrape the medium API for posts for the site.'
     ],
+    technicalReview: {
+      snippet: "I really appreciate your hard work with both Backend and Frontend! Very professionally built app and very enjoyable to use. Keep it up!",
+      url: 'https://review.udacity.com/#!/reviews/221700',
+      author: 'Expert Code Reviewer'
+    },
     technicalInformation: {
       description: "Built with functional JavaScript, ES2015, React, Redux, Grommet, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and Mocha / JSDOM to provide high quality code.  Built a custom GraphQL back end schema.",
       tags: [
@@ -32,7 +182,7 @@ const projects = [
       ]
     },
     designPatterns: {
-      description: 'Most notably, the app utilizes A11y accessibility and UX best practices.  It also uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  On the back end, it follows the micro-service architecture, serving data via a sinlge endpoint with GraphQL.',
+      description: 'Most notably, the app utilizes A11y accessibility and UX best practices.  It also uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  On the back end, it follows the micro-service architecture, serving data via a single endpoint with GraphQL.',
       tags: [
         'A11y',
         'Webpack Chunking',
@@ -108,7 +258,7 @@ const projects = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     category: 'frontend',
     title: 'Restaurant Reviewer App',
     type: 'A11y Best Practices',
@@ -295,7 +445,7 @@ const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     category: 'frontend',
     title: 'Open Source Boilerplates',
     type: 'Best Practices Boilerplates and Generators',
