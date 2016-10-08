@@ -1,20 +1,11 @@
-function elementInViewport(el) {
-  let top = el.offsetTop;
-  let left = el.offsetLeft;
-  let width = el.offsetWidth;
-  let height = el.offsetHeight;
-
-  while(el.offsetParent) {
-    el = el.offsetParent;
-    top += el.offsetTop;
-    left += el.offsetLeft;
-  }
-
+function elementInViewport(element) {
+  const rect = element.getBoundingClientRect();
   return (
-    top < (window.pageYOffset + window.innerHeight) &&
-    left < (window.pageXOffset + window.innerWidth) &&
-    (top + height) > window.pageYOffset &&
-    (left + width) > window.pageXOffset
+    rect.top >= 0 && rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight ||
+        document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth ||
+            document.documentElement.clientWidth)
   );
 }
 

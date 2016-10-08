@@ -27,9 +27,14 @@ class PortfolioItem extends React.Component {
       isScrolledIntoView: i === 0
     };
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleFadeInAfterTimeout = this.handleFadeInAfterTimeout.bind(this);
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    if (window.addEventListener) {
+      window.addEventListener('scroll', this.handleScroll, true);
+    } else {
+      window.attachEvent('onscroll', this.handleScroll, true);
+    }
     /* Call the handle scroll right away if it's the first project*/
     const { isScrolledIntoView } = this.state;
     if (isScrolledIntoView) {
@@ -46,6 +51,7 @@ class PortfolioItem extends React.Component {
     const element = document.getElementById(selector);
     if (elementInViewport(element)) {
       if (this.state.needsAnimation === true) {
+        console.log(`Element ${element} is in viewport`);
         this.setState({
           needsAnimation: false,
           isScrolledIntoView: true,
@@ -54,6 +60,14 @@ class PortfolioItem extends React.Component {
         });
       }
     }
+  }
+  handleFadeInAfterTimeout() {
+    setTimeout(() => {
+      this.setState({
+        needsAnimation: false,
+        isScrolledIntoView: true
+      });
+    }, 5000);
   }
   render() {
     const {

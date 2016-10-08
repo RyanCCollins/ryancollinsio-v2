@@ -6,6 +6,9 @@ import {
   LoadingIndicator,
   ExpandingSearch
 } from '../../components';
+import {
+  Footer
+} from '../../containers';
 import { CategoryFilterContainer } from '../../containers';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -48,7 +51,7 @@ class Portfolio extends Component {
     } = this.props;
     if (index === projects.length - 1) {
       const { endLoad } = this.props;
-      serverLatency(2000).then(() => {
+      serverLatency(1200).then(() => {
         endLoad();
       });
     }
@@ -94,6 +97,7 @@ class Portfolio extends Component {
             onLoad={this.handleEndLoad}
           />
         </div>
+        <Footer />
       </LoadingIndicator>
     );
   }
