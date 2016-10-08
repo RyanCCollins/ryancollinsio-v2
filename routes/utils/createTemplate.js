@@ -29,11 +29,11 @@ const createTemplate = (html, initialState) =>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Audiowide:100,400" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,300,700|Lato:400,300,700" rel="stylesheet">
-      <link href="/main.cbd30fbe5a2c95c0e719a6f2365b5808.css" rel="stylesheet">
+      <link href="/main.e253a405a3ad3bcdefbbff89774d4bfe.css" rel="stylesheet">
     </head>
     <body>
       <div id="app">${html}</div>
-      <script type="text/javascript" src="/main.6ab28fbbe293f01d3506.js"></script>
+      <script type="text/javascript" src="/main.a7a7b2d3a57a8f667077.js"></script>
       <script>
         window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
       </script>

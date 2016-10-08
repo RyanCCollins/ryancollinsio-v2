@@ -447,6 +447,150 @@ const projects = [
   {
     id: 3,
     category: 'frontend',
+    title: 'Meetup Event Planner',
+    type: 'React Single Page App',
+    description: `Built a dynamic single page application using React and
+      Redux showcasing best practices for building dynamic and interactive web forms built
+      to increase conversions. Built a responsive web application that allows the user to establish a meet-up event.`,
+    milestones: [
+      'Front End Milstones: ',
+      'Followed ES2015 best practices',
+      'Crafted reusable modules with 100% test coverage using webpack as a module bundler',
+      'Created highly dynamic User Interface, including Web forms and other interactive content',
+      'Followed UX and A11y Accessibility Best Practices',
+      'Created several dozen reusable stateful and stateless functional React components using best practices',
+      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality.',
+      'Back End Milestones: ',
+      'Built a scalable GraphQL on Rails API to provide data and authentication to the site',
+      'Utilized a decoupled and service oriented architecture for maximum scalability',
+      'Wrote tests utilizing RSpec to eliminate Regressions'
+    ],
+    technicalInformation: {
+      description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Built a highly scalable GraphQL on Rails backend to provide data and authentication to the site.",
+      tags: [
+        'React',
+        'Redux',
+        'Flux',
+        'ES2015',
+        'CSS Modules',
+        'GraphQL',
+        'Rails',
+        'Relay',
+        'Mocha',
+        'Expect',
+        'React-Redux'
+      ]
+    },
+    designPatterns: {
+      description: 'This app uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  Follows best practices for stateless functional components.  Implements a service oriented architecture using GraphQL and Ruby on Rails for maximum performance and scalability',
+      tags: [
+        'Flux',
+        'GraphQL',
+        'Service Oriented',
+        'Unidirectional Data Flow',
+        'Functional Reactive Programming',
+        'Stateless Functional Components'
+      ]
+    },
+    repositoryURL: 'https://github.com/RyanCCollins/meetup-event-planner',
+    appStoreUrl: '',
+    projectUrl: 'http://meetup-event-planner.herokuapp.com/',
+    featureImage: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/main-mock.png?raw=true',
+    caption: 'Rails, React & GraphQL App Highlighting Interactivity and Performance.',
+    images: [
+      {
+        id: 0,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/main-top.png?raw=true',
+        width: 1138,
+        height: 916,
+        aspectRatio: 1.242,
+        lightboxImage: {
+          caption: 'Main Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/main-top.png?raw=true'
+        }
+      },
+      {
+        id: 1,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/login-main.png?raw=true',
+        width: 1138,
+        height: 916,
+        aspectRatio: 1.242,
+        lightboxImage: {
+          caption: 'Log In Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/login-main.png?raw=true'
+        }
+      },
+      {
+        id: 2,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/signup.png?raw=true',
+        width: 1138,
+        height: 916,
+        aspectRatio: 1.242,
+        lightboxImage: {
+          caption: 'Sign Up Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/signup.png?raw=true'
+        }
+      },
+      {
+        id: 3,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/create-event-top.png?raw=true',
+        width: 1138,
+        height: 916,
+        aspectRatio: 1.242,
+        lightboxImage: {
+          caption: 'Create Event Form Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/create-event-top.png?raw=true'
+        }
+      },
+      {
+        id: 4,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/create-event-all.png?raw=true',
+        width: 1138,
+        height: 916,
+        aspectRatio: 1.242,
+        lightboxImage: {
+          caption: 'Create Event Form Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/create-event-all.png?raw=true'
+        }
+      },
+      {
+        id: 5,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/single-event-all.png?raw=true',
+        width: 1138,
+        height: 1390,
+        aspectRatio: 0.819,
+        lightboxImage: {
+          caption: 'Single Event Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/single-event-all.png?raw=true'
+        }
+      },
+      {
+        id: 6,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/main-all.png?raw=true',
+        width: 1138,
+        height: 1956,
+        aspectRatio: 0.58,
+        lightboxImage: {
+          caption: 'Main Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/main-all.png?raw=true'
+        }
+      },
+      {
+        id: 7,
+        src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/events-list.png?raw=true',
+        width: 1138,
+        height: 2505,
+        aspectRatio:  0.45,
+        lightboxImage: {
+          caption: 'Main Page',
+          src: 'https://github.com/RyanCCollins/cdn/blob/master/portfolio-image-gallery-images/meetup-event-planner/meetup-event-planner/events-list.png?raw=true'
+        }
+      }
+    ]
+  },
+  {
+    id: 10,
+    category: 'frontend',
     title: 'Open Source Boilerplates',
     type: 'Best Practices Boilerplates and Generators',
     description: `Released two open-source boilerplates, multiple scaffolding tools and React component generators using the knowledge and best
@@ -541,7 +685,7 @@ const projects = [
     ]
   },
   {
-    id: 10,
+    id: 20,
     category: 'frontend',
     title: 'Public Transportation',
     type: 'Offline First Single Page Web Application',
@@ -652,99 +796,6 @@ const projects = [
         lightboxImage: {
           caption: 'Help Page',
           src: 'https://github.com/RyanCCollins/cdn/blob/master/public-transportation/help.png?raw=true'
-        }
-      }
-    ]
-  },
-  {
-    id: 20,
-    category: 'frontend',
-    title: 'Meetup Event Planner',
-    type: 'React Single Page App',
-    description: `Built a dynamic single page application using React and
-      Redux showcasing best practices for building dynamic and interactive web forms built
-      to increase conversions. Built a responsive web application that allows the user to establish a meet-up event.`,
-    milestones: [
-      'Followed ES2015 best practices',
-      'Crafted reusable modules using webpack as a module bundler',
-      'Utilized cutting-edge functional reactive programming techniques',
-      'Authored a single page app utilizing React JS, Redux, among other notable JavaScript libraries',
-      'Created several dozen reusable stateful and stateless functional React components using best practices',
-      'As always, followed the AirBnB JSX and JavaScript style guides and utilized ESLint to provide exceptional style and code quality.',
-      'Wrote tests utilizing Mocha and the Expect assertion library to provide solid code and eliminate regressions.',
-      'Utilized the Flux unidirectional data architecture',
-      'Used CSS modules and followed the best practices for scalable React as noted by Max Stoibr'
-    ],
-    technicalInformation: {
-      description: "Built with functional JavaScript, ES2015, React, Redux, CSS Modules, following the unidirectional data-flow architecture.  Utilizes best practices for scaling of React Apps. Unit tests written with Expect and, Mocha and JSDOM to provide high quality code.  Uses the react-redux connect method to hook up react components to the redux store.",
-      tags: [
-        'React',
-        'Redux',
-        'Flux',
-        'ES2015',
-        'CSS Modules',
-        'Mocha',
-        'Expect',
-        'React-Redux'
-      ]
-    },
-    designPatterns: {
-      description: 'Most notably, this app uses the Flux unidirectional data-flow architecture and functional reactive programming techniques.  Follows best practices for stateless functional components.',
-      tags: [
-        'Flux',
-        'Unidirectional Data Flow',
-        'Functional Reactive Programming',
-        'Stateless Functional Components'
-      ]
-    },
-    repositoryURL: 'https://github.com/RyanCCollins/meetups',
-    appStoreUrl: '',
-    projectUrl: 'https://meetup-events-planner.firebase.com/',
-    featureImage: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/main-mockup.jpg',
-    caption: 'Project 1 for Senior Web Nanodegree.',
-    images: [
-      {
-        id: 0,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/landing-page.png',
-        width: 1200,
-        height: 900,
-        aspectRatio: 1.333,
-        lightboxImage: {
-          caption: 'Landing Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/landing-page.png'
-        }
-      },
-      {
-        id: 1,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signin-page.png',
-        width: 1200,
-        height: 900,
-        aspectRatio: 1.333,
-        lightboxImage: {
-          caption: 'Sign in Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signin-page.png'
-        }
-      },
-      {
-        id: 2,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signup-page.png',
-        width: 1200,
-        height: 900,
-        aspectRatio: 1.333,
-        lightboxImage: {
-          caption: 'Signup Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/signup-page.png'
-        }
-      },
-      {
-        id: 3,
-        src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/meetup-dashboard.png',
-        width: 1200,
-        height: 900,
-        aspectRatio: 1.333,
-        lightboxImage: {
-          caption: 'Meetup Page',
-          src: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/portfolio-image-gallery-images/meetup-event-planner/meetup-dashboard.png'
         }
       }
     ]

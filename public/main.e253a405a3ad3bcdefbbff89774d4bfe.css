@@ -7958,8 +7958,8 @@ body {
   line-height: 25px;
   overflow-x: hidden !important; }
 
-.app {
-  overflow-x: hidden; }
+html {
+  overflow-x: hidden !important; }
 
 ul.starred {
   list-style: none;
