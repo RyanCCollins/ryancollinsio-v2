@@ -1,9 +1,11 @@
+NOTE: RyanCollins.io v3.0 is now LIVE.  This project is now deprecated, but will remain here for historical purposes.
+
 [![Codacy grade](https://img.shields.io/codacy/grade/fb3bf4881b8d4b98a8a3ff59f47b14d4.svg?maxAge=2592000)](https://github.com/RyanCCollins/ryancollins.io)
 ![Code Ship](https://codeship.com/projects/19501030-5b62-0134-1c18-421b0673279f/status?branch=master)
 
 ![Ryancollins.io logo](https://raw.githubusercontent.com/RyanCCollins/ryancollins.io/master/ryancollins.io-logo.png)
 
-# RyanCollins.io
+# RyanCollins.io v2.0
 
 Rewrite of my professional portfolio and blog utilizing React, Redux, Keystone, Node, MongoDb, Foundation, etc.
 
